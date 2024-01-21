@@ -84,4 +84,16 @@
 
     <color name="black">#000</color>
 
+    <!-- default SponsorBlock segment colors -->
+    <color name="sponsor_segment">#00d400</color>
+    <color name="intro_segment">#00ffff</color>
+    <color name="outro_segment">#0202ed</color>
+    <color name="interaction_segment">#cc00ff</color>
+    <color name="highlight_segment">#ff1983</color>
+    <color name="self_promo_segment">#ffff00</color>
+    <color name="non_music_segment">#ff9900</color>
+    <color name="preview_segment">#008fd6</color>
+    <color name="filler_segment">#7300ff</color>
+    <color name="pending_segment">#ffffff</color>
+
 </resources>

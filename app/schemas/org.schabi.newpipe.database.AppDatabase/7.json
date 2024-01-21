@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 7,
-    "identityHash": "012fc8e7ad3333f1597347f34e76a513",
+    "identityHash": "7dcdec7a500be9088f7a9a4767292b41",
     "entities": [
       {
         "tableName": "subscriptions",
@@ -58,10 +58,10 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": true,
           "columnNames": [
             "uid"
-          ],
-          "autoGenerate": true
+          ]
         },
         "indices": [
           {
@@ -107,10 +107,10 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": true,
           "columnNames": [
             "id"
-          ],
-          "autoGenerate": true
+          ]
         },
         "indices": [
           {
@@ -209,10 +209,10 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": true,
           "columnNames": [
             "uid"
-          ],
-          "autoGenerate": true
+          ]
         },
         "indices": [
           {
@@ -252,11 +252,11 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": false,
           "columnNames": [
             "stream_id",
             "access_date"
-          ],
-          "autoGenerate": false
+          ]
         },
         "indices": [
           {
@@ -301,10 +301,10 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": false,
           "columnNames": [
             "stream_id"
-          ],
-          "autoGenerate": false
+          ]
         },
         "indices": [],
         "foreignKeys": [
@@ -351,10 +351,10 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": true,
           "columnNames": [
             "uid"
-          ],
-          "autoGenerate": true
+          ]
         },
         "indices": [
           {
@@ -393,11 +393,11 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": false,
           "columnNames": [
             "playlist_id",
             "join_index"
-          ],
-          "autoGenerate": false
+          ]
         },
         "indices": [
           {
@@ -493,10 +493,10 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": true,
           "columnNames": [
             "uid"
-          ],
-          "autoGenerate": true
+          ]
         },
         "indices": [
           {
@@ -539,11 +539,11 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": false,
           "columnNames": [
             "stream_id",
             "subscription_id"
-          ],
-          "autoGenerate": false
+          ]
         },
         "indices": [
           {
@@ -611,10 +611,10 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": true,
           "columnNames": [
             "uid"
-          ],
-          "autoGenerate": true
+          ]
         },
         "indices": [
           {
@@ -647,11 +647,11 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": false,
           "columnNames": [
             "group_id",
             "subscription_id"
-          ],
-          "autoGenerate": false
+          ]
         },
         "indices": [
           {
@@ -707,10 +707,10 @@
           }
         ],
         "primaryKey": {
+          "autoGenerate": false,
           "columnNames": [
             "subscription_id"
-          ],
-          "autoGenerate": false
+          ]
         },
         "indices": [],
         "foreignKeys": [
@@ -726,12 +726,32 @@
             ]
           }
         ]
+      },
+      {
+        "tableName": "sponsorblock_whitelist",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uploader` TEXT NOT NULL, PRIMARY KEY(`uploader`))",
+        "fields": [
+          {
+            "fieldPath": "uploader",
+            "columnName": "uploader",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "uploader"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
       }
     ],
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '012fc8e7ad3333f1597347f34e76a513')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7dcdec7a500be9088f7a9a4767292b41')"
     ]
   }
 }

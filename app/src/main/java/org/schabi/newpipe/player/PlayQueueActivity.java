@@ -46,6 +46,7 @@ import org.schabi.newpipe.util.Localization;
 import org.schabi.newpipe.util.NavigationHelper;
 import org.schabi.newpipe.util.PermissionHelper;
 import org.schabi.newpipe.util.ServiceHelper;
+import org.schabi.newpipe.util.SponsorBlockHelper;
 import org.schabi.newpipe.util.ThemeHelper;
 
 import java.util.List;
@@ -229,9 +230,12 @@ public final class PlayQueueActivity extends AppCompatActivity
                 } else {
                     onQueueUpdate(player.getPlayQueue());
                     buildComponents();
-                    if (player != null) {
-                        player.setActivityListener(PlayQueueActivity.this);
-                    }
+                    player.setActivityListener(PlayQueueActivity.this);
+                    player.getCurrentStreamInfo().ifPresent(info ->
+                            SponsorBlockHelper.markSegments(
+                                    getApplicationContext(),
+                                    queueControlBinding.seekBar,
+                                    info));
                 }
             }
         };

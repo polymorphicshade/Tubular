@@ -817,7 +817,8 @@ public class RouterActivity extends AppCompatActivity {
             inFlight(true);
             final LoadingDialog loadingDialog = new LoadingDialog(R.string.loading_metadata_title);
             loadingDialog.show(getParentFragmentManager(), "loadingDialog");
-            disposables.add(ExtractorHelper.getStreamInfo(currentServiceId, currentUrl, true)
+            disposables.add(ExtractorHelper.getStreamInfo(getContext(), currentServiceId,
+                            currentUrl, true)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .compose(this::pleaseWait)
@@ -837,7 +838,8 @@ public class RouterActivity extends AppCompatActivity {
 
         private void openAddToPlaylistDialog(final int currentServiceId, final String currentUrl) {
             inFlight(true);
-            disposables.add(ExtractorHelper.getStreamInfo(currentServiceId, currentUrl, false)
+            disposables.add(ExtractorHelper.getStreamInfo(getContext(), currentServiceId,
+                            currentUrl, false)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .compose(this::pleaseWait)
@@ -970,7 +972,8 @@ public class RouterActivity extends AppCompatActivity {
 
             switch (choice.linkType) {
                 case STREAM:
-                    single = ExtractorHelper.getStreamInfo(choice.serviceId, choice.url, false);
+                    single = ExtractorHelper.getStreamInfo(
+                            this, choice.serviceId, choice.url, false);
                     userAction = UserAction.REQUESTED_STREAM;
                     break;
                 case CHANNEL:

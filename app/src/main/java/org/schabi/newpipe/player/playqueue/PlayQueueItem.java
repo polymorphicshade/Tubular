@@ -1,5 +1,7 @@
 package org.schabi.newpipe.player.playqueue;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -122,8 +124,8 @@ public class PlayQueueItem implements Serializable {
     }
 
     @NonNull
-    public Single<StreamInfo> getStream() {
-        return ExtractorHelper.getStreamInfo(this.serviceId, this.url, false)
+    public Single<StreamInfo> getStream(final Context context) {
+        return ExtractorHelper.getStreamInfo(context, this.serviceId, this.url, false)
                 .subscribeOn(Schedulers.io())
                 .doOnError(throwable -> error = throwable);
     }

@@ -57,6 +57,7 @@ import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -69,6 +70,7 @@ import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.PlaybackException;
 import com.google.android.exoplayer2.PlaybackParameters;
 import com.google.android.exoplayer2.Player.PositionInfo;
+import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.Tracks;
 import com.google.android.exoplayer2.source.MediaSource;
@@ -86,6 +88,8 @@ import org.schabi.newpipe.databinding.PlayerBinding;
 import org.schabi.newpipe.error.ErrorInfo;
 import org.schabi.newpipe.error.ErrorUtil;
 import org.schabi.newpipe.error.UserAction;
+import org.schabi.newpipe.extractor.sponsorblock.SponsorBlockAction;
+import org.schabi.newpipe.extractor.sponsorblock.SponsorBlockSegment;
 import org.schabi.newpipe.extractor.stream.AudioStream;
 import org.schabi.newpipe.extractor.Image;
 import org.schabi.newpipe.extractor.stream.StreamInfo;
@@ -118,6 +122,8 @@ import org.schabi.newpipe.player.ui.VideoPlayerUi;
 import org.schabi.newpipe.util.DependentPreferenceHelper;
 import org.schabi.newpipe.util.ListHelper;
 import org.schabi.newpipe.util.NavigationHelper;
+import org.schabi.newpipe.util.SponsorBlockMode;
+import org.schabi.newpipe.util.SponsorBlockHelper;
 import org.schabi.newpipe.util.image.PicassoHelper;
 import org.schabi.newpipe.util.SerializedCache;
 import org.schabi.newpipe.util.StreamTypeUtil;
@@ -262,7 +268,9 @@ public final class Player implements PlaybackListener, Listener {
     private final SharedPreferences prefs;
     @NonNull
     private final HistoryRecordManager recordManager;
+    private SponsorBlockMode sponsorBlockMode = SponsorBlockMode.DISABLED;
 
+    private final SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener;
 
     /*//////////////////////////////////////////////////////////////////////////
     // Constructor
@@ -273,6 +281,25 @@ public final class Player implements PlaybackListener, Listener {
         this.service = service;
         context = service;
         prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        final boolean isSponsorBlockEnabled = prefs.getBoolean(
+                context.getString(R.string.sponsor_block_enable_key), false);
+
+        setSponsorBlockMode(isSponsorBlockEnabled
+                ? SponsorBlockMode.ENABLED
+                : SponsorBlockMode.DISABLED);
+
+        preferenceChangeListener =
+                (sharedPreferences, key) -> {
+                    if (context.getString(R.string.sponsor_block_enable_key).equals(key)) {
+                        setSponsorBlockMode(sharedPreferences.getBoolean(key, false)
+                                ? SponsorBlockMode.ENABLED
+                                : SponsorBlockMode.DISABLED);
+                    }
+                };
+
+        prefs.registerOnSharedPreferenceChangeListener(preferenceChangeListener);
+
         recordManager = new HistoryRecordManager(context);
 
         setupBroadcastReceiver();
@@ -637,7 +664,7 @@ public final class Player implements PlaybackListener, Listener {
         }
 
         if (playQueue != null) {
-            playQueueManager = new MediaSourceManager(this, playQueue);
+            playQueueManager = new MediaSourceManager(context, this, playQueue);
         }
     }
 
@@ -923,12 +950,61 @@ public final class Player implements PlaybackListener, Listener {
     }
 
     public void triggerProgressUpdate() {
+        triggerProgressUpdate(false);
+    }
+
+    public void triggerProgressUpdate(final boolean isRewind) {
         if (exoPlayerIsNull()) {
             return;
         }
 
-        onUpdateProgress(Math.max((int) simpleExoPlayer.getCurrentPosition(), 0),
-                (int) simpleExoPlayer.getDuration(), simpleExoPlayer.getBufferedPercentage());
+        final int currentProgress = Math.max((int) simpleExoPlayer.getCurrentPosition(), 0);
+
+        onUpdateProgress(
+                currentProgress,
+                (int) simpleExoPlayer.getDuration(),
+                simpleExoPlayer.getBufferedPercentage());
+
+        triggerCheckForSponsorBlockSegments(currentProgress, isRewind);
+    }
+
+    private void triggerCheckForSponsorBlockSegments(final int currentProgress,
+                                                     final boolean isRewind) {
+        if (sponsorBlockMode != SponsorBlockMode.ENABLED || !isPrepared) {
+            return;
+        }
+
+        getSkippableSponsorBlockSegment(currentProgress).ifPresent(sponsorBlockSegment -> {
+            int skipTarget = isRewind
+                    ? (int) Math.ceil((sponsorBlockSegment.startTime)) - 1
+                    : (int) Math.ceil((sponsorBlockSegment.endTime));
+
+            if (skipTarget < 0) {
+                skipTarget = 0;
+            }
+
+            // temporarily force EXACT seek parameters to prevent infinite skip looping
+            final SeekParameters seekParams = simpleExoPlayer.getSeekParameters();
+            simpleExoPlayer.setSeekParameters(SeekParameters.EXACT);
+
+            seekTo(skipTarget);
+
+            simpleExoPlayer.setSeekParameters(seekParams);
+
+            if (prefs.getBoolean(
+                    context.getString(R.string.sponsor_block_notifications_key), false)) {
+                final String toastText =
+                        SponsorBlockHelper.convertCategoryToSkipMessage(
+                                context, sponsorBlockSegment.category);
+
+                Toast.makeText(context, toastText, Toast.LENGTH_SHORT).show();
+            }
+
+            if (DEBUG) {
+                Log.d("SPONSOR_BLOCK", "Skipped segment: currentProgress = ["
+                        + currentProgress + "], skipped to = [" + skipTarget + "]");
+            }
+        });
     }
 
     private Disposable getProgressUpdateDisposable() {
@@ -1706,7 +1782,7 @@ public final class Player implements PlaybackListener, Listener {
 
     public void fastForward() {
         if (DEBUG) {
-            Log.d(TAG, "fastRewind() called");
+            Log.d(TAG, "fastForward() called");
         }
         seekBy(retrieveSeekDurationFromPreferences(this));
         triggerProgressUpdate();
@@ -1717,7 +1793,7 @@ public final class Player implements PlaybackListener, Listener {
             Log.d(TAG, "fastRewind() called");
         }
         seekBy(-retrieveSeekDurationFromPreferences(this));
-        triggerProgressUpdate();
+        triggerProgressUpdate(true);
     }
     //endregion
 
@@ -2300,6 +2376,41 @@ public final class Player implements PlaybackListener, Listener {
 
     public Optional<PlayerServiceEventListener> getFragmentListener() {
         return Optional.ofNullable(fragmentListener);
+    }
+
+    public SponsorBlockMode getSponsorBlockMode() {
+        return sponsorBlockMode;
+    }
+
+    public void setSponsorBlockMode(final SponsorBlockMode mode) {
+        sponsorBlockMode = mode;
+    }
+
+    public Optional<SponsorBlockSegment> getSkippableSponsorBlockSegment(final int progress) {
+        return getCurrentStreamInfo().map(info -> {
+            final SponsorBlockSegment[] sponsorBlockSegments = info.getSponsorBlockSegments();
+            if (sponsorBlockSegments == null) {
+                return null;
+            }
+
+            for (final SponsorBlockSegment sponsorBlockSegment : sponsorBlockSegments) {
+                if (sponsorBlockSegment.action != SponsorBlockAction.SKIP) {
+                    continue;
+                }
+
+                if (progress < sponsorBlockSegment.startTime) {
+                    continue;
+                }
+
+                if (progress > sponsorBlockSegment.endTime) {
+                    continue;
+                }
+
+                return sponsorBlockSegment;
+            }
+
+            return null;
+        });
     }
 
     /**

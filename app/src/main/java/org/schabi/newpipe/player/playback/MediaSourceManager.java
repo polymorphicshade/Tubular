@@ -1,5 +1,11 @@
 package org.schabi.newpipe.player.playback;
 
+import static org.schabi.newpipe.player.mediasource.FailedMediaSource.MediaSourceResolutionException;
+import static org.schabi.newpipe.player.mediasource.FailedMediaSource.StreamInfoLoadException;
+import static org.schabi.newpipe.player.playqueue.PlayQueue.DEBUG;
+import static org.schabi.newpipe.util.ServiceHelper.getCacheExpirationMillis;
+
+import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
 
@@ -38,11 +44,6 @@ import io.reactivex.rxjava3.internal.subscriptions.EmptySubscription;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import io.reactivex.rxjava3.subjects.PublishSubject;
 
-import static org.schabi.newpipe.player.mediasource.FailedMediaSource.MediaSourceResolutionException;
-import static org.schabi.newpipe.player.mediasource.FailedMediaSource.StreamInfoLoadException;
-import static org.schabi.newpipe.player.playqueue.PlayQueue.DEBUG;
-import static org.schabi.newpipe.util.ServiceHelper.getCacheExpirationMillis;
-
 public class MediaSourceManager {
     @NonNull
     private final String TAG = "MediaSourceManager@" + hashCode();
@@ -69,6 +70,8 @@ public class MediaSourceManager {
      */
     private static final int MAXIMUM_LOADER_SIZE = WINDOW_SIZE * 2 + 1;
 
+    @NonNull
+    private final Context context;
     @NonNull
     private final PlaybackListener playbackListener;
     @NonNull
@@ -125,14 +128,16 @@ public class MediaSourceManager {
 
     private final Handler removeMediaSourceHandler = new Handler();
 
-    public MediaSourceManager(@NonNull final PlaybackListener listener,
+    public MediaSourceManager(@NonNull final Context context,
+                              @NonNull final PlaybackListener listener,
                               @NonNull final PlayQueue playQueue) {
-        this(listener, playQueue, 400L,
+        this(context, listener, playQueue, 400L,
                 /*playbackNearEndGapMillis=*/TimeUnit.MILLISECONDS.convert(30, TimeUnit.SECONDS),
                 /*progressUpdateIntervalMillis*/TimeUnit.MILLISECONDS.convert(2, TimeUnit.SECONDS));
     }
 
-    private MediaSourceManager(@NonNull final PlaybackListener listener,
+    private MediaSourceManager(@NonNull final Context context,
+                               @NonNull final PlaybackListener listener,
                                @NonNull final PlayQueue playQueue,
                                final long loadDebounceMillis,
                                final long playbackNearEndGapMillis,
@@ -146,6 +151,7 @@ public class MediaSourceManager {
                     + " ms] for them to be useful.");
         }
 
+        this.context = context;
         this.playbackListener = listener;
         this.playQueue = playQueue;
 
@@ -420,7 +426,7 @@ public class MediaSourceManager {
     }
 
     private Single<ManagedMediaSource> getLoadedMediaSource(@NonNull final PlayQueueItem stream) {
-        return stream.getStream()
+        return stream.getStream(context)
                 .map(streamInfo -> Optional
                         .ofNullable(playbackListener.sourceOf(stream, streamInfo))
                         .<ManagedMediaSource>flatMap(source ->

@@ -154,7 +154,7 @@ public final class InternalUrlsHandler {
         }
 
         final Single<StreamInfo> single =
-                ExtractorHelper.getStreamInfo(service.getServiceId(), cleanUrl, false);
+                ExtractorHelper.getStreamInfo(context, service.getServiceId(), cleanUrl, false);
         disposables.add(single.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(info -> {

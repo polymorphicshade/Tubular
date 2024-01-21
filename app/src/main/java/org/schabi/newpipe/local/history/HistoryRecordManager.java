@@ -59,6 +59,7 @@ import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class HistoryRecordManager {
+    private final Context context;
     private final AppDatabase database;
     private final StreamDAO streamTable;
     private final StreamHistoryDAO streamHistoryTable;
@@ -69,6 +70,7 @@ public class HistoryRecordManager {
     private final String streamHistoryKey;
 
     public HistoryRecordManager(final Context context) {
+        this.context = context;
         database = NewPipeDatabase.getInstance(context);
         streamTable = database.streamDAO();
         streamHistoryTable = database.streamHistoryDAO();
@@ -103,6 +105,7 @@ public class HistoryRecordManager {
             // Duration will not exist if the item was loaded with fast mode, so fetch it if empty
             if (info.getDuration() < 0) {
                 final StreamInfo completeInfo = ExtractorHelper.getStreamInfo(
+                        context,
                         info.getServiceId(),
                         info.getUrl(),
                         false
@@ -235,7 +238,7 @@ public class HistoryRecordManager {
     ///////////////////////////////////////////////////////
 
     public Maybe<StreamStateEntity> loadStreamState(final PlayQueueItem queueItem) {
-        return queueItem.getStream()
+        return queueItem.getStream(context)
                 .map(info -> streamTable.upsert(new StreamEntity(info)))
                 .flatMapPublisher(streamStateTable::getState)
                 .firstElement()

@@ -22,6 +22,8 @@ import org.schabi.newpipe.database.playlist.dao.PlaylistStreamDAO;
 import org.schabi.newpipe.database.playlist.model.PlaylistEntity;
 import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity;
 import org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity;
+import org.schabi.newpipe.database.sponsorblock.dao.SponsorBlockWhitelistDAO;
+import org.schabi.newpipe.database.sponsorblock.dao.SponsorBlockWhitelistEntry;
 import org.schabi.newpipe.database.stream.dao.StreamDAO;
 import org.schabi.newpipe.database.stream.dao.StreamStateDAO;
 import org.schabi.newpipe.database.stream.model.StreamEntity;
@@ -36,7 +38,7 @@ import org.schabi.newpipe.database.subscription.SubscriptionEntity;
                 StreamEntity.class, StreamHistoryEntity.class, StreamStateEntity.class,
                 PlaylistEntity.class, PlaylistStreamEntity.class, PlaylistRemoteEntity.class,
                 FeedEntity.class, FeedGroupEntity.class, FeedGroupSubscriptionEntity.class,
-                FeedLastUpdatedEntity.class
+                FeedLastUpdatedEntity.class, SponsorBlockWhitelistEntry.class
         },
         version = DB_VER_7
 )
@@ -62,4 +64,6 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract FeedGroupDAO feedGroupDAO();
 
     public abstract SubscriptionDAO subscriptionDAO();
+
+    public abstract SponsorBlockWhitelistDAO sponsorBlockWhitelistDAO();
 }
