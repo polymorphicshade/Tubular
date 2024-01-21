@@ -126,8 +126,8 @@
     <string name="always">Πάντα</string>
     <string name="just_once">Μόνο μία φορά</string>
     <string name="file">Αρχείο</string>
-    <string name="notification_channel_name">Ειδοποίηση NewPipe</string>
-    <string name="notification_channel_description">Ειδοποιήσεις του αναπαραγωγέα του NewPipe</string>
+    <string name="notification_channel_name">Ειδοποίηση Tubular</string>
+    <string name="notification_channel_description">Ειδοποιήσεις του αναπαραγωγέα του Tubular</string>
     <string name="unknown_content">[Άγνωστο]</string>
     <string name="switch_to_background">Αλλαγή σε Παρασκήνιο</string>
     <string name="switch_to_popup">Αλλαγή σε Αναδυόμενο Παράθυρο</string>
@@ -194,7 +194,7 @@
     <string name="ok">Εντάξει</string>
     <string name="msg_name">Όνομα αρχείου</string>
     <string name="msg_threads">Νήματα</string>
-    <string name="msg_running">Λήψη NewPipe</string>
+    <string name="msg_running">Λήψη Tubular</string>
     <string name="msg_wait">Παρακαλώ περιμένετε…</string>
     <string name="msg_copied">Αντιγράφηκε στο πρόχειρο</string>
     <string name="no_available_dir">Παρακαλώ ορίστε έναν φάκελο λήψεων αργότερα στις ρυθμίσεις</string>
@@ -207,7 +207,7 @@
     <string name="settings_file_replacement_character_summary">Οι μη έγκυροι χαρακτήρες αντικαθίστανται με αυτήν την τιμή</string>
     <string name="settings_file_replacement_character_title">Αντικαταστάτης χαρακτήρας</string>
     <string name="charset_most_special_characters">Οι περισσότεροι ειδικοί χαρακτήρες</string>
-    <string name="title_activity_about">Σχετικά με το NewPipe</string>
+    <string name="title_activity_about">Σχετικά με το Tubular</string>
     <string name="title_licenses">Άδειες Τρίτων</string>
     <string name="copyright" formatted="true">© %1$s από %2$s υπό %3$s</string>
     <string name="tab_about">Πληροφορίες &amp; Συχνές Ερωτήσεις</string>
@@ -216,16 +216,16 @@
     <string name="contribution_encouragement">Αν έχετε ιδέες για μετάφραση, αλλαγή σχεδιασμού, εκκαθάριση ή ριζικές αλλαγές κώδικα της εφαρμογής, η βοήθεια σας είναι πάντα ευπρόσδεκτη. Όσο περισσότερη έχουμε, τόσο καλύτεροι γινόμαστε!</string>
     <string name="view_on_github">Δείτε το στο GitHub</string>
     <string name="donation_title">Δωρεά</string>
-    <string name="donation_encouragement">Το NewPipe αναπτύσσεται από εθελοντές που δαπανούν τον ελεύθερο χρόνο τους για να σας προσφέρουν τη βέλτιστη δυνατή εμπειρία χρήστη. Ανταποδώστε το, για να βοηθήσετε τους προγραμματιστές του NewPipe να το κάνουν ακόμα καλύτερο, όσο απολαμβάνουν ένα φλιτζάνι καφέ.</string>
+    <string name="donation_encouragement">Το Tubular αναπτύσσεται από εθελοντές που δαπανούν τον ελεύθερο χρόνο τους για να σας προσφέρουν τη βέλτιστη δυνατή εμπειρία χρήστη. Ανταποδώστε το, για να βοηθήσετε τους προγραμματιστές του Tubular να το κάνουν ακόμα καλύτερο, όσο απολαμβάνουν ένα φλιτζάνι καφέ.</string>
     <string name="give_back">Προσφέρετε</string>
     <string name="website_title">Ιστότοπος</string>
-    <string name="website_encouragement">Επισκευτείτε τον ιστότοπο του NewPipe για περισσότερες πληροφορίες και νέα.</string>
-    <string name="privacy_policy_title">Πολιτική ιδιωτικού απόρρητου του NewPipe</string>
-    <string name="privacy_policy_encouragement">Το NewPipe παίρνει πολύ σοβαρά την ιδιωτικότητα σας. Έτσι, η εφαρμογή αυτή δεν συλλέγει δεδομένα από εσάς χωρίς τη συγκατάθεσή σας.
-\nΗ πολιτική ιδιωτικού απόρρητου του NewPipe εξηγεί λεπτομερώς ποια δεδομένα αποστέλλονται και αποθηκεύονται όταν επιλέγετε να στείλετε μια αναφορά σφαλμάτων.</string>
+    <string name="website_encouragement">Επισκευτείτε τον ιστότοπο του Tubular για περισσότερες πληροφορίες και νέα.</string>
+    <string name="privacy_policy_title">Πολιτική ιδιωτικού απόρρητου του Tubular</string>
+    <string name="privacy_policy_encouragement">Το Tubular παίρνει πολύ σοβαρά την ιδιωτικότητα σας. Έτσι, η εφαρμογή αυτή δεν συλλέγει δεδομένα από εσάς χωρίς τη συγκατάθεσή σας.
+\nΗ πολιτική ιδιωτικού απόρρητου του Tubular εξηγεί λεπτομερώς ποια δεδομένα αποστέλλονται και αποθηκεύονται όταν επιλέγετε να στείλετε μια αναφορά σφαλμάτων.</string>
     <string name="read_privacy_policy">Ανάγνωση της πολιτικής ιδιωτικού απόρρητου</string>
-    <string name="app_license_title">Η άδεια του NewPipe</string>
-    <string name="app_license">Το NewPipe είναι copylelft ελεύθερο λογισμικό: Μπορείτε να το χρησιμοποιήσετε, να το μελετήσετε, να το μοιραστείτε και να το βελτιώσετε κατά βούληση. Ειδικότερα, μπορείτε να το αναδιανείμετε ή/και να το τροποποιήσετε υπό την άδεια GNU General Public Licence όπως αυτή εκδόθηκε από το Free Software Foundation, είτε υπό την έκδοση 3 της άδειας, είτε (προαιρετικά) υπό οποιαδήποτε μεταγενέστερη άδεια.</string>
+    <string name="app_license_title">Η άδεια του Tubular</string>
+    <string name="app_license">Το Tubular είναι copylelft ελεύθερο λογισμικό: Μπορείτε να το χρησιμοποιήσετε, να το μελετήσετε, να το μοιραστείτε και να το βελτιώσετε κατά βούληση. Ειδικότερα, μπορείτε να το αναδιανείμετε ή/και να το τροποποιήσετε υπό την άδεια GNU General Public Licence όπως αυτή εκδόθηκε από το Free Software Foundation, είτε υπό την έκδοση 3 της άδειας, είτε (προαιρετικά) υπό οποιαδήποτε μεταγενέστερη άδεια.</string>
     <string name="read_full_license">Ανάγνωση της άδειας</string>
     <string name="delete_item_search_history">Θέλετε να σβήσετε αυτό το αντικείμενο από το ιστορικό αναζήτησης;</string>
     <string name="title_last_played">Τελευταία αναπαραγωγή</string>
@@ -319,7 +319,7 @@
     <string name="skip_silence_checkbox">Γρήγορη αναπαραγωγή κατά τη διάρκεια της σίγασης</string>
     <string name="playback_step">Βήμα</string>
     <string name="playback_reset">Επαναφορά</string>
-    <string name="start_accept_privacy_policy">Προς συμμόρφωση με τον Ευρωπαϊκό Γενικό Κανονισμό για την Προστασία Δεδομένων (GDPR), σας εφιστούμε την προσοχή στην πολιτική προστασίας προσωπικών δεδομένων του NewPipe. Παραλούμε, διαβάστε την προσεκτικά.
+    <string name="start_accept_privacy_policy">Προς συμμόρφωση με τον Ευρωπαϊκό Γενικό Κανονισμό για την Προστασία Δεδομένων (GDPR), σας εφιστούμε την προσοχή στην πολιτική προστασίας προσωπικών δεδομένων του Tubular. Παραλούμε, διαβάστε την προσεκτικά.
 \nΘα πρέπει να την αποδεχτείτε προκειμένου να μας αποστείλετε την αναφορά σφάλματος.</string>
     <string name="accept">Αποδοχή</string>
     <string name="decline">Απόρριψη</string>
@@ -335,7 +335,7 @@
     <string name="events">Συμβάντα</string>
     <string name="file_deleted">Το αρχείο διαγράφηκε</string>
     <string name="app_update_notification_channel_name">Ειδοποίηση ενημέρωσης εφαρμογής</string>
-    <string name="app_update_notification_channel_description">Ειδοποίηση για νεότερη έκδοση του NewPipe</string>
+    <string name="app_update_notification_channel_description">Ειδοποίηση για νεότερη έκδοση του Tubular</string>
     <string name="download_to_sdcard_error_title">Εξωτερική μνήμη αποθήκευσης μη διαθέσιμη</string>
     <string name="download_to_sdcard_error_message">Η αποθήκευση στην SD κάρτα δεν είναι δυνατή. Επαναφορά στην αρχική τοποθεσία λήψης;</string>
     <string name="saved_tabs_invalid_json">Δεν ήταν δυνατή η ανάγνωση των αποθηκευμένων καρτελών. Θα γίνει χρήση των προεπιλεγμένων</string>
@@ -350,7 +350,7 @@
     <string name="list">Λίστα</string>
     <string name="grid">Πλέγμα</string>
     <string name="auto">Αυτόματα</string>
-    <string name="app_update_available_notification_title">Μια νέα έκδοση του NewPipe είναι διαθέσιμη!</string>
+    <string name="app_update_available_notification_title">Μια νέα έκδοση του Tubular είναι διαθέσιμη!</string>
     <string name="missions_header_finished">Ολοκληρώθηκε</string>
     <string name="missions_header_pending">Εκκρεμεί</string>
     <string name="paused">σε παύση</string>
@@ -394,7 +394,7 @@
     <string name="missing_file">Το αρχείο μετακινήθηκε ή διαγράφηκε</string>
     <string name="overwrite_failed">δεν είναι δυνατή η αντικατάσταση του αρχείου</string>
     <string name="download_already_pending">Υπάρχει μια εκκρεμής λήψη με αυτό το όνομα</string>
-    <string name="error_postprocessing_stopped">Το NewPipe τερματίστηκε ενώ επεξεργάζονταν το αρχείο</string>
+    <string name="error_postprocessing_stopped">Το Tubular τερματίστηκε ενώ επεξεργάζονταν το αρχείο</string>
     <string name="error_insufficient_storage">Δεν υπάρχει αρκετός χώρος στη συσκευή</string>
     <string name="error_progress_lost">Η πρόοδος χάθηκε, επειδή το αρχείο διαγράφηκε</string>
     <string name="error_timeout">Λήξη χρονικού ορίου σύνδεσης</string>
@@ -436,7 +436,7 @@
     <string name="search_showing_result_for">Εμφάνιση αποτελεσμάτων για: %s</string>
     <string name="feed_use_dedicated_fetch_method_enable_button">Ενεργοποίηση γρήγορης λειτουργίας</string>
     <string name="feed_use_dedicated_fetch_method_disable_button">Απενεργοποίηση γρήγορης λειτουργίας</string>
-    <string name="content_not_supported">Αυτό το περιεχόμενο δεν υποστηρίζεται ακόμη από το NewPipe.
+    <string name="content_not_supported">Αυτό το περιεχόμενο δεν υποστηρίζεται ακόμη από το Tubular.
 \n
 \nΕλπίζουμε ότι θα υποστηριχθεί σε μια μελλοντική έκδοση.</string>
     <string name="detail_sub_channel_thumbnail_view_description">Μικρογραφία avatar του καναλιού</string>
@@ -493,7 +493,7 @@
     <string name="notification_action_buffering">Φόρτωση</string>
     <string name="feed_use_dedicated_fetch_method_help_text">Πιστεύετε ότι η ροή φορτώνει πολύ αργά; Δοκιμάστε να ενεργοποιήσετε τη γρήγορη φόρτωση (από τις ρυθμίσεις ή πατώντας το παρακάτω κουμπί).
 \n
-\nΤο NewPipe προσφέρει δύο στρατηγικές φόρτωσης ροής:
+\nΤο Tubular προσφέρει δύο στρατηγικές φόρτωσης ροής:
 \n- Λήψη ολόκληρου του καναλιού συνδρομής, το οποίο είναι αργό αλλά πλήρες.
 \n- Χρήση ενός αποκλειστικού τελικού σημείου υπηρεσίας, το οποίο είναι γρήγορο αλλά συνήθως δεν είναι πλήρες.
 \n
@@ -579,13 +579,13 @@
     <string name="open_with">Άνοιγμα με</string>
     <string name="no_app_to_open_intent">Καμία εφαρμογή στη συσκευή σας δεν μπορεί το ανοίξει</string>
     <string name="crash_the_app">Κατάρρευση εφαρμογής</string>
-    <string name="paid_content">Αυτό το περιεχόμενο είναι διαθέσιμο μόνο σε χρήστες που έχουν πληρώσει και δεν μπορεί να αναπαραχθεί ή να το κατεβάσετε με το NewPipe.</string>
-    <string name="youtube_music_premium_content">Αυτό το βίντεο είναι διαθέσιμο μόνο για τα μέλη του YouTube Music Premium και δεν μπορεί να αναπαραχθεί ή να το κατεβάσετε με το NewPipe.</string>
-    <string name="private_content">Αυτό το περιεχόμενο είναι ιδιωτικό και δεν μπορεί να αναπαραχθεί ή να το κατεβάσετε με το NewPipe.</string>
-    <string name="soundcloud_go_plus_content">Αυτό είναι ένα κομμάτι SoundCloud Go+, τουλάχιστον στη χώρα σας. Έτσι δεν μπορεί να αναπαραχθεί ή να το κατεβάσετε με το NewPipe.</string>
+    <string name="paid_content">Αυτό το περιεχόμενο είναι διαθέσιμο μόνο σε χρήστες που έχουν πληρώσει και δεν μπορεί να αναπαραχθεί ή να το κατεβάσετε με το Tubular.</string>
+    <string name="youtube_music_premium_content">Αυτό το βίντεο είναι διαθέσιμο μόνο για τα μέλη του YouTube Music Premium και δεν μπορεί να αναπαραχθεί ή να το κατεβάσετε με το Tubular.</string>
+    <string name="private_content">Αυτό το περιεχόμενο είναι ιδιωτικό και δεν μπορεί να αναπαραχθεί ή να το κατεβάσετε με το Tubular.</string>
+    <string name="soundcloud_go_plus_content">Αυτό είναι ένα κομμάτι SoundCloud Go+, τουλάχιστον στη χώρα σας. Έτσι δεν μπορεί να αναπαραχθεί ή να το κατεβάσετε με το Tubular.</string>
     <string name="georestricted_content">Αυτό το περιεχόμενο δεν είναι διαθέσιμο στη χώρα σας.</string>
     <string name="restricted_video_no_stream">Αυτό το βίντεο έχει περιορισμό ηλικίας.
-\nΛόγω της νέας πολιτικής του YouTube για αυτά τα βίντεο, το NewPipe δεν μπορεί να το αναπαράγει.</string>
+\nΛόγω της νέας πολιτικής του YouTube για αυτά τα βίντεο, το Tubular δεν μπορεί να το αναπαράγει.</string>
     <string name="featured">Επιλεγμένα</string>
     <string name="radio">Ράδιο</string>
     <string name="recaptcha_solve">Λύση</string>
@@ -616,7 +616,7 @@
     <string name="account_terminated">Ο λογαριασμός διαγράφηκε</string>
     <string name="feed_load_error_fast_unknown">Η κατάσταση γρήγορης τροφοδοσίας δεν παρέχει περισσότερες πληροφορίες.</string>
     <string name="feed_load_error_terminated">Ο λογαριασμός του δημιουργού έχει διαγραφεί.
-\nΤο NewPipe δε θα μπορεί να φορτώσει αυτή την τροφοδοσία στο μέλλον.
+\nΤο Tubular δε θα μπορεί να φορτώσει αυτή την τροφοδοσία στο μέλλον.
 \nΘέλετε να απεγγραφείτε από αυτό το κανάλι;</string>
     <string name="feed_load_error_account_info">Αδυναμία φόρτωσης τροφοδοσίας για \'%s\'.</string>
     <string name="feed_load_error">Σφάλμα φόρτωσης τροφοδοσίας</string>
@@ -667,7 +667,7 @@
 \nΕγκαταστήστε έναν ή δοκιμάστε να απενεργοποιήσετε το \'%s\' στις ρυθμίσεις λήψεων</string>
     <string name="no_appropriate_file_manager_message_android_10">Δε βρέθηκε κατάλληλος διαχειριστής αρχείων για αυτή την ενέργεια.
 \nΕγκαταστήστε έναν συμβατό με το Πλαίσιο Πρόσβασης Αποθήκευσης</string>
-    <string name="error_report_notification_title">Το NewPipe παρουσίασε ένα σφάλμα. Πατήστε για αναφορά</string>
+    <string name="error_report_notification_title">Το Tubular παρουσίασε ένα σφάλμα. Πατήστε για αναφορά</string>
     <string name="show_error_snackbar">Εμφάνιση μιας snackbar σφάλματος</string>
     <string name="detail_pinned_comment_view_description">Καρφιτσωμένο σχόλιο</string>
     <string name="leak_canary_not_available">Το LeakCanary δεν είναι διαθέσιμο</string>
@@ -711,7 +711,7 @@
     <string name="fast_mode">Γρήγορη λειτουργία</string>
     <string name="import_subscriptions_hint">Εισάγετε ή εξάγετε συνδρομές από το μενού 3 κουκκίδων</string>
     <string name="app_update_available_notification_text">Πατήστε για λήψη %s</string>
-    <string name="app_update_unavailable_toast">Έχετε την πιο πρόσφατη έκδοση του NewPipe</string>
+    <string name="app_update_unavailable_toast">Έχετε την πιο πρόσφατη έκδοση του Tubular</string>
     <string name="night_theme_available">Αυτή η επιλογή είναι διαθέσιμη μόνο εάν έχει επιλεγεί %s για Θέμα</string>
     <string name="unset_playlist_thumbnail">Κατάργηση μόνιμης μικρογραφίας</string>
     <string name="msg_failed_to_copy">Αποτυχία αντιγραφής στο πρόχειρο</string>

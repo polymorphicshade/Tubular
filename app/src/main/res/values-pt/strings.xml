@@ -76,7 +76,7 @@
     <string name="no_available_dir">Tem que definir, nas definições, uma pasta para as descargas</string>
     <string name="ok">OK</string>
     <string name="msg_threads">Processos</string>
-    <string name="msg_running">Descarga NewPipe</string>
+    <string name="msg_running">Descarga Tubular</string>
     <string name="app_ui_crash">Aplicação terminou em erro</string>
     <string name="info_labels">O quê:\\nPedido:\\nIdioma do conteúdo:\\nPaís do conteúdo\\nIdioma da aplicação\\nServiço:\\nHora GMT:\\nPacote:\\nVersão:\\nSO Versão:</string>
     <string name="open_in_popup_mode">Abrir no modo popup</string>
@@ -104,14 +104,14 @@
     <string name="show_search_suggestions_title">Sugestões de pesquisa</string>
     <string name="show_search_suggestions_summary">Escolha as sugestões a mostrar ao pesquisar</string>
     <string name="best_resolution">Melhor resolução</string>
-    <string name="title_activity_about">Acerca de NewPipe</string>
+    <string name="title_activity_about">Acerca de Tubular</string>
     <string name="title_licenses">Licenças de terceiros</string>
     <string name="copyright" formatted="true">© %1$s de %2$s nos termos da %3$s</string>
     <string name="tab_about">Sobre e FAQ</string>
     <string name="tab_licenses">Licenças</string>
     <string name="app_description">Aplicação livre de reprodução de transmissões para Android.</string>
     <string name="view_on_github">Ver no GitHub</string>
-    <string name="app_license_title">Licença do NewPipe</string>
+    <string name="app_license_title">Licença do Tubular</string>
     <string name="contribution_encouragement">Se tem ideias para: tradução, alterações de desenho, limpeza de código, ou alterações significativas no código fonte - todas as ajudas são bem-vindas. Quanto mais se faz, melhor ficará!</string>
     <string name="read_full_license">Ver licença</string>
     <string name="contribution_title">Participar</string>
@@ -132,8 +132,8 @@
     <string name="settings_category_player_behavior_title">Comportamento</string>
     <string name="settings_category_history_title">Histórico e cache</string>
     <string name="undo">Desfazer</string>
-    <string name="notification_channel_name">Notificação NewPipe</string>
-    <string name="notification_channel_description">Notificações para o reprodutor do NewPipe</string>
+    <string name="notification_channel_name">Notificação Tubular</string>
+    <string name="notification_channel_description">Notificações para o reprodutor do Tubular</string>
     <string name="search_no_results">Sem resultados</string>
     <string name="empty_list_subtitle">Aqui não há nada para ver</string>
     <string name="no_subscribers">Sem subscritores</string>
@@ -216,7 +216,7 @@
     <string name="no_streams_available_download">Não existem vídeos para descarregar</string>
     <string name="dismiss">Rejeitar</string>
     <string name="website_title">Site oficial</string>
-    <string name="website_encouragement">Visite o site NewPipe para obter mais informação e novidades.</string>
+    <string name="website_encouragement">Visite o site Tubular para obter mais informação e novidades.</string>
     <string name="kiosk_page_summary">Página \'kiosk\'</string>
     <string name="export_complete_toast">Exportado</string>
     <string name="import_complete_toast">Importado</string>
@@ -294,14 +294,14 @@
     <string name="delete_search_history_alert">Remover todo o histórico de pesquisas\?</string>
     <string name="search_history_deleted">Histórico de pesquisa removido</string>
     <string name="one_item_deleted">1 item eliminado.</string>
-    <string name="donation_encouragement">NewPipe é desenvolvido por voluntários que utilizam o seu tempo livre para nos proporcionar a melhor experiência. Retribua para ajudar os programadores a tornarem NewPipe ainda melhor.</string>
+    <string name="donation_encouragement">Tubular é desenvolvido por voluntários que utilizam o seu tempo livre para nos proporcionar a melhor experiência. Retribua para ajudar os programadores a tornarem Tubular ainda melhor.</string>
     <string name="give_back">Contribuir</string>
-    <string name="privacy_policy_title">Política de privacidade do NewPipe</string>
-    <string name="privacy_policy_encouragement">O projeto NewPipe leva a sua privacidade muito a sério. Por isso, não recolhe nenhum dado sem o seu consentimento.
-\nA polícia de privacidade do NewPipe explica, em detalhe, os tipos de dados enviados sempre que submete um relatório de erro.</string>
+    <string name="privacy_policy_title">Política de privacidade do Tubular</string>
+    <string name="privacy_policy_encouragement">O projeto Tubular leva a sua privacidade muito a sério. Por isso, não recolhe nenhum dado sem o seu consentimento.
+\nA polícia de privacidade do Tubular explica, em detalhe, os tipos de dados enviados sempre que submete um relatório de erro.</string>
     <string name="read_privacy_policy">Ver política de privacidade</string>
     <string name="auto_queue_title">Adicionar o próximo vídeo à fila automaticamente</string>
-    <string name="app_license">NewPipe é um software livre \"copyleft\": pode utilizar, estudar, partilhar e melhorar a aplicação. Especificamente, pode redistribuir e/ou modificar a aplicação nos termos da GNU General Public License, conforme publicada pela Free Software Foundation, tanto a versão 3 da licença ou (por opção) qualquer versão posterior.</string>
+    <string name="app_license">Tubular é um software livre \"copyleft\": pode utilizar, estudar, partilhar e melhorar a aplicação. Especificamente, pode redistribuir e/ou modificar a aplicação nos termos da GNU General Public License, conforme publicada pela Free Software Foundation, tanto a versão 3 da licença ou (por opção) qualquer versão posterior.</string>
     <string name="import_settings">Também deseja importar as definições\?</string>
     <string name="hold_to_append">Toque longo para colocar na fila</string>
     <string name="preferred_open_action_settings_title">Ação de \'Abrir\' preferida</string>
@@ -321,7 +321,7 @@
     <string name="skip_silence_checkbox">Avanço rápido durante silêncio</string>
     <string name="playback_step">Passo</string>
     <string name="playback_reset">Repor</string>
-    <string name="start_accept_privacy_policy">Para cumprir com o Regulamento Geral da Proteção de Dados (RGPD), chamamos a sua atenção para a política de privacidade do NewPipe. Por favor, leia com atenção.
+    <string name="start_accept_privacy_policy">Para cumprir com o Regulamento Geral da Proteção de Dados (RGPD), chamamos a sua atenção para a política de privacidade do Tubular. Por favor, leia com atenção.
 \nTem que aceitar esta política para nos poder enviar o seu relatório.</string>
     <string name="accept">Aceitar</string>
     <string name="decline">Recusar</string>
@@ -337,7 +337,7 @@
     <string name="settings_category_updates_title">Atualizações</string>
     <string name="file_deleted">Ficheiro eliminado</string>
     <string name="app_update_notification_channel_name">Notificação de nova versão</string>
-    <string name="app_update_notification_channel_description">Notificações para novas versões do NewPipe</string>
+    <string name="app_update_notification_channel_description">Notificações para novas versões do Tubular</string>
     <string name="download_to_sdcard_error_title">Armazenamento externo indisponível</string>
     <string name="download_to_sdcard_error_message">Não é possível guardar no cartão SD. Repor pasta de descargas\?</string>
     <string name="saved_tabs_invalid_json">Não foi possível ler os separadores guardados e vamos usar os separadores padrão</string>
@@ -351,7 +351,7 @@
     <string name="list">Lista</string>
     <string name="grid">Grelha</string>
     <string name="auto">Automático</string>
-    <string name="app_update_available_notification_title">Atualização NewPipe disponível!</string>
+    <string name="app_update_available_notification_title">Atualização Tubular disponível!</string>
     <string name="missions_header_finished">Terminada</string>
     <string name="paused">em pausa</string>
     <string name="queued">na fila</string>
@@ -397,7 +397,7 @@
     <string name="overwrite_unrelated_warning">Já existe um ficheiro com este nome</string>
     <string name="overwrite_failed">não é possível sobrescrever o ficheiro</string>
     <string name="download_already_pending">Existe uma descarga pendente com este nome</string>
-    <string name="error_postprocessing_stopped">NewPipe foi fechado enquanto trabalhava no ficheiro</string>
+    <string name="error_postprocessing_stopped">Tubular foi fechado enquanto trabalhava no ficheiro</string>
     <string name="error_insufficient_storage">Não há espaço livre no dispositivo</string>
     <string name="error_progress_lost">Progresso perdido, o ficheiro foi eliminado</string>
     <string name="error_timeout">Ligação expirada</string>
@@ -454,7 +454,7 @@
     <string name="done">Concluído</string>
     <string name="feed_use_dedicated_fetch_method_help_text">Acha que a fonte demora muito tempo a carregar\? Se sim, tente ativar o carregamento rápido (pode alterar a opção nas definições ou no botão abaixo).
 \n
-\nNewPipe oferece duas estratégias de carregamento:
+\nTubular oferece duas estratégias de carregamento:
 \n- Obter todo o canal de subscrição - lento, mas completo.
 \n- Usar um \'endpoint\' dedicado - mais rápido, mas não completo.
 \n
@@ -510,7 +510,7 @@
     <string name="unmute">Ativar som</string>
     <string name="mute">Sem som</string>
     <string name="videos_string">Vídeos</string>
-    <string name="content_not_supported">Este conteúdo ainda não é suportado pelo NewPipe. 
+    <string name="content_not_supported">Este conteúdo ainda não é suportado pelo Tubular. 
 \n 
 \nEsperamos que seja suportado numa versão futura.</string>
     <string name="infinite_videos">∞ vídeos</string>
@@ -565,7 +565,7 @@
     <string name="show_memory_leaks">Mostrar \'leaks\' de memória</string>
     <string name="enqueued">Colocado na fila</string>
     <string name="enqueue_stream">Colocar na fila</string>
-    <string name="clear_cookie_summary">Limpar cookies que NewPipe armazena quando resolve um reCAPTCHA</string>
+    <string name="clear_cookie_summary">Limpar cookies que Tubular armazena quando resolve um reCAPTCHA</string>
     <string name="recaptcha_cookies_cleared">Os cookies reCAPTCHA foram limpos</string>
     <string name="clear_cookie_title">Limpar cookies reCAPTCHA</string>
     <string name="youtube_restricted_mode_enabled_summary">O YouTube fornece um \"Modo restrito\" que oculta conteúdo, potencialmente, destinado a adultos</string>
@@ -590,11 +590,11 @@
     <string name="open_with">Abrir com</string>
     <string name="crash_the_app">A app travou</string>
     <string name="restricted_video_no_stream">Este vídeo tem uma restrição de idade.
-\nDevido às novas políticas do YouTube quanto a restrição de alguns vídeos, o NewPipe não pode aceder a estes vídeos e, por isso, não os consegue reproduzir.</string>
-    <string name="paid_content">Este conteúdo só está disponível para utilizadores que pagaram, portanto não pode ser transmitido ou descarregado pelo NewPipe.</string>
-    <string name="youtube_music_premium_content">Este vídeo está disponível apenas para os membros do YouTube Music Premium, portanto não pode ser transmitido ou descarregado pelo NewPipe.</string>
-    <string name="private_content">Este conteúdo é privado, portanto não pode ser transmitido ou descarregado pelo NewPipe.</string>
-    <string name="soundcloud_go_plus_content">Esta é uma faixa de SoundCloud Go+, pelo menos no seu país, pelo que não pode ser transmitida ou descarregada por NewPipe.</string>
+\nDevido às novas políticas do YouTube quanto a restrição de alguns vídeos, o Tubular não pode aceder a estes vídeos e, por isso, não os consegue reproduzir.</string>
+    <string name="paid_content">Este conteúdo só está disponível para utilizadores que pagaram, portanto não pode ser transmitido ou descarregado pelo Tubular.</string>
+    <string name="youtube_music_premium_content">Este vídeo está disponível apenas para os membros do YouTube Music Premium, portanto não pode ser transmitido ou descarregado pelo Tubular.</string>
+    <string name="private_content">Este conteúdo é privado, portanto não pode ser transmitido ou descarregado pelo Tubular.</string>
+    <string name="soundcloud_go_plus_content">Esta é uma faixa de SoundCloud Go+, pelo menos no seu país, pelo que não pode ser transmitida ou descarregada por Tubular.</string>
     <string name="georestricted_content">Este conteúdo não está disponível no seu país.</string>
     <string name="radio">Rádio</string>
     <string name="featured">Destaques</string>
@@ -613,7 +613,7 @@
     <string name="account_terminated">Conta encerrada</string>
     <string name="feed_load_error_fast_unknown">O modo de feed rápido não fornece mais informações sobre isto.</string>
     <string name="feed_load_error_terminated">A conta do autor foi encerrada.
-\nNewPipe não será capaz de carregar este feed no futuro.
+\nTubular não será capaz de carregar este feed no futuro.
 \nQuer cancelar a inscrição deste canal\?</string>
     <string name="feed_load_error_account_info">Não foi possível carregar o feed para \'%s\'.</string>
     <string name="feed_load_error">Erro ao carregar o feed</string>
@@ -673,7 +673,7 @@
     <string name="show_crash_the_player_summary">Mostra uma opção de travamento ao usar o reprodutor</string>
     <string name="error_report_channel_name">Notificação para relatórios de erro</string>
     <string name="error_report_channel_description">Notificações para reportar erros</string>
-    <string name="error_report_notification_title">NewPipe encontrou um erro, toque para reportar</string>
+    <string name="error_report_notification_title">Tubular encontrou um erro, toque para reportar</string>
     <string name="error_report_notification_toast">Ocorreu um erro, veja a notificação</string>
     <string name="show_error_snackbar">Mostrar um snackbar de erro</string>
     <string name="create_error_notification">Criar uma notificação de erro</string>
@@ -723,7 +723,7 @@
     <string name="sort">Ordenação</string>
     <string name="fast_mode">Modo rápido</string>
     <string name="import_subscriptions_hint">Importe ou exporte subscrições no menu 3 pontos</string>
-    <string name="app_update_unavailable_toast">Já está a executar a versão mais recente do NewPipe</string>
+    <string name="app_update_unavailable_toast">Já está a executar a versão mais recente do Tubular</string>
     <string name="app_update_available_notification_text">Toque para descarregar %s</string>
     <string name="night_theme_available">Esta opção só está disponível se estiver selecionado %s para o tema</string>
     <string name="unset_playlist_thumbnail">Desativar miniatura permanente</string>

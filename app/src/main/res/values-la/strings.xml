@@ -66,7 +66,7 @@
     <string name="search_no_results">Nullae resultationes</string>
     <string name="settings_category_appearance_title">Apparentia</string>
     <string name="settings_category_player_behavior_title">Mos</string>
-    <string name="notification_channel_name">NewPipe notitia</string>
+    <string name="notification_channel_name">Tubular notitia</string>
     <plurals name="listening">
         <item quantity="one">%s audiens</item>
         <item quantity="other">%s audientes</item>

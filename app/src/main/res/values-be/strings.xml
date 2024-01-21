@@ -103,8 +103,8 @@
     <string name="always">Заўсёды</string>
     <string name="just_once">Толькі цяпер</string>
     <string name="file">Файл</string>
-    <string name="notification_channel_name">Апавяшчэнне NewPipe</string>
-    <string name="notification_channel_description">Апавяшчэнні для прайгравальніка NewPipe</string>
+    <string name="notification_channel_name">Апавяшчэнне Tubular</string>
+    <string name="notification_channel_description">Апавяшчэнні для прайгравальніка Tubular</string>
     <string name="unknown_content">[Невядома]</string>
     <string name="switch_to_background">Перайсці ў фон</string>
     <string name="switch_to_popup">Перайсці ў акно</string>
@@ -192,7 +192,7 @@
     <string name="msg_name">Імя файла</string>
     <string name="msg_threads">Патокі</string>
     <string name="msg_error">Памылка</string>
-    <string name="msg_running">NewPipe спампоўвае</string>
+    <string name="msg_running">Tubular спампоўвае</string>
     <string name="msg_running_detail">Падрабязнасці</string>
     <string name="msg_wait">Пачакайце…</string>
     <string name="msg_copied">Скапіявана ў буфер абмену</string>
@@ -208,7 +208,7 @@
     <string name="settings_file_replacement_character_title">Сімвал для замены</string>
     <string name="charset_letters_and_digits">Літары і лічбы</string>
     <string name="charset_most_special_characters">Большасць спецзнакаў</string>
-    <string name="title_activity_about">Аб NewPipe</string>
+    <string name="title_activity_about">Аб Tubular</string>
     <string name="title_licenses">Іншыя ліцэнзіі</string>
     <string name="copyright" formatted="true">© %1$s %2$s пад ліцэнзіяй %3$s</string>
     <string name="tab_about">Аб праграме</string>
@@ -218,16 +218,16 @@
     <string name="contribution_encouragement">Вітаецца ўсё - ідэі, пераклад, змены дызайну, чыстка кода або велізарныя змены ў кодзе. Чым больш зроблена, тым лепш!</string>
     <string name="view_on_github">Адкрыць на GitHub</string>
     <string name="donation_title">Ахвяраваць</string>
-    <string name="donation_encouragement">NewPipe распрацаваны добраахвотнікамі, якія праводзяць свой вольны час, забяспечваючы лепшы карыстацкі досвед. Дапамажыце распрацоўшчыкам зрабіць NewPipe яшчэ лепшым, пакуль яны атрымліваюць асалоду ад кавы.</string>
+    <string name="donation_encouragement">Tubular распрацаваны добраахвотнікамі, якія праводзяць свой вольны час, забяспечваючы лепшы карыстацкі досвед. Дапамажыце распрацоўшчыкам зрабіць Tubular яшчэ лепшым, пакуль яны атрымліваюць асалоду ад кавы.</string>
     <string name="give_back">Аддаць належнае</string>
     <string name="website_title">Вэб-сайт</string>
-    <string name="website_encouragement">Дзеля атрымання больш падрабязнай інфармацыі і апошніх навін аб NewPipe наведайце наш вэб-сайт.</string>
-    <string name="privacy_policy_title">Палітыка прыватнасці NewPipe</string>
-    <string name="privacy_policy_encouragement">Праект NewPipe вельмі сур\'ёзна ставіцца да вашай прыватнасці. Таму прыкладанне не збірае ніякіх дадзеных без вашай згоды. 
-\nПалітыка прыватнасці NewPipe падрабязна тлумачыць, якія дадзеныя адпраўляюцца і захоўваюцца пры адпраўцы справаздачы аб збоях.</string>
+    <string name="website_encouragement">Дзеля атрымання больш падрабязнай інфармацыі і апошніх навін аб Tubular наведайце наш вэб-сайт.</string>
+    <string name="privacy_policy_title">Палітыка прыватнасці Tubular</string>
+    <string name="privacy_policy_encouragement">Праект Tubular вельмі сур\'ёзна ставіцца да вашай прыватнасці. Таму прыкладанне не збірае ніякіх дадзеных без вашай згоды. 
+\nПалітыка прыватнасці Tubular падрабязна тлумачыць, якія дадзеныя адпраўляюцца і захоўваюцца пры адпраўцы справаздачы аб збоях.</string>
     <string name="read_privacy_policy">Прачытаць палітыку</string>
-    <string name="app_license_title">Ліцэнзія NewPipe</string>
-    <string name="app_license">NewPipe - гэта праграмнае забеспячэнне, свабоднае ад копілефта: вы можаце выкарыстоўваць, вывучаць, дзяліцца і паляпшаць яго па жаданні. У прыватнасці, вы можаце распаўсюджваць і/ці змяняць яго ў адпаведнасці з умовамі Агульнай грамадскай ліцэнзіі GNU, апублікаванай Фондам свабоднага праграмнага забеспячэння, альбо версіі 3 Ліцэнзіі, альбо (на ваш выбар) любой пазнейшай версіі.</string>
+    <string name="app_license_title">Ліцэнзія Tubular</string>
+    <string name="app_license">Tubular - гэта праграмнае забеспячэнне, свабоднае ад копілефта: вы можаце выкарыстоўваць, вывучаць, дзяліцца і паляпшаць яго па жаданні. У прыватнасці, вы можаце распаўсюджваць і/ці змяняць яго ў адпаведнасці з умовамі Агульнай грамадскай ліцэнзіі GNU, апублікаванай Фондам свабоднага праграмнага забеспячэння, альбо версіі 3 Ліцэнзіі, альбо (на ваш выбар) любой пазнейшай версіі.</string>
     <string name="read_full_license">Прачытаць ліцэнзію</string>
     <string name="title_activity_history">Гісторыя</string>
     <string name="action_history">Гісторыя</string>
@@ -322,7 +322,7 @@
     <string name="skip_silence_checkbox">Прапускаць цішыню</string>
     <string name="playback_step">Крок</string>
     <string name="playback_reset">Скід</string>
-    <string name="start_accept_privacy_policy">У адпаведнасці з Агульным рэгламентам па абароне дадзеных ЕС (GDPR), звяртаем вашу ўвагу на палітыку прыватнасці NewPipe. Калі ласка, уважліва азнаёмцеся з ёй.
+    <string name="start_accept_privacy_policy">У адпаведнасці з Агульным рэгламентам па абароне дадзеных ЕС (GDPR), звяртаем вашу ўвагу на палітыку прыватнасці Tubular. Калі ласка, уважліва азнаёмцеся з ёй.
 \nВам неабходна прыняць яе ўмовы, каб адправіць нам справаздачу пра памылку.</string>
     <string name="accept">Прыняць</string>
     <string name="decline">Адмовіцца</string>
@@ -338,7 +338,7 @@
     <string name="settings_category_updates_title">Абнаўленні</string>
     <string name="file_deleted">Файл выдалены</string>
     <string name="app_update_notification_channel_name">Апавяшчэнне аб абнаўленні праграмы</string>
-    <string name="app_update_notification_channel_description">Апавяшчэнні пра новыя версіі NewPipe</string>
+    <string name="app_update_notification_channel_description">Апавяшчэнні пра новыя версіі Tubular</string>
     <string name="download_to_sdcard_error_title">Знешняе сховішча недаступна</string>
     <string name="download_to_sdcard_error_message">Загрузка на знешнюю SD-карту немагчымая. Скінуць размяшчэнне тэчкі загрузкі\?</string>
     <string name="saved_tabs_invalid_json">Памылка чытання захаваных укладак. Выкарыстоўваюцца ўкладкі па змаўчанні</string>
@@ -352,7 +352,7 @@
     <string name="list">Спіс</string>
     <string name="grid">Сетка</string>
     <string name="auto">Аўтаматычна</string>
-    <string name="app_update_available_notification_title">Даступна абнаўленне NewPipe!</string>
+    <string name="app_update_available_notification_title">Даступна абнаўленне Tubular!</string>
     <string name="missions_header_finished">Скончана</string>
     <string name="missions_header_pending">У чарзе</string>
     <string name="paused">прыпынена</string>
@@ -398,7 +398,7 @@
     <string name="overwrite_finished_warning">Файл з такім імем ужо існуе</string>
     <string name="overwrite_failed">немагчыма перазапісаць файл</string>
     <string name="download_already_pending">У чарзе ўжо ёсць загрузка з такім імем</string>
-    <string name="error_postprocessing_stopped">NewPipe была зачынена падчас працы над файлам</string>
+    <string name="error_postprocessing_stopped">Tubular была зачынена падчас працы над файлам</string>
     <string name="error_insufficient_storage">Скончылася вольнае месца на прыладзе</string>
     <string name="error_progress_lost">Прагрэс страчаны, так як файл быў выдалены</string>
     <string name="error_timeout">Час злучэння выйшла</string>
@@ -431,7 +431,7 @@
     <string name="choose_instance_prompt">Выберыце экзэмпляр</string>
     <string name="delete_downloaded_files">Выдаліць загружаныя файлы</string>
     <string name="show_original_time_ago_summary">Арыгінальныя тэксты з сэрвісаў будуць бачны ў ленце элементаў</string>
-    <string name="clear_cookie_summary">Ачысціце cookie, якія NewPipe захоўвае пры рашэнні reCAPTCHA</string>
+    <string name="clear_cookie_summary">Ачысціце cookie, якія Tubular захоўвае пры рашэнні reCAPTCHA</string>
     <string name="peertube_instance_add_exists">Інстанцыя ўжо існуе</string>
     <string name="peertube_instance_add_fail">Немагчыма праверыць экзэмпляр</string>
     <string name="peertube_instance_add_help">Увядзіце адрас URL інстанцыі</string>
@@ -566,7 +566,7 @@
     <string name="seekbar_preview_thumbnail_title">Прагляд мініяцюры над паўзунком часу</string>
     <string name="high_quality_larger">Высокая якасць (больш)</string>
     <string name="dont_show">Не паказваць</string>
-    <string name="app_update_unavailable_toast">Вы выкарыстоўваеце апошнюю версію NewPipe</string>
+    <string name="app_update_unavailable_toast">Вы выкарыстоўваеце апошнюю версію Tubular</string>
     <string name="error_download_resource_gone">Немажліва аднавіць гэту загрузку</string>
     <plurals name="deleted_downloads_toast">
         <item quantity="one">Выдалена %1$s зазагрузка</item>
@@ -590,7 +590,7 @@
 \nУключыце \"%1$s\" у наладах, калі хочаце бачыць гэта.</string>
     <string name="error_report_channel_name">Апавяшчэнне аб памылцы</string>
     <string name="error_report_channel_description">Апавяшчэнні для паведамлення аб памылках</string>
-    <string name="error_report_notification_title">NewPipe выявіў памылку, націсніце, каб паведаміць</string>
+    <string name="error_report_notification_title">Tubular выявіў памылку, націсніце, каб паведаміць</string>
     <string name="start_main_player_fullscreen_summary">Не запускайце відэа ў міні-прайгравальніку, а пераключыце непасрэдна ў поўнаэкранны рэжым, калі аўтаматычны паварот заблакіраваны. Вы ўсё яшчэ можаце атрымаць доступ да міні-плэера, выйшоўшы з поўнаэкраннага рэжыму</string>
     <string name="peertube_instance_url_help">Знайдзіце асобнікі, якія вам падабаюцца, на %s</string>
     <string name="show_meta_info_title">Паказаць метаінфармацыю</string>
@@ -603,7 +603,7 @@
     <string name="show_meta_info_summary">Адключыце, каб схаваць поля метаінфармацыі з дадатковай інфармацыяй пра стваральніка патоку, змесціва патоку або пошукавы запыт</string>
     <string name="remote_search_suggestions">Прапановы аддаленага пошуку</string>
     <string name="restricted_video_no_stream">Гэта відэа абмежавана па ўзросце.
-\nУ сувязі з новай палітыкай YouTube у дачыненні да відэа з узроставымі абмежаваннямі, NewPipe не можа атрымаць доступ ні да аднаго са сваіх відэапатокаў і, такім чынам, не можа іх прайграваць.</string>
+\nУ сувязі з новай палітыкай YouTube у дачыненні да відэа з узроставымі абмежаваннямі, Tubular не можа атрымаць доступ ні да аднаго са сваіх відэапатокаў і, такім чынам, не можа іх прайграваць.</string>
     <string name="youtube_restricted_mode_enabled_summary">YouTube забяспечвае \"Абмежаваны рэжым\", які хавае патэнцыйна змесціва для дарослых</string>
     <string name="msg_calculating_hash">Разлік хэша</string>
     <string name="recaptcha_solve">Вырашана</string>
@@ -688,7 +688,7 @@
     <string name="feed_update_threshold_summary">Час пасля апошняга абнаўлення, перш чым падпіска лічыцца састарэлай — %s</string>
     <string name="feed_load_error">Памылка загрузкі стужкі</string>
     <string name="feed_load_error_terminated">Уліковы запіс аўтара быў спынены.
-\nNewPipe не зможа загрузіць гэты канал у будучыні.
+\nTubular не зможа загрузіць гэты канал у будучыні.
 \nВы хочаце адмовіцца ад падпіскі на гэты канал\?</string>
     <string name="feed_load_error_fast_unknown">Рэжым хуткай загрузкі стужкі не дае дадатковай інфармацыі аб гэтым.</string>
     <string name="feed_use_dedicated_fetch_method_title">Атрымлівайце са спецыяльнага канала, калі ён даступны</string>
@@ -714,7 +714,7 @@
     <string name="radio">Радыё</string>
     <string name="feed_hide_streams_title">Паказаць наступныя стрымы</string>
     <string name="feed_show_hide_streams">Паказаць/схаваць стрымы</string>
-    <string name="content_not_supported">Гэты кантэнт яшчэ не падтрымліваецца NewPipe.
+    <string name="content_not_supported">Гэты кантэнт яшчэ не падтрымліваецца Tubular.
 \n
 \nСпадзяюся, ён будзе падтрымлівацца ў наступных версіях.</string>
     <string name="playlist_page_summary">Старонка плэйліста</string>
@@ -723,15 +723,15 @@
     <string name="no_appropriate_file_manager_message">Для гэтага дзеяння не знойдзены адпаведны дыспетчар файлаў.
 \nКалі ласка, усталюйце файлавы мэнэджар або паспрабуйце адключыць «%s» у наладах загрузкі</string>
     <string name="georestricted_content">Гэты кантэнт недаступны ў вашай краіне.</string>
-    <string name="soundcloud_go_plus_content">Гэта трэк SoundCloud Go+, прынамсі ў вашай краіне, таму NewPipe не можа трансляваць ці спампоўваць яго.</string>
-    <string name="private_content">Гэта змесціва з\'яўляецца прыватным, таму NewPipe не можа яго трансляваць або спампоўваць.</string>
-    <string name="youtube_music_premium_content">Гэта відэа даступна толькі для падпісчыкаў YouTube Music Premium, таму NewPipe не можа яго трансляваць або спампоўваць.</string>
+    <string name="soundcloud_go_plus_content">Гэта трэк SoundCloud Go+, прынамсі ў вашай краіне, таму Tubular не можа трансляваць ці спампоўваць яго.</string>
+    <string name="private_content">Гэта змесціва з\'яўляецца прыватным, таму Tubular не можа яго трансляваць або спампоўваць.</string>
+    <string name="youtube_music_premium_content">Гэта відэа даступна толькі для падпісчыкаў YouTube Music Premium, таму Tubular не можа яго трансляваць або спампоўваць.</string>
     <string name="account_terminated">Уліковы запіс спынены</string>
     <string name="service_provides_reason">%s дае наступную прычыну:</string>
     <string name="featured">Рэкамендаваны</string>
     <string name="metadata_privacy_internal">Унутраная</string>
     <string name="feed_show_watched">Цалкам прагледзеў</string>
-    <string name="paid_content">Гэты кантэнт даступны толькі для аплачаных карыстальнікаў, таму NewPipe не можа яго трансляваць або спампоўваць.</string>
+    <string name="paid_content">Гэты кантэнт даступны толькі для аплачаных карыстальнікаў, таму Tubular не можа яго трансляваць або спампоўваць.</string>
     <string name="feed_use_dedicated_fetch_method_summary">Даступны ў некаторых службах, звычайна нашмат хутчэй, але можа вяртаць абмежаваную колькасць элементаў і часта няпоўную інфармацыю (напрыклад, без працягласці, тыпу элемента, без актыўнага стану)</string>
     <string name="metadata_age_limit">Узроставае абмежаванне</string>
     <string name="no_appropriate_file_manager_message_android_10">Для гэтага дзеяння не знойдзены адпаведны дыспетчар файлаў.
@@ -741,7 +741,7 @@
     <string name="feed_show_partially_watched">Часткова прагледжана</string>
     <string name="feed_use_dedicated_fetch_method_help_text">Як вы думаеце, загрузка корму адбываецца занадта павольна\? Калі так, паспрабуйце ўключыць хуткую загрузку (гэта можна змяніць у наладах або націснуўшы кнопку ніжэй).
 \n
-\nNewPipe прапануе дзве стратэгіі загрузкі корму:
+\nTubular прапануе дзве стратэгіі загрузкі корму:
 \n• Атрыманне ўсяго канала падпіскі павольнае, але поўнае.
 \n• Выкарыстанне спецыяльнай канчатковай кропкі абслугоўвання, якая працуе хутка, але звычайна не поўная.
 \n

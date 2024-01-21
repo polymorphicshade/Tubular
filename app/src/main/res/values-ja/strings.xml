@@ -69,7 +69,7 @@
     <string name="msg_name">ファイル名</string>
     <string name="msg_threads">同時接続数</string>
     <string name="msg_error">エラー</string>
-    <string name="msg_running">ダウンロード中 (NewPipe)</string>
+    <string name="msg_running">ダウンロード中 (Tubular)</string>
     <string name="msg_running_detail">タップして詳細を表示</string>
     <string name="msg_wait">お待ちください…</string>
     <string name="msg_copied">クリップボードにコピーしました</string>
@@ -104,14 +104,14 @@
     <string name="show_search_suggestions_title">検索候補の表示</string>
     <string name="show_search_suggestions_summary">検索時に表示する候補を選択します</string>
     <string name="best_resolution">最高</string>
-    <string name="title_activity_about">NewPipe について</string>
+    <string name="title_activity_about">Tubular について</string>
     <string name="title_licenses">サードパーティー ライセンス</string>
     <string name="copyright" formatted="true">© %1$s 作者 %2$s ライセンス %3$s</string>
     <string name="tab_about">バージョン情報とよくある質問</string>
     <string name="tab_licenses">ライセンス</string>
     <string name="app_description">Android 向けのフリーで軽量なストリーミング。</string>
     <string name="view_on_github">GitHub で表示</string>
-    <string name="app_license_title">NewPipe のライセンス</string>
+    <string name="app_license_title">Tubular のライセンス</string>
     <string name="contribution_encouragement">翻訳、デザインの変更、コードの整理、動作の重いコードの変更など、アイデアをお持ちではありませんか？ヘルプはいつでも歓迎します。より良いものを一緒に作り上げましょう！</string>
     <string name="read_full_license">ライセンスを読む</string>
     <string name="contribution_title">貢献する</string>
@@ -134,7 +134,7 @@
     <string name="settings_category_history_title">履歴とキャッシュ</string>
     <string name="undo">元に戻す</string>
     <string name="play_all">すべて再生</string>
-    <string name="notification_channel_name">NewPipe の通知</string>
+    <string name="notification_channel_name">Tubular の通知</string>
     <string name="unknown_content">[不明]</string>
     <string name="player_stream_failure">動画の再生ができませんでした</string>
     <string name="player_unrecoverable_failure">回復不能なエラーが発生しました</string>
@@ -148,9 +148,9 @@
     <string name="charset_letters_and_digits">文字と数字</string>
     <string name="charset_most_special_characters">文字と数字と、多くの特殊文字</string>
     <string name="donation_title">寄付</string>
-    <string name="donation_encouragement">NewPipe は、あなたに最高の体験を提供するために、ボランティアが自分たちの時間を使って開発しています。開発者たちがコーヒーを飲みながら NewPipe を継続的に改良できるよう、ご支援をお願いします。</string>
+    <string name="donation_encouragement">Tubular は、あなたに最高の体験を提供するために、ボランティアが自分たちの時間を使って開発しています。開発者たちがコーヒーを飲みながら Tubular を継続的に改良できるよう、ご支援をお願いします。</string>
     <string name="website_title">Webサイト</string>
-    <string name="website_encouragement">NewPipe の詳しい情報や最新情報については、ウェブサイトをご覧ください。</string>
+    <string name="website_encouragement">Tubular の詳しい情報や最新情報については、ウェブサイトをご覧ください。</string>
     <string name="title_activity_history">履歴</string>
     <string name="action_history">履歴</string>
     <string name="delete_item_search_history">このアイテムを検索履歴から削除しますか？</string>
@@ -248,7 +248,7 @@
     <string name="channels">チャンネル</string>
     <string name="playlists">プレイリスト</string>
     <string name="users">ユーザー</string>
-    <string name="privacy_policy_title">NewPipe プライバシーポリシー</string>
+    <string name="privacy_policy_title">Tubular プライバシーポリシー</string>
     <string name="read_privacy_policy">プライバシーポリシーを確認</string>
     <string name="use_inexact_seek_title">おおまかなシーク</string>
     <string name="use_inexact_seek_summary">おおまかなシークを使用することで精度が下がる代わりに高速にシークができます。5 秒、15 秒または 25 秒間隔のシークはできません</string>
@@ -265,16 +265,16 @@
     </plurals>
     <string name="one_item_deleted">1 つのアイテムが削除されました。</string>
     <string name="give_back">支援する</string>
-    <string name="privacy_policy_encouragement">NewPipe プロジェクトはあなたのプライバシーを非常に大切にしています。あなたの同意がない限り、アプリはいかなるデータも収集しません。
-\nNewPipe のプライバシー・ポリシーでは、クラッシュリポート送信時にどのような種類のデータが送信・記録されるかを詳細に説明しています。</string>
-    <string name="app_license">NewPipe はコピーレフトなソフトウェアです。あなたは自由にそれを使用し、研究し、共有し、そして改善することができます。あなたは、GNU フリーソフトウェア財団が公開する GNU General Public ライセンス バージョン3以降の下に、自由に再配布・修正を行うことができます。</string>
+    <string name="privacy_policy_encouragement">Tubular プロジェクトはあなたのプライバシーを非常に大切にしています。あなたの同意がない限り、アプリはいかなるデータも収集しません。
+\nTubular のプライバシー・ポリシーでは、クラッシュリポート送信時にどのような種類のデータが送信・記録されるかを詳細に説明しています。</string>
+    <string name="app_license">Tubular はコピーレフトなソフトウェアです。あなたは自由にそれを使用し、研究し、共有し、そして改善することができます。あなたは、GNU フリーソフトウェア財団が公開する GNU General Public ライセンス バージョン3以降の下に、自由に再配布・修正を行うことができます。</string>
     <string name="title_last_played">最終再生日時</string>
     <string name="title_most_played">最も再生された動画</string>
     <string name="resize_zoom">拡大</string>
     <string name="controls_add_to_playlist_title">プレイリスト</string>
     <string name="show_hold_to_append_title">「長押しでキューに追加」のヒントを表示</string>
     <string name="tracks">トラック</string>
-    <string name="notification_channel_description">NewPipe のプレイヤーの通知</string>
+    <string name="notification_channel_description">Tubular のプレイヤーの通知</string>
     <string name="new_and_hot">新着と人気</string>
     <string name="hold_to_append">長押しでキューに追加</string>
     <string name="start_here_on_popup">ポップアップで連続再生を開始</string>
@@ -325,20 +325,20 @@
     <string name="tab_choose">タブを選択</string>
     <string name="settings_category_updates_title">アプリの更新</string>
     <string name="events">イベント</string>
-    <string name="app_update_notification_channel_description">新しい NewPipe バージョンの通知</string>
+    <string name="app_update_notification_channel_description">新しい Tubular バージョンの通知</string>
     <string name="download_to_sdcard_error_title">外部記憶装置は利用できません</string>
     <string name="restore_defaults">既定値に戻す</string>
     <string name="restore_defaults_confirmation">既定の設定を復元しますか\?</string>
     <string name="subscribers_count_not_available">登録者数は利用できません</string>
     <string name="conferences">会議</string>
-    <string name="start_accept_privacy_policy">ヨーロッパの一般データ保護規制（GDPR）に準拠するために、NewPipeの個人情報保護方針にご注意ください。よく読んでください。
+    <string name="start_accept_privacy_policy">ヨーロッパの一般データ保護規制（GDPR）に準拠するために、Tubularの個人情報保護方針にご注意ください。よく読んでください。
 \n私たちに不具合報告を送るためには、これを受け入れなければなりません。</string>
     <string name="updates_setting_title">アプリの更新</string>
     <string name="list_view_mode">リストビュー モード</string>
     <string name="list">リスト</string>
     <string name="grid">グリッド</string>
     <string name="auto">自動</string>
-    <string name="app_update_available_notification_title">NewPipe のアップデートがあります！</string>
+    <string name="app_update_available_notification_title">Tubular のアップデートがあります！</string>
     <string name="missions_header_finished">完了</string>
     <string name="missions_header_pending">順番に処理中</string>
     <string name="paused">一時停止</string>
@@ -389,7 +389,7 @@
     <string name="missing_file">ファイルが移動または削除されました</string>
     <string name="overwrite_failed">ファイルを上書きできません</string>
     <string name="download_already_pending">同じファイル名のダウンロードが既に進行中です</string>
-    <string name="error_postprocessing_stopped">ファイルの作業中に NewPipe が閉じられました</string>
+    <string name="error_postprocessing_stopped">ファイルの作業中に Tubular が閉じられました</string>
     <string name="error_insufficient_storage">デバイスに空き容量がありません</string>
     <string name="error_progress_lost">ファイルが削除されたため、進行状況が失われました</string>
     <string name="confirm_prompt">ダウンロード履歴、またはダウンロードしたファイルを消去しますか\?</string>
@@ -481,7 +481,7 @@
     <string name="feed_use_dedicated_fetch_method_disable_button">高速モードを無効化</string>
     <string name="feed_use_dedicated_fetch_method_help_text">フィードの読み込みが遅すぎると思いますか？ その場合、高速読み込みを有効化してみてください (設定、もしくは下のボタンを押して変更することができます)。
 \n
-\nNewPipe は2つの読み込み方法を提供します:
+\nTubular は2つの読み込み方法を提供します:
 \n・登録チャンネル全体を取得します。これは低速ですが完全です。
 \n・専用のサービス エンドポイントを使用します。これは高速ですが、たいていの場合不完全です。
 \n
@@ -492,7 +492,7 @@
 \nつまり、読み込み方法の選択は速度または正確さのどちらを優先するか、あなたの好みによります。</string>
     <string name="infinite_videos">∞ の動画</string>
     <string name="more_than_100_videos">100 以上の動画</string>
-    <string name="content_not_supported">このコンテンツはまだ NewPipe でサポートされていません。
+    <string name="content_not_supported">このコンテンツはまだ Tubular でサポートされていません。
 \n
 \n今後のバージョンでサポートされるかもしれません。</string>
     <string name="songs">曲</string>
@@ -546,7 +546,7 @@
     <string name="show_age_restricted_content_summary">年齢制限 (18+ など) の理由で、子供には不適切な可能性のあるコンテンツを表示する</string>
     <string name="enqueue_stream">キューに追加</string>
     <string name="enqueued">キューに追加しました</string>
-    <string name="clear_cookie_summary">reCAPTCHA を解いたときに NewPipe が保存した Cookie を消去します</string>
+    <string name="clear_cookie_summary">reCAPTCHA を解いたときに Tubular が保存した Cookie を消去します</string>
     <string name="clear_cookie_title">reCAPTCHA の Cookie を消去</string>
     <string name="recaptcha_cookies_cleared">reCAPTCHA の Cookie が消去されました</string>
     <string name="show_memory_leaks">メモリリークを表示</string>
@@ -568,14 +568,14 @@
     <string name="show_meta_info_summary">動画作成者、動画コンテンツ、検索リクエストに関する追加情報を含むメタ情報ボックスを非表示にするにはオフにします</string>
     <string name="no_app_to_open_intent">お使いのデバイス上のアプリでは、これを開くことはできません</string>
     <string name="chapters">チャプター</string>
-    <string name="paid_content">このコンテンツは有料のユーザーのみが利用できるため、NewPipeでのストリーミングやダウンロードはできません。</string>
-    <string name="youtube_music_premium_content">この動画は YouTube ミュージック プレミアム会員のみが利用できるようになっているので、NewPipe でストリーミングやダウンロードを行うことはできません。</string>
-    <string name="private_content">このコンテンツは非公開のため、NewPipeでストリーミングやダウンロードすることはできません。</string>
-    <string name="soundcloud_go_plus_content">これは SoundCloud Go+ トラックなので、少なくともあなたの国では、NewPipeではストリーミングやダウンロードができません。</string>
+    <string name="paid_content">このコンテンツは有料のユーザーのみが利用できるため、Tubularでのストリーミングやダウンロードはできません。</string>
+    <string name="youtube_music_premium_content">この動画は YouTube ミュージック プレミアム会員のみが利用できるようになっているので、Tubular でストリーミングやダウンロードを行うことはできません。</string>
+    <string name="private_content">このコンテンツは非公開のため、Tubularでストリーミングやダウンロードすることはできません。</string>
+    <string name="soundcloud_go_plus_content">これは SoundCloud Go+ トラックなので、少なくともあなたの国では、Tubularではストリーミングやダウンロードができません。</string>
     <string name="georestricted_content">このコンテンツは、お住まいの国ではご利用いただけません。</string>
     <string name="crash_the_app">アプリのクラッシュ</string>
     <string name="restricted_video_no_stream">この動画は年齢制限があります。
-\n年齢制限付き動画を含む新しい YouTube ポリシーにより、NewPipe は動画ストリームにアクセスできないため再生できません。</string>
+\n年齢制限付き動画を含む新しい YouTube ポリシーにより、Tubular は動画ストリームにアクセスできないため再生できません。</string>
     <string name="select_night_theme_toast">以下からお好みの夜間テーマを選択できます</string>
     <string name="auto_device_theme_title">自動 (デバイスのテーマ)</string>
     <string name="night_theme_summary">お好みの夜間テーマを選択 — %s</string>
@@ -611,7 +611,7 @@
     <string name="description_select_note">今説明文のテキストを選択できます。選択モード中はページがちらついたりリンクがクリックできなくなったりすることに注意してください。</string>
     <string name="account_terminated">停止されたアカウント</string>
     <string name="feed_load_error_terminated">この投稿者のアカウントは停止されています。
-\nNewPipe は将来的にこのフィードを読み込めなくなります。
+\nTubular は将来的にこのフィードを読み込めなくなります。
 \nこのチャンネルの登録を解除しますか？</string>
     <string name="off">オフ</string>
     <string name="on">オン</string>
@@ -694,7 +694,7 @@
     <string name="sort">並び替え</string>
     <string name="faq">ウェブサイトを表示</string>
     <string name="app_update_available_notification_text">タップして%sをダウンロード</string>
-    <string name="app_update_unavailable_toast">あなたはNewPipeの最新版を起動しています</string>
+    <string name="app_update_unavailable_toast">あなたはTubularの最新版を起動しています</string>
     <string name="faq_title">よくある質問</string>
     <string name="faq_description">アプリの使い方に困ったときは、よくある質問に答えていますので、ぜひご覧ください!</string>
     <string name="night_theme_available">%sがテーマに選択された場合のみ、この選択肢が利用可能です</string>

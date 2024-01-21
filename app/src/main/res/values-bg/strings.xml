@@ -80,8 +80,8 @@
     <string name="best_resolution">Най-добра резолюция</string>
     <string name="undo">Отмени</string>
     <string name="play_all">Възпроизведи всички</string>
-    <string name="notification_channel_name">Известия от NewPipe</string>
-    <string name="notification_channel_description">Известия за Фонов плейър и плейъра в Отделен прозорец на NewPipe</string>
+    <string name="notification_channel_name">Известия от Tubular</string>
+    <string name="notification_channel_description">Известия за Фонов плейър и плейъра в Отделен прозорец на Tubular</string>
     <string name="unknown_content">[Неизвестен]</string>
     <string name="general_error">Грешка</string>
     <string name="network_error">Проблем с мрежата</string>
@@ -131,7 +131,7 @@
     <string name="msg_name">Име на файла</string>
     <string name="msg_threads">Нишки</string>
     <string name="msg_error">Грешка</string>
-    <string name="msg_running">NewPipe Изтегляне</string>
+    <string name="msg_running">Tubular Изтегляне</string>
     <string name="msg_running_detail">Докосни за подробности</string>
     <string name="msg_wait">Моля, изчакайте…</string>
     <string name="msg_copied">Копирано в клипборда</string>
@@ -139,7 +139,7 @@
     <string name="settings_file_replacement_character_summary">Невалидните символи се заменят с тази стойност</string>
     <string name="settings_file_replacement_character_title">Символ за замяна</string>
     <string name="charset_letters_and_digits">Букви и цифри</string>
-    <string name="title_activity_about">За NewPipe</string>
+    <string name="title_activity_about">За Tubular</string>
     <string name="title_licenses">Лицензи от трети страни</string>
     <string name="tab_about">Относно приложението</string>
     <string name="tab_licenses">Лицензи</string>
@@ -193,15 +193,15 @@
     <string name="contribution_title">Съдействайте</string>
     <string name="contribution_encouragement">За всичко, което се сетите: превод, промени по дизайна, изчистване на кода или много сериозни промени по кода – помощта е винаги добре дошла. Колкото повече развитие, толкова по-добре!</string>
     <string name="donation_title">Направете дарение</string>
-    <string name="donation_encouragement">NewPipe се разработва от доброволци, които отделят от своето време, за да предоставят най-доброто потребителско изживяване. Включете се в разработката като почерпите разработчиците с една чашка кафе, които да изпият, докато правят NewPipe още по-добро приложение.</string>
+    <string name="donation_encouragement">Tubular се разработва от доброволци, които отделят от своето време, за да предоставят най-доброто потребителско изживяване. Включете се в разработката като почерпите разработчиците с една чашка кафе, които да изпият, докато правят Tubular още по-добро приложение.</string>
     <string name="give_back">Дари</string>
     <string name="website_title">Уебсайт</string>
-    <string name="website_encouragement">Посетете сайта на NewPipe за повече информация и новини.</string>
-    <string name="privacy_policy_title">Политиката на NewPipe за личните данни</string>
-    <string name="privacy_policy_encouragement">Проектът NewPipe се отнася много сериозно към вашата поверителност. За това, приложението не събира никакви данни без вашето съгласие.
+    <string name="website_encouragement">Посетете сайта на Tubular за повече информация и новини.</string>
+    <string name="privacy_policy_title">Политиката на Tubular за личните данни</string>
+    <string name="privacy_policy_encouragement">Проектът Tubular се отнася много сериозно към вашата поверителност. За това, приложението не събира никакви данни без вашето съгласие.
 \nНашата политика за личните данни обяснява подробно какви данни изпращате и къде се съхраняват, когато изпращате съобщения за грешки.</string>
     <string name="read_privacy_policy">Прочетете нашата политика за поверителност</string>
-    <string name="app_license_title">Лицензът на NewPipe</string>
+    <string name="app_license_title">Лицензът на Tubular</string>
     <string name="no_player_found_toast">Липсва стрийм плейър (можете да изтеглите VLC, за да пуснете стрийма).</string>
     <string name="show_hold_to_append_summary">Показвай подсказка при избор на фоновия режим или режим в прозорец от екрана за „Детайли“ към видео</string>
     <string name="clear_views_history_summary">Изтрива историята на възпроизвежданите стриймове и позицията на възпроизвеждането</string>
@@ -219,7 +219,7 @@
     <string name="recaptcha_request_toast">Изисква се въвеждане на reCAPTCHA</string>
     <string name="settings_category_downloads_title">Изтегляне</string>
     <string name="charset_most_special_characters">Повечето специални символи</string>
-    <string name="app_license">NewPipe е безплатен „copyleft“ софтуер: Можете да го използвате, изучавате, споделяте и подобрявате по желание. В частност, Вие можете да препубликувате и/или модифицирате приложението според правилата на Главния обществен лиценз на ГНУ, издаден от Фондацията за свободен софтуер – версия 3 на лиценза или по-нова.</string>
+    <string name="app_license">Tubular е безплатен „copyleft“ софтуер: Можете да го използвате, изучавате, споделяте и подобрявате по желание. В частност, Вие можете да препубликувате и/или модифицирате приложението според правилата на Главния обществен лиценз на ГНУ, издаден от Фондацията за свободен софтуер – версия 3 на лиценза или по-нова.</string>
     <string name="read_full_license">Прочетете лиценза</string>
     <string name="title_activity_history">История</string>
     <string name="action_history">История</string>
@@ -312,7 +312,7 @@
     <string name="playback_tempo">Темпо</string>
     <string name="playback_pitch">Височина</string>
     <string name="skip_silence_checkbox">Бързо превъртане при тишина</string>
-    <string name="start_accept_privacy_policy">От съображения към Общия европейски регламент относно защитата на данните, Ви привличаме вниманието към политиката за поверителност на NewPipe. Моля, прочетете я внимателно.
+    <string name="start_accept_privacy_policy">От съображения към Общия европейски регламент относно защитата на данните, Ви привличаме вниманието към политиката за поверителност на Tubular. Моля, прочетете я внимателно.
 \nТрябва да сте съгласни с условията, за да ни изпратите доклада за грешката.</string>
     <string name="accept">Приеми</string>
     <string name="decline">Откажи</string>
@@ -369,7 +369,7 @@
     <string name="missions_header_finished">Завършено</string>
     <string name="paused">прекъснат</string>
     <string name="restricted_video_no_stream">Това видео е с възрастови ограничения.
-\nПоради новите политики на YouTube за видеа с възрастови ограничения, NewPipe не може да достъпи нито един от видеопотоците на това видео и не може да го възпроизведе.</string>
+\nПоради новите политики на YouTube за видеа с възрастови ограничения, Tubular не може да достъпи нито един от видеопотоците на това видео и не може да го възпроизведе.</string>
     <string name="dont_show">Не показвай</string>
     <string name="local_search_suggestions">Местни предложения за търсене</string>
     <string name="error_report_open_github_notice">Моля проверете дали има създадена дискусия за срив като този. Постъпилите дубликати са в ущърб на така ценното време за разработка.</string>
@@ -390,7 +390,7 @@
     <string name="wifi_only">Само при Wi-Fi</string>
     <string name="list_view_mode">Вид на списъка</string>
     <string name="enable_playback_resume_summary">Възстанови последната позиция</string>
-    <string name="app_update_available_notification_title">Нова версия на NewPipe е налична!</string>
+    <string name="app_update_available_notification_title">Нова версия на Tubular е налична!</string>
     <string name="seekbar_preview_thumbnail_title">Миниатюри на лентата за превъртане</string>
     <string name="low_quality_smaller">Нискокачествени (малки)</string>
     <string name="queued">на опашка</string>
@@ -479,7 +479,7 @@
     <string name="max_retry_desc">Максимален брой опити преди отменяне на изтеглянето</string>
     <string name="feed_create_new_group_button_title">Създай</string>
     <string name="feed_group_dialog_delete_message">Искате ли да изтриете тази група\?</string>
-    <string name="content_not_supported">Това съдържание не се поддържа от NewPipe.
+    <string name="content_not_supported">Това съдържание не се поддържа от Tubular.
 \n
 \nЕвентуално може да бъде поддържано в бъдещи версии.</string>
     <string name="processing_may_take_a_moment">Обработка… Ще отнеме момент</string>
@@ -519,14 +519,14 @@
         <item quantity="other">%d дни</item>
     </plurals>
     <string name="channel_created_by">Създадено от %s</string>
-    <string name="paid_content">Съдържанието е достъпно само за хора, които са си платили, затова не може да бъде гледано или изтеглено с NewPipe.</string>
-    <string name="youtube_music_premium_content">Това видео е достъпно за абонати на YouTube Music Premium, затова не може да бъде гледано или изтеглено с NewPipe.</string>
+    <string name="paid_content">Съдържанието е достъпно само за хора, които са си платили, затова не може да бъде гледано или изтеглено с Tubular.</string>
+    <string name="youtube_music_premium_content">Това видео е достъпно за абонати на YouTube Music Premium, затова не може да бъде гледано или изтеглено с Tubular.</string>
     <string name="remove_watched_popup_title">Премахни изгледаните видеа\?</string>
     <string name="remove_watched_popup_yes_and_partially_watched_videos">Да, както и само частично изгледаните видеа</string>
     <string name="subscribers_count_not_available">Брой на абонати не е наличен</string>
     <string name="peertube_instance_add_exists">Инстанцията вече съществува</string>
     <string name="missing_file">Файлът е преместен или изтрит</string>
-    <string name="app_update_notification_channel_description">Известие за нова версия на NewPipe</string>
+    <string name="app_update_notification_channel_description">Известие за нова версия на Tubular</string>
     <string name="peertube_instance_url_title">PeerTube инстанции</string>
     <string name="download_already_pending">Има насрочено изтегляне с това име</string>
     <string name="download_already_running">Вече има активно изтегляне с това име</string>

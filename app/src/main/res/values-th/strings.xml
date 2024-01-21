@@ -107,10 +107,10 @@
     <string name="always">ตลอดเวลา</string>
     <string name="just_once">เพียงครั้งเดียว</string>
     <string name="file">ไฟล์</string>
-    <string name="notification_channel_name">การแจ้งเตือน NewPipe</string>
-    <string name="notification_channel_description">การแจ้งเตือนของแอป NewPipe เมื่อเล่นสื่อในโหมดพื้นหลังและป๊อปอัพ</string>
+    <string name="notification_channel_name">การแจ้งเตือน Tubular</string>
+    <string name="notification_channel_description">การแจ้งเตือนของแอป Tubular เมื่อเล่นสื่อในโหมดพื้นหลังและป๊อปอัพ</string>
     <string name="app_update_notification_channel_name">การแจ้งเตือนการอัปเดตแอป</string>
-    <string name="app_update_notification_channel_description">การแจ้งเตือนสำหรับ NewPipe เวอร์ชั่นใหม่</string>
+    <string name="app_update_notification_channel_description">การแจ้งเตือนสำหรับ Tubular เวอร์ชั่นใหม่</string>
     <string name="unknown_content">[ไม่ทราบ]</string>
     <string name="switch_to_background">สลับไปยังโหมดพื้นหลัง</string>
     <string name="switch_to_popup">สลับไปยังโหมดป๊อปอัพ</string>
@@ -186,7 +186,7 @@
     <string name="dismiss">ไม่สนใจ</string>
     <string name="rename">เปลี่ยนชื่อ</string>
     <string name="msg_name">ชื่อไฟล์</string>
-    <string name="msg_running">NewPipe กำลังดาวน์โหลด</string>
+    <string name="msg_running">Tubular กำลังดาวน์โหลด</string>
     <string name="msg_running_detail">แตะเพื่อดูรายละเอียด</string>
     <string name="msg_wait">โปรดรอ…</string>
     <string name="msg_copied">คัดลอกไปที่คลิปบอร์ดแล้ว</string>
@@ -200,7 +200,7 @@
     <string name="settings_file_replacement_character_title">อักขระทดแทน</string>
     <string name="charset_letters_and_digits">ตัวอักษรและตัวเลข</string>
     <string name="charset_most_special_characters">อักขระพิเศษส่วนใหญ่</string>
-    <string name="title_activity_about">เกี่ยวกับ NewPipe</string>
+    <string name="title_activity_about">เกี่ยวกับ Tubular</string>
     <string name="title_licenses">สัญญาอนุญาตของบุคคลที่สาม</string>
     <string name="copyright" formatted="true">© %1$s โดย %2$s ภายใต้ %3$s</string>
     <string name="tab_about">เกี่ยวกับ</string>
@@ -212,12 +212,12 @@
     <string name="donation_title">บริจาค</string>
     <string name="give_back">คืนให้</string>
     <string name="website_title">เว็บไซต์</string>
-    <string name="website_encouragement">เยี่ยมชมเว็บไซต์ NewPipe สำหรับข้อมูลเพิ่มเติมและข่าวสาร</string>
-    <string name="privacy_policy_title">นโยบายความเป็นส่วนตัวของ NewPipe</string>
-    <string name="privacy_policy_encouragement">โครงการ NewPipe คำนึงถึงความเป็นส่วนตัวของคุณอย่างจริงจัง ดังนั้นแอปจะไม่เก็บรวบรวมข้อมูลใดๆ โดยไม่ได้รับความยินยอมจากคุณ
-\nนโยบายความเป็นส่วนตัวของ NewPipe มีการอธิบายในรายละเอียดเกี่ยวกับข้อมูลที่จะถูกส่งออกไปและเก็บไว้เมื่อคุณรายงานความผิดพลาดของแอป</string>
+    <string name="website_encouragement">เยี่ยมชมเว็บไซต์ Tubular สำหรับข้อมูลเพิ่มเติมและข่าวสาร</string>
+    <string name="privacy_policy_title">นโยบายความเป็นส่วนตัวของ Tubular</string>
+    <string name="privacy_policy_encouragement">โครงการ Tubular คำนึงถึงความเป็นส่วนตัวของคุณอย่างจริงจัง ดังนั้นแอปจะไม่เก็บรวบรวมข้อมูลใดๆ โดยไม่ได้รับความยินยอมจากคุณ
+\nนโยบายความเป็นส่วนตัวของ Tubular มีการอธิบายในรายละเอียดเกี่ยวกับข้อมูลที่จะถูกส่งออกไปและเก็บไว้เมื่อคุณรายงานความผิดพลาดของแอป</string>
     <string name="read_privacy_policy">อ่านนโยบายความเป็นส่วนตัว</string>
-    <string name="app_license_title">สัญญาอนุญาตของ NewPipe</string>
+    <string name="app_license_title">สัญญาอนุญาตของ Tubular</string>
     <string name="read_full_license">อ่านสัญญาอนุญาต</string>
     <string name="title_activity_history">ประวัติ</string>
     <string name="action_history">ประวัติ</string>
@@ -306,7 +306,7 @@
     <string name="skip_silence_checkbox">กรอไปข้างหน้าระหว่างความเงียบ</string>
     <string name="playback_step">ทีละ</string>
     <string name="playback_reset">รีเซ็ต</string>
-    <string name="start_accept_privacy_policy">เพื่อให้สอดคล้องกับระเบียบข้อบังคับว่าด้วยการป้องกันข้อมูลทั่วไปของยุโรป (GDPR) เราขอแนะนำให้คุณอ่านนโยบายความเป็นส่วนตัวของ NewPipe อย่างระมัดระวังและถี่ถ้วน
+    <string name="start_accept_privacy_policy">เพื่อให้สอดคล้องกับระเบียบข้อบังคับว่าด้วยการป้องกันข้อมูลทั่วไปของยุโรป (GDPR) เราขอแนะนำให้คุณอ่านนโยบายความเป็นส่วนตัวของ Tubular อย่างระมัดระวังและถี่ถ้วน
 \nคุณต้องยอมรับข้อตกลงเพื่ออนุญาตให้ส่งรายงานข้อผิดพลาดถึงเรา</string>
     <string name="accept">ยอมรับ</string>
     <string name="decline">ปฏิเสธ</string>
@@ -323,7 +323,7 @@
     <string name="list">รายการ</string>
     <string name="grid">ตาราง</string>
     <string name="auto">อัตโนมัติ</string>
-    <string name="app_update_available_notification_title">NewPipe พร้อมให้อัพเดทแล้ว!</string>
+    <string name="app_update_available_notification_title">Tubular พร้อมให้อัพเดทแล้ว!</string>
     <string name="missions_header_finished">เสร็จแล้ว</string>
     <string name="missions_header_pending">อยู่ในคิว</string>
     <string name="paused">หยุดชั่วคราว</string>

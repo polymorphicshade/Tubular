@@ -99,8 +99,8 @@
     <string name="always">Alati</string>
     <string name="just_once">Üks kord</string>
     <string name="file">Fail</string>
-    <string name="notification_channel_name">NewPipe teavitus</string>
-    <string name="notification_channel_description">Teavitused NewPipe pleierile</string>
+    <string name="notification_channel_name">Tubular teavitus</string>
+    <string name="notification_channel_description">Teavitused Tubular pleierile</string>
     <string name="unknown_content">[Tundmatu]</string>
     <string name="switch_to_background">Lülita taustale</string>
     <string name="switch_to_popup">Lülita hüpikpleierile</string>
@@ -183,7 +183,7 @@
     <string name="msg_name">Faili nimi</string>
     <string name="msg_threads">Lõimed</string>
     <string name="msg_error">Viga</string>
-    <string name="msg_running">NewPipe allalaadimine</string>
+    <string name="msg_running">Tubular allalaadimine</string>
     <string name="msg_running_detail">Üksikasjade nägemiseks toksa</string>
     <string name="msg_wait">Palun oota…</string>
     <string name="msg_copied">Kopeeriti lõikepuhvrisse</string>
@@ -197,7 +197,7 @@
     <string name="settings_file_replacement_character_title">Asendustähemärk</string>
     <string name="charset_letters_and_digits">Tähed ja numbrid</string>
     <string name="charset_most_special_characters">Erimärgid</string>
-    <string name="title_activity_about">NewPipe rakendusest</string>
+    <string name="title_activity_about">Tubular rakendusest</string>
     <string name="title_licenses">Kolmanda osapoole litsentsid</string>
     <string name="tab_about">Rakenduse teave ja KKK</string>
     <string name="tab_licenses">Litsentsid</string>
@@ -205,10 +205,10 @@
     <string name="view_on_github">Vaata GitHubis</string>
     <string name="donation_title">Anneta</string>
     <string name="website_title">Veebileht</string>
-    <string name="website_encouragement">Enama info saamiseks külasta NewPipe veebilehte.</string>
-    <string name="privacy_policy_title">NewPipe privaatsuspoliitika</string>
+    <string name="website_encouragement">Enama info saamiseks külasta Tubular veebilehte.</string>
+    <string name="privacy_policy_title">Tubular privaatsuspoliitika</string>
     <string name="read_privacy_policy">Loe privaatsuspoliitikat</string>
-    <string name="app_license_title">NewPipe litsents</string>
+    <string name="app_license_title">Tubular litsents</string>
     <string name="read_full_license">Loe litsentsi</string>
     <string name="title_activity_history">Ajalugu</string>
     <string name="action_history">Ajalugu</string>
@@ -303,11 +303,11 @@
     <string name="copyright" formatted="true">© %1$s %2$s %3$s alla</string>
     <string name="app_description">Vaba ja lihtne voogesitus Androidis.</string>
     <string name="contribution_encouragement">Kui sul on ideid kujunduse muutmisest, koodi puhastamisest või suurtest koodi muudatustest - abi on alati teretulnud. Mida rohkem tehtud, seda paremaks läheb!</string>
-    <string name="donation_encouragement">NewPipe arendajad on vabatahtlikud, kes kulutavad oma vaba aega, toomaks sulle parimat kasutamise kogemust. On aeg anda tagasi aidates arendajaid ja muuta NewPipe veel paremaks, nautides ise tassi kohvi.</string>
+    <string name="donation_encouragement">Tubular arendajad on vabatahtlikud, kes kulutavad oma vaba aega, toomaks sulle parimat kasutamise kogemust. On aeg anda tagasi aidates arendajaid ja muuta Tubular veel paremaks, nautides ise tassi kohvi.</string>
     <string name="give_back">Anneta</string>
-    <string name="privacy_policy_encouragement">NewPipe võtab privaatsust väga tõsiselt. Seetõttu ei kogu rakendus ilma nõusolekuta mingeid andmeid.
-\nNewPipe privaatsuspoliitika selgitab üksikasjalikult, milliseid andmeid saadetakse ja kogutakse veateate saatmisel.</string>
-    <string name="app_license">NewPipe vaba avatud koodiga tarkvara. Seada võid kasutada, uurida, jagada ja parandada nii, nagu õigemaks pead. Täpsemalt - seda võid levitada ja/või muuta vastavalt Vaba Tarkvara Sihtasutuse avaldatud GNU Üldise Avaliku Litsentsi v.3 (või sinu valikul hilisema versiooni) tingimustele.</string>
+    <string name="privacy_policy_encouragement">Tubular võtab privaatsust väga tõsiselt. Seetõttu ei kogu rakendus ilma nõusolekuta mingeid andmeid.
+\nTubular privaatsuspoliitika selgitab üksikasjalikult, milliseid andmeid saadetakse ja kogutakse veateate saatmisel.</string>
+    <string name="app_license">Tubular vaba avatud koodiga tarkvara. Seada võid kasutada, uurida, jagada ja parandada nii, nagu õigemaks pead. Täpsemalt - seda võid levitada ja/või muuta vastavalt Vaba Tarkvara Sihtasutuse avaldatud GNU Üldise Avaliku Litsentsi v.3 (või sinu valikul hilisema versiooni) tingimustele.</string>
     <string name="enable_disposed_exceptions_title">Teavita elutsüklist väljas vigadest</string>
     <string name="import_soundcloud_instructions">Impordi SoundCloudi profiil trükkides URL või oma ID:
 \n
@@ -321,7 +321,7 @@
     <string name="skip_silence_checkbox">Keri helitu koht edasi</string>
     <string name="playback_step">Samm</string>
     <string name="playback_reset">Lähtesta</string>
-    <string name="start_accept_privacy_policy">Selleks, et täita Euroopa Üldist Andmekaitse Määrust (GDPR), juhime tähelepanu NewPipe\'i privaatsuspoliitikale. Palun lugege seda hoolikalt.
+    <string name="start_accept_privacy_policy">Selleks, et täita Euroopa Üldist Andmekaitse Määrust (GDPR), juhime tähelepanu Tubular\'i privaatsuspoliitikale. Palun lugege seda hoolikalt.
 \nMeile veateate saatmiseks pead sellega nõustuma.</string>
     <string name="minimize_on_exit_title">Minimeeri, kui kasutad teisi rakendusi</string>
     <string name="minimize_on_exit_summary">Tegevus lülitusel peamiselt videopleierilt teisele rakendusele — %s</string>
@@ -335,7 +335,7 @@
     <string name="events">Sündmused</string>
     <string name="file_deleted">Fail kustutati</string>
     <string name="app_update_notification_channel_name">Rakenduse värskenduse teavitus</string>
-    <string name="app_update_notification_channel_description">Teavitus NewPipe uuetest versioonidest</string>
+    <string name="app_update_notification_channel_description">Teavitus Tubular uuetest versioonidest</string>
     <string name="download_to_sdcard_error_title">Väline andmekandja pole saadaval</string>
     <string name="download_to_sdcard_error_message">Allalaadimine välisele SD-kaardile ei ole võimalik. Kas lähtestada allalaadimiste kataloogi asukoht\?</string>
     <string name="saved_tabs_invalid_json">Tõrge salvestatud vahekaaride lugemisel; kasutatakse vaikeväärtusi</string>
@@ -350,7 +350,7 @@
     <string name="list">Nimekiri</string>
     <string name="grid">Võrgustik</string>
     <string name="auto">Auto</string>
-    <string name="app_update_available_notification_title">NewPipe värskendus on saadaval!</string>
+    <string name="app_update_available_notification_title">Tubular värskendus on saadaval!</string>
     <string name="missions_header_finished">Lõpetatud</string>
     <string name="missions_header_pending">Ootel</string>
     <string name="paused">peatatud</string>
@@ -426,10 +426,10 @@
     <string name="no_app_to_open_intent">Ükski sinu seadme rakendus ei saa seda avada</string>
     <string name="crash_the_app">Jooksuta rakendus kokku</string>
     <string name="georestricted_content">See sisu ei ole sinu riigis saadaval.</string>
-    <string name="soundcloud_go_plus_content">Vähemalt sinu riigis on see SoundCloud Go+ teenuse lugu, seega ei saa seda NewPipe\'i kaudu voogedastada ega alla laadida.</string>
-    <string name="private_content">See sisu on privaatne, seega ei saa seda NewPipe\'i kaudu voogedastada ega alla laadida.</string>
-    <string name="youtube_music_premium_content">See video on saadaval ainult YouTube Music Premium teenuse tellijatele, seega ei saa seda NewPipe\'i kaudu voogedastada ega alla laadida.</string>
-    <string name="paid_content">See sisu on kättesaadav ainult tasulise teenuse kasutajatele, seega ei saa seda NewPipe\'i kaudu voogedastada ega alla laadida.</string>
+    <string name="soundcloud_go_plus_content">Vähemalt sinu riigis on see SoundCloud Go+ teenuse lugu, seega ei saa seda Tubular\'i kaudu voogedastada ega alla laadida.</string>
+    <string name="private_content">See sisu on privaatne, seega ei saa seda Tubular\'i kaudu voogedastada ega alla laadida.</string>
+    <string name="youtube_music_premium_content">See video on saadaval ainult YouTube Music Premium teenuse tellijatele, seega ei saa seda Tubular\'i kaudu voogedastada ega alla laadida.</string>
+    <string name="paid_content">See sisu on kättesaadav ainult tasulise teenuse kasutajatele, seega ei saa seda Tubular\'i kaudu voogedastada ega alla laadida.</string>
     <string name="recaptcha_solve">Lahenda</string>
     <string name="featured">Esiletõstetud</string>
     <string name="radio">Raadio</string>
@@ -459,7 +459,7 @@
     <string name="delete_playback_states_alert">Kas kustutame kõik taasesituste asukohad\?</string>
     <string name="clear_playback_states_summary">Kustutab kõik taasesituse käigus salvestatud asukohad</string>
     <string name="clear_playback_states_title">Kustuta taasesituste asukohad</string>
-    <string name="clear_cookie_summary">Kustuta küpsised, mille NewPipe on reCAPTCHA vastamise ajal salvestanud</string>
+    <string name="clear_cookie_summary">Kustuta küpsised, mille Tubular on reCAPTCHA vastamise ajal salvestanud</string>
     <string name="recaptcha_cookies_cleared">reCAPTCHA küpsised on kustutatud</string>
     <string name="clear_cookie_title">Kustuta reCAPTCHA küpsised</string>
     <string name="hash_channel_name">Teavitus video räsi kohta</string>
@@ -468,7 +468,7 @@
     <string name="songs">Laulud</string>
     <string name="videos_string">Videod</string>
     <string name="restricted_video_no_stream">Sellel videol on vanusepiirang.
-\nVastavalt YouTube uuetele reeglitele, mis käitlevad vanusepiirangutega materjali, NewPipe ei saa seda kätte ning vastavalt ei suuda seda ka esitada.</string>
+\nVastavalt YouTube uuetele reeglitele, mis käitlevad vanusepiirangutega materjali, Tubular ei saa seda kätte ning vastavalt ei suuda seda ka esitada.</string>
     <string name="restricted_video">Sellel videol on vanusepiirang.
 \n
 \nKui sa soovid seda näha, siis lülita seadistustest „%1$s“ sisse.</string>
@@ -556,11 +556,11 @@
     <string name="enable_queue_limit_desc">Luba korraga vaid üks allalaadimine</string>
     <string name="enable_queue_limit">Piira allalaadimiste järjekorda</string>
     <string name="error_progress_lost">Faili kustutamisega läks ka tööjärg kautsi</string>
-    <string name="error_postprocessing_stopped">Faili töötlemisel NewPipe lõpetas töö</string>
+    <string name="error_postprocessing_stopped">Faili töötlemisel Tubular lõpetas töö</string>
     <string name="disable_media_tunneling_summary">Lülita meedia tunneldamine välja juhul, kui esitamisel tekib must ekraan või pildi kuvamine on katkendlik.</string>
     <string name="disable_media_tunneling_title">Lülita meedia tunneldamine välja</string>
     <string name="drawer_header_description">Vaheta teenust, hetkel on kasutusel:</string>
-    <string name="content_not_supported">NewPipe hetkel sellist võimaluist ei toeta.
+    <string name="content_not_supported">Tubular hetkel sellist võimaluist ei toeta.
 \n
 \nAga loodetavasti jõuame sellise võimaluse tulevasse versiooni lisada.</string>
     <string name="detail_sub_channel_thumbnail_view_description">Kanali tunnuspilt</string>
@@ -610,7 +610,7 @@
     <string name="feed_use_dedicated_fetch_method_title">Hangi võimalusel spetsiaalsest voost</string>
     <string name="feed_load_error_fast_unknown">Kiirvoo režiim ei paku selle kohta täiendavat teavet.</string>
     <string name="feed_load_error_terminated">Autori konto on lõpetatud.
-\nTulevikus ei saa NewPipe seda voogu laadida.
+\nTulevikus ei saa Tubular seda voogu laadida.
 \nKas soovid tühistada selle kanali tellimuse\?</string>
     <string name="feed_load_error_account_info">Voo \'%s\' laadimine nurjus.</string>
     <string name="feed_load_error">Via voo laadimisel</string>
@@ -624,7 +624,7 @@
     <string name="detail_heart_img_view_description">Südamlik autor</string>
     <string name="feed_use_dedicated_fetch_method_help_text">Kas sinu meelest on voo laadimine aeglane\? Sel juhul proovi lubada kiire laadimine (seda saad muuta seadetes või vajutades allolevat nuppu).
 \n
-\nNewPipe pakub kahte voo laadimise strateegiat:
+\nTubular pakub kahte voo laadimise strateegiat:
 \n• Tellitud kanali täielik, kuid aeglane hankimine.
 \n• Teenuse spetsiaalse lõpp-punkti kasutamine, mis on kiire, kuid tavaliselt mittetäielik.
 \n
@@ -658,7 +658,7 @@
     <string name="feed_new_items">Uued andmevoo kirjed</string>
     <string name="show_crash_the_player_title">Näita „Jooksuta meediamängija kokku“ nupukest</string>
     <string name="show_crash_the_player_summary">Näitab valikut meediamängija kokkujooksutamiseks</string>
-    <string name="error_report_notification_title">NewPipe töös tekkis viga, sellest teavitamiseks toksa</string>
+    <string name="error_report_notification_title">Tubular töös tekkis viga, sellest teavitamiseks toksa</string>
     <string name="crash_the_player">Jooksuta meediamängija kokku</string>
     <string name="show_error_snackbar">Näita veateate akent</string>
     <string name="error_report_channel_name">Teavitus vigadest</string>
@@ -711,7 +711,7 @@
     <string name="app_update_available_notification_text">%s allalaadimiseks toksa</string>
     <string name="fast_mode">Kiirrežiim</string>
     <string name="import_subscriptions_hint">Tellimusi saad importida või eksportida 3 punktiga menüüst</string>
-    <string name="app_update_unavailable_toast">Sa kasutad NewPipe\'i uusimat versiooni</string>
+    <string name="app_update_unavailable_toast">Sa kasutad Tubular\'i uusimat versiooni</string>
     <string name="night_theme_available">See valik on kasutusel vaid %s teema puhul</string>
     <string name="msg_failed_to_copy">Lõikelauale kopeerimine ei õnnestunud</string>
     <string name="unset_playlist_thumbnail">Eemalda püsiv pisipilt</string>

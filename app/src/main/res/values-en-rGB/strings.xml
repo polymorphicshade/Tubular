@@ -51,12 +51,12 @@
     <string name="settings_category_video_audio_title">Video and audio</string>
     <string name="settings_category_player_title">Player</string>
     <string name="cancel">Cancel</string>
-    <string name="content_not_supported">This content is not yet supported by NewPipe.
+    <string name="content_not_supported">This content is not yet supported by Tubular.
 \n
 \nHopefully, it will be supported in a future version.</string>
     <string name="feed_use_dedicated_fetch_method_help_text">Do you think feed loading is too slow\? If so, try enabling fast loading (you can change it in settings or by pressing the button below).
 \n
-\nNewPipe offers two feed loading methods:
+\nTubular offers two feed loading methods:
 \n• Fetching the whole subscription channel, which is slow but complete.
 \n• Using a dedicated service endpoint, which is fast but usually not complete.
 \n
@@ -68,8 +68,8 @@
     <string name="feed_use_dedicated_fetch_method_summary">Available in some services, it is usually much faster but may return a limited number of items and often incomplete information (e.g. no duration, item type, no live status).</string>
     <string name="max_retry_desc">Maximum number of attempts before cancelling the download</string>
     <string name="read_full_license">Read licence</string>
-    <string name="app_license">NewPipe is copyleft libre software: You can use, study share and improve it at will. Specifically you can redistribute and/or modify it under the terms of the GNU General Public Licence as published by the Free Software Foundation, either version 3 of the Licence, or (at your option) any later version.</string>
-    <string name="app_license_title">NewPipe’s licence</string>
+    <string name="app_license">Tubular is copyleft libre software: You can use, study share and improve it at will. Specifically you can redistribute and/or modify it under the terms of the GNU General Public Licence as published by the Free Software Foundation, either version 3 of the Licence, or (at your option) any later version.</string>
+    <string name="app_license_title">Tubular’s licence</string>
     <string name="tab_licenses">Licences</string>
     <string name="title_licenses">Third-party licences</string>
     <string name="download_to_sdcard_error_message">Downloading to SD card not possible. Reset download folder location\?</string>

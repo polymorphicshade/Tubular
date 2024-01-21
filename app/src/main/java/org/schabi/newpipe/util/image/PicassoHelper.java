@@ -130,7 +130,7 @@ public final class PicassoHelper {
     }
 
     public static RequestCreator loadNotificationIcon(@Nullable final String url) {
-        return loadImageDefault(url, R.drawable.ic_newpipe_triangle_white);
+        return loadImageDefault(url, R.drawable.ic_tubular_white);
     }
 
 

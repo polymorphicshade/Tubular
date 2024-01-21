@@ -72,7 +72,7 @@
     <string name="msg_name">Fájlnév</string>
     <string name="msg_threads">Szálak</string>
     <string name="msg_error">Hiba</string>
-    <string name="msg_running">NewPipe letöltés folyamatban</string>
+    <string name="msg_running">Tubular letöltés folyamatban</string>
     <string name="msg_running_detail">Koppintson a részletekért</string>
     <string name="msg_wait">Kis türelmet…</string>
     <string name="msg_copied">Vágólapra másolva</string>
@@ -117,8 +117,8 @@
     <string name="play_all">Összes lejátszása</string>
     <string name="always">Mindig</string>
     <string name="just_once">Csak egyszer</string>
-    <string name="notification_channel_name">NewPipe értesítés</string>
-    <string name="notification_channel_description">Értesítések a NewPipe lejátszójához</string>
+    <string name="notification_channel_name">Tubular értesítés</string>
+    <string name="notification_channel_description">Értesítések a Tubular lejátszójához</string>
     <string name="unknown_content">[Ismeretlen]</string>
     <string name="import_data_title">Adatbázis importálása</string>
     <string name="export_data_title">Adatbázis exportálása</string>
@@ -197,7 +197,7 @@
     <string name="settings_file_replacement_character_title">Csere karakter</string>
     <string name="charset_letters_and_digits">Betűk és számok</string>
     <string name="charset_most_special_characters">Legtöbb speciális karakter</string>
-    <string name="title_activity_about">A NewPipe névjegye</string>
+    <string name="title_activity_about">A Tubular névjegye</string>
     <string name="tab_about">Névjegy és GYIK</string>
     <string name="tab_licenses">Licencek</string>
     <string name="app_description">Szabad, egyszerű közvetítésnézés Androidon.</string>
@@ -205,15 +205,15 @@
     <string name="contribution_encouragement">Legyen ötleted a fordítással, a dizájnnal, a forráskód tisztításával vagy egy komolyabb átszervezésével kapcsolatban, bármilyen segítséget szívesen fogadunk. Minél több minden készül el, annál jobb lesz!</string>
     <string name="view_on_github">Megtekintés a GitHubon</string>
     <string name="donation_title">Adományozás</string>
-    <string name="donation_encouragement">A NewPipe alkalmazást önkéntesek fejlesztik a szabadidejükben, hogy a lehető legjobb felhasználói élményt nyújtsák. Járuljon hozzá, hogy a fejlesztők még jobbá tegyék alkalmazást, miközben egy csésze kávét szürcsölnek.</string>
+    <string name="donation_encouragement">A Tubular alkalmazást önkéntesek fejlesztik a szabadidejükben, hogy a lehető legjobb felhasználói élményt nyújtsák. Járuljon hozzá, hogy a fejlesztők még jobbá tegyék alkalmazást, miközben egy csésze kávét szürcsölnek.</string>
     <string name="give_back">Hozzájárulás</string>
     <string name="website_title">Honlap</string>
-    <string name="website_encouragement">Látogassa meg a NewPipe honlapját további információkért és hírekért.</string>
-    <string name="privacy_policy_title">A NewPipe adatvédelmi irányelvei</string>
-    <string name="privacy_policy_encouragement">A NewPipe projekt komolyan veszi az adatvédelmét. Az alkalmazás nem gyűjt semmilyen adatot a beleegyezése nélkül.
-\nA NewPipe adatvédelmi irányelve részletesen elmagyarázza, mely adatok kerülnek elküldésre és tárolásra az alkalmazás összeomlásának jelentésekor.</string>
+    <string name="website_encouragement">Látogassa meg a Tubular honlapját további információkért és hírekért.</string>
+    <string name="privacy_policy_title">A Tubular adatvédelmi irányelvei</string>
+    <string name="privacy_policy_encouragement">A Tubular projekt komolyan veszi az adatvédelmét. Az alkalmazás nem gyűjt semmilyen adatot a beleegyezése nélkül.
+\nA Tubular adatvédelmi irányelve részletesen elmagyarázza, mely adatok kerülnek elküldésre és tárolásra az alkalmazás összeomlásának jelentésekor.</string>
     <string name="read_privacy_policy">Adatvédelmi irányelvek elolvasása</string>
-    <string name="app_license_title">A NewPipe licence</string>
+    <string name="app_license_title">A Tubular licence</string>
     <string name="read_full_license">Licenc elolvasása</string>
     <string name="title_activity_history">Előzmények</string>
     <string name="action_history">Előzmények</string>
@@ -320,7 +320,7 @@
     <string name="seek_duration_title">Az előre- és visszatekerés időtartama</string>
     <string name="enable_playback_resume_summary">Utolsó lejátszási pozíció visszaállítása</string>
     <string name="enable_playback_resume_title">Lejátszás folytatása</string>
-    <string name="app_update_notification_channel_description">Értesítések az új NewPipe verziókról</string>
+    <string name="app_update_notification_channel_description">Értesítések az új Tubular verziókról</string>
     <string name="app_update_notification_channel_name">Alkalmazásfrissítés értesítése</string>
     <string name="file_deleted">Fájl törölve</string>
     <string name="settings_category_updates_title">Frissítések</string>
@@ -349,7 +349,7 @@
     <string name="error_timeout">Kapcsolati időtúllépés</string>
     <string name="error_progress_lost">Az előrehaladás elveszett, mert a fájlt törölték</string>
     <string name="error_insufficient_storage">Nincs hely az eszközön</string>
-    <string name="error_postprocessing_stopped">A NewPipe leállt a fájl feldolgozása közben</string>
+    <string name="error_postprocessing_stopped">A Tubular leállt a fájl feldolgozása közben</string>
     <string name="error_postprocessing_failed">Utófeldolgozás sikertelen</string>
     <string name="error_http_not_found">Nincs talalat</string>
     <string name="error_http_unsupported_range">A kiszolgáló nem fogad többszálú letöltést, próbálkozzon újra ezzel: @string/msg_threads = 1</string>
@@ -373,7 +373,7 @@
     <string name="paused">szüneteltetve</string>
     <string name="missions_header_pending">Függőben lévő</string>
     <string name="missions_header_finished">Befejezett</string>
-    <string name="app_update_available_notification_title">NewPipe frissítés érhető el!</string>
+    <string name="app_update_available_notification_title">Tubular frissítés érhető el!</string>
     <string name="auto">Automatikus</string>
     <string name="grid">Rács</string>
     <string name="list">Lista</string>
@@ -399,7 +399,7 @@
     <string name="show_description_summary">Kapcsolja ki, hogy elrejtse a videó leírását és a további információkat</string>
     <string name="restore_defaults_confirmation">Visszaállítja az alapértelmezéseket\?</string>
     <string name="restricted_video_no_stream">Ez a videó korhatáros.
-\nAz új, korhatáros videókkal kapcsolatos YouTube irányelvek miatt a NewPipe nem férhet hozzá a videóhoz, így nem tudja lejátszani.</string>
+\nAz új, korhatáros videókkal kapcsolatos YouTube irányelvek miatt a Tubular nem férhet hozzá a videóhoz, így nem tudja lejátszani.</string>
     <string name="description_tab_description">Leírás</string>
     <string name="comments_tab_description">Megjegyzések</string>
     <string name="copy_for_github">Formázott jelentés másolása</string>
@@ -421,7 +421,7 @@
     <string name="new_seek_duration_toast">Az ExoPlayer korlátai miatt az előre- és visszatekerés időtartama %d másodpercre lett állítva</string>
     <string name="feed_groups_header_title">Csatornacsoportok</string>
     <string name="systems_language">Rendszer alapértelmezése</string>
-    <string name="start_accept_privacy_policy">Az Általános adatvédelmi rendeletnek (GDPR) való megfelelés érdekében felhívjuk figyelmét a NewPipe adatvédelmi nyilatkozatára. Olvassa el figyelmesen.
+    <string name="start_accept_privacy_policy">Az Általános adatvédelmi rendeletnek (GDPR) való megfelelés érdekében felhívjuk figyelmét a Tubular adatvédelmi nyilatkozatára. Olvassa el figyelmesen.
 \nEl kell fogadnia, ha hibajelentést szeretne küldeni.</string>
     <string name="crash_the_app">Alkalmazás összeomlasztása</string>
     <string name="show_memory_leaks">Memóriaszivárgások megjelenítése</string>
@@ -463,7 +463,7 @@
     <string name="more_than_100_videos">100+ videó</string>
     <string name="error_report_open_issue_button_text">Jelentés a GitHubon</string>
     <string name="restore_defaults">Alapértelmezések visszaállítása</string>
-    <string name="clear_cookie_summary">Sütik törlése, amelyeket a NewPipe akkor ment, amikor megold egy reCAPTCHA-t</string>
+    <string name="clear_cookie_summary">Sütik törlése, amelyeket a Tubular akkor ment, amikor megold egy reCAPTCHA-t</string>
     <string name="recaptcha_cookies_cleared">reCAPTCHA sütik törölve</string>
     <string name="clear_cookie_title">reCAPTCHA sütik törlése</string>
     <string name="artists">Előadók</string>
@@ -513,15 +513,15 @@
         <item quantity="other">%d kiválasztva</item>
     </plurals>
     <string name="feed_create_new_group_button_title">Új</string>
-    <string name="content_not_supported">Ezt a tartalmat még nem támogatja a NewPipe.
+    <string name="content_not_supported">Ezt a tartalmat még nem támogatja a Tubular.
 \n
 \nRemélhetőleg egy következő verzióban már támogatott lesz.</string>
     <string name="no_app_to_open_intent">Nincs a készülékén olyan alkalmazás, amely meg tudja ezt nyitni</string>
-    <string name="youtube_music_premium_content">Ez a videó csak YouTube Music Prémium előfizetők számára érhető el, így nem tekinthető meg és nem tölthető le a NewPipe-pal.</string>
+    <string name="youtube_music_premium_content">Ez a videó csak YouTube Music Prémium előfizetők számára érhető el, így nem tekinthető meg és nem tölthető le a Tubular-pal.</string>
     <string name="auto_device_theme_title">Automatikus (rendszertéma)</string>
-    <string name="paid_content">Ez a tartalom csak előfizetőknek érhető el, nem tekinthető meg és nem tölthető le a NewPipe-pal.</string>
+    <string name="paid_content">Ez a tartalom csak előfizetőknek érhető el, nem tekinthető meg és nem tölthető le a Tubular-pal.</string>
     <string name="georestricted_content">Ez a tartalom nem érhető el az országában.</string>
-    <string name="private_content">Ez a tartalom privát, így nem tekinthető meg és nem tölthető le a NewPipe-pal.</string>
+    <string name="private_content">Ez a tartalom privát, így nem tekinthető meg és nem tölthető le a Tubular-pal.</string>
     <string name="download_has_started">A letöltés elkezdődött</string>
     <string name="notification_scale_to_square_image_summary">Értesítésben megjelenő bélyegkép átméretezése 16:9-es helyett 1:1-es arányra (torzítással járhat)</string>
     <string name="chapters">Fejezetek</string>
@@ -549,7 +549,7 @@
     <string name="show_channel_details">Csatorna részleteinek megjelenítése</string>
     <string name="hold_to_append">Tartsa a sorba állításhoz</string>
     <string name="default_kiosk_page_summary">Alapértelmezett újságárus</string>
-    <string name="app_license">A NewPipe egy copyleft szabad szoftver: tetszése szerint felhasználhatja, tanulmányozhatja, megoszthatja és fejlesztheti. Egész pontosan a Free Software Foundation által kiadott GNU General Public License 3-as, vagy (választható módon) újabb verziójának feltételei szerint módosíthatja vagy adhatja tovább.</string>
+    <string name="app_license">A Tubular egy copyleft szabad szoftver: tetszése szerint felhasználhatja, tanulmányozhatja, megoszthatja és fejlesztheti. Egész pontosan a Free Software Foundation által kiadott GNU General Public License 3-as, vagy (választható módon) újabb verziójának feltételei szerint módosíthatja vagy adhatja tovább.</string>
     <string name="recaptcha_solve">Megoldás</string>
     <string name="subtitle_activity_recaptcha">Nyomja meg a „Kész” gombot, ha megoldotta</string>
     <string name="msg_calculating_hash">Ujjlenyomat számítása</string>
@@ -580,14 +580,14 @@
     <string name="feed_update_threshold_title">Lista frissítési küszöb</string>
     <string name="feed_update_threshold_summary">A legutóbbi frissítés óta eltelt idő, ami után a feliratkozás elavultnak számít – %s</string>
     <string name="feed_load_error_terminated">A szerző fiókját eltávolították.
-\nA NewPipe nem fogja tudni betölteni ezt a listát a jövőben.
+\nA Tubular nem fogja tudni betölteni ezt a listát a jövőben.
 \nLeiratkozik erről a csatornáról\?</string>
     <string name="feed_load_error_fast_unknown">A gyors listamód nem ad ennél több információt.</string>
     <string name="feed_use_dedicated_fetch_method_title">Lekérés egy dedikált listából, ha lehetséges</string>
     <string name="feed_use_dedicated_fetch_method_enable_button">Gyors mód engedélyezése</string>
     <string name="feed_use_dedicated_fetch_method_help_text">Úgy gondolja, hogy a lista betöltése lassú\? Ha így van, akkor próbálja engedélyezni a gyors betöltést (ezt a beállításokban változtathatja meg, vagy a lenti gomb megnyomásával).
 \n
-\nA NewPipe két listabetöltési stratégiát kínál:
+\nA Tubular két listabetöltési stratégiát kínál:
 \n• A teljes feliratkozott csatorna lekérése, amely lassú, de teljes.
 \n• Egy dedikált szolgáltatási végpont, amely gyors, de általában nem teljes.
 \n
@@ -632,11 +632,11 @@
     <string name="detail_heart_img_view_description">Készítő által szívecskézve</string>
     <string name="on">Be</string>
     <string name="feed_load_error_account_info">A(z) „%s” listája nem tölthető be.</string>
-    <string name="soundcloud_go_plus_content">Ez egy SoundCloud Go+ szám, legalábbis az Ön országában, így nem játszható le vagy tölthető le a NewPipe-pal.</string>
+    <string name="soundcloud_go_plus_content">Ez egy SoundCloud Go+ szám, legalábbis az Ön országában, így nem játszható le vagy tölthető le a Tubular-pal.</string>
     <string name="show_meta_info_summary">Kapcsolja ki, hogy elrejtse a metainformációs dobozokat, melyek további információkat tartalmaznak a közvetítés létrehozójáról, annak tartalmáról vagy egy keresési kérésről</string>
     <string name="error_report_channel_name">Hibajelentési értesítés</string>
     <string name="error_report_channel_description">Értesítések a hibák jelentéséhez</string>
-    <string name="error_report_notification_title">A NewPipe hibát észlelt, koppintson a jelentéséhez</string>
+    <string name="error_report_notification_title">A Tubular hibát észlelt, koppintson a jelentéséhez</string>
     <string name="error_report_notification_toast">Hiba történt, lásd az értesítést</string>
     <string name="disable_media_tunneling_title">Médiacsatornázás letiltása</string>
     <string name="show_error_snackbar">Hiba üzenetsávjának megjelenítése</string>
@@ -711,7 +711,7 @@
     <string name="faq_description">Ha problémája van az alkalmazás használatával, akkor nézze meg az ezekre a gyakori kérdésekre adott válaszokat!</string>
     <string name="fast_mode">Gyors mód</string>
     <string name="import_subscriptions_hint">Feliratkozások importálása vagy exportálása a 3 pontos menüből</string>
-    <string name="app_update_unavailable_toast">Ön a Newpipe legfrissebb verzióját futtatja</string>
+    <string name="app_update_unavailable_toast">Ön a Tubular legfrissebb verzióját futtatja</string>
     <string name="app_update_available_notification_text">Nyomjon a %s letöltéséhez</string>
     <string name="left_gesture_control_title">Bal gesztus művelete</string>
     <string name="right_gesture_control_title">Jobb gesztus művelete</string>

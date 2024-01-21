@@ -69,7 +69,7 @@
     <string name="ok">OK</string>
     <string name="msg_name">Nama berkas</string>
     <string name="msg_error">Galat</string>
-    <string name="msg_running">NewPipe Sedang Mengunduh</string>
+    <string name="msg_running">Tubular Sedang Mengunduh</string>
     <string name="msg_running_detail">Sentuh untuk detail</string>
     <string name="msg_wait">Mohon tunggu…</string>
     <string name="msg_copied">Disalin ke papan klip</string>
@@ -109,14 +109,14 @@
     <string name="settings_file_replacement_character_title">Karakter pengganti</string>
     <string name="charset_letters_and_digits">Huruf dan angka</string>
     <string name="charset_most_special_characters">Karakter spesial umum</string>
-    <string name="title_activity_about">Tentang NewPipe</string>
+    <string name="title_activity_about">Tentang Tubular</string>
     <string name="title_licenses">Lisensi pihak ketiga</string>
     <string name="copyright" formatted="true">© %1$s oleh %2$s di bawah %3$s</string>
     <string name="tab_about">Tentang &amp; FAQ</string>
     <string name="tab_licenses">Lisensi</string>
     <string name="app_description">Aplikasi video daring yang bebas dan ringan untuk Android.</string>
     <string name="view_on_github">Lihat di GitHub</string>
-    <string name="app_license_title">Lisensi NewPipe</string>
+    <string name="app_license_title">Lisensi Tubular</string>
     <string name="contribution_encouragement">Terlepas apakah Anda memiliki ide untuk; terjemahan, perubahan desain, pembersihan kode, atau perubahan kode yang signifikan, segala bantuan akan selalu diterima. Semakin banyak akan semakin baik jadinya!</string>
     <string name="read_full_license">Baca lisensi</string>
     <string name="contribution_title">Kontribusi</string>
@@ -128,7 +128,7 @@
     <string name="enable_search_history_title">Riwayat pencarian</string>
     <string name="enable_search_history_summary">Simpan pencarian secara lokal</string>
     <string name="enable_watch_history_title">Riwayat tontonan</string>
-    <string name="notification_channel_name">Notifikasi NewPipe</string>
+    <string name="notification_channel_name">Notifikasi Tubular</string>
     <string name="title_activity_history">Riwayat</string>
     <string name="action_history">Riwayat</string>
     <string name="thumbnail_cache_wipe_complete_notice">Cache gambar dihapus</string>
@@ -149,7 +149,7 @@
     <string name="always">Selalu</string>
     <string name="just_once">Hanya Sekali</string>
     <string name="file">Berkas</string>
-    <string name="notification_channel_description">Notifikasi untuk pemutar NewPipe</string>
+    <string name="notification_channel_description">Notifikasi untuk pemutar Tubular</string>
     <string name="unknown_content">[Tidak diketahui]</string>
     <string name="switch_to_background">Alihkan ke Latar Belakang</string>
     <string name="switch_to_popup">Alihkan ke Popup</string>
@@ -185,10 +185,10 @@
     <string name="dismiss">Abaikan</string>
     <string name="rename">Ubah nama</string>
     <string name="donation_title">Donasi</string>
-    <string name="donation_encouragement">NewPipe dikembangkan oleh relawan yang menyisihkan waktu untuk memberi Anda pengalaman terbaik. Segala dukungan kepada pengembang akan membuat NewPipe menjadi lebih baik sambil menikmati secangkir kopi.</string>
+    <string name="donation_encouragement">Tubular dikembangkan oleh relawan yang menyisihkan waktu untuk memberi Anda pengalaman terbaik. Segala dukungan kepada pengembang akan membuat Tubular menjadi lebih baik sambil menikmati secangkir kopi.</string>
     <string name="give_back">Beri dukungan</string>
     <string name="website_title">Situs Web</string>
-    <string name="website_encouragement">Kunjungi situs web NewPipe untuk info dan berita.</string>
+    <string name="website_encouragement">Kunjungi situs web Tubular untuk info dan berita.</string>
     <string name="delete_item_search_history">Apakah Anda ingin menghapus item ini dari riwayat pencarian\?</string>
     <string name="title_last_played">Terakhir Diputar</string>
     <string name="title_most_played">Sering Diputar</string>
@@ -259,7 +259,7 @@
     <string name="tab_subscriptions">Langganan</string>
     <string name="use_inexact_seek_title">Gunakan tinjau cepat tak pasti</string>
     <string name="use_inexact_seek_summary">Memungkinkan pengguna memilih posisi waktu video dengan cepat tetapi dengan tingkat presisi yang rendah. Mencari 5, 15 atau 25 detik tidak berhasil dengan ini</string>
-    <string name="app_license">NewPipe adalah perangkat lunak libre copyleft: Anda bisa menggunakannya, mempelajarinya, berbagi, dan meningkatkannya. Secara khusus Anda bisa mendistribusikan ulang dan/atau memodifikasinya dibawah syarat Lisensi Publik Umum GNU yang diterbitkan oleh Free Software Foundation, baik versi 3 dari Lisensi, atau (sesuai pilihan Anda) versi yang lebih baru.</string>
+    <string name="app_license">Tubular adalah perangkat lunak libre copyleft: Anda bisa menggunakannya, mempelajarinya, berbagi, dan meningkatkannya. Secara khusus Anda bisa mendistribusikan ulang dan/atau memodifikasinya dibawah syarat Lisensi Publik Umum GNU yang diterbitkan oleh Free Software Foundation, baik versi 3 dari Lisensi, atau (sesuai pilihan Anda) versi yang lebih baru.</string>
     <string name="import_settings">Apakah Anda juga ingin mengimpor pengaturan\?</string>
     <string name="preferred_open_action_settings_title">Tindakan \'buka\' yang diinginkan</string>
     <string name="preferred_open_action_settings_summary">Tindakan baku ketika membuka konten — %s</string>
@@ -304,14 +304,14 @@
     <string name="playlists">Daftar Putar</string>
     <string name="tracks">Trek</string>
     <string name="users">Pengguna</string>
-    <string name="privacy_policy_title">Kebijakan Privasi NewPipe</string>
-    <string name="privacy_policy_encouragement">Proyek NewPipe sangat memperhatikan privasi Anda. Oleh karena itu, aplikasi initidak mengumpulkan data apa pun tanpa persetujuan Anda.
-\nKebijakan privasi NewPipe menjelaskan secara detail data apa saja yang dikirim dan disimpan ketika Anda mengirimkan laporan kerusakan.</string>
+    <string name="privacy_policy_title">Kebijakan Privasi Tubular</string>
+    <string name="privacy_policy_encouragement">Proyek Tubular sangat memperhatikan privasi Anda. Oleh karena itu, aplikasi initidak mengumpulkan data apa pun tanpa persetujuan Anda.
+\nKebijakan privasi Tubular menjelaskan secara detail data apa saja yang dikirim dan disimpan ketika Anda mengirimkan laporan kerusakan.</string>
     <string name="read_privacy_policy">Baca kebijakan privasi</string>
     <string name="skip_silence_checkbox">Percepat saat diam</string>
     <string name="playback_step">Langkah</string>
     <string name="playback_reset">Atur ulang</string>
-    <string name="start_accept_privacy_policy">Agar sesuai dengan Regulasi Perlindungan Data Umum Eropa (GDPR), dengan ini kami tarik perhatian Anda ke kebijakan privasi NewPipe. Silakan baca dengan seksama.
+    <string name="start_accept_privacy_policy">Agar sesuai dengan Regulasi Perlindungan Data Umum Eropa (GDPR), dengan ini kami tarik perhatian Anda ke kebijakan privasi Tubular. Silakan baca dengan seksama.
 \nAnda harus menerimanya untuk mengirimkan laporan bug kepada kami.</string>
     <string name="accept">Setuju</string>
     <string name="decline">Tolak</string>
@@ -329,7 +329,7 @@
     <string name="events">Acara</string>
     <string name="file_deleted">Berkas dihapus</string>
     <string name="app_update_notification_channel_name">Notifikasi pembaruan apl</string>
-    <string name="app_update_notification_channel_description">Notifikasi untuk versi-versi NewPipe baru</string>
+    <string name="app_update_notification_channel_description">Notifikasi untuk versi-versi Tubular baru</string>
     <string name="download_to_sdcard_error_title">Penyimpanan eksternal tidak tersedia</string>
     <string name="download_to_sdcard_error_message">Tidak bisa mengunduh ke kartu SD eksternal. Atur ulang lokasi folder unduhan\?</string>
     <string name="saved_tabs_invalid_json">Tidak bisa membaca tab yang disimpan, beralih menggunakan tab bawaan</string>
@@ -344,7 +344,7 @@
     <string name="list">Daftar</string>
     <string name="grid">Kisi</string>
     <string name="auto">Otomatis</string>
-    <string name="app_update_available_notification_title">Pembaruan NewPipe telah tersedia!</string>
+    <string name="app_update_available_notification_title">Pembaruan Tubular telah tersedia!</string>
     <string name="missions_header_finished">Selesai</string>
     <string name="missions_header_pending">Tertunda</string>
     <string name="paused">dijeda</string>
@@ -388,7 +388,7 @@
     <string name="overwrite_unrelated_warning">Berkas dengan nama yang sama sudah ada</string>
     <string name="overwrite_failed">tidak bisa menimpa ulang berkas</string>
     <string name="download_already_pending">Ada unduhan yang dijeda dengan nama ini</string>
-    <string name="error_postprocessing_stopped">NewPipe telah ditutup saat sedang memproses berkas</string>
+    <string name="error_postprocessing_stopped">Tubular telah ditutup saat sedang memproses berkas</string>
     <string name="error_insufficient_storage">Tidak ada ruang kosong tersisa pada perangkat</string>
     <string name="error_progress_lost">Kehilangan laju, karena berkas telah dihapus</string>
     <string name="confirm_prompt">Apakah Anda yakin ingin menghapus semua riwayat unduhan dan berkas yang telah diunduh\?</string>
@@ -487,7 +487,7 @@
     <string name="restricted_video">Video ini dibatasi usia.
 \n
 \nAktifkan \"%1$s\" di dalam pengaturan jika Anda ingin melihatnya.</string>
-    <string name="content_not_supported">Konten ini belum didukung oleh NewPipe.
+    <string name="content_not_supported">Konten ini belum didukung oleh Tubular.
 \n
 \nSemoga akan didukung pada versi berikutnya.</string>
     <string name="remove_watched_popup_yes_and_partially_watched_videos">Iya, dan video yang ditonton sebagian</string>
@@ -497,7 +497,7 @@
     <string name="mute">Bisukan</string>
     <string name="feed_use_dedicated_fetch_method_help_text">Apakah Anda merasa pemuatan langganan sangat lambat\? Jika iya, coba nyalakan pemuatan cepat (Anda bisa mengubahnya di dalam pengaturan atau dengan menekan tombol di bawah)
 \n
-\nNewPipe menyediakan dua strategi pemuatan langganan:
+\nTubular menyediakan dua strategi pemuatan langganan:
 \n• Mengambil semua kanal langganan, yang lebih lambat tapi lengkap.
 \n• Menggunakan layanan endpoint khusus, yang lebih cepat namun terkadang tidak lengkap.
 \n
@@ -545,7 +545,7 @@
     <string name="show_memory_leaks">Tampilkan kebocoran memori</string>
     <string name="enqueued">Ditambahkan</string>
     <string name="enqueue_stream">Tambahkan</string>
-    <string name="clear_cookie_summary">Hapus kuki yang disimpan oleh NewPipe saat Anda memecahkan reCAPTCHA</string>
+    <string name="clear_cookie_summary">Hapus kuki yang disimpan oleh Tubular saat Anda memecahkan reCAPTCHA</string>
     <string name="recaptcha_cookies_cleared">Kuki reCAPTCHA telah dihapus</string>
     <string name="clear_cookie_title">Hapus kuki reCAPTCHA</string>
     <string name="youtube_restricted_mode_enabled_summary">YouTube menyediakan \"Mode Terbatas\" yang menyembunyikan konten dewasa</string>
@@ -568,14 +568,14 @@
     <string name="show_description_summary">Nonaktifkan untuk menyembunyikan deskripsi dan informasi tambahan</string>
     <string name="show_description_title">Tampilkan deskripsi</string>
     <string name="open_with">Buka dengan</string>
-    <string name="paid_content">Konten ini hanya tersedia untuk pengguna yang telah membayar, sehingga tidak bisa diputar atau diunduh oleh NewPipe.</string>
-    <string name="youtube_music_premium_content">Video ini hanya tersedia untuk anggota YouTube Music Premium, sehingga tidak bisa diputar atau diunduh oleh NewPipe.</string>
-    <string name="private_content">Konten ini privat, sehingga tidak bisa diputar atau diunduh oleh NewPipe.</string>
-    <string name="soundcloud_go_plus_content">Ini adalah sebuah trek SoundCloud Go +, setidaknya di negara Anda, sehingga tidak bisa diputar atau diunduh oleh NewPipe.</string>
+    <string name="paid_content">Konten ini hanya tersedia untuk pengguna yang telah membayar, sehingga tidak bisa diputar atau diunduh oleh Tubular.</string>
+    <string name="youtube_music_premium_content">Video ini hanya tersedia untuk anggota YouTube Music Premium, sehingga tidak bisa diputar atau diunduh oleh Tubular.</string>
+    <string name="private_content">Konten ini privat, sehingga tidak bisa diputar atau diunduh oleh Tubular.</string>
+    <string name="soundcloud_go_plus_content">Ini adalah sebuah trek SoundCloud Go +, setidaknya di negara Anda, sehingga tidak bisa diputar atau diunduh oleh Tubular.</string>
     <string name="georestricted_content">Konten ini tidak tersedia di negara Anda.</string>
     <string name="crash_the_app">Hentikan aplikasi</string>
     <string name="restricted_video_no_stream">Video ini dibatasi usia.
-\nKarena kebijakan YouTube yang baru dengan video yang dibatasi usia, NewPipe tidak bisa mengakses video dan tidak bisa memutarnya.</string>
+\nKarena kebijakan YouTube yang baru dengan video yang dibatasi usia, Tubular tidak bisa mengakses video dan tidak bisa memutarnya.</string>
     <string name="select_night_theme_toast">Kamu bisa pilih tema malam favoritmu dibawah</string>
     <string name="night_theme_summary">Pilih tema malam favoritmu — %s</string>
     <string name="auto_device_theme_title">Otomatis (tema perangkat)</string>
@@ -607,7 +607,7 @@
     <string name="account_terminated">Akun dinonaktifkan</string>
     <string name="feed_load_error_fast_unknown">Mode langganan cepat tidak menyediakan lebih banyak info tentang ini.</string>
     <string name="feed_load_error_terminated">Akun kreator telah dinonaktifkan.
-\nNewPipe tidak akan bisa memuat langganan ini lagi.
+\nTubular tidak akan bisa memuat langganan ini lagi.
 \nApakah Anda ingin berhenti berlangganan channel ini\?</string>
     <string name="feed_load_error_account_info">Tidak bisa memuat langganan untuk \'%s\'.</string>
     <string name="feed_load_error">Galat memuat langganan</string>
@@ -654,7 +654,7 @@
     <string name="create_error_notification">Buat sebuah notifikasi kegalatan</string>
     <string name="no_appropriate_file_manager_message">Tidak ada pengelola berkas yang ditemukan untuk tindakan ini.
 \nSilakan pasang pengelola berkas atau coba nonaktifkan \'%s\' di pengaturan unduhan</string>
-    <string name="error_report_notification_title">NewPipe mengalami sebuah kegalatan, ketuk untuk melaporkan</string>
+    <string name="error_report_notification_title">Tubular mengalami sebuah kegalatan, ketuk untuk melaporkan</string>
     <string name="no_appropriate_file_manager_message_android_10">Tidak ada pengelola berkas yang ditemukan untuk tindakan ini.
 \nSilakan pasang pengelola berkas yang kompatibel dengan Storage Access Framework</string>
     <string name="detail_pinned_comment_view_description">Komentar dipin</string>
@@ -697,7 +697,7 @@
     <string name="sort">Urutan</string>
     <string name="fast_mode">Mode cepat</string>
     <string name="import_subscriptions_hint">Impor atau ekspor langganan dari menu 3 titik</string>
-    <string name="app_update_unavailable_toast">Anda menjalankan NewPipe versi terkini</string>
+    <string name="app_update_unavailable_toast">Anda menjalankan Tubular versi terkini</string>
     <string name="app_update_available_notification_text">Ketuk untuk mengunduh %s</string>
     <string name="night_theme_available">Opsi ini hanya tersedia jika %s dipilih untuk Tema</string>
     <string name="unset_playlist_thumbnail">Batalkan penetapan gambar kecil permanen</string>

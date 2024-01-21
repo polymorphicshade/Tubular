@@ -65,7 +65,7 @@
     <string name="tab_licenses">Llicències</string>
     <string name="contribution_title">Col·labora-hi</string>
     <string name="website_title">Lloc web</string>
-    <string name="app_license_title">Llicència del NewPipe</string>
+    <string name="app_license_title">Llicència del Tubular</string>
     <string name="read_full_license">Llegiu la llicència</string>
     <string name="title_activity_history">Historial</string>
     <string name="action_history">Historial</string>
@@ -134,8 +134,8 @@
     <string name="content_language_title">Llengua per defecte dels continguts</string>
     <string name="background_player_playing_toast">S\'està reproduint en rerefons</string>
     <string name="popup_playing_toast">S\'està reproduint en mode emergent</string>
-    <string name="notification_channel_name">Notificació de NewPipe</string>
-    <string name="notification_channel_description">Notificacions per al reproductor de NewPipe</string>
+    <string name="notification_channel_name">Notificació de Tubular</string>
+    <string name="notification_channel_description">Notificacions per al reproductor de Tubular</string>
     <string name="could_not_load_thumbnails">No s\'han pogut carregar totes les miniatures</string>
     <string name="parsing_error">No s\'ha pogut processar el lloc web</string>
     <string name="content_not_available">Contingut no disponible</string>
@@ -183,12 +183,12 @@
     <string name="dismiss">Tanca</string>
     <string name="rename">Canvia el nom</string>
     <string name="msg_threads">Fils</string>
-    <string name="msg_running">Baixada del NewPipe activa</string>
+    <string name="msg_running">Baixada del Tubular activa</string>
     <string name="msg_wait">Un moment…</string>
     <string name="msg_copied">S\'ha copiat al porta-retalls</string>
     <string name="settings_file_charset_title">Caràcters permesos als noms de fitxer</string>
     <string name="charset_letters_and_digits">Lletres i dígits</string>
-    <string name="title_activity_about">Quant al NewPipe</string>
+    <string name="title_activity_about">Quant al Tubular</string>
     <string name="copyright" formatted="true">© %1$s per %2$s sota %3$s</string>
     <string name="app_description">Reprodueix transmissions de manera lliure i lleugera a l\'Android.</string>
     <string name="view_on_github">Visualitza a GitHub</string>
@@ -242,7 +242,7 @@
     <string name="settings_file_replacement_character_title">Caràcter de substitució</string>
     <string name="charset_most_special_characters">Principals caràcters especials</string>
     <string name="contribution_encouragement">Idees, traduccions, canvis en el disseny, neteja del codi, canvis importants de programació… La vostra ajuda sempre és benvinguda. Com més feina feta hi hagi, millor!</string>
-    <string name="donation_encouragement">El NewPipe està desenvolupat per voluntaris que fan servir el seu temps lliure per oferir-vos la millor experiència possible. Feu una aportació per assegurar que els nostres desenvolupadors puguin millorar encara més el NewPipe mentre fan un cafè.</string>
+    <string name="donation_encouragement">El Tubular està desenvolupat per voluntaris que fan servir el seu temps lliure per oferir-vos la millor experiència possible. Feu una aportació per assegurar que els nostres desenvolupadors puguin millorar encara més el Tubular mentre fan un cafè.</string>
     <string name="give_back">Feu la vostra aportació</string>
     <string name="no_channel_subscribed_yet">Encara no us heu subscrit a cap canal</string>
     <string name="new_and_hot">Novetats</string>
@@ -305,13 +305,13 @@
     <string name="delete_search_history_alert">Voleu suprimir tot l\'historial de cerca\?</string>
     <string name="search_history_deleted">S\'ha esborrat l\'historial de cerca</string>
     <string name="one_item_deleted">S\'ha esborrat 1 element.</string>
-    <string name="app_license">El NewPipe és programari lliure sota llicència copyleft: el podeu fer servir, estudiar, compartir i millorar com vulgueu. Concretament, el podeu redistribuir i/o modificar d\'acord amb els termes de la llicència GNU GPL publicada per la Free Software Foundation, versió 3 o qualsevol altra versió posterior.</string>
+    <string name="app_license">El Tubular és programari lliure sota llicència copyleft: el podeu fer servir, estudiar, compartir i millorar com vulgueu. Concretament, el podeu redistribuir i/o modificar d\'acord amb els termes de la llicència GNU GPL publicada per la Free Software Foundation, versió 3 o qualsevol altra versió posterior.</string>
     <string name="import_settings">Voleu importar també els paràmetres\?</string>
-    <string name="privacy_policy_title">Política de privadesa del NewPipe</string>
-    <string name="privacy_policy_encouragement">El projecte NewPipe es pren molt seriosament la vostra privadesa. Per aquesta raó, l\'aplicació no emmagatzema cap dada sense el vostre consentiment. 
-\nLa política de privadesa del NewPipe descriu detalladament quines dades s\'envien i s\'emmagatzemen quan envieu un informe d\'error.</string>
+    <string name="privacy_policy_title">Política de privadesa del Tubular</string>
+    <string name="privacy_policy_encouragement">El projecte Tubular es pren molt seriosament la vostra privadesa. Per aquesta raó, l\'aplicació no emmagatzema cap dada sense el vostre consentiment. 
+\nLa política de privadesa del Tubular descriu detalladament quines dades s\'envien i s\'emmagatzemen quan envieu un informe d\'error.</string>
     <string name="read_privacy_policy">Llegiu la política de privadesa</string>
-    <string name="start_accept_privacy_policy">Per complir amb el Reglament General de Protecció de Dades Europeu (GDPR), us demanem que pareu atenció a la política de privadesa del NewPipe. Llegiu-la detingudament.
+    <string name="start_accept_privacy_policy">Per complir amb el Reglament General de Protecció de Dades Europeu (GDPR), us demanem que pareu atenció a la política de privadesa del Tubular. Llegiu-la detingudament.
 \nSi voleu informar d\'un error, l\'haureu d\'acceptar.</string>
     <string name="accept">Accepta</string>
     <string name="decline">Rebutja</string>
@@ -339,7 +339,7 @@
     <string name="list">Llista</string>
     <string name="grid">Quadrícula</string>
     <string name="auto">Automàtic</string>
-    <string name="app_update_available_notification_title">Una nova versió del NewPipe està disponible!</string>
+    <string name="app_update_available_notification_title">Una nova versió del Tubular està disponible!</string>
     <string name="missions_header_pending">Pendent</string>
     <string name="paused">en pausa</string>
     <string name="queued">a la cua</string>
@@ -350,7 +350,7 @@
     <string name="error_path_creation">No es pot crear la carpeta de destinació</string>
     <string name="stop">Atura</string>
     <string name="events">Esdeveniments</string>
-    <string name="app_update_notification_channel_description">Notificacions de noves versions del NewPipe</string>
+    <string name="app_update_notification_channel_description">Notificacions de noves versions del Tubular</string>
     <string name="subscribers_count_not_available">Nombre de subscriptors no disponible</string>
     <string name="main_page_content_summary">Quines pestanyes es mostren a la pàgina principal</string>
     <string name="conferences">Conferències</string>
@@ -398,7 +398,7 @@
     <string name="enable_playback_state_lists_summary">Mostra els indicadors de posició de reproducció a les llistes</string>
     <string name="settings_category_clear_data_title">Neteja les dades</string>
     <string name="permission_denied">El sistema ha denegat l\'acció</string>
-    <string name="error_postprocessing_stopped">S\'ha tancat el NewPipe mentre es treballava en el fitxer</string>
+    <string name="error_postprocessing_stopped">S\'ha tancat el Tubular mentre es treballava en el fitxer</string>
     <string name="downloads_storage_ask_title">Demana on baixar</string>
     <string name="download_to_sdcard_error_message">No es pot desar a la targeta externa. Voleu restablir la carpeta de baixades\?</string>
     <string name="error_http_unsupported_range">El servidor no accepta baixades simultànies. Proveu amb @string/msg_threads = 1</string>
@@ -456,12 +456,12 @@
     <string name="video_detail_by">Per %s</string>
     <string name="channel_created_by">Creat per %s</string>
     <string name="detail_sub_channel_thumbnail_view_description">Miniatura de l\'avatar del canal</string>
-    <string name="content_not_supported">El NewPipe encara no suporta aquest contingut.
+    <string name="content_not_supported">El Tubular encara no suporta aquest contingut.
 \n
 \nEsperem que en el futur ho faci.</string>
     <string name="feed_use_dedicated_fetch_method_help_text">Creieu que la càrrega de contingut és massa lenta\? Si és el cas, proveu d\'activar la càrrega ràpida (podeu canviar-ho a paràmetres o al botó de sota).
 \n
-\nEl NewPipe ofereix dues formes de càrrega de contingut per als feeds:
+\nEl Tubular ofereix dues formes de càrrega de contingut per als feeds:
 \n• Descarregant-ne el canal sencer, que és lent però complet.
 \n• Fent servir un servei dedicat, que és molt ràpid però sovint incomplet.
 \n
@@ -540,7 +540,7 @@
     <string name="error_report_open_github_notice">Si us plau, comproveu abans si el problema que ha causat aquesta fallada ja ha estat informat. Els tiquets per duplicat fan que perdem temps que podríem aprofitar resolent-los.</string>
     <string name="error_report_open_issue_button_text">Avisa del problema a GitHub</string>
     <string name="copy_for_github">Copia l\'informe d\'errors</string>
-    <string name="clear_cookie_summary">Esborra les galetes que NewPipe desa quan resoleu un reCAPTCHA</string>
+    <string name="clear_cookie_summary">Esborra les galetes que Tubular desa quan resoleu un reCAPTCHA</string>
     <string name="recaptcha_cookies_cleared">Les galetes del reCAPTCHA han estat esborrades</string>
     <string name="clear_cookie_title">Esborra les galetes del reCAPTCHA</string>
     <string name="hash_channel_description">Notificacions pel progrés de comprovació de vídeo</string>
@@ -577,17 +577,17 @@
     <string name="open_with">Obre amb</string>
     <string name="radio">Ràdio</string>
     <string name="featured">Destacats</string>
-    <string name="paid_content">Aquests contingut és només accessible per usuaris de pagament, així que no pot ésser ni reproduït ni baixat pel NewPipe.</string>
-    <string name="youtube_music_premium_content">Aquest vídeo és només disponible pels usuaris subscriptors de YouTube Music Premium, així que no pot ésser ni reproduït ni baixat pel NewPipe.</string>
-    <string name="private_content">Aquest contingut és privat, així que no pot ésser ni reproduït ni baixat amb el NewPipe.</string>
-    <string name="soundcloud_go_plus_content">Aquesta és una pista de SoundCloud Go+ des del territori on us trobeu, així que no pot ésser reproduïda o baixada pel NewPipe.</string>
+    <string name="paid_content">Aquests contingut és només accessible per usuaris de pagament, així que no pot ésser ni reproduït ni baixat pel Tubular.</string>
+    <string name="youtube_music_premium_content">Aquest vídeo és només disponible pels usuaris subscriptors de YouTube Music Premium, així que no pot ésser ni reproduït ni baixat pel Tubular.</string>
+    <string name="private_content">Aquest contingut és privat, així que no pot ésser ni reproduït ni baixat amb el Tubular.</string>
+    <string name="soundcloud_go_plus_content">Aquesta és una pista de SoundCloud Go+ des del territori on us trobeu, així que no pot ésser reproduïda o baixada pel Tubular.</string>
     <string name="georestricted_content">Aquest contingut no és disponible al vostre territori.</string>
     <string name="no_app_to_open_intent">El vostre dispositiu no té cap aplicació capaç d\'obrir aquest tipus de contingut</string>
     <string name="crash_the_app">Força l\'aturada de l\'aplicació</string>
     <string name="recaptcha_solve">Resol</string>
     <string name="related_items_tab_description">Reproduccions en directe relacionades</string>
     <string name="restricted_video_no_stream">Aquest vídeo té restriccions d\'edat.
-\nDegut a la nova política d\'edat de YouTube, el NewPipe no pot accedir a aquest contingut i per tant no pot reproduir-lo.</string>
+\nDegut a la nova política d\'edat de YouTube, el Tubular no pot accedir a aquest contingut i per tant no pot reproduir-lo.</string>
     <string name="show_description_summary">Desactiveu per amagar la descripció i la informació addicional del vídeo</string>
     <string name="disable_media_tunneling_title">Desactiva l\'entunelament del contingut</string>
     <string name="off">Desactiva</string>
@@ -617,7 +617,7 @@
     <string name="service_provides_reason">%s dóna aquesta raó:</string>
     <string name="account_terminated">Usuari suspes</string>
     <string name="feed_load_error_terminated">El compte de l\'autor ha estat esborrat.
-\nNewPipe no serà capaç de carregar aquest fil en el futur.
+\nTubular no serà capaç de carregar aquest fil en el futur.
 \nUs voleu desubscriure d\'aquest canal\?</string>
     <string name="feed_load_error_account_info">No s\'ha pogut carregar el contingut per \'%s\'.</string>
     <string name="feed_load_error">Error carregant contingut</string>
@@ -653,7 +653,7 @@
 \nInstal·leu un gestor de fitxers o intenteu desactivar «%s» als paràmetres de baixada.</string>
     <string name="error_report_notification_toast">S\'ha produït un error, consulteu la notificació</string>
     <string name="enqueued_next">Afegit el següent vídeo a la cua</string>
-    <string name="error_report_notification_title">NewPipe ha trobat un error, toca per informar</string>
+    <string name="error_report_notification_title">Tubular ha trobat un error, toca per informar</string>
     <string name="enqueue_next_stream">Posa a la cua el següent vídeo</string>
     <string name="create_error_notification">Crear una notificació d\'error</string>
     <string name="error_report_channel_description">Notificacions per informar d\'errors</string>

@@ -111,10 +111,10 @@
     <string name="always">Altid</string>
     <string name="just_once">Kun én gang</string>
     <string name="file">Fil</string>
-    <string name="notification_channel_name">NewPipe notifikation</string>
-    <string name="notification_channel_description">Notifikationer for NewPipes afspiller</string>
+    <string name="notification_channel_name">Tubular notifikation</string>
+    <string name="notification_channel_description">Notifikationer for Tubulars afspiller</string>
     <string name="app_update_notification_channel_name">Notifikation om opdatering af app</string>
-    <string name="app_update_notification_channel_description">Notifikationer for nye NewPipe versioner</string>
+    <string name="app_update_notification_channel_description">Notifikationer for nye Tubular versioner</string>
     <string name="unknown_content">[Ukendt]</string>
     <string name="switch_to_background">Skift til baggrund</string>
     <string name="switch_to_popup">Skift til pop op</string>
@@ -190,7 +190,7 @@
     <string name="msg_name">Filnavn</string>
     <string name="msg_threads">Tråde</string>
     <string name="msg_error">Fejl</string>
-    <string name="msg_running">NewPiper downloader</string>
+    <string name="msg_running">Tubularr downloader</string>
     <string name="msg_running_detail">Tryk for detaljer</string>
     <string name="msg_wait">Vent venligst…</string>
     <string name="msg_copied">Kopieret til udklipsholderen</string>
@@ -206,7 +206,7 @@
     <string name="settings_file_replacement_character_title">Erstatningstegn</string>
     <string name="charset_letters_and_digits">Bogstaver og cifre</string>
     <string name="charset_most_special_characters">De fleste specialtegn</string>
-    <string name="title_activity_about">Om NewPipe</string>
+    <string name="title_activity_about">Om Tubular</string>
     <string name="title_licenses">Tredjepartslicenser</string>
     <string name="copyright" formatted="true">© %1$s af %2$s under %3$s</string>
     <string name="tab_about">Om &amp; Ofte stillede spørgsmål</string>
@@ -216,14 +216,14 @@
     <string name="contribution_encouragement">Hvad enten du har idéer til oversættelse, designændringer, kodeoprydning eller virkelig tunge kodeændringer, så er hjælp altid velkommen. Jo mere der bliver gjort, jo bedre bliver det!</string>
     <string name="view_on_github">Se på GitHub</string>
     <string name="donation_title">Doner</string>
-    <string name="donation_encouragement">NewPipe er udviklet af frivillige, der bruger deres fritid på at give dig den bedst mulige brugeroplevelse. Giv noget tilbage for at hjælpe NewPipes udviklere til at gøre appen endnu bedre, mens de nyder en kop kaffe.</string>
+    <string name="donation_encouragement">Tubular er udviklet af frivillige, der bruger deres fritid på at give dig den bedst mulige brugeroplevelse. Giv noget tilbage for at hjælpe Tubulars udviklere til at gøre appen endnu bedre, mens de nyder en kop kaffe.</string>
     <string name="give_back">Giv noget tilbage</string>
     <string name="website_title">Websted</string>
-    <string name="website_encouragement">Besøg NewPipes websted for mere information og nyheder.</string>
-    <string name="privacy_policy_title">NewPipes fortrolighedspolitik</string>
+    <string name="website_encouragement">Besøg Tubulars websted for mere information og nyheder.</string>
+    <string name="privacy_policy_title">Tubulars fortrolighedspolitik</string>
     <string name="read_privacy_policy">Læs fortrolighedspolitik</string>
-    <string name="app_license_title">NewPipes licens</string>
-    <string name="app_license">NewPipe er copyleft, fri software: Du kan bruge, studere, dele og forbedre den som du vil. Specifikt kan du redistribuere og/eller ændre den under betingelserne i GNU General Public License som udgivet af Free Software Foundation, enten version 3 af licensen eller (efter dit ønske) en vilkårlig senere version.</string>
+    <string name="app_license_title">Tubulars licens</string>
+    <string name="app_license">Tubular er copyleft, fri software: Du kan bruge, studere, dele og forbedre den som du vil. Specifikt kan du redistribuere og/eller ændre den under betingelserne i GNU General Public License som udgivet af Free Software Foundation, enten version 3 af licensen eller (efter dit ønske) en vilkårlig senere version.</string>
     <string name="read_full_license">Læs licens</string>
     <string name="title_activity_history">Historik</string>
     <string name="action_history">Historik</string>
@@ -360,7 +360,7 @@
     <string name="minimize_on_exit_none_description">Ingen</string>
     <string name="minimize_on_exit_background_description">Minimer til baggrundsafspiller</string>
     <string name="minimize_on_exit_popup_description">Minimer til pop op-afspiller</string>
-    <string name="app_update_available_notification_title">En NewPipe-opdatering er tilgængelig!</string>
+    <string name="app_update_available_notification_title">En Tubular-opdatering er tilgængelig!</string>
     <string name="paused">sat på pause</string>
     <string name="queued">sat i kø</string>
     <string name="max_retry_msg">Maksimalt antal genforsøg</string>
@@ -441,11 +441,11 @@
     <string name="recaptcha_cookies_cleared">reCAPTCHA cookies er ryddet</string>
     <string name="delete_playback_states_alert">Slet alle afspilningspositioner\?</string>
     <string name="missing_file">Filen er flyttet eller slettet</string>
-    <string name="error_report_notification_title">NewPipe stødte ind i en fejl, tryk for at rapportere</string>
+    <string name="error_report_notification_title">Tubular stødte ind i en fejl, tryk for at rapportere</string>
     <string name="error_report_open_issue_button_text">Rapporter på GitHub</string>
     <string name="high_quality_larger">Høj kvalitet (større)</string>
     <string name="enable_queue_limit">Begræns downloadkøen</string>
-    <string name="clear_cookie_summary">Ryd de cookies som NewPipe opbevarer når du løser en reCAPTCHA</string>
+    <string name="clear_cookie_summary">Ryd de cookies som Tubular opbevarer når du løser en reCAPTCHA</string>
     <string name="notification_colorize_title">Farvelæg notifikationen</string>
     <string name="settings_category_player_notification_title">Afspillernotifikation</string>
     <string name="error_report_notification_toast">En fejl opstod, se notifikationen</string>
@@ -474,8 +474,8 @@
     <string name="confirm_prompt">Vil du rydde din download historik eller slette alle downloadede filer\?</string>
     <string name="error_download_resource_gone">Kan ikke gendanne dette download</string>
     <string name="clear_download_history">Ryd download historik</string>
-    <string name="privacy_policy_encouragement">NewPipe projektet tager dit privatliv seriøst. Derfor samler appen intet data uden dit samtykke.
-\nNewPipes fortrolighedspolitik forklarer i detaljer, hvilke data der bliver sendt og opbevaret når du sender en nedbrudsrapport.</string>
+    <string name="privacy_policy_encouragement">Tubular projektet tager dit privatliv seriøst. Derfor samler appen intet data uden dit samtykke.
+\nTubulars fortrolighedspolitik forklarer i detaljer, hvilke data der bliver sendt og opbevaret når du sender en nedbrudsrapport.</string>
     <string name="copy_for_github">Kopier en formatteret rapport</string>
     <string name="permission_display_over_apps">Giv tilladelse til at vise over andre apps</string>
     <string name="enable_playback_state_lists_summary">Vis indikatorer for afspilningsposition i lister</string>
@@ -492,7 +492,7 @@
     <string name="night_theme_title">Nattema</string>
     <string name="seek_duration_title">Frem- og tilbagesøgningstid</string>
     <string name="restricted_video_no_stream">Denne video er aldersbegrænset.
-\nPga. YouTubes politik om aldersbegrænsede videoer har NewPipe ikke adgang til videoen.</string>
+\nPga. YouTubes politik om aldersbegrænsede videoer har Tubular ikke adgang til videoen.</string>
     <string name="crash_the_player">Crash afspilleren</string>
     <string name="clear_queue_confirmation_title">Spørg om bekræftelse før du rydder en kø</string>
     <string name="seekbar_preview_thumbnail_title">Forhåndsvisning af miniaturebilleder på statuslinjen</string>
@@ -534,7 +534,7 @@
     <string name="create_error_notification">Lav en fejlnotifikation</string>
     <string name="local">Lokale</string>
     <string name="feed_load_error_terminated">Udgiverens bruger er blevet slettet.
-\nNewpipe kan ikke indlæse dette feed i fremtiden.
+\nTubular kan ikke indlæse dette feed i fremtiden.
 \nVil du fjerne dit abonnement på denne kanal\?</string>
     <string name="feed_oldest_subscription_update">Feedet blev sidst opdateret for %s</string>
     <string name="feed_subscription_not_loaded_count">Ikke indlæst: %d</string>
@@ -550,12 +550,12 @@
     <string name="show_thumbnail_title">Vis miniaturebillede</string>
     <string name="metadata_tags">Tags</string>
     <string name="metadata_age_limit">Aldersbegrænsning</string>
-    <string name="content_not_supported">Dette indhold er ikke understøttet af NewPipe.
+    <string name="content_not_supported">Dette indhold er ikke understøttet af Tubular.
 \n
 \nVi håber at kunne understøtte det i en fremtiden.</string>
-    <string name="paid_content">Dette indhold er kun tilgængeligt for brugere som har betalt for det. Det kan ikke blive streamet eller downloadet af NewPipe.</string>
+    <string name="paid_content">Dette indhold er kun tilgængeligt for brugere som har betalt for det. Det kan ikke blive streamet eller downloadet af Tubular.</string>
     <string name="account_terminated">Bruger slettet</string>
-    <string name="private_content">Dette indhold er privat, så det jan ikke blive streamet eller downloadet af NewPipe.</string>
+    <string name="private_content">Dette indhold er privat, så det jan ikke blive streamet eller downloadet af Tubular.</string>
     <string name="recently_added">Nyligt tilføjede</string>
     <string name="featured">Fremhævede</string>
     <string name="service_provides_reason">%s giver denne grund:</string>
@@ -602,9 +602,9 @@
     <string name="choose_instance_prompt">Vælg en instans</string>
     <string name="error_timeout">Forbindelse afbrudt</string>
     <string name="error_progress_lost">Fremskridt tabt fordi filen blev slettet</string>
-    <string name="error_postprocessing_stopped">NewPipe blev lukket under arbejde på filen</string>
+    <string name="error_postprocessing_stopped">Tubular blev lukket under arbejde på filen</string>
     <string name="overwrite_failed">Kan ikke overskrive filen</string>
-    <string name="start_accept_privacy_policy">For at være i overenstemmelse med GDPR fanger vi din opmærksomhed hentil NewPipes privatpolitik. Venligst læs den med omhu.
+    <string name="start_accept_privacy_policy">For at være i overenstemmelse med GDPR fanger vi din opmærksomhed hentil Tubulars privatpolitik. Venligst læs den med omhu.
 \nDu skal acceptere den for at sende os en fejlrapport.</string>
     <string name="unhook_checkbox">Aflænk (kan skabe forvrængning)</string>
     <string name="import_soundcloud_instructions">Importer en SoundCloud profil ved at skrive enten dit URL eller ID:
@@ -644,7 +644,7 @@
     <string name="show_error_snackbar">Vis en fejl snackbar</string>
     <string name="downloads_storage_use_saf_title">Brug system mappevælger (SAF)</string>
     <string name="detail_sub_channel_thumbnail_view_description">Kanalens avatar-miniaturebillede</string>
-    <string name="soundcloud_go_plus_content">Dette er et SoundCloud Go+-nummer, i hvert fald i dit land, så det kan ikke streames eller downloades af NewPipe.</string>
+    <string name="soundcloud_go_plus_content">Dette er et SoundCloud Go+-nummer, i hvert fald i dit land, så det kan ikke streames eller downloades af Tubular.</string>
     <string name="no_appropriate_file_manager_message_android_10">Der blev ikke fundet nogen passende filhåndtering til denne handling.
 \nInstaller en Storage Access Framework-kompatibel filhåndtering</string>
     <string name="no_appropriate_file_manager_message">Der blev ikke fundet nogen passende filhåndtering til denne handling.
@@ -670,14 +670,14 @@
     <string name="no_video_streams_available_for_external_players">Ingen videostreams er tilgængelige for eksterne afspillere</string>
     <string name="off">Fra</string>
     <string name="tablet_mode_title">Tablet-tilstand</string>
-    <string name="youtube_music_premium_content">Denne video er kun tilgængelig for YouTube Music Premium-medlemmer, så den kan ikke streames eller downloades af NewPipe.</string>
+    <string name="youtube_music_premium_content">Denne video er kun tilgængelig for YouTube Music Premium-medlemmer, så den kan ikke streames eller downloades af Tubular.</string>
     <string name="downloads_storage_use_saf_summary">\"Storage Access Framework\" gør det muligt at downloade til et eksternt SD-kort</string>
     <string name="enable_disposed_exceptions_summary">Fremtving indberetning af ikke-leverbare Rx-undtagelser uden for fragmentets eller aktivitetens livscyklus efter bortskaffelse</string>
     <string name="app_update_available_notification_text">Tryk for at downloade %s</string>
     <string name="downloads_storage_use_saf_summary_api_29">Fra og med Android 10 understøttes kun \"Storage Access Framework\"</string>
     <string name="feed_use_dedicated_fetch_method_help_text">Synes du, at feed-indlæsning er for langsom\? Hvis det er tilfældet, så prøv at aktivere hurtig indlæsning (du kan ændre det i indstillingerne eller ved at trykke på knappen nedenfor).
 \n
-\nNewPipe tilbyder to strategier til feed-indlæsning:
+\nTubular tilbyder to strategier til feed-indlæsning:
 \n- Hentning af hele abonnementskanalen, hvilket er langsomt, men komplet.
 \n- Brug af et dedikeret service endpoint, hvilket er hurtigt, men normalt ikke komplet.
 \n
@@ -696,7 +696,7 @@
     <string name="faq_description">Hvis du har problemer med at bruge appen, bør du tjekke disse svar på almindelige spørgsmål!</string>
     <string name="faq">Se på hjemmeside</string>
     <string name="show_image_indicators_summary">Vis Picasso-farvede bånd oven på billeder, der angiver deres kilde: rød for netværk, blå for disk og grøn for hukommelse</string>
-    <string name="app_update_unavailable_toast">Du kører den nyeste version af NewPipe</string>
+    <string name="app_update_unavailable_toast">Du kører den nyeste version af Tubular</string>
     <string name="new_seek_duration_toast">På grund af ExoPlayer-begrænsninger blev søgetiden sat til %d sekunder</string>
     <string name="feed_group_show_only_ungrouped_subscriptions">Vis kun ikke-grupperede abonnementer</string>
     <string name="playlist_page_summary">Side med spillelister</string>
