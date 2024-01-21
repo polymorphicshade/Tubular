@@ -54,6 +54,12 @@
         app:iconSpaceReserved="false" />
 
     <PreferenceScreen
+        android:fragment="org.schabi.newpipe.settings.ReturnYouTubeDislikeSettingsFragment"
+        android:icon="@drawable/ic_thumb_down"
+        android:title="ReturnYouTubeDislike"
+        app:iconSpaceReserved="false" />
+
+    <PreferenceScreen
         android:fragment="org.schabi.newpipe.settings.DebugSettingsFragment"
         android:icon="@drawable/ic_bug_report"
         android:key="@string/debug_pref_screen_key"

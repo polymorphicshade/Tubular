@@ -117,6 +117,7 @@ import org.schabi.newpipe.util.ListHelper;
 import org.schabi.newpipe.util.Localization;
 import org.schabi.newpipe.util.NavigationHelper;
 import org.schabi.newpipe.util.PermissionHelper;
+import org.schabi.newpipe.extractor.returnyoutubedislike.ReturnYouTubeDislikeInfo;
 import org.schabi.newpipe.util.PlayButtonHelper;
 import org.schabi.newpipe.util.SponsorBlockMode;
 import org.schabi.newpipe.util.StreamTypeUtil;
@@ -1518,6 +1519,8 @@ public final class VideoDetailFragment
     public void handleResult(@NonNull final StreamInfo info) {
         super.handleResult(info);
 
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
+
         currentInfo = info;
         setInitialData(info.getServiceId(), info.getOriginalUrl(), info.getName(), playQueue);
 
@@ -1534,6 +1537,14 @@ public final class VideoDetailFragment
             displayUploaderAsSubChannel(info);
         }
 
+        final ReturnYouTubeDislikeInfo rydInfo = info.getRydInfo();
+        final boolean isRydEnabled = prefs.getBoolean(
+                getString(R.string.return_youtube_dislike_enable_key), true);
+        final boolean overrideLikeCount = prefs.getBoolean(
+                getString(R.string.return_youtube_dislike_override_like_count_key), true);
+        final boolean overrideViewCount = prefs.getBoolean(
+                getString(R.string.return_youtube_dislike_override_view_count_key), true);
+
         if (info.getViewCount() >= 0) {
             if (info.getStreamType().equals(StreamType.AUDIO_LIVE_STREAM)) {
                 binding.detailViewCountView.setText(Localization.listeningCount(activity,
@@ -1548,6 +1559,12 @@ public final class VideoDetailFragment
             binding.detailViewCountView.setVisibility(View.VISIBLE);
         } else {
             binding.detailViewCountView.setVisibility(View.GONE);
+        }
+
+        // RYD override: views
+        if (rydInfo != null && isRydEnabled && overrideViewCount) {
+            binding.detailViewCountView.setText(Localization
+                    .localizeViewCount(activity, rydInfo.viewCount));
         }
 
         if (info.getDislikeCount() == -1 && info.getLikeCount() == -1) {
@@ -1568,6 +1585,14 @@ public final class VideoDetailFragment
                 binding.detailThumbsDownImgView.setVisibility(View.GONE);
             }
 
+            // RYD override: dislikes
+            if (rydInfo != null && isRydEnabled) {
+                binding.detailThumbsDownCountView.setText(Localization
+                        .shortCount(activity, rydInfo.dislikes));
+                binding.detailThumbsDownCountView.setVisibility(View.VISIBLE);
+                binding.detailThumbsDownImgView.setVisibility(View.VISIBLE);
+            }
+
             if (info.getLikeCount() >= 0) {
                 binding.detailThumbsUpCountView.setText(Localization.shortCount(activity,
                         info.getLikeCount()));
@@ -1577,6 +1602,15 @@ public final class VideoDetailFragment
                 binding.detailThumbsUpCountView.setVisibility(View.GONE);
                 binding.detailThumbsUpImgView.setVisibility(View.GONE);
             }
+
+            // RYD override: likes
+            if (rydInfo != null && isRydEnabled && overrideLikeCount) {
+                binding.detailThumbsUpCountView.setText(Localization
+                        .shortCount(activity, rydInfo.likes));
+                binding.detailThumbsUpCountView.setVisibility(View.VISIBLE);
+                binding.detailThumbsUpImgView.setVisibility(View.VISIBLE);
+            }
+
             binding.detailThumbsDisabledView.setVisibility(View.GONE);
         }
 

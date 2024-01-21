@@ -1,0 +1,53 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="ReturnYouTubeDislike">
+    <Preference
+        app:iconSpaceReserved="false"
+        android:key="@string/return_youtube_dislike_home_page_key"
+        android:summary="@string/return_youtube_dislike_home_page_summary"
+        android:title="@string/return_youtube_dislike_home_page_title"/>
+
+    <Preference
+        app:iconSpaceReserved="false"
+        android:key="@string/return_youtube_dislike_security_faq_key"
+        android:summary="@string/return_youtube_dislike_security_faq_summary"
+        android:title="@string/return_youtube_dislike_security_faq_title"/>
+
+    <PreferenceCategory
+        android:layout="@layout/settings_category_header_layout"
+        android:title="@string/settings">
+
+        <SwitchPreference
+            app:iconSpaceReserved="false"
+            android:defaultValue="true"
+            android:key="@string/return_youtube_dislike_enable_key"
+            android:summary="@string/return_youtube_dislike_enable_summary"
+            android:title="@string/return_youtube_dislike_enable_title"/>
+
+        <org.schabi.newpipe.settings.custom.ReturnYouTubeDislikeApiUrlPreference
+            app:iconSpaceReserved="false"
+            android:dependency="@string/return_youtube_dislike_enable_key"
+            android:defaultValue="@string/return_youtube_dislike_default_api_url"
+            android:key="@string/return_youtube_dislike_api_url_key"
+            android:summary="@string/return_youtube_dislike_api_url_summary"
+            android:title="@string/return_youtube_dislike_api_url_title"/>
+
+        <SwitchPreference
+            app:iconSpaceReserved="false"
+            android:dependency="@string/return_youtube_dislike_enable_key"
+            android:defaultValue="true"
+            android:key="@string/return_youtube_dislike_override_like_count_key"
+            android:summary="@string/return_youtube_dislike_override_like_count_summary"
+            android:title="@string/return_youtube_dislike_override_like_count_title"/>
+
+        <SwitchPreference
+            app:iconSpaceReserved="false"
+            android:dependency="@string/return_youtube_dislike_enable_key"
+            android:defaultValue="true"
+            android:key="@string/return_youtube_dislike_override_view_count_key"
+            android:summary="@string/return_youtube_dislike_override_view_count_summary"
+            android:title="@string/return_youtube_dislike_override_view_count_title"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

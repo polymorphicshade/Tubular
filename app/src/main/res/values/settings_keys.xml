@@ -1498,4 +1498,12 @@
     <string name="sponsor_block_category_pending_key" translatable="false">sponsor_block_category_pending_key</string>
     <string name="sponsor_block_category_pending_color_key" translatable="false">sponsor_block_category_pending_color_key</string>
     <string name="sponsor_block_clear_whitelist_key" translatable="false">sponsor_block_clear_whitelist</string>
+
+    <!-- ReturnYouTubeDislike -->
+    <string name="return_youtube_dislike_home_page_key" translatable="false">return_youtube_dislike_home_page</string>
+    <string name="return_youtube_dislike_security_faq_key" translatable="false">return_youtube_dislike_security_faq</string>
+    <string name="return_youtube_dislike_enable_key" translatable="false">return_youtube_dislike_enable</string>
+    <string name="return_youtube_dislike_api_url_key" translatable="false">return_youtube_dislike_api_url</string>
+    <string name="return_youtube_dislike_override_like_count_key" translatable="false">return_youtube_dislike_override_like_count</string>
+    <string name="return_youtube_dislike_override_view_count_key" translatable="false">return_youtube_dislike_override_view_count</string>
 </resources>

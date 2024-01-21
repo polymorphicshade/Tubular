@@ -47,6 +47,7 @@ import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
 import org.schabi.newpipe.extractor.kiosk.KioskInfo;
 import org.schabi.newpipe.extractor.linkhandler.ListLinkHandler;
 import org.schabi.newpipe.extractor.playlist.PlaylistInfo;
+import org.schabi.newpipe.extractor.returnyoutubedislike.ReturnYouTubeDislikeApiSettings;
 import org.schabi.newpipe.extractor.search.SearchInfo;
 import org.schabi.newpipe.extractor.sponsorblock.SponsorBlockApiSettings;
 import org.schabi.newpipe.extractor.stream.StreamInfo;
@@ -121,10 +122,31 @@ public final class ExtractorHelper {
                 Single.fromCallable(() -> StreamInfo.getInfo(
                         NewPipe.getService(serviceId),
                         url,
-                        buildSponsorBlockApiSettings(context))));
+                        buildSponsorBlockApiSettings(context),
+                        buildReturnYouTubeDislikeApiSettings(context))));
     }
 
-    public static Single<ChannelInfo> getChannelInfo(final int serviceId, final String url,
+    private static ReturnYouTubeDislikeApiSettings buildReturnYouTubeDislikeApiSettings(
+            final Context context) {
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        final boolean isRydEnabled = prefs.getBoolean(context
+                .getString(R.string.return_youtube_dislike_enable_key), false);
+
+        if (!isRydEnabled) {
+            return null;
+        }
+
+        final ReturnYouTubeDislikeApiSettings result = new ReturnYouTubeDislikeApiSettings();
+        result.apiUrl =
+                prefs.getString(
+                        context.getString(R.string.return_youtube_dislike_api_url_key), null);
+
+        return result;
+    }
+
+    public static Single<ChannelInfo> getChannelInfo(final int serviceId,
+                                                     final String url,
                                                      final boolean forceLoad) {
         checkServiceId(serviceId);
         return checkCache(forceLoad, serviceId, url, InfoItem.InfoType.CHANNEL,
