@@ -16,7 +16,7 @@ android {
     namespace 'org.schabi.newpipe'
 
     defaultConfig {
-        applicationId "org.schabi.newpipe"
+        applicationId "org.polymorphicshade.tubular"
         resValue "string", "app_name", "Tubular"
         minSdk 21
         targetSdk 33
