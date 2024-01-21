@@ -22,6 +22,7 @@ object ReleaseVersionUtil {
     private const val RELEASE_CERT_PUBLIC_KEY_SHA1 =
         "B0:2E:90:7C:1C:D6:FC:57:C3:35:F0:88:D0:8F:50:5F:94:E4:D2:15"
 
+    // TODO: no longer using this since this checks Github now... do we still need this?
     @JvmStatic
     fun isReleaseApk(): Boolean {
         return certificateSHA1Fingerprint == RELEASE_CERT_PUBLIC_KEY_SHA1

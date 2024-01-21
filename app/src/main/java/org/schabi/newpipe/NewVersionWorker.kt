@@ -22,7 +22,7 @@ import org.schabi.newpipe.extractor.downloader.Response
 import org.schabi.newpipe.extractor.exceptions.ReCaptchaException
 import org.schabi.newpipe.util.ReleaseVersionUtil.coerceUpdateCheckExpiry
 import org.schabi.newpipe.util.ReleaseVersionUtil.isLastUpdateCheckExpired
-import org.schabi.newpipe.util.ReleaseVersionUtil.isReleaseApk
+import org.schabi.newpipe.util.Version
 import java.io.IOException
 
 class NewVersionWorker(
@@ -30,20 +30,15 @@ class NewVersionWorker(
     workerParams: WorkerParameters
 ) : Worker(context, workerParams) {
 
-    /**
-     * Method to compare the current and latest available app version.
-     * If a newer version is available, we show the update notification.
-     *
-     * @param versionName    Name of new version
-     * @param apkLocationUrl Url with the new apk
-     * @param versionCode    Code of new version
-     */
     private fun compareAppVersionAndShowNotification(
         versionName: String,
-        apkLocationUrl: String?,
-        versionCode: Int
+        apkLocationUrl: String?
     ) {
-        if (BuildConfig.VERSION_CODE >= versionCode) {
+        val ourVersion = Version.fromString(BuildConfig.VERSION_NAME)
+        val theirVersion = Version.fromString(versionName)
+
+        // abort if source version is the same or newer than target version
+        if (ourVersion >= theirVersion) {
             if (inputData.getBoolean(IS_MANUAL, false)) {
                 // Show toast stating that the app is up-to-date if the update check was manual.
                 ContextCompat.getMainExecutor(applicationContext).execute {
@@ -83,11 +78,6 @@ class NewVersionWorker(
 
     @Throws(IOException::class, ReCaptchaException::class)
     private fun checkNewVersion() {
-        // Check if the current apk is a github one or not.
-        if (!isReleaseApk()) {
-            return
-        }
-
         if (!inputData.getBoolean(IS_MANUAL, false)) {
             val prefs = PreferenceManager.getDefaultSharedPreferences(applicationContext)
             // Check if the last request has happened a certain time ago
@@ -120,19 +110,16 @@ class NewVersionWorker(
 
         // Parse the json from the response.
         try {
-            val newpipeVersionInfo = JsonParser.`object`()
-                .from(response.responseBody()).getObject("flavors")
-                .getObject("newpipe")
-
-            val versionName = newpipeVersionInfo.getString("version")
-            val versionCode = newpipeVersionInfo.getInt("version_code")
-            val apkLocationUrl = newpipeVersionInfo.getString("apk")
-            compareAppVersionAndShowNotification(versionName, apkLocationUrl, versionCode)
+            val jObj = JsonParser.`object`().from(response.responseBody())
+            val versionName = jObj.getString("tag_name")
+            val apkLocationUrl = jObj
+                .getArray("assets")
+                .getObject(0)
+                .getString("browser_download_url")
+            compareAppVersionAndShowNotification(versionName, apkLocationUrl)
         } catch (e: JsonParserException) {
-            // Most likely something is wrong in data received from NEWPIPE_API_URL.
-            // Do not alarm user and fail silently.
             if (DEBUG) {
-                Log.w(TAG, "Could not get NewPipe API: invalid json", e)
+                Log.w(TAG, "Invalid json", e)
             }
         }
     }
@@ -153,22 +140,9 @@ class NewVersionWorker(
     companion object {
         private val DEBUG = MainActivity.DEBUG
         private val TAG = NewVersionWorker::class.java.simpleName
-        private const val NEWPIPE_API_URL = "https://newpipe.net/api/data.json"
+        private const val NEWPIPE_API_URL = "https://api.github.com/repos/polymorphicshade/Tubular/releases/latest"
         private const val IS_MANUAL = "isManual"
 
-        /**
-         * Start a new worker which checks if all conditions for performing a version check are met,
-         * fetches the API endpoint [.NEWPIPE_API_URL] containing info about the latest NewPipe
-         * version and displays a notification about an available update if one is available.
-         * <br></br>
-         * Following conditions need to be met, before data is requested from the server:
-         *
-         *  *  The app is signed with the correct signing key (by TeamNewPipe / schabi).
-         * If the signing key differs from the one used upstream, the update cannot be installed.
-         *  * The user enabled searching for and notifying about updates in the settings.
-         *  * The app did not recently check for updates.
-         * We do not want to make unnecessary connections and DOS our servers.
-         */
         @JvmStatic
         fun enqueueNewVersionCheckingWork(context: Context, isManual: Boolean) {
             val workRequest = OneTimeWorkRequestBuilder<NewVersionWorker>()
