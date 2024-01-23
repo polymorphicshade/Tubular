@@ -212,10 +212,10 @@
     <string name="donation_title">บริจาค</string>
     <string name="give_back">คืนให้</string>
     <string name="website_title">เว็บไซต์</string>
-    <string name="website_encouragement">เยี่ยมชมเว็บไซต์ Tubular สำหรับข้อมูลเพิ่มเติมและข่าวสาร</string>
-    <string name="privacy_policy_title">นโยบายความเป็นส่วนตัวของ Tubular</string>
-    <string name="privacy_policy_encouragement">โครงการ Tubular คำนึงถึงความเป็นส่วนตัวของคุณอย่างจริงจัง ดังนั้นแอปจะไม่เก็บรวบรวมข้อมูลใดๆ โดยไม่ได้รับความยินยอมจากคุณ
-\nนโยบายความเป็นส่วนตัวของ Tubular มีการอธิบายในรายละเอียดเกี่ยวกับข้อมูลที่จะถูกส่งออกไปและเก็บไว้เมื่อคุณรายงานความผิดพลาดของแอป</string>
+    <string name="website_encouragement">เยี่ยมชมเว็บไซต์ NewPipe สำหรับข้อมูลเพิ่มเติมและข่าวสาร</string>
+    <string name="privacy_policy_title">นโยบายความเป็นส่วนตัวของ NewPipe</string>
+    <string name="privacy_policy_encouragement">โครงการ NewPipe คำนึงถึงความเป็นส่วนตัวของคุณอย่างจริงจัง ดังนั้นแอปจะไม่เก็บรวบรวมข้อมูลใดๆ โดยไม่ได้รับความยินยอมจากคุณ
+\nนโยบายความเป็นส่วนตัวของ NewPipe มีการอธิบายในรายละเอียดเกี่ยวกับข้อมูลที่จะถูกส่งออกไปและเก็บไว้เมื่อคุณรายงานความผิดพลาดของแอป</string>
     <string name="read_privacy_policy">อ่านนโยบายความเป็นส่วนตัว</string>
     <string name="app_license_title">สัญญาอนุญาตของ Tubular</string>
     <string name="read_full_license">อ่านสัญญาอนุญาต</string>

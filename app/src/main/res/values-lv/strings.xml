@@ -55,13 +55,13 @@
     <string name="app_license">Tubular ir bezmaksas programmatūra: jūs varat izmantot, izpētīt, dalīties un uzlabot to jebkurā brīdī. Tieši jūs varat kopīgot un/ vai modificēt to saskaņā ar GNU Vispārējās Publiskās Licences noteikumiem, ko publicējusi Brīvās Programmatūras Fonds, vai nu 3. licences versija, vai (pēc jūsu izvēles) jebkura vēlāka versija.</string>
     <string name="app_license_title">Tubular Licence</string>
     <string name="read_privacy_policy">Izslasīt privātuma politiku</string>
-    <string name="privacy_policy_encouragement">Tubular projekts uztver jūsu privātumu ļoti nopietni . Tāpēc lietotne nesavāc datus bez jūsu piekrišanas.
-\nTubular privātuma politika sīki izskaidro, kādi dati tiek nosūtīti un uzglabāti, nosūtot kļūdas ziņojumu.</string>
-    <string name="privacy_policy_title">Tubular Privātuna Politika</string>
-    <string name="website_encouragement">Apmeklēt Tubular mājaslapu, lai iegūtu vairāk informācijas un ziņu.</string>
+    <string name="privacy_policy_encouragement">NewPipe projekts uztver jūsu privātumu ļoti nopietni . Tāpēc lietotne nesavāc datus bez jūsu piekrišanas.
+\nNewPipe privātuma politika sīki izskaidro, kādi dati tiek nosūtīti un uzglabāti, nosūtot kļūdas ziņojumu.</string>
+    <string name="privacy_policy_title">NewPipe Privātuna Politika</string>
+    <string name="website_encouragement">Apmeklēt NewPipe mājaslapu, lai iegūtu vairāk informācijas un ziņu.</string>
     <string name="website_title">Mājaslapa</string>
     <string name="give_back">Dot atpakaļ</string>
-    <string name="donation_encouragement">Tubular izstrādā brīvprātīgie, kas pavada savu brīvo laiku, sniedzot vislabāko lietotāju pieredzi. Dodiet palīdzību izstrādātājiem, kuri padara Tubular vēl lābāku.</string>
+    <string name="donation_encouragement">NewPipe izstrādā brīvprātīgie, kas pavada savu brīvo laiku, sniedzot vislabāko lietotāju pieredzi. Dodiet palīdzību izstrādātājiem, kuri padara Tubular vēl lābāku.</string>
     <string name="donation_title">Ziedot</string>
     <string name="view_on_github">Apskatīt GitHub</string>
     <string name="contribution_encouragement">Vienalga, kādas idejas Jums ir; Tulkojuma, dizaina izmaiņu, koda tīrīšanas vai reāli smagas kodu izmaiņas - palīdzība vienmēr ir laipni gaidīta. Jo vairāk tiek darīts, jo labāks tas kļūst!</string>

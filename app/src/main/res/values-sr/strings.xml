@@ -193,10 +193,10 @@
     <string name="unknown_content">[Непознато]</string>
     <string name="show_hold_to_append_title">Прикажи савет „Задржи за стављање у ред чекања”</string>
     <string name="donation_title">Донација</string>
-    <string name="donation_encouragement">Tubular је развијен од стране волонтера који проводе своје слободно време доносећи вам најбоље корисничко искуство. Узвратите програмерима како би учинили Tubular још бољим, док уживају у шољици кафе.</string>
+    <string name="donation_encouragement">NewPipe је развијен од стране волонтера који проводе своје слободно време доносећи вам најбоље корисничко искуство. Узвратите програмерима како би учинили Tubular још бољим, док уживају у шољици кафе.</string>
     <string name="give_back">Узврати</string>
     <string name="website_title">Веб-сајт</string>
-    <string name="website_encouragement">За више информација и новости посетите Tubular веб-сајт.</string>
+    <string name="website_encouragement">За више информација и новости посетите NewPipe веб-сајт.</string>
     <string name="hold_to_append">Задржи за стављање у ред чекања</string>
     <string name="use_inexact_seek_title">Користи брзо, непрецизно премотавање</string>
     <string name="use_inexact_seek_summary">Непрецизно премотавање омогућава плејеру да брже долази до позиције уз смањену прецизност. Премотавање за 5, 15 или 25 секунди са овом опцијом не ради</string>
@@ -384,9 +384,9 @@
     <string name="title_last_played">Последње пуштано</string>
     <string name="app_license">Tubular је слободан софтвер за копирање: Можете га користити, проучавати, делити и побољшавати по жељи. Конкретно, можете га поново дистрибуирати и/или модификовати под условима GNU Опште јавне лиценце коју је објавила Фондација за слободни софтвер, било верзију 3 лиценце или (по вашем избору) било коју каснију верзију.</string>
     <string name="read_privacy_policy">Прочитај политику приватности</string>
-    <string name="privacy_policy_encouragement">Пројекат Tubular веома озбиљно схвата вашу приватност. Стога, апликација не прикупља никакве податке без вашег пристанка.
-\nПолитика приватности Tubular-а детаљно објашњава који се подаци шаљу и чувају када пошаљете извештај о отказивању апликације.</string>
-    <string name="privacy_policy_title">Политика приватности Tubular-а</string>
+    <string name="privacy_policy_encouragement">Пројекат NewPipe веома озбиљно схвата вашу приватност. Стога, апликација не прикупља никакве податке без вашег пристанка.
+\nПолитика приватности NewPipe-а детаљно објашњава који се подаци шаљу и чувају када пошаљете извештај о отказивању апликације.</string>
+    <string name="privacy_policy_title">Политика приватности NewPipe-а</string>
     <string name="done">Готово</string>
     <string name="recaptcha_solve">Реши</string>
     <string name="subtitle_activity_recaptcha">Притисните „Готово“ када решите</string>

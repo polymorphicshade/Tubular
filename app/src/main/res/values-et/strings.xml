@@ -205,8 +205,8 @@
     <string name="view_on_github">Vaata GitHubis</string>
     <string name="donation_title">Anneta</string>
     <string name="website_title">Veebileht</string>
-    <string name="website_encouragement">Enama info saamiseks külasta Tubular veebilehte.</string>
-    <string name="privacy_policy_title">Tubular privaatsuspoliitika</string>
+    <string name="website_encouragement">Enama info saamiseks külasta NewPipe veebilehte.</string>
+    <string name="privacy_policy_title">NewPipe privaatsuspoliitika</string>
     <string name="read_privacy_policy">Loe privaatsuspoliitikat</string>
     <string name="app_license_title">Tubular litsents</string>
     <string name="read_full_license">Loe litsentsi</string>
@@ -303,9 +303,9 @@
     <string name="copyright" formatted="true">© %1$s %2$s %3$s alla</string>
     <string name="app_description">Vaba ja lihtne voogesitus Androidis.</string>
     <string name="contribution_encouragement">Kui sul on ideid kujunduse muutmisest, koodi puhastamisest või suurtest koodi muudatustest - abi on alati teretulnud. Mida rohkem tehtud, seda paremaks läheb!</string>
-    <string name="donation_encouragement">Tubular arendajad on vabatahtlikud, kes kulutavad oma vaba aega, toomaks sulle parimat kasutamise kogemust. On aeg anda tagasi aidates arendajaid ja muuta Tubular veel paremaks, nautides ise tassi kohvi.</string>
+    <string name="donation_encouragement">NewPipe arendajad on vabatahtlikud, kes kulutavad oma vaba aega, toomaks sulle parimat kasutamise kogemust. On aeg anda tagasi aidates arendajaid ja muuta Tubular veel paremaks, nautides ise tassi kohvi.</string>
     <string name="give_back">Anneta</string>
-    <string name="privacy_policy_encouragement">Tubular võtab privaatsust väga tõsiselt. Seetõttu ei kogu rakendus ilma nõusolekuta mingeid andmeid.
+    <string name="privacy_policy_encouragement">NewPipe võtab privaatsust väga tõsiselt. Seetõttu ei kogu rakendus ilma nõusolekuta mingeid andmeid.
 \nTubular privaatsuspoliitika selgitab üksikasjalikult, milliseid andmeid saadetakse ja kogutakse veateate saatmisel.</string>
     <string name="app_license">Tubular vaba avatud koodiga tarkvara. Seada võid kasutada, uurida, jagada ja parandada nii, nagu õigemaks pead. Täpsemalt - seda võid levitada ja/või muuta vastavalt Vaba Tarkvara Sihtasutuse avaldatud GNU Üldise Avaliku Litsentsi v.3 (või sinu valikul hilisema versiooni) tingimustele.</string>
     <string name="enable_disposed_exceptions_title">Teavita elutsüklist väljas vigadest</string>

@@ -316,7 +316,7 @@
     <string name="view_on_github">GitHub ରେ ଦେଖନ୍ତୁ</string>
     <string name="donation_title">ଦାନ କରନ୍ତୁ</string>
     <string name="donation_encouragement">ସ୍ଵେଚ୍ଛାସେବୀ ସେମାନଙ୍କର ସର୍ବୋତ୍ତମ ସମୟ ଆପଣଙ୍କୁ ସର୍ବୋତ୍ତମ ଉପଭୋକ୍ତା ଅଭିଜ୍ଞତା ଆଣିବା ଦ୍ୱାରା ନୂତନ ପାଇପ୍ ବିକଶିତ କରନ୍ତି । ଡେଭଲପର୍ମାନଙ୍କୁ ଏକ କପ୍ କଫି ଉପଭୋଗ କରୁଥିବାବେଳେ Tubular କୁ ଆହୁରି ଉନ୍ନତ କରିବାରେ ସାହାଯ୍ୟ କରିବାକୁ ଫେରନ୍ତୁ ।</string>
-    <string name="privacy_policy_title">Tubular ର ଗୋପନୀୟତା ନୀତି</string>
+    <string name="privacy_policy_title">NewPipe ର ଗୋପନୀୟତା ନୀତି</string>
     <string name="read_privacy_policy">ଗୋପନୀୟତା ନୀତି ପଢ଼ନ୍ତୁ</string>
     <string name="app_license_title">Tubular ର ଲାଇସେନ୍ସ</string>
     <string name="read_full_license">ଲାଇସେନ୍ସ ପଢ଼ନ୍ତୁ</string>
@@ -470,7 +470,7 @@
     <string name="retry">ପୁନଃଚେଷ୍ଟା କରନ୍ତୁ</string>
     <string name="no_comments">କିଛି କହିବାର ନାହିଁ</string>
     <string name="website_title">ୱେବସାଇଟ୍</string>
-    <string name="website_encouragement">ଅଧିକ ସୂଚନା ଏବଂ ସମ୍ବାଦ ପାଇଁ Tubular ୱେବସାଇଟ୍ ପରିଦର୍ଶନ କରନ୍ତୁ ।</string>
+    <string name="website_encouragement">ଅଧିକ ସୂଚନା ଏବଂ ସମ୍ବାଦ ପାଇଁ NewPipe ୱେବସାଇଟ୍ ପରିଦର୍ଶନ କରନ୍ତୁ ।</string>
     <string name="export_complete_toast">ରପ୍ତାନି ହୋଇଛି</string>
     <string name="no_valid_zip_file">କୌଣସି ବୈଧ ZIP ଫାଇଲ୍ ନାହିଁ</string>
     <string name="conferences">ଆଲୋଚନା</string>
@@ -544,7 +544,7 @@
     <string name="contribution_encouragement">ଆପଣଙ୍କର ଧାରଣା ଅଛି କି ନାହିଁ; ଅନୁବାଦ, ଡିଜାଇନ୍ ପରିବର୍ତ୍ତନ, କୋଡ୍ ସଫା କରିବା, କିମ୍ବା ପ୍ରକୃତ ଭାରୀ କୋଡ୍ ପରିବର୍ତ୍ତନ - ସାହାଯ୍ୟ ସର୍ବଦା ସ୍ୱାଗତଯୋଗ୍ୟ ।ଯେତେ ଭଲ ହୁଏ ସେତେ ଭଲ ହୁଏ!</string>
     <string name="app_description">ଆଣ୍ଡ୍ରଏଡରେ ସ୍ଵାଧୀନ ହାଲୁକା ଷ୍ଟ୍ରିମିଂ ।</string>
     <string name="privacy_policy_encouragement">ନ୍ୟୁ ପାଇପ୍ ପ୍ରୋଜେକ୍ଟ ଆପଣଙ୍କ ଗୋପନୀୟତାକୁ ଅତି ଗମ୍ଭୀରତାର ସହିତ ନେଇଥାଏ । ତେଣୁ, ଆପଣଙ୍କ ସମ୍ମତି ବିନା ଆପ୍ କୌଣସି ତଥ୍ୟ ସଂଗ୍ରହ କରେ ନାହିଁ ।
-\nTubular ର ଗୋପନୀୟତା ନୀତି ବିସ୍ତୃତ ଭାବରେ ବ୍ୟାଖ୍ୟା କରେ ଯେତେବେଳେ ଆପଣ କ୍ରାସ୍ ରିପୋର୍ଟ ପଠାନ୍ତି କେଉଁ ତଥ୍ୟ ପଠାଯାଏ ଏବଂ ଗଚ୍ଛିତ ହୁଏ ।</string>
+\nNewPipe ର ଗୋପନୀୟତା ନୀତି ବିସ୍ତୃତ ଭାବରେ ବ୍ୟାଖ୍ୟା କରେ ଯେତେବେଳେ ଆପଣ କ୍ରାସ୍ ରିପୋର୍ଟ ପଠାନ୍ତି କେଉଁ ତଥ୍ୟ ପଠାଯାଏ ଏବଂ ଗଚ୍ଛିତ ହୁଏ ।</string>
     <string name="main_page_content">ମୁଖ୍ୟ ପୃଷ୍ଠାର ବିଷୟବସ୍ତୁ</string>
     <string name="select_a_playlist">ଏକ ପ୍ଲେଲିଷ୍ଟ ଚୟନ କରନ୍ତୁ</string>
     <string name="import_complete_toast">ଆମଦାନୀ ହୋଇଛି</string>

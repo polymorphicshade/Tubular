@@ -337,9 +337,9 @@
     <string name="contribution_encouragement">Fikirlərinizin olub-olmaması, tərcümə, dizayn dəyişiklikləri, kod təmizlənməsi və ya real ağır kod dəyişiklikləri və.s kömək həmişə xoşdur. Nə qədər çox edilsə, bir o qədər yaxşı olar!</string>
     <string name="give_back">İanə Et</string>
     <string name="website_title">Veb sayt</string>
-    <string name="website_encouragement">Əlavə məlumat və xəbərlər üçün Tubular Veb saytını ziyarət et.</string>
-    <string name="privacy_policy_title">Tubular Məxfilik Siyasəti</string>
-    <string name="privacy_policy_encouragement">Tubular layihəsi məxfiliyinizə çox ciddi yanaşır. Nəticə etibarı ilə, tətbiq sizin razılığınız olmadan heç bir məlumat toplamır.
+    <string name="website_encouragement">Əlavə məlumat və xəbərlər üçün NewPipe Veb saytını ziyarət et.</string>
+    <string name="privacy_policy_title">NewPipe Məxfilik Siyasəti</string>
+    <string name="privacy_policy_encouragement">NewPipe layihəsi məxfiliyinizə çox ciddi yanaşır. Nəticə etibarı ilə, tətbiq sizin razılığınız olmadan heç bir məlumat toplamır.
 \nTubular məxfilik siyasəti xəta məlumatı göndərdiyiniz zaman hansı məlumatların göndərildiyini və saxlanıldığını ətraflı izah edir.</string>
     <string name="read_privacy_policy">Məxfilik Siyasətini Oxu</string>
     <string name="app_license_title">Tubular Lisenziyası</string>
@@ -462,7 +462,7 @@
     <string name="notification_colorize_summary">Android\'in bildiriş rəngini miniatürdəki əsas rəngə uyğun fərdiləşdirməsini təmin et (qeyd edək ki, bu, bütün cihazlarda mövcud deyil)</string>
     <string name="view_on_github">GitHub\'da Bax</string>
     <string name="donation_title">İanə Et</string>
-    <string name="donation_encouragement">Tubular, sizə ən yaxşı istifadəçi təcrübəsi göstərmək üçün boş vaxtlarını sərf edən könüllülər tərəfindən hazırlanmışdır. Tərtibatçılara bir fincan qəhvə içərkən Tubular-ı daha da yaxşılaşdırmağa ianə etməklə kömək edin.</string>
+    <string name="donation_encouragement">NewPipe, sizə ən yaxşı istifadəçi təcrübəsi göstərmək üçün boş vaxtlarını sərf edən könüllülər tərəfindən hazırlanmışdır. Tərtibatçılara bir fincan qəhvə içərkən Tubular-ı daha da yaxşılaşdırmağa ianə etməklə kömək edin.</string>
     <string name="most_liked">Ən çox bəyənildi</string>
     <string name="enqueued">Növbəyə salındı</string>
     <string name="preferred_open_action_settings_summary">Məzmunu açarkən standart hərəkət — %s</string>

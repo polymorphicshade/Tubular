@@ -249,8 +249,8 @@
     <string name="rename">Preimenuj</string>
     <string name="one_item_deleted">1 stavka izbrisana.</string>
     <string name="give_back">Vrati</string>
-    <string name="website_encouragement">Posjeti Tubular web-stranicu za više informacija i vijesti.</string>
-    <string name="privacy_policy_title">Tubular pravila o privatnosti</string>
+    <string name="website_encouragement">Posjeti NewPipe web-stranicu za više informacija i vijesti.</string>
+    <string name="privacy_policy_title">NewPipe pravila o privatnosti</string>
     <string name="read_privacy_policy">Pročitaj pravila o privatnosti</string>
     <string name="title_last_played">Zadnje svirano</string>
     <string name="title_most_played">Najviše reproducirano</string>
@@ -328,7 +328,7 @@
     <string name="restore_defaults">Obnovi standardne vrijednosti</string>
     <string name="restore_defaults_confirmation">Želiš li obnoviti standardne vrijednosti\?</string>
     <string name="subscribers_count_not_available">Broj pretplatnika nije dostupan</string>
-    <string name="donation_encouragement">Tubular razvijaju volonteri koji provode vrijeme kako bi doprinijeli najboljem iskustvu. Doprinesi programerima kako bi poboljšali Tubular dok uživaju u šalici kave.</string>
+    <string name="donation_encouragement">NewPipe razvijaju volonteri koji provode vrijeme kako bi doprinijeli najboljem iskustvu. Doprinesi programerima kako bi poboljšali Tubular dok uživaju u šalici kave.</string>
     <string name="main_page_content_summary">Koje su kartice prikazane na glavnoj stranici</string>
     <string name="conferences">Konferencije</string>
     <string name="preferred_open_action_settings_title">Željena radnja za otvaranje</string>
@@ -384,8 +384,8 @@
     <string name="error_unable_to_load_comments">Nije bilo moguće učitati komentare</string>
     <string name="close">Zatvori</string>
     <string name="app_license">Tubular je copyleft libre softver: Može se koristiti, proučavati i poboljšavati po volji. Konkretno, može se redistribuirati i / ili modificirati pod uvjetima GNU opće javne licence koju je objavila zaklada Free Software Foundation, pod verzijom 3 licence, ili (po vlastitom izboru) bilo koje kasnije verzije.</string>
-    <string name="privacy_policy_encouragement">Projekt Tubular ozbiljno shvaća tvou privatnost. Stoga program ne prikuplja nikakve podatke bez tvog pristanka.
-\nTubular pravila o privatnosti detaljno objašnjavaju koji se podaci šalju i spremaju kad šalješ izvještaje o prekidu rada programa.</string>
+    <string name="privacy_policy_encouragement">Projekt NewPipe ozbiljno shvaća tvou privatnost. Stoga program ne prikuplja nikakve podatke bez tvog pristanka.
+\nNewPipe pravila o privatnosti detaljno objašnjavaju koji se podaci šalju i spremaju kad šalješ izvještaje o prekidu rada programa.</string>
     <string name="start_accept_privacy_policy">Kako bismo se uskladili s Europskom općom uredbom o zaštiti podataka (GDPR), ovime upozoravamo na Tubular politiku privatnosti. Pažljivo je pročitaj.
 \nZa slanje izvješća o pogreškama moraš prihvatiti politiku privatnosti.</string>
     <string name="enable_playback_resume_title">Nastavi reprodukciju</string>

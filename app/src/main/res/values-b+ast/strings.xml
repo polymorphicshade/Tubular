@@ -113,10 +113,10 @@
     <string name="start_here_on_background">Reproducir en segundu planu</string>
     <string name="start_here_on_popup">Reproducir nun ventanu</string>
     <string name="donation_title">Donación</string>
-    <string name="donation_encouragement">Tubular ta desendolcáu por xente voluntario que pasa\'l tiempu llibre ufriéndote la meyor esperiencia d\'usuariu. Devolvi\'l favor p\'ayudar a los desendolcadores p\'ameyorar Tubular tovía más mentanto esfruten d\'una taza de café.</string>
+    <string name="donation_encouragement">NewPipe ta desendolcáu por xente voluntario que pasa\'l tiempu llibre ufriéndote la meyor esperiencia d\'usuariu. Devolvi\'l favor p\'ayudar a los desendolcadores p\'ameyorar Tubular tovía más mentanto esfruten d\'una taza de café.</string>
     <string name="give_back">Donar</string>
     <string name="website_title">Sitiu web</string>
-    <string name="website_encouragement">Visita\'l sitiu web de Tubular pa más información y noticies.</string>
+    <string name="website_encouragement">Visita\'l sitiu web de NewPipe pa más información y noticies.</string>
     <string name="default_content_country_title">País predetermináu del conteníu</string>
     <string name="always">Siempres</string>
     <string name="import_data_title">Importar una base de datos</string>
@@ -220,7 +220,7 @@
         <item quantity="other">%s vídeos</item>
     </plurals>
     <string name="preferred_player_fetcher_notification_message">Cargando\'l conteníu solicitáu</string>
-    <string name="privacy_policy_title">Política de privacidá de Tubular</string>
+    <string name="privacy_policy_title">Política de privacidá de NewPipe</string>
     <string name="error_file_creation">El ficheru nun pue crease</string>
     <string name="error_http_no_content">El sirvidor nun unvia datos</string>
     <string name="localization_changes_requires_app_restart">La llingua va camudar namás que se reanicie l\'aplicación.</string>
@@ -415,7 +415,7 @@
     <string name="title_most_played">Lo más reproducío</string>
     <string name="title_last_played">Lo último reproducío</string>
     <string name="app_license">Tubular ye software copyleft: pues usalu, estudialu, compartilu y ameyoralu como quieras. N\'especial, pues redistribuyilu y/o modificalu baxo los términos de la GNU General Public License según espublizó la Free Software Foundation, quier la versión 3 de la llicencia quier (na to opinión) cualesquier versión posterior.</string>
-    <string name="privacy_policy_encouragement">El proyeutu de Tubular toma mui en serio la privacidá. Poro, l\'aplicación nun recueye nengún datu ensin el to consentimientu.
+    <string name="privacy_policy_encouragement">El proyeutu de NewPipe toma mui en serio la privacidá. Poro, l\'aplicación nun recueye nengún datu ensin el to consentimientu.
 \nLa política de privacidá de Tubular desplica en detalle los datos que s\'unvien y atroxen cuando unvies un informe de casque.</string>
     <string name="app_description">Un aplicación llibre pa ver/sentir plataformes de tresmisión n\'Android.</string>
     <string name="settings_file_replacement_character_title">Caráuteres de troquéu</string>

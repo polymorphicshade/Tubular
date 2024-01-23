@@ -191,14 +191,14 @@
     <string name="app_license">Tubular - bu nusxa ko\'chirish dasturiy ta\'minotidir: Siz foydalanishingiz, baham ko\'rishingiz va o\'zingizning xohishingiz bilan yaxshilashingiz mumkin. Xususan, siz uni bepul dasturiy ta\'minot fondi tomonidan e\'lon qilingan GNU umumiy jamoat litsenziyasi shartlari asosida qayta tarqatishingiz va / yoki o\'zgartirishingiz mumkin, Litsenziyaning 3-versiyasi yoki (sizning xohishingizga ko\'ra) har qanday keyingi versiyada.</string>
     <string name="app_license_title">Tubular litsenziyasi</string>
     <string name="read_privacy_policy">Maxfiylik siyosatini o\'qish</string>
-    <string name="privacy_policy_encouragement">Tubular loyihasi sizning shaxsiy hayotingizga jiddiy e\'tibor beradi. Shuning uchun ilova sizning roziligingizsiz biron bir ma\'lumot to\'plamaydi.
+    <string name="privacy_policy_encouragement">NewPipe loyihasi sizning shaxsiy hayotingizga jiddiy e\'tibor beradi. Shuning uchun ilova sizning roziligingizsiz biron bir ma\'lumot to\'plamaydi.
 \nTubular-ning maxfiylik siyosati halokat to\'g\'risidagi hisobotni yuborganingizda qanday ma\'lumotlar yuborilishi va saqlanishi haqida batafsil ma\'lumot beradi.</string>
-    <string name="privacy_policy_title">Tubular-ning maxfiylik siyosati</string>
-    <string name="website_encouragement">Qo\'shimcha ma\'lumot va yangiliklar uchun Tubular veb-saytiga tashrif buyuring.</string>
+    <string name="privacy_policy_title">NewPipe-ning maxfiylik siyosati</string>
+    <string name="website_encouragement">Qo\'shimcha ma\'lumot va yangiliklar uchun NewPipe veb-saytiga tashrif buyuring.</string>
     <string name="website_title">Websayt</string>
     <string name="give_back">Qaytarib berish</string>
     <string name="donation_title">Hadya etish</string>
-    <string name="donation_encouragement">Tubular ko\'ngillilar tomonidan bo\'sh vaqtlarini sarflash orqali sizga eng yaxshi foydalanuvchi tajribasini taqdim etadi. Ishlab chiquvchilarga bir chashka qahvadan zavqlanib, Tubular-ni yanada yaxshiroq qilishlariga yordam berish.</string>
+    <string name="donation_encouragement">NewPipe ko\'ngillilar tomonidan bo\'sh vaqtlarini sarflash orqali sizga eng yaxshi foydalanuvchi tajribasini taqdim etadi. Ishlab chiquvchilarga bir chashka qahvadan zavqlanib, Tubular-ni yanada yaxshiroq qilishlariga yordam berish.</string>
     <string name="view_on_github">GitHubda ko\'rish</string>
     <string name="contribution_encouragement">Sizda g\'oyalar bormi; tarjima, dizayndagi o\'zgarishlar, kodni tozalash yoki haqiqiy og\'ir kodni o\'zgartirish - yordam har doim mamnuniyat bilan qabul qilinadi. Qancha ko\'p ish qilinsa, shuncha yaxshi bo\'ladi!</string>
     <string name="contribution_title">Hissa qo\'shish</string>

@@ -216,11 +216,11 @@
     <string name="contribution_encouragement">Hvad enten du har idéer til oversættelse, designændringer, kodeoprydning eller virkelig tunge kodeændringer, så er hjælp altid velkommen. Jo mere der bliver gjort, jo bedre bliver det!</string>
     <string name="view_on_github">Se på GitHub</string>
     <string name="donation_title">Doner</string>
-    <string name="donation_encouragement">Tubular er udviklet af frivillige, der bruger deres fritid på at give dig den bedst mulige brugeroplevelse. Giv noget tilbage for at hjælpe Tubulars udviklere til at gøre appen endnu bedre, mens de nyder en kop kaffe.</string>
+    <string name="donation_encouragement">NewPipe er udviklet af frivillige, der bruger deres fritid på at give dig den bedst mulige brugeroplevelse. Giv noget tilbage for at hjælpe Tubulars udviklere til at gøre appen endnu bedre, mens de nyder en kop kaffe.</string>
     <string name="give_back">Giv noget tilbage</string>
     <string name="website_title">Websted</string>
-    <string name="website_encouragement">Besøg Tubulars websted for mere information og nyheder.</string>
-    <string name="privacy_policy_title">Tubulars fortrolighedspolitik</string>
+    <string name="website_encouragement">Besøg NewPipes websted for mere information og nyheder.</string>
+    <string name="privacy_policy_title">NewPipes fortrolighedspolitik</string>
     <string name="read_privacy_policy">Læs fortrolighedspolitik</string>
     <string name="app_license_title">Tubulars licens</string>
     <string name="app_license">Tubular er copyleft, fri software: Du kan bruge, studere, dele og forbedre den som du vil. Specifikt kan du redistribuere og/eller ændre den under betingelserne i GNU General Public License som udgivet af Free Software Foundation, enten version 3 af licensen eller (efter dit ønske) en vilkårlig senere version.</string>
@@ -474,7 +474,7 @@
     <string name="confirm_prompt">Vil du rydde din download historik eller slette alle downloadede filer\?</string>
     <string name="error_download_resource_gone">Kan ikke gendanne dette download</string>
     <string name="clear_download_history">Ryd download historik</string>
-    <string name="privacy_policy_encouragement">Tubular projektet tager dit privatliv seriøst. Derfor samler appen intet data uden dit samtykke.
+    <string name="privacy_policy_encouragement">NewPipe projektet tager dit privatliv seriøst. Derfor samler appen intet data uden dit samtykke.
 \nTubulars fortrolighedspolitik forklarer i detaljer, hvilke data der bliver sendt og opbevaret når du sender en nedbrudsrapport.</string>
     <string name="copy_for_github">Kopier en formatteret rapport</string>
     <string name="permission_display_over_apps">Giv tilladelse til at vise over andre apps</string>

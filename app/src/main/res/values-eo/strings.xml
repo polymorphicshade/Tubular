@@ -298,10 +298,10 @@
     <string name="select_a_kiosk">Elekti kioskon</string>
     <string name="start_here_on_background">Komenci ludi fone</string>
     <string name="donation_title">Donaci</string>
-    <string name="donation_encouragement">Tubular estas programadita par volontuoj, elspezante lia tempo por alporti vin la plej bona uzanta sperto. Redoni por helpi programistojn plibonigi Tubular dum ili ĝuas tason da kafo.</string>
+    <string name="donation_encouragement">NewPipe estas programadita par volontuoj, elspezante lia tempo por alporti vin la plej bona uzanta sperto. Redoni por helpi programistojn plibonigi Tubular dum ili ĝuas tason da kafo.</string>
     <string name="give_back">Redoni</string>
     <string name="website_title">Retejo</string>
-    <string name="website_encouragement">Viziti la retejon de Tubular por pli da informoj kaj novaĵoj.</string>
+    <string name="website_encouragement">Viziti la retejon de NewPipe por pli da informoj kaj novaĵoj.</string>
     <string name="drawer_open">Malfermi la tirkeston</string>
     <string name="drawer_close">Fermi la tirtekston</string>
     <string name="external_player_unsupported_link_type">Ekstaraj ludantoj ne suportas tiajn ligilojn</string>
@@ -353,8 +353,8 @@
     <string name="one_item_deleted">1 ero forviŝita.</string>
     <string name="app_license">Tubular estas programaro sub rajtoceda permesilo: Vi povas uzi, studi, komuniki kaj plibonigi ĝin kiel vi volas. Precize, vi povas redistribui kaj/aŭ modifi ĝin sub la kondiĉoj de la Ĝenerala Publika Permesilo de GNU, kiel publikigita per la Free Software Foundation, ĉu en la versio 3, ĉu (se vi volas) ajna posta versio.</string>
     <string name="import_settings">Ĉu vi volas ankaŭ importi agordojn\?</string>
-    <string name="privacy_policy_title">Privateca politiko de Tubular</string>
-    <string name="privacy_policy_encouragement">La Tubular projekto serioze respektas vian privatecon. Konsekvence, la apo ne kolektas ajnan datumon sen via konsento.
+    <string name="privacy_policy_title">Privateca politiko de NewPipe</string>
+    <string name="privacy_policy_encouragement">La NewPipe projekto serioze respektas vian privatecon. Konsekvence, la apo ne kolektas ajnan datumon sen via konsento.
 \nLa privateco politiko de Tubular detale eksplikas kion datumon estas sendita kaj stokita kiam vi sendas falegosignalon.</string>
     <string name="read_privacy_policy">Legi la privatecan politikon</string>
     <string name="start_accept_privacy_policy">Por konformiĝi al la Ĝenerala Datum-Protekta Regularon (GDPR), ni allogas vian atenton al la privateca politiko de Tubular. Bonvolu atentive legi ĝin.

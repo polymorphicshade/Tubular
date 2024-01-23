@@ -178,7 +178,7 @@
     <string name="import_data_summary">覆蓋您目前的歷史記錄、訂閱與設定（選用）</string>
     <string name="export_data_summary">匯出歷史記錄、訂閱內容、播放清單、設定</string>
     <string name="give_back">回饋</string>
-    <string name="website_encouragement">如欲了解更多有關 Tubular 的資訊和新聞，請造訪我們的網站。</string>
+    <string name="website_encouragement">如欲了解更多有關 NewPipe 的資訊和新聞，請造訪我們的網站。</string>
     <string name="main_page_content">首頁內容</string>
     <string name="blank_page_summary">空白頁面</string>
     <string name="kiosk_page_summary">互動導覽頁面</string>
@@ -200,7 +200,7 @@
     <string name="start_here_on_background">在背景開始播放</string>
     <string name="start_here_on_popup">在彈出式視窗中開始播放</string>
     <string name="hold_to_append">長按以新增至佇列</string>
-    <string name="donation_encouragement">Tubular 由志願者所開發，他們花費他們的空閒時間務求為您帶來最佳的使用體驗。現在是時候回過頭來，讓我們的開發人員能夠在使 Tubular 更臻完美的同時，享受一杯咖啡。</string>
+    <string name="donation_encouragement">NewPipe 由志願者所開發，他們花費他們的空閒時間務求為您帶來最佳的使用體驗。現在是時候回過頭來，讓我們的開發人員能夠在使 Tubular 更臻完美的同時，享受一杯咖啡。</string>
     <string name="drawer_open">打開抽屜</string>
     <string name="drawer_close">關閉抽屜</string>
     <string name="video_player">影片播放器</string>
@@ -301,9 +301,9 @@
     <string name="one_item_deleted">已刪除一個項目。</string>
     <string name="app_license">Tubular 是一個 Copyleft 的自由軟體：您可以隨意使用、研究、分享並改進它。在遵守由自由軟體基金會所發佈的 GNU 通用公共授權條款的狀況下，您可以自由地再散佈及／或修改它；授權條款預設使用第三版，但您也可以選擇更新的版本。</string>
     <string name="import_settings">您是否要同時匯入設定？</string>
-    <string name="privacy_policy_title">Tubular 的隱私政策</string>
-    <string name="privacy_policy_encouragement">Tubular 專案非常重視您的隱私。因此，未經您同意此程式不會收集任何資料。 
-\nTubular 的隱私權政策詳細說明了當您發送錯誤回報時，什麼資料會被傳送及儲存。</string>
+    <string name="privacy_policy_title">NewPipe 的隱私政策</string>
+    <string name="privacy_policy_encouragement">NewPipe 專案非常重視您的隱私。因此，未經您同意此程式不會收集任何資料。
+\nNewPipe 的隱私權政策詳細說明了當您發送錯誤回報時，什麼資料會被傳送及儲存。</string>
     <string name="read_privacy_policy">閱讀隱私政策</string>
     <string name="start_accept_privacy_policy">為配合歐洲通用資料保護條例 ( GDPR ) ，我們在此請您注意 Tubular 的隱私政策。請務必仔細閱讀。 
 \n您必須接受它才能向我們發送錯誤報告。</string>

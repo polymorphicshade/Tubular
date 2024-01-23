@@ -200,10 +200,10 @@
     <string name="contribution_encouragement">Ако имаш идеи за; превод, дизајн, чистење или големи промени во кодот - помошта е секогаш добредојдена. Што повеќе се работи, подобра е апликацијата!</string>
     <string name="view_on_github">Види на GitHub</string>
     <string name="donation_title">Донирај</string>
-    <string name="donation_encouragement">Tubular се гради од волонтери кои го вложуваат слободното време за важето задоволство. Време е да им возвратиме за тие да можат да ја подобрат апликацијата, уживајќи во топло кафе.</string>
+    <string name="donation_encouragement">NewPipe се гради од волонтери кои го вложуваат слободното време за важето задоволство. Време е да им возвратиме за тие да можат да ја подобрат апликацијата, уживајќи во топло кафе.</string>
     <string name="give_back">Возврати</string>
     <string name="website_title">Вебсајт</string>
-    <string name="website_encouragement">За повеќе информации и новости за Tubular посети ја вебстраната.</string>
+    <string name="website_encouragement">За повеќе информации и новости за NewPipe посети ја вебстраната.</string>
     <string name="app_license_title">Лиценцата на Tubular</string>
     <string name="read_full_license">Прочитај лиценца</string>
     <string name="title_activity_history">Историја</string>
@@ -303,9 +303,9 @@
     <string name="preferred_open_action_settings_summary">Стандардна акција при отворање видеа — %s</string>
     <string name="caption_setting_title">Преводи</string>
     <string name="caption_setting_description">Смени ја големината и стилот на преводот. Потребен е рестарт за промена</string>
-    <string name="privacy_policy_title">Tubular - политика за приватност</string>
-    <string name="privacy_policy_encouragement">Проектот Tubular сериозно ја сфаќа вашата приватност. Затоа апликацијата не собира ваши податоци без ваша дозвола.
-\nПолитиката за приватност на Tubular детално објаснува кои податоци се зачувани и пратени кога праќате извештај за грешка во апликацијата.</string>
+    <string name="privacy_policy_title">NewPipe - политика за приватност</string>
+    <string name="privacy_policy_encouragement">Проектот NewPipe сериозно ја сфаќа вашата приватност. Затоа апликацијата не собира ваши податоци без ваша дозвола.
+\nПолитиката за приватност на NewPipe детално објаснува кои податоци се зачувани и пратени кога праќате извештај за грешка во апликацијата.</string>
     <string name="read_privacy_policy">Прочитај ја политиката за приватност</string>
     <string name="start_accept_privacy_policy">За да постапуваме соодветно со регулацијата за заштита на податоци (GDPR) на ЕУ, вараме да обрнете внимание на политиката за приватност на Tubular.
 \nВе молиме прочитајте ја внимателно. Мора да ја прифатите за да ни го испратите извештајот за грешка во апликацијата.</string>

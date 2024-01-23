@@ -148,9 +148,9 @@
     <string name="charset_letters_and_digits">むじんでぃすーいんじ</string>
     <string name="charset_most_special_characters">むじんでぃすーいんじんでぃ、おおくぬとぅくしゅむじ</string>
     <string name="donation_title">ちーふ</string>
-    <string name="donation_encouragement">Tubularー、うんじゅんかいさいこうぬたいきんていきょうすんでぃ、ボランティアぬじぶんぬちゃーぬじかんちかてぃかいはちそーいびーん。かいはちしゃぬちゃーがコーヒーぬまがちーTubularけいずいちゅてぃちーにかいりょうないるよう、ぐさいんうにげーさびら。</string>
+    <string name="donation_encouragement">NewPipeー、うんじゅんかいさいこうぬたいきんていきょうすんでぃ、ボランティアぬじぶんぬちゃーぬじかんちかてぃかいはちそーいびーん。かいはちしゃぬちゃーがコーヒーぬまがちーTubularけいずいちゅてぃちーにかいりょうないるよう、ぐさいんうにげーさびら。</string>
     <string name="website_title">ウェブサイト</string>
-    <string name="website_encouragement">Tubularぬくわしさんじょうほうやさいしんじょうほうにちいてぃは、ウェブサイトんーちくぃみそーれー。</string>
+    <string name="website_encouragement">NewPipeぬくわしさんじょうほうやさいしんじょうほうにちいてぃは、ウェブサイトんーちくぃみそーれー。</string>
     <string name="title_activity_history">りりき</string>
     <string name="action_history">りりき</string>
     <string name="delete_item_search_history">くぬアイテムきーるさくりりきからさくじょさびーが？</string>
@@ -248,7 +248,7 @@
     <string name="channels">チャンネル</string>
     <string name="playlists">プレイリスト</string>
     <string name="users">ユーザー</string>
-    <string name="privacy_policy_title">Tubularプライバシーポリシー</string>
+    <string name="privacy_policy_title">NewPipeプライバシーポリシー</string>
     <string name="read_privacy_policy">プライバシーポリシーかくにん</string>
     <string name="use_inexact_seek_title">おおまかやるシーク</string>
     <string name="use_inexact_seek_summary">おおまかやるシークしようするくとぅっしさいどぅがさがいるかわりんかいこうすくんかいシークぬなやびーん。5びょう、15びょうあらんでぃ25びょうかんかくぬシークーなやびらん</string>
@@ -267,8 +267,8 @@
     </plurals>
     <string name="one_item_deleted">てぃーちぬアイテムぬさちゅるじょさりやびたん。</string>
     <string name="give_back">しーいんすん</string>
-    <string name="privacy_policy_encouragement">Tubularプロジェクトーうんじゅがプライバシーふぃじょうにてーしちなちょーいびーん。うんじゅがちゃーいがねーんかぎり、アプレーいかなるデータんしゅうしゅうさびらん。
-\nTubularぬプライバシー・ポリシーっしぇー、クラッシュリポートそうしんじんかいちゃぬぐとーるしゅるいぬデータぬあんしん・きるくされいがしーょうさいにしちめいそーいびーん。</string>
+    <string name="privacy_policy_encouragement">NewPipeプロジェクトーうんじゅがプライバシーふぃじょうにてーしちなちょーいびーん。うんじゅがちゃーいがねーんかぎり、アプレーいかなるデータんしゅうしゅうさびらん。
+\nNewPipeぬプライバシー・ポリシーっしぇー、クラッシュリポートそうしんじんかいちゃぬぐとーるしゅるいぬデータぬあんしん・きるくされいがしーょうさいにしちめいそーいびーん。</string>
     <string name="app_license">Tubularーコピーレフトなソフトウェアやいびーん。うんじょーじゆうにうりさし、きんきゅうしー、きょうゆうし、あんしがいじんするくとぅがなやびーん。うんじょー、GNUフリーソフトウェアじぇーやんんがかんかいすん GNU General Publicライセンスバージョン3いかぬむとぅんかい、じゆうにさえーいーん・しゅうせいうくないるくとぅがなやびーん。</string>
     <string name="title_last_played">さいしゅうさいせいにちじ</string>
     <string name="title_most_played">むっとぅむさいせいさったんちゃーしが</string>

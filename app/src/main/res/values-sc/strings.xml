@@ -92,13 +92,13 @@
     <string name="app_license">Tubular est unu programma lìberu cun litzèntzia copyleft: lu podes impreare, cumpartzire e megiorare comente cheres. Pro èssere prus craros, lu podes torrare a intregare in suta de sos tèrmines de sa Litzèntzia Generale Pùblica GNU publicada dae sa Free Software Foundation, sa versione 3 de sa litzèntzia o, si preferis, una prus noa.</string>
     <string name="app_license_title">Litzèntzia de Tubular</string>
     <string name="read_privacy_policy">Leghe sa polìtica de riservadesa</string>
-    <string name="privacy_policy_encouragement">Su progetu Tubular pigat sa riservadesa tua in manera sèria a beru. Pro custa resone s\'aplicatzione non collit perunu datu chene su cunsensu tuo.
-\n Sa polìtica de riservadesa de Tubular ispiegat a sa minuda ite genia de datos benint imbiados cando imbias unu raportu de errore.</string>
-    <string name="privacy_policy_title">Polìtica de riservadesa de Tubular</string>
-    <string name="website_encouragement">Bìsita su situ web de Tubular pro àteras informatziones e noas.</string>
+    <string name="privacy_policy_encouragement">Su progetu NewPipe pigat sa riservadesa tua in manera sèria a beru. Pro custa resone s\'aplicatzione non collit perunu datu chene su cunsensu tuo.
+\n Sa polìtica de riservadesa de NewPipe ispiegat a sa minuda ite genia de datos benint imbiados cando imbias unu raportu de errore.</string>
+    <string name="privacy_policy_title">Polìtica de riservadesa de NewPipe</string>
+    <string name="website_encouragement">Bìsita su situ web de NewPipe pro àteras informatziones e noas.</string>
     <string name="website_title">Situ web</string>
     <string name="give_back">Retribui</string>
-    <string name="donation_encouragement">Tubular benit isvilupadu dae voluntàrios chi impreant su tempus lìberu issoro batende·ti sa mègius esperièntzia de impreadore. Torra·li su favore pro agiudare sos isvilupadores a megiorare Tubular galu de prus, in su mentres chi si gosant una tzìchera de cafè.</string>
+    <string name="donation_encouragement">NewPipe benit isvilupadu dae voluntàrios chi impreant su tempus lìberu issoro batende·ti sa mègius esperièntzia de impreadore. Torra·li su favore pro agiudare sos isvilupadores a megiorare Tubular galu de prus, in su mentres chi si gosant una tzìchera de cafè.</string>
     <string name="donation_title">Dona</string>
     <string name="view_on_github">Pòmpia in GitHub</string>
     <string name="contribution_encouragement">Si tenes ideas pro sa tradutzione, modìficas de su progetu, pro s\'innetadura de su còdighe o pro modìficas de su còdighe mannas, s\'agiudu est semper benebènnidu. Prus si faghet e mègius est!</string>

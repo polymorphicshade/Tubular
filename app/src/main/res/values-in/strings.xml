@@ -185,10 +185,10 @@
     <string name="dismiss">Abaikan</string>
     <string name="rename">Ubah nama</string>
     <string name="donation_title">Donasi</string>
-    <string name="donation_encouragement">Tubular dikembangkan oleh relawan yang menyisihkan waktu untuk memberi Anda pengalaman terbaik. Segala dukungan kepada pengembang akan membuat Tubular menjadi lebih baik sambil menikmati secangkir kopi.</string>
+    <string name="donation_encouragement">NewPipe dikembangkan oleh relawan yang menyisihkan waktu untuk memberi Anda pengalaman terbaik. Segala dukungan kepada pengembang akan membuat Tubular menjadi lebih baik sambil menikmati secangkir kopi.</string>
     <string name="give_back">Beri dukungan</string>
     <string name="website_title">Situs Web</string>
-    <string name="website_encouragement">Kunjungi situs web Tubular untuk info dan berita.</string>
+    <string name="website_encouragement">Kunjungi situs web NewPipe untuk info dan berita.</string>
     <string name="delete_item_search_history">Apakah Anda ingin menghapus item ini dari riwayat pencarian\?</string>
     <string name="title_last_played">Terakhir Diputar</string>
     <string name="title_most_played">Sering Diputar</string>
@@ -304,9 +304,9 @@
     <string name="playlists">Daftar Putar</string>
     <string name="tracks">Trek</string>
     <string name="users">Pengguna</string>
-    <string name="privacy_policy_title">Kebijakan Privasi Tubular</string>
-    <string name="privacy_policy_encouragement">Proyek Tubular sangat memperhatikan privasi Anda. Oleh karena itu, aplikasi initidak mengumpulkan data apa pun tanpa persetujuan Anda.
-\nKebijakan privasi Tubular menjelaskan secara detail data apa saja yang dikirim dan disimpan ketika Anda mengirimkan laporan kerusakan.</string>
+    <string name="privacy_policy_title">Kebijakan Privasi NewPipe</string>
+    <string name="privacy_policy_encouragement">Proyek NewPipe sangat memperhatikan privasi Anda. Oleh karena itu, aplikasi initidak mengumpulkan data apa pun tanpa persetujuan Anda.
+\nKebijakan privasi NewPipe menjelaskan secara detail data apa saja yang dikirim dan disimpan ketika Anda mengirimkan laporan kerusakan.</string>
     <string name="read_privacy_policy">Baca kebijakan privasi</string>
     <string name="skip_silence_checkbox">Percepat saat diam</string>
     <string name="playback_step">Langkah</string>

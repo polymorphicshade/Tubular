@@ -188,8 +188,8 @@
     <string name="start_here_on_popup">Riproduci nel lettore popup</string>
     <string name="donation_title">Dona</string>
     <string name="website_title">Sito</string>
-    <string name="website_encouragement">Visita il sito di Tubular per informazioni e novità.</string>
-    <string name="donation_encouragement">Tubular è sviluppato da volontari che impiegano il loro tempo libero per offrire agli utenti un\'esperienza migliore. Restituisci il favore, aiutandoli a rendere Tubular ancora più piacevole, mentre si gustano una tazza di caffè.</string>
+    <string name="website_encouragement">Visita il sito di NewPipe per informazioni e novità.</string>
+    <string name="donation_encouragement">NewPipe è sviluppato da volontari che impiegano il loro tempo libero per offrire agli utenti un\'esperienza migliore. Restituisci il favore, aiutandoli a rendere Tubular ancora più piacevole, mentre si gustano una tazza di caffè.</string>
     <string name="give_back">Restituisci</string>
     <string name="default_content_country_title">Paese predefinito per i contenuti</string>
     <string name="switch_to_background">Passa in sottofondo</string>
@@ -311,7 +311,7 @@
     <string name="app_license">Tubular è un software libero con licenza copyleft: si può utilizzare, studiare, condividere e migliorare a proprio piacimento. In particolare, è possibile ridistribuirlo e/o modificarlo secondo i termini della GNU General Public License (Free Software Foundation), nella versione 3 o successiva, a propria discrezione.</string>
     <string name="import_settings">Vuoi anche importare le impostazioni?</string>
     <string name="privacy_policy_title">Informativa sulla privacy</string>
-    <string name="privacy_policy_encouragement">Il progetto Tubular tiene molto alla tua privacy. Perciò, l\'app non raccoglie alcun dato senza il tuo consenso.
+    <string name="privacy_policy_encouragement">Il progetto NewPipe tiene molto alla tua privacy. Perciò, l\'app non raccoglie alcun dato senza il tuo consenso.
 \nL\'informativa sulla privacy spiega nel dettaglio quali dati vengono trattati e memorizzati durante l\'invio di segnalazioni per arresti anomali.</string>
     <string name="read_privacy_policy">Leggi l\'informativa sulla privacy</string>
     <string name="start_accept_privacy_policy">Per rispettare il regolamento europeo sulla protezione dei dati (GDPR), richiamiamo la vostra attenzione sull\'informativa sulla privacy di Tubular. Si prega di leggerla attentamente.

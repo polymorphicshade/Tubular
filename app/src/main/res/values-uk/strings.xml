@@ -207,9 +207,9 @@
     <string name="title_activity_recaptcha">Перевірка reCAPTCHA</string>
     <string name="recaptcha_request_toast">Запит перевірки reCAPTCHA</string>
     <string name="copyright" formatted="true">© %1$s, %2$s під %3$s</string>
-    <string name="donation_encouragement">Tubular розроблений добровольцями, які витрачають власний час заради вашого задоволення. Допоможіть розробникам зробити Tubular ще ліпшим, насолоджуючись філіжанкою кави.</string>
+    <string name="donation_encouragement">NewPipe розроблений добровольцями, які витрачають власний час заради вашого задоволення. Допоможіть розробникам зробити Tubular ще ліпшим, насолоджуючись філіжанкою кави.</string>
     <string name="give_back">Ваша допомога</string>
-    <string name="website_encouragement">Завітайте на офіційний сайт Tubular, щоб отримати більше інформації та новин.</string>
+    <string name="website_encouragement">Завітайте на офіційний сайт NewPipe, щоб отримати більше інформації та новин.</string>
     <string name="app_license_title">Ліцензія Tubular</string>
     <string name="read_full_license">Прочитати ліцензію</string>
     <string name="action_history">Історія</string>
@@ -315,9 +315,9 @@
     <string name="one_item_deleted">Видалено 1 елемент.</string>
     <string name="app_license">Tubular є вільним (копілефт) застосунком: ви можете використовувати, поширювати та вдосконалювати його на власний розсуд. Зокрема ви можете розповсюджувати та/або змінювати його за умов дотримання вимог GNU General Public License 3-ї версії або (на ваш вибір) будь-якої пізнішої версії, опублікованої Free Software Foundation.</string>
     <string name="import_settings">Імпортувати разом з налаштуваннями\?</string>
-    <string name="privacy_policy_title">Політика приватності Tubular</string>
-    <string name="privacy_policy_encouragement">Проєкт Tubular дуже серйозно ставиться до вашої приватності. Тому застосунок не збирає ніяких даних без вашої згоди.
-\nПолітика приватності докладно Tubular пояснює, які дані надсилаються і зберігаються у звіті про збій.</string>
+    <string name="privacy_policy_title">Політика приватності NewPipe</string>
+    <string name="privacy_policy_encouragement">Проєкт NewPipe дуже серйозно ставиться до вашої приватності. Тому застосунок не збирає ніяких даних без вашої згоди.
+\nПолітика приватності докладно NewPipe пояснює, які дані надсилаються і зберігаються у звіті про збій.</string>
     <string name="read_privacy_policy">Читати політику приватності</string>
     <string name="start_accept_privacy_policy">З метою дотримання Загального регламенту про захист даних ЄС (General Data Protection Regulation, GDPR) ми звертаємо вашу увагу на політику приватності Tubular. Будь ласка, прочитайте уважно.
 \nВи маєте прийняти її, аби надіслати нам звіт про помилку.</string>

@@ -166,10 +166,10 @@
     <string name="contribution_encouragement">Jei turite idėjų dėl: vertimų, išvaizdos pakeitimų, kodo supaprastinimo, arba rimtų kodo pakeitimų - pagalba visada laukiama!</string>
     <string name="view_on_github">Peržiūrėti per GitHub</string>
     <string name="donation_title">Paremti</string>
-    <string name="donation_encouragement">Tubular yra vystoma savanorių, kurie skiria savo laisvą laiką, kad sukurtų geriausią patirtį Jums. Dabar yra laikas paremti juos, kad kūrėjai galėtų Tubular paversti dar geresne programėle.</string>
+    <string name="donation_encouragement">NewPipe yra vystoma savanorių, kurie skiria savo laisvą laiką, kad sukurtų geriausią patirtį Jums. Dabar yra laikas paremti juos, kad kūrėjai galėtų Tubular paversti dar geresne programėle.</string>
     <string name="give_back">Duokite grąžos</string>
     <string name="website_title">Interneto puslapis</string>
-    <string name="website_encouragement">Kad sužinotumėte daugiau apie Tubular apsilankykite mūsų interneto puslapyje.</string>
+    <string name="website_encouragement">Kad sužinotumėte daugiau apie NewPipe apsilankykite mūsų interneto puslapyje.</string>
     <string name="app_license_title">Tubular licencija</string>
     <string name="read_full_license">Skaityti licenciją</string>
     <string name="title_activity_history">Istorija</string>
@@ -502,9 +502,9 @@
     <string name="default_kiosk_page_summary">Numatytasis režimas</string>
     <string name="main_page_content_summary">Kokios kortelės rodomos pagrindiniame puslapyje</string>
     <string name="read_privacy_policy">Skaityti privatumo politiką</string>
-    <string name="privacy_policy_encouragement">Tubular į jūsų privatumą žiūri labai rimtai. Programa be jūsų sutikimo nerenka jokių duomenų.
-\nTubular privatumo politika išsamiai parodo kokie duomenys siunčiami ir saugomi pranešant apie problemą.</string>
-    <string name="privacy_policy_title">Tubular privatumo politika</string>
+    <string name="privacy_policy_encouragement">NewPipe į jūsų privatumą žiūri labai rimtai. Programa be jūsų sutikimo nerenka jokių duomenų.
+\nNewPipe privatumo politika išsamiai parodo kokie duomenys siunčiami ir saugomi pranešant apie problemą.</string>
+    <string name="privacy_policy_title">NewPipe privatumo politika</string>
     <string name="done">Atlikta</string>
     <string name="recaptcha_solve">Išspręsta</string>
     <string name="subtitle_activity_recaptcha">Paspauskite \"atlikta\" kai išspręsta</string>

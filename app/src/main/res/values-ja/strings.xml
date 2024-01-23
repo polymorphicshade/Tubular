@@ -148,9 +148,9 @@
     <string name="charset_letters_and_digits">文字と数字</string>
     <string name="charset_most_special_characters">文字と数字と、多くの特殊文字</string>
     <string name="donation_title">寄付</string>
-    <string name="donation_encouragement">Tubular は、あなたに最高の体験を提供するために、ボランティアが自分たちの時間を使って開発しています。開発者たちがコーヒーを飲みながら Tubular を継続的に改良できるよう、ご支援をお願いします。</string>
+    <string name="donation_encouragement">NewPipe は、あなたに最高の体験を提供するために、ボランティアが自分たちの時間を使って開発しています。開発者たちがコーヒーを飲みながら Tubular を継続的に改良できるよう、ご支援をお願いします。</string>
     <string name="website_title">Webサイト</string>
-    <string name="website_encouragement">Tubular の詳しい情報や最新情報については、ウェブサイトをご覧ください。</string>
+    <string name="website_encouragement">NewPipe の詳しい情報や最新情報については、ウェブサイトをご覧ください。</string>
     <string name="title_activity_history">履歴</string>
     <string name="action_history">履歴</string>
     <string name="delete_item_search_history">このアイテムを検索履歴から削除しますか？</string>
@@ -248,7 +248,7 @@
     <string name="channels">チャンネル</string>
     <string name="playlists">プレイリスト</string>
     <string name="users">ユーザー</string>
-    <string name="privacy_policy_title">Tubular プライバシーポリシー</string>
+    <string name="privacy_policy_title">NewPipe プライバシーポリシー</string>
     <string name="read_privacy_policy">プライバシーポリシーを確認</string>
     <string name="use_inexact_seek_title">おおまかなシーク</string>
     <string name="use_inexact_seek_summary">おおまかなシークを使用することで精度が下がる代わりに高速にシークができます。5 秒、15 秒または 25 秒間隔のシークはできません</string>
@@ -265,8 +265,8 @@
     </plurals>
     <string name="one_item_deleted">1 つのアイテムが削除されました。</string>
     <string name="give_back">支援する</string>
-    <string name="privacy_policy_encouragement">Tubular プロジェクトはあなたのプライバシーを非常に大切にしています。あなたの同意がない限り、アプリはいかなるデータも収集しません。
-\nTubular のプライバシー・ポリシーでは、クラッシュリポート送信時にどのような種類のデータが送信・記録されるかを詳細に説明しています。</string>
+    <string name="privacy_policy_encouragement">NewPipe プロジェクトはあなたのプライバシーを非常に大切にしています。あなたの同意がない限り、アプリはいかなるデータも収集しません。
+\nNewPipe のプライバシー・ポリシーでは、クラッシュリポート送信時にどのような種類のデータが送信・記録されるかを詳細に説明しています。</string>
     <string name="app_license">Tubular はコピーレフトなソフトウェアです。あなたは自由にそれを使用し、研究し、共有し、そして改善することができます。あなたは、GNU フリーソフトウェア財団が公開する GNU General Public ライセンス バージョン3以降の下に、自由に再配布・修正を行うことができます。</string>
     <string name="title_last_played">最終再生日時</string>
     <string name="title_most_played">最も再生された動画</string>

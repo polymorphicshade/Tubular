@@ -193,12 +193,12 @@
     <string name="contribution_title">Съдействайте</string>
     <string name="contribution_encouragement">За всичко, което се сетите: превод, промени по дизайна, изчистване на кода или много сериозни промени по кода – помощта е винаги добре дошла. Колкото повече развитие, толкова по-добре!</string>
     <string name="donation_title">Направете дарение</string>
-    <string name="donation_encouragement">Tubular се разработва от доброволци, които отделят от своето време, за да предоставят най-доброто потребителско изживяване. Включете се в разработката като почерпите разработчиците с една чашка кафе, които да изпият, докато правят Tubular още по-добро приложение.</string>
+    <string name="donation_encouragement">NewPipe се разработва от доброволци, които отделят от своето време, за да предоставят най-доброто потребителско изживяване. Включете се в разработката като почерпите разработчиците с една чашка кафе, които да изпият, докато правят Tubular още по-добро приложение.</string>
     <string name="give_back">Дари</string>
     <string name="website_title">Уебсайт</string>
-    <string name="website_encouragement">Посетете сайта на Tubular за повече информация и новини.</string>
-    <string name="privacy_policy_title">Политиката на Tubular за личните данни</string>
-    <string name="privacy_policy_encouragement">Проектът Tubular се отнася много сериозно към вашата поверителност. За това, приложението не събира никакви данни без вашето съгласие.
+    <string name="website_encouragement">Посетете сайта на NewPipe за повече информация и новини.</string>
+    <string name="privacy_policy_title">Политиката на NewPipe за личните данни</string>
+    <string name="privacy_policy_encouragement">Проектът NewPipe се отнася много сериозно към вашата поверителност. За това, приложението не събира никакви данни без вашето съгласие.
 \nНашата политика за личните данни обяснява подробно какви данни изпращате и къде се съхраняват, когато изпращате съобщения за грешки.</string>
     <string name="read_privacy_policy">Прочетете нашата политика за поверителност</string>
     <string name="app_license_title">Лицензът на Tubular</string>

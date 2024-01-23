@@ -262,8 +262,8 @@
     <string name="title_most_played">Najbolj igrano</string>
     <string name="title_last_played">Nazadnje igrano</string>
     <string name="read_privacy_policy">Preberi pravilnik zasebnosti</string>
-    <string name="privacy_policy_title">Tubular-ovi pravilnik zasebnosti</string>
-    <string name="website_encouragement">Obiščite spletno mesto od Tubular za več informacij in novic.</string>
+    <string name="privacy_policy_title">NewPipe-ovi pravilnik zasebnosti</string>
+    <string name="website_encouragement">Obiščite spletno mesto od NewPipe za več informacij in novic.</string>
     <string name="done">Končano</string>
     <string name="no_comments">Ni komantarjev</string>
     <string name="no_one_listening">Nobeden ne posluša</string>
@@ -355,10 +355,10 @@
     <string name="could_not_import_all_files">Opozorilo: ni mogoče uvoziti vseh datotek.</string>
     <string name="select_a_playlist">Izberi seznam predvajanja</string>
     <string name="app_license">Tubular je prosta in odprta programska oprema: lahko jo uporabljaš, preučuješ in izboljšaš po želji. Lahko jo distributiraš in/ali spremeniš pod pogoji GNU General Public Licence, kot jo je izdala Free Software Foundation v različici 3 ali po izbiri v katerikoli novejši različici.</string>
-    <string name="privacy_policy_encouragement">Projekt Tubular jemlje vašo zasebnost zelo resno. Aplikacija zato ne zbira kakršnih koli podatkov brez vašega dovoljenja.
-\nPolitika zasebnosti Tubular-a podrobno pojasnjuje, kateri podatki so poslani in shranjeni, ko pošljete poročilo o zrušitvi.</string>
+    <string name="privacy_policy_encouragement">Projekt NewPipe jemlje vašo zasebnost zelo resno. Aplikacija zato ne zbira kakršnih koli podatkov brez vašega dovoljenja.
+\nPolitika zasebnosti NewPipe-a podrobno pojasnjuje, kateri podatki so poslani in shranjeni, ko pošljete poročilo o zrušitvi.</string>
     <string name="give_back">Pomagaj</string>
-    <string name="donation_encouragement">Tubular razvijajo prostovoljci, ki preživljajo svoj prosti čas, da vam prinašajo najboljšo uporabniško izkušnjo. Pomagajte razvijalcem pri izdelavi še boljšega Tubular-a medtem ko uživajo skodelico kave.</string>
+    <string name="donation_encouragement">NewPipe razvijajo prostovoljci, ki preživljajo svoj prosti čas, da vam prinašajo najboljšo uporabniško izkušnjo. Pomagajte razvijalcem pri izdelavi še boljšega Tubular-a medtem ko uživajo skodelico kave.</string>
     <string name="subtitle_activity_recaptcha">Pritisni \"končano\" ko je rešena</string>
     <string name="one_item_deleted">Odstranjen 1 element.</string>
     <string name="msg_calculating_hash">Izračun zgoščevalne funkcije je v teku</string>

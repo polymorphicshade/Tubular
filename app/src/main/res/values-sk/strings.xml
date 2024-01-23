@@ -192,10 +192,10 @@
     <string name="dismiss">Zrušiť</string>
     <string name="rename">Premenovať</string>
     <string name="donation_title">Prispieť</string>
-    <string name="donation_encouragement">Aplikácia Tubular je vyvíjaná dobrovoľníkmi v ich voľnom čase snažiac sa vám priniesť najlepší zážitok z appky, ak sa vám páči, odmeňte vývojárov aby mohli Tubular naďalej vylepšovať napríklad pri šálke dobrej kávy.</string>
+    <string name="donation_encouragement">Aplikácia NewPipe je vyvíjaná dobrovoľníkmi v ich voľnom čase snažiac sa vám priniesť najlepší zážitok z appky, ak sa vám páči, odmeňte vývojárov aby mohli Tubular naďalej vylepšovať napríklad pri šálke dobrej kávy.</string>
     <string name="give_back">Daruj</string>
     <string name="website_title">Webstránka</string>
-    <string name="website_encouragement">Pre viac informácií a noviniek navštívte webstránku Tubular.</string>
+    <string name="website_encouragement">Pre viac informácií a noviniek navštívte webstránku NewPipe.</string>
     <string name="delete_item_search_history">Chcete odstrániť túto položku z histórie vyhľadávania?</string>
     <string name="title_last_played">Naposledy prehrávané</string>
     <string name="title_most_played">Najprehrávanejšie</string>
@@ -309,9 +309,9 @@
     <string name="search_history_deleted">História vyhľadávaní bola vymazaná</string>
     <string name="one_item_deleted">1 položka bola vymazaná.</string>
     <string name="app_license">Tubular je slobodný softvér pod licenciou copyleft. Môžete ho používať, študovať a vylepšovať ako len chcete. Konkrétne ho môžete šíriť a/alebo upravovať pod podmienkami Všeobecnej verejnej licencie GNU, ako ju publikuje Free Software Foundation, buď verzia 3 licencie, alebo (podľa vašej voľby) ktorákoľvek neskoršia verzia.</string>
-    <string name="privacy_policy_title">Ochrana osobných údajov v Tubular</string>
-    <string name="privacy_policy_encouragement">Tubular projekt berie vaše súkromie vážne. Preto aplikácia nezhromažďuje žiadne údaje bez vášho súhlasu.
-\nTubular v ochrane súkromia podrobne vysvetľuje, aké údaje budú odoslané a uložené pri hlásení o páde.</string>
+    <string name="privacy_policy_title">Ochrana osobných údajov v NewPipe</string>
+    <string name="privacy_policy_encouragement">NewPipe projekt berie vaše súkromie vážne. Preto aplikácia nezhromažďuje žiadne údaje bez vášho súhlasu.
+\nNewPipe v ochrane súkromia podrobne vysvetľuje, aké údaje budú odoslané a uložené pri hlásení o páde.</string>
     <string name="read_privacy_policy">Prečítajte si pravidlá ochrany osobných údajov</string>
     <string name="import_settings">Chcete zároveň importovať aj nastavenia?</string>
     <string name="start_accept_privacy_policy">V súlade s Európskym Všeobecným Nariadením o Ochrane Údajov (GDPR), chceme upriamiť Vašu pozornosť na zmluvu o ochrane osobných údajov v Tubular. Starostlivo si ju prečítajte.

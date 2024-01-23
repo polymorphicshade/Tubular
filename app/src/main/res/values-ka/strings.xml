@@ -304,10 +304,10 @@
     <string name="donation_title">შემოწირულობა</string>
     <string name="give_back">დაბრუნება</string>
     <string name="website_title">საიტი</string>
-    <string name="website_encouragement">ეწვიეთ Tubular ვებსაიტს დამატებითი ინფორმაციისა და სიახლეებისთვის.</string>
-    <string name="privacy_policy_title">Tubular-ის კონფიდენციალურობის პოლიტიკა</string>
-    <string name="privacy_policy_encouragement">Tubular პროექტი თქვენს კონფიდენციალურობას ძალიან სერიოზულად ეკიდება. ამიტომ, აპლიკაცია არ აგროვებს მონაცემებს თქვენი თანხმობის გარეშე.
-\nTubular-ის კონფიდენციალურობის პოლიტიკა დეტალურად განმარტავს, თუ რა მონაცემები იგზავნება და ინახება ავარიის ანგარიშის გაგზავნისას.</string>
+    <string name="website_encouragement">ეწვიეთ NewPipe ვებსაიტს დამატებითი ინფორმაციისა და სიახლეებისთვის.</string>
+    <string name="privacy_policy_title">NewPipe-ის კონფიდენციალურობის პოლიტიკა</string>
+    <string name="privacy_policy_encouragement">NewPipe პროექტი თქვენს კონფიდენციალურობას ძალიან სერიოზულად ეკიდება. ამიტომ, აპლიკაცია არ აგროვებს მონაცემებს თქვენი თანხმობის გარეშე.
+\nNewPipe-ის კონფიდენციალურობის პოლიტიკა დეტალურად განმარტავს, თუ რა მონაცემები იგზავნება და ინახება ავარიის ანგარიშის გაგზავნისას.</string>
     <string name="read_privacy_policy">წაიკითხეთ კონფიდენციალურობის პოლიტიკა</string>
     <string name="app_license_title">Tubular-ის ლიცენზია</string>
     <string name="read_full_license">წაიკითხეთ ლიცენზია</string>
@@ -625,7 +625,7 @@
     <string name="tab_about">შესახებ &amp; ხშირად დასმული კითხვები</string>
     <string name="title_licenses">მესამე მხარის ლიცენზიები</string>
     <string name="copyright">© %1$s მიერ %2$s %3$s-ის ქვეშ</string>
-    <string name="donation_encouragement">Tubular შემუშავებულია მოხალისეების მიერ, რომლებიც ატარებენ თავისუფალ დროს და მოგაქვთ საუკეთესო მომხმარებლის გამოცდილება. დაეხმარეთ დეველოპერებს, გააუმჯობესონ Tubular, სანამ ფინჯანი ყავით ტკბებიან.</string>
+    <string name="donation_encouragement">NewPipe შემუშავებულია მოხალისეების მიერ, რომლებიც ატარებენ თავისუფალ დროს და მოგაქვთ საუკეთესო მომხმარებლის გამოცდილება. დაეხმარეთ დეველოპერებს, გააუმჯობესონ Tubular, სანამ ფინჯანი ყავით ტკბებიან.</string>
     <string name="import_youtube_instructions">YouTube გამოწერების იმპორტი Google takeout-დან:
 \n
 \n 1. გადადით ამ URL-ზე: %1$s

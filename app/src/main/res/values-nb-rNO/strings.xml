@@ -184,10 +184,10 @@
     <string name="start_here_on_background">Start avspilling i bakgrunnen</string>
     <string name="start_here_on_popup">Start avspilling i et oppsprett</string>
     <string name="donation_title">Doner</string>
-    <string name="donation_encouragement">Tubular utvikles av frivillige som bruker sin fritid til å gi deg den beste brukeropplevelsen. Gi tilbake for å hjelpe utviklere å gjøre Tubular enda bedre, mens de nyter en varm kopp kaffe.</string>
+    <string name="donation_encouragement">NewPipe utvikles av frivillige som bruker sin fritid til å gi deg den beste brukeropplevelsen. Gi tilbake for å hjelpe utviklere å gjøre Tubular enda bedre, mens de nyter en varm kopp kaffe.</string>
     <string name="give_back">Bidra</string>
     <string name="website_title">Nettside</string>
-    <string name="website_encouragement">Besøk Tubular-nettsiden for mer info og nyheter.</string>
+    <string name="website_encouragement">Besøk NewPipe-nettsiden for mer info og nyheter.</string>
     <string name="default_content_country_title">Forvalgt innholdsland</string>
     <string name="switch_to_background">Bytt til bakgrunnsmodus</string>
     <string name="switch_to_popup">Bytt til oppsprettsmodus</string>
@@ -307,9 +307,9 @@
     <string name="enable_disposed_exceptions_title">Rapporter feil utenfor livssyklusen</string>
     <string name="enable_disposed_exceptions_summary">Tving rapportering av uleverbare Rx-unntak utenom fragment eller aktivitetslevetid etter forkastelse</string>
     <string name="unhook_checkbox">Avhekt (kan forårsake forvrenging)</string>
-    <string name="privacy_policy_title">Tubulars personvernspraksis</string>
-    <string name="privacy_policy_encouragement">Tubular-prosjektet tar ditt personvern veldig alvorlig. Derfor samler ikke appen inn data uten ditt samtykke.
-\nTubulars personvernspraksis forklarer i detalj hvilken data som sendes og lagres når du sender en krasjrapport.</string>
+    <string name="privacy_policy_title">NewPipes personvernspraksis</string>
+    <string name="privacy_policy_encouragement">NewPipe-prosjektet tar ditt personvern veldig alvorlig. Derfor samler ikke appen inn data uten ditt samtykke.
+\nNewPipes personvernspraksis forklarer i detalj hvilken data som sendes og lagres når du sender en krasjrapport.</string>
     <string name="read_privacy_policy">Les personvernspraksis</string>
     <string name="start_accept_privacy_policy">For å overholde EUs personvernforordning (GDPR), vil vi rette oppmerksomheten din mot Tubular sin personvernerklæring. Vennligst les den nøye.
 \nDu må godta den, for å sende oss feilrapporten.</string>

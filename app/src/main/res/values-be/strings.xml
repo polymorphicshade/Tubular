@@ -218,12 +218,12 @@
     <string name="contribution_encouragement">Вітаецца ўсё - ідэі, пераклад, змены дызайну, чыстка кода або велізарныя змены ў кодзе. Чым больш зроблена, тым лепш!</string>
     <string name="view_on_github">Адкрыць на GitHub</string>
     <string name="donation_title">Ахвяраваць</string>
-    <string name="donation_encouragement">Tubular распрацаваны добраахвотнікамі, якія праводзяць свой вольны час, забяспечваючы лепшы карыстацкі досвед. Дапамажыце распрацоўшчыкам зрабіць Tubular яшчэ лепшым, пакуль яны атрымліваюць асалоду ад кавы.</string>
+    <string name="donation_encouragement">NewPipe распрацаваны добраахвотнікамі, якія праводзяць свой вольны час, забяспечваючы лепшы карыстацкі досвед. Дапамажыце распрацоўшчыкам зрабіць Tubular яшчэ лепшым, пакуль яны атрымліваюць асалоду ад кавы.</string>
     <string name="give_back">Аддаць належнае</string>
     <string name="website_title">Вэб-сайт</string>
-    <string name="website_encouragement">Дзеля атрымання больш падрабязнай інфармацыі і апошніх навін аб Tubular наведайце наш вэб-сайт.</string>
-    <string name="privacy_policy_title">Палітыка прыватнасці Tubular</string>
-    <string name="privacy_policy_encouragement">Праект Tubular вельмі сур\'ёзна ставіцца да вашай прыватнасці. Таму прыкладанне не збірае ніякіх дадзеных без вашай згоды. 
+    <string name="website_encouragement">Дзеля атрымання больш падрабязнай інфармацыі і апошніх навін аб NewPipe наведайце наш вэб-сайт.</string>
+    <string name="privacy_policy_title">Палітыка прыватнасці NewPipe</string>
+    <string name="privacy_policy_encouragement">Праект NewPipe вельмі сур\'ёзна ставіцца да вашай прыватнасці. Таму прыкладанне не збірае ніякіх дадзеных без вашай згоды.
 \nПалітыка прыватнасці Tubular падрабязна тлумачыць, якія дадзеныя адпраўляюцца і захоўваюцца пры адпраўцы справаздачы аб збоях.</string>
     <string name="read_privacy_policy">Прачытаць палітыку</string>
     <string name="app_license_title">Ліцэнзія Tubular</string>

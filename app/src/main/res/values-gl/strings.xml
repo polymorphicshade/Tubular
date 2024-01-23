@@ -213,13 +213,13 @@
     <string name="contribution_encouragement">Se ten ideas de tradución, mudanzas ao deseño, limpeza de código ou mudanzas serias deste—a axuda sempre é benvida. Canto máis fixermos, tanto máis vai mellorar!</string>
     <string name="view_on_github">Ver no GitHub</string>
     <string name="donation_title">Doar</string>
-    <string name="donation_encouragement">Tubular é desenvolvido por voluntarios que pasan o seu tempo libre para brindarte a mellor experiencia de usuario. Regresa aos desenvolvedores para que Tubular sexa aínda mellor mentres gozan dunha cunca de café.</string>
+    <string name="donation_encouragement">NewPipe é desenvolvido por voluntarios que pasan o seu tempo libre para brindarte a mellor experiencia de usuario. Regresa aos desenvolvedores para que Tubular sexa aínda mellor mentres gozan dunha cunca de café.</string>
     <string name="give_back">Retribuír</string>
     <string name="website_title">Sitio web</string>
-    <string name="website_encouragement">Visite o sitio web do Tubular para saber máis e ver noticias sobre o proxecto.</string>
-    <string name="privacy_policy_title">Política de privacidade do Tubular</string>
-    <string name="privacy_policy_encouragement">O proxecto Tubular dá moita importancia á súa privacidade. Por tanto, non recolle ningún dato sen o seu consentimento.
-\nA política de privacidade do Tubular explica con máis detalle que datos son enviados e gardados cando envía un relatorio de erros.</string>
+    <string name="website_encouragement">Visite o sitio web do NewPipe para saber máis e ver noticias sobre o proxecto.</string>
+    <string name="privacy_policy_title">Política de privacidade do NewPipe</string>
+    <string name="privacy_policy_encouragement">O proxecto NewPipe dá moita importancia á súa privacidade. Por tanto, non recolle ningún dato sen o seu consentimento.
+\nA política de privacidade do NewPipe explica con máis detalle que datos son enviados e gardados cando envía un relatorio de erros.</string>
     <string name="read_privacy_policy">Ler a política de privacidade</string>
     <string name="app_license_title">Licenza do Tubular</string>
     <string name="app_license">Tubular é un software libre copyleft: Pode usar, estudar compartillar e melloralo a vontade. En concreto, pode redistribuír e / ou modificala segundo os termos da Licenza Pública Xeral GNU publicada pola Free Software Foundation, xa sexa a versión 3 da licenza, ou (na súa opción) calquera outra versión posterior.</string>

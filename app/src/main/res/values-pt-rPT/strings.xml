@@ -81,8 +81,8 @@
     <string name="delete_playback_states_alert">Remover todas as posições de reprodução\?</string>
     <string name="enable_queue_limit">Limitar fila de descargas</string>
     <string name="show_age_restricted_content_title">Mostrar conteúdo com restrição de idade</string>
-    <string name="privacy_policy_encouragement">O projeto Tubular leva a sua privacidade muito a sério. Por isso, não recolhe nenhum dado sem o seu consentimento.
-\nA polícia de privacidade do Tubular explica, em detalhe, os tipos de dados enviados sempre que submete um relatório de erro.</string>
+    <string name="privacy_policy_encouragement">O projeto NewPipe leva a sua privacidade muito a sério. Por isso, não recolhe nenhum dado sem o seu consentimento.
+\nA polícia de privacidade do NewPipe explica, em detalhe, os tipos de dados enviados sempre que submete um relatório de erro.</string>
     <string name="file">Ficheiro</string>
     <string name="controls_add_to_playlist_title">Adicionar a</string>
     <string name="clear_playback_states_summary">Remove todas as posições de reprodução</string>
@@ -182,7 +182,7 @@
     <string name="recaptcha_request_toast">Desafio reCAPTCHA solicitado</string>
     <string name="autoplay_title">Reprodução automática</string>
     <string name="peertube_instance_add_exists">Instância já existe</string>
-    <string name="donation_encouragement">Tubular é desenvolvido por voluntários que utilizam o seu tempo livre para nos proporcionar a melhor experiência. Retribua para ajudar os programadores a tornarem Tubular ainda melhor.</string>
+    <string name="donation_encouragement">NewPipe é desenvolvido por voluntários que utilizam o seu tempo livre para nos proporcionar a melhor experiência. Retribua para ajudar os programadores a tornarem Tubular ainda melhor.</string>
     <string name="auto_queue_summary">Continuar (sem repetição) a fila de reprodução anexando um vídeo relacionado</string>
     <string name="always">Sempre</string>
     <string name="start_accept_privacy_policy">Para cumprir com o Regulamento Geral da Proteção de Dados (RGPD), chamamos a sua atenção para a política de privacidade do Tubular. Por favor, leia com atenção.
@@ -244,7 +244,7 @@
     <string name="download_path_audio_dialog_title">Escolha a pasta para colocar os ficheiros de áudio</string>
     <string name="app_update_available_notification_title">Atualização Tubular disponível!</string>
     <string name="events">Eventos</string>
-    <string name="privacy_policy_title">Política de privacidade do Tubular</string>
+    <string name="privacy_policy_title">Política de privacidade do NewPipe</string>
     <string name="could_not_load_thumbnails">Não foi possível carregar todas as miniaturas</string>
     <string name="audio">Áudio</string>
     <string name="cancel">Cancelar</string>
@@ -266,7 +266,7 @@
     <string name="seek_duration_title">Duração da pesquisa de avanço/recuo rápido</string>
     <string name="missing_file">Ficheiro movido ou eliminado</string>
     <string name="title_last_played">Última reprodução</string>
-    <string name="website_encouragement">Visite o site Tubular para obter mais informação e novidades.</string>
+    <string name="website_encouragement">Visite o site NewPipe para obter mais informação e novidades.</string>
     <string name="import_soundcloud_instructions">Importe o seu perfil SoundCloud digitando o URL ou a ID.:
 \n
 \n1. Ative o modo desktop do seu navegador web (o site não está disponível para dispositivos móveis)

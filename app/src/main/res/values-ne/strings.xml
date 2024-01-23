@@ -228,11 +228,11 @@
     <string name="contribution_encouragement">तपाईं को विचार छ कि छैन; अनुवाद, डिजाइन परिवर्तन, कोड सफाई, वा वास्तविक भारी कोड परिवर्तन-मद्दत सधैं छ स्वागत गर्दछौं। अधिक राम्रो यो हुन्छ गरिन्छ!</string>
     <string name="view_on_github">(GitHub)गिटहबमा हेर्नुहोस्</string>
     <string name="donation_title">दान</string>
-    <string name="donation_encouragement">(Tubular)न्यु पाइप तपाईं ल्याउन सबै भन्दा राम्रो प्रयोगकर्ता अनुभव आफ्नो स्वतन्त्र समय खर्च स्वयंसेवकहरु विकास गरिएको छ। Tubular अझ राम्रो तिनीहरू एक कप कफी आनन्द गर्दा बनाउन मद्दत विकासकर्ताहरूले फिर्ता दिनुहोस्।</string>
+    <string name="donation_encouragement">(NewPipe)न्यु पाइप तपाईं ल्याउन सबै भन्दा राम्रो प्रयोगकर्ता अनुभव आफ्नो स्वतन्त्र समय खर्च स्वयंसेवकहरु विकास गरिएको छ। Tubular अझ राम्रो तिनीहरू एक कप कफी आनन्द गर्दा बनाउन मद्दत विकासकर्ताहरूले फिर्ता दिनुहोस्।</string>
     <string name="give_back">फिर्ता दिनुहोस</string>
     <string name="website_title">वेबसाइट</string>
-    <string name="website_encouragement">थप जानकारी र समाचार लागि Tubular वेबसाइट मा जानुहोस्।</string>
-    <string name="privacy_policy_title">Tubular गोपनीयता नीति</string>
+    <string name="website_encouragement">थप जानकारी र समाचार लागि NewPipe वेबसाइट मा जानुहोस्।</string>
+    <string name="privacy_policy_title">NewPipe गोपनीयता नीति</string>
     <string name="privacy_policy_encouragement">न्यू पाइप परियोजना आफ्नो गोपनीयता धेरै गम्भीरतापूर्वक लिन्छ। तसर्थ, तपाईँको सहमति बिना कुनै पनि डाटा संकलन गर्दैन।
 \nन्यू पाइपको गोपनीयता नीतिले क्र्यास रिपोर्ट पठाउने बित्तिकै कुन डाटा पठाइएको र भण्डारण गरिएको छ भनेर विस्तृत वर्णन गर्दछ।</string>
     <string name="read_privacy_policy">गोपनीयता नीति पढ्नुहोस्</string>

@@ -213,13 +213,13 @@
     <string name="charset_letters_and_digits">Chỉ chữ cái và chữ số</string>
     <string name="charset_most_special_characters">Hầu hết các ký tự đặc biệt</string>
     <string name="donation_title">Đóng góp</string>
-    <string name="donation_encouragement">Tubular được phát triển bởi các tình nguyện viên dành thời gian và tâm huyết của mình để mang lại cho bạn trải nghiệm tốt nhất. Đóng góp một chút xiền để giúp chúng tôi làm Tubular tốt hơn nữa (Nếu bạn muốn).</string>
+    <string name="donation_encouragement">NewPipe được phát triển bởi các tình nguyện viên dành thời gian và tâm huyết của mình để mang lại cho bạn trải nghiệm tốt nhất. Đóng góp một chút xiền để giúp chúng tôi làm Tubular tốt hơn nữa (Nếu bạn muốn).</string>
     <string name="give_back">Đôn Nét</string>
     <string name="website_title">Trang web</string>
-    <string name="website_encouragement">Truy cập website chính thức của Tubular để biết thêm thông tin và tin tức.</string>
-    <string name="privacy_policy_title">Chính sách bảo mật của Tubular</string>
-    <string name="privacy_policy_encouragement">Tubular rất coi trọng quyền riêng tư của bạn. Do đó, ứng dụng không thu thập bất kỳ dữ liệu nào mà không có sự đồng ý của bạn.
-\nChính sách bảo mật của Tubular giải thích chi tiết dữ liệu nào được gửi và lưu trữ khi bạn gửi báo cáo sự cố.</string>
+    <string name="website_encouragement">Truy cập website chính thức của NewPipe để biết thêm thông tin và tin tức.</string>
+    <string name="privacy_policy_title">Chính sách bảo mật của NewPipe</string>
+    <string name="privacy_policy_encouragement">NewPipe rất coi trọng quyền riêng tư của bạn. Do đó, ứng dụng không thu thập bất kỳ dữ liệu nào mà không có sự đồng ý của bạn.
+\nChính sách bảo mật của NewPipe giải thích chi tiết dữ liệu nào được gửi và lưu trữ khi bạn gửi báo cáo sự cố.</string>
     <string name="read_privacy_policy">Đọc chính sách bảo mật</string>
     <string name="app_license">Tubular là phần mềm tự do bản quyền bên trái: Bạn có thể sử dụng, nghiên cứu, chia sẻ và cải tiến nó theo ý muốn. Cụ thể là bạn có thể phân phối lại và/hoặc sửa đổi nó theo các điều khoản của Giấy phép Công cộng GNU do Tổ chức Phần mềm Tự do xuất bản, phiên bản 3 của Giấy phép hoặc (tùy theo lựa chọn của bạn) bất kỳ phiên bản nào mới hơn.</string>
     <string name="title_activity_history">Lịch sử</string>

@@ -216,7 +216,7 @@
     <string name="no_streams_available_download">Não existem vídeos para descarregar</string>
     <string name="dismiss">Rejeitar</string>
     <string name="website_title">Site oficial</string>
-    <string name="website_encouragement">Visite o site Tubular para obter mais informação e novidades.</string>
+    <string name="website_encouragement">Visite o site NewPipe para obter mais informação e novidades.</string>
     <string name="kiosk_page_summary">Página \'kiosk\'</string>
     <string name="export_complete_toast">Exportado</string>
     <string name="import_complete_toast">Importado</string>
@@ -294,11 +294,11 @@
     <string name="delete_search_history_alert">Remover todo o histórico de pesquisas\?</string>
     <string name="search_history_deleted">Histórico de pesquisa removido</string>
     <string name="one_item_deleted">1 item eliminado.</string>
-    <string name="donation_encouragement">Tubular é desenvolvido por voluntários que utilizam o seu tempo livre para nos proporcionar a melhor experiência. Retribua para ajudar os programadores a tornarem Tubular ainda melhor.</string>
+    <string name="donation_encouragement">NewPipe é desenvolvido por voluntários que utilizam o seu tempo livre para nos proporcionar a melhor experiência. Retribua para ajudar os programadores a tornarem Tubular ainda melhor.</string>
     <string name="give_back">Contribuir</string>
-    <string name="privacy_policy_title">Política de privacidade do Tubular</string>
-    <string name="privacy_policy_encouragement">O projeto Tubular leva a sua privacidade muito a sério. Por isso, não recolhe nenhum dado sem o seu consentimento.
-\nA polícia de privacidade do Tubular explica, em detalhe, os tipos de dados enviados sempre que submete um relatório de erro.</string>
+    <string name="privacy_policy_title">Política de privacidade do NewPipe</string>
+    <string name="privacy_policy_encouragement">O projeto NewPipe leva a sua privacidade muito a sério. Por isso, não recolhe nenhum dado sem o seu consentimento.
+\nA polícia de privacidade do NewPipe explica, em detalhe, os tipos de dados enviados sempre que submete um relatório de erro.</string>
     <string name="read_privacy_policy">Ver política de privacidade</string>
     <string name="auto_queue_title">Adicionar o próximo vídeo à fila automaticamente</string>
     <string name="app_license">Tubular é um software livre \"copyleft\": pode utilizar, estudar, partilhar e melhorar a aplicação. Especificamente, pode redistribuir e/ou modificar a aplicação nos termos da GNU General Public License, conforme publicada pela Free Software Foundation, tanto a versão 3 da licença ou (por opção) qualquer versão posterior.</string>

@@ -201,10 +201,10 @@
     <string name="contribution_encouragement">Hulp is altijd welkom, of u nu nieuwe ideeën hebt, vertalingen kunt bijdragen, wijzigingen hebt voor het ontwerp, de code kunt opkuisen of er zelfs grote wijzigingen in wilt maken. Hoe meer hulp, hoe beter dat het wordt!</string>
     <string name="view_on_github">Bekijken op GitHub</string>
     <string name="donation_title">Doneren</string>
-    <string name="donation_encouragement">Tubular wordt door vrijwilligers in hun vrije tijd ontwikkeld om jou de beste ervaring te brengen. Geef wat terug zodat onze ontwikkelaars Tubular nóg beter kunnen maken terwijl ze van hun kopje koffie genieten.</string>
+    <string name="donation_encouragement">NewPipe wordt door vrijwilligers in hun vrije tijd ontwikkeld om jou de beste ervaring te brengen. Geef wat terug zodat onze ontwikkelaars Tubular nóg beter kunnen maken terwijl ze van hun kopje koffie genieten.</string>
     <string name="give_back">Teruggeven</string>
     <string name="website_title">Website</string>
-    <string name="website_encouragement">Bezoek de website van Tubular voor meer informatie en het laatste nieuws.</string>
+    <string name="website_encouragement">Bezoek de website van NewPipe voor meer informatie en het laatste nieuws.</string>
     <string name="app_license_title">Licentie van Tubular</string>
     <string name="read_full_license">Licentie lezen</string>
     <string name="title_activity_history">Geschiedenis</string>
@@ -307,9 +307,9 @@
     <string name="one_item_deleted">1 item verwijderd.</string>
     <string name="app_license">Tubular is vrije software: u kan het gebruiken, bestuderen, delen en verbeteren zoveel u maar wil. U kan het opnieuw uitgeven en/of aanpassen volgens de voorwaarden van de GNU General Public License, gepubliceerd door de Free Software Foundation, versie 3 van de licentie, of (indien gewenst) om het even welke latere versie.</string>
     <string name="import_settings">Wilt u ook de instellingen importeren\?</string>
-    <string name="privacy_policy_title">Privacybeleid van Tubular</string>
-    <string name="privacy_policy_encouragement">Het Tubular-project neemt privacy serieus. Daarom verzamelt de app geen gegevens zonder uw toestemming.
-\nTubular\'s privacybeleid legt gedetailleerd uit welke gegevens verstuurd en opgeslagen worden als u een crashrapport verstuurt.</string>
+    <string name="privacy_policy_title">Privacybeleid van NewPipe</string>
+    <string name="privacy_policy_encouragement">Het NewPipe-project neemt privacy serieus. Daarom verzamelt de app geen gegevens zonder uw toestemming.
+\nNewPipe\'s privacybeleid legt gedetailleerd uit welke gegevens verstuurd en opgeslagen worden als u een crashrapport verstuurt.</string>
     <string name="read_privacy_policy">Privacybeleid lezen</string>
     <string name="start_accept_privacy_policy">Om de Europese Algemene Verordening Gegevensbescherming (ook wel: AVG of GDPR) na te leven, wijzen we u op het nieuwe privacybeleid van Tubular. Lees dit zorgvuldig.
 \nU moet het beleid aanvaarden om ons het foutrapport te kunnen opsturen.</string>

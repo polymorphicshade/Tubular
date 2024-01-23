@@ -184,10 +184,10 @@
     <string name="start_here_on_background">Börja spela i bakgrunden</string>
     <string name="start_here_on_popup">Börja spela i en popup</string>
     <string name="donation_title">Donera</string>
-    <string name="donation_encouragement">Tubular utvecklas av frivilliga som spenderar sin fritid på att ge dig den bästa användarupplevelsen. Nu är det tid att ge tillbaka för att säkerställa att utvecklarna kan göra Tubular ännu bättre medan de njuter av en kopp kaffe.</string>
+    <string name="donation_encouragement">NewPipe utvecklas av frivilliga som spenderar sin fritid på att ge dig den bästa användarupplevelsen. Nu är det tid att ge tillbaka för att säkerställa att utvecklarna kan göra Tubular ännu bättre medan de njuter av en kopp kaffe.</string>
     <string name="give_back">Ge tillbaka</string>
     <string name="website_title">Webbplats</string>
-    <string name="website_encouragement">För att få mer information och de senaste nyheterna om Tubular, besök vår webbplats.</string>
+    <string name="website_encouragement">För att få mer information och de senaste nyheterna om NewPipe, besök vår webbplats.</string>
     <string name="show_info">Visa info</string>
     <string name="tab_bookmarks">Bokmärkta Spellistor</string>
     <string name="controls_add_to_playlist_title">Lägg till i</string>
@@ -239,9 +239,9 @@
     <string name="dismiss">Avfärda</string>
     <string name="rename">Byt namn</string>
     <string name="one_item_deleted">1 objekt borttaget.</string>
-    <string name="privacy_policy_title">Tubulars sekretesspolicy</string>
-    <string name="privacy_policy_encouragement">Tubular-projektet tar din integritet på största allvar. Appen samlar därför inte in några uppgifter utan ditt medgivande.
-\nTubulars sekretesspolicy förklarar i detalj vad för data som skickas och lagras när du skickar en kraschrapport.</string>
+    <string name="privacy_policy_title">NewPipes sekretesspolicy</string>
+    <string name="privacy_policy_encouragement">NewPipe-projektet tar din integritet på största allvar. Appen samlar därför inte in några uppgifter utan ditt medgivande.
+\nNewPipes sekretesspolicy förklarar i detalj vad för data som skickas och lagras när du skickar en kraschrapport.</string>
     <string name="read_privacy_policy">Läs sekretesspolicy</string>
     <string name="app_license">Tubular är copyleft fri programvara: Du kan använda, studera, dela och förbättra den som du vill. Specifikt kan du distribuera och/eller modifiera det under villkoren för GNU General Public License som publicerats av Free Software Foundation, antingen version 3 av licensen, eller (om du så önskar) en senare version.</string>
     <string name="title_last_played">Senast spelade</string>

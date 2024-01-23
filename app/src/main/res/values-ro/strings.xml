@@ -213,10 +213,10 @@
     <string name="invalid_file">Fișierul nu există sau lipsește permisiunea de a citi sau scrie în el</string>
     <string name="file_name_empty_error">Numele fișierului nu poate fi gol</string>
     <string name="error_occurred_detail">A survenit o eroare: %1$s</string>
-    <string name="donation_encouragement">Tubular este dezvoltat de voluntari care își petrec timpul liber pentru a vă oferi cea mai bună experiență de utilizare. Donează pentru a ajuta dezvoltatorii să facă Tubular și mai bun în timp ce ei se bucură de o ceașcă de cafea.</string>
+    <string name="donation_encouragement">NewPipe este dezvoltat de voluntari care își petrec timpul liber pentru a vă oferi cea mai bună experiență de utilizare. Donează pentru a ajuta dezvoltatorii să facă Tubular și mai bun în timp ce ei se bucură de o ceașcă de cafea.</string>
     <string name="give_back">Dăruiește înapoi</string>
     <string name="website_title">Site web</string>
-    <string name="website_encouragement">Vizitați site-ul Tubular pentru mai multe informații și noutăți.</string>
+    <string name="website_encouragement">Vizitați site-ul NewPipe pentru mai multe informații și noutăți.</string>
     <string name="title_last_played">Ultimele vizionări</string>
     <string name="title_most_played">Cele mai multe vizionări</string>
     <string name="export_complete_toast">Exportat</string>
@@ -299,9 +299,9 @@
     <string name="caption_setting_title">Subtitrări</string>
     <string name="caption_setting_description">Modificați scara textului de legendă a playerului și stilurile de fundal. Necesită repornirea aplicației pentru a intra în vigoare</string>
     <string name="app_license">Tubular este un software liber cu copyleft: îl puteți folosi, studia, distribui și îmbunătăți în voie. Mai exact, îl puteți redistribui și/sau modifica în conformitate cu termenii Licenței Publice Generale GNU, așa cum a fost publicată de Free Software Foundation, fie versiunea 3 a Licenței, fie (la alegerea dumneavoastră) orice versiune ulterioară.</string>
-    <string name="privacy_policy_title">Politica de confidențialitate a Tubular</string>
-    <string name="privacy_policy_encouragement">Proiectul Tubular ia foarte în serios confidențialitatea dumneavoastră. Prin urmare, aplicația nu colectează niciun fel de date fără consimțământul dumneavoastră.
-\nPolitica de confidențialitate a Tubular explică în detaliu ce date sunt trimise și stocate atunci când trimiteți un raport de eroare.</string>
+    <string name="privacy_policy_title">Politica de confidențialitate a NewPipe</string>
+    <string name="privacy_policy_encouragement">Proiectul NewPipe ia foarte în serios confidențialitatea dumneavoastră. Prin urmare, aplicația nu colectează niciun fel de date fără consimțământul dumneavoastră.
+\nPolitica de confidențialitate a NewPipe explică în detaliu ce date sunt trimise și stocate atunci când trimiteți un raport de eroare.</string>
     <string name="read_privacy_policy">Citiți politica de confidențialitate</string>
     <string name="saved_tabs_invalid_json">Nu s-au putut citi filele salvate, deci se folosesc cele implicite</string>
     <string name="restore_defaults">Restaurați valorile implicite</string>

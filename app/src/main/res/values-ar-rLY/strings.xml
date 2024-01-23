@@ -54,8 +54,8 @@
 \n
 \nهل تريد الاستمرار؟</string>
     <string name="close">إغلاق</string>
-    <string name="privacy_policy_encouragement">يأخذ مشروع Tubular خصوصيتك على محمل الجد. لذلك، لا يجمع التطبيق أي بيانات دون موافقتك.
-\nتوضح سياسة خصوصية Tubular بالتفصيل البيانات التي يتم إرسالها وتخزينها عند إرسال تقرير الأعطال.</string>
+    <string name="privacy_policy_encouragement">يأخذ مشروع NewPipe خصوصيتك على محمل الجد. لذلك، لا يجمع التطبيق أي بيانات دون موافقتك.
+\nتوضح سياسة خصوصية NewPipe بالتفصيل البيانات التي يتم إرسالها وتخزينها عند إرسال تقرير الأعطال.</string>
     <plurals name="feed_group_dialog_selection_count">
         <item quantity="zero">لاشيء مُحدّد</item>
         <item quantity="one">واحدة محددة</item>
@@ -341,7 +341,7 @@
     <string name="notification_colorize_summary">اجعل أندرويد يخصص لون الإشعار وفقا للّون الرئيسي في الصورة المصغرة (لاحظ أن هذا غير متوفر على جميع الأجهزة)</string>
     <string name="background_player_playing_toast">يتم التشغيل في الخلفية</string>
     <string name="error_http_no_content">الخادم لا يقوم بإرسال البيانات</string>
-    <string name="privacy_policy_title">سياسة خصوصية Tubular</string>
+    <string name="privacy_policy_title">سياسة خصوصية NewPipe</string>
     <string name="recaptcha_request_toast">طلب اختبار الكابتشا مطلوب</string>
     <string name="faq_description">إذا كنت تواجه مشكلة في استخدام التطبيق ، فتأكد من مراجعة هذه الإجابات للأسئلة الشائعة!</string>
     <string name="downloads">التحميلات</string>
@@ -747,7 +747,7 @@
     <string name="unhook_checkbox">إلغاء الإرتباط (قد يسبب تشويه)</string>
     <string name="settings_category_clear_data_title">امسح البيانات</string>
     <string name="no_playlist_bookmarked_yet">لا توجد إشارات مرجعية لقائمة التشغيل بعدُ</string>
-    <string name="donation_encouragement">يتم تطوير Tubular من قبل متطوعين يقضون وقت فراغهم لتقديم أفضل تجربة لك. حان الوقت لرد المساعدة مع المطورين وجعل Tubular أكثر و أفضل بينما يستمتعون بفنجان من القهوة.</string>
+    <string name="donation_encouragement">يتم تطوير NewPipe من قبل متطوعين يقضون وقت فراغهم لتقديم أفضل تجربة لك. حان الوقت لرد المساعدة مع المطورين وجعل Tubular أكثر و أفضل بينما يستمتعون بفنجان من القهوة.</string>
     <string name="show_comments_title">إظهار التعليقات</string>
     <string name="msg_copied">تم نسخه إلى الحافظة</string>
     <string name="more_options">المزيد من الخيارات</string>
@@ -769,7 +769,7 @@
     <string name="conferences">المؤتمرات</string>
     <string name="import_file_title">إستيراد ملف</string>
     <string name="show_error_snackbar">إظهار خطأ snackbar</string>
-    <string name="website_encouragement">قم بزيارة موقع Tubular لمزيد من المعلومات والمستجدات.</string>
+    <string name="website_encouragement">قم بزيارة موقع NewPipe لمزيد من المعلومات والمستجدات.</string>
     <string name="no_channel_subscribed_yet">لم يتم الاشتراك في أي قناة بعد</string>
     <string name="start_main_player_fullscreen_summary">لا تبدأ تشغيل مقاطع الفيديو في المشغل المصغر، ولكن قم بتدوير وضع ملء الشاشة مباشرة، إذا تم تأمين التدوير التلقائي. لا يزال بإمكانك الوصول إلى المشغل المصغر عن طريق الخروج من ملء الشاشة</string>
     <string name="app_license_title">تراخيص Tubular</string>

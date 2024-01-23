@@ -518,13 +518,13 @@
     <string name="trending">Tiştên Trend</string>
     <string name="app_license_title">Lîsansa Tubular</string>
     <string name="read_privacy_policy">Polîtîkaya nepeniyê bixwînin</string>
-    <string name="privacy_policy_encouragement">Projeya Tubular nepenîtiya we pir cidî digire. Ji ber vê yekê, sepanê bêyî razîbûna we tu daneyan kom nake.
-\nSiyaseta taybetîtiyê ya Tubular dema ku hûn rapora qeza dişînin çi daneyên têne şandin û hilanîn bi berfirehî vedibêje.</string>
-    <string name="privacy_policy_title">Siyaseta taybetîtiyê ya Tubular</string>
-    <string name="website_encouragement">Ji bo bêtir agahdarî û nûçeyan biçin Malpera Tubular.</string>
+    <string name="privacy_policy_encouragement">Projeya NewPipe nepenîtiya we pir cidî digire. Ji ber vê yekê, sepanê bêyî razîbûna we tu daneyan kom nake.
+\nSiyaseta taybetîtiyê ya NewPipe dema ku hûn rapora qeza dişînin çi daneyên têne şandin û hilanîn bi berfirehî vedibêje.</string>
+    <string name="privacy_policy_title">Siyaseta taybetîtiyê ya NewPipe</string>
+    <string name="website_encouragement">Ji bo bêtir agahdarî û nûçeyan biçin Malpera NewPipe.</string>
     <string name="website_title">Malper</string>
     <string name="give_back">Vegerînin</string>
-    <string name="donation_encouragement">Tubular ji hêla dilxwazan ve dema xweya vala derbas dikin ji we re ezmûna bikarhênerê çêtirîn anîne pêşve xistin. Vegerînin da ku ji pêşdebiran re bibin alîkar ku Tubular hê çêtir bikin dema ku ew ji fîncanek qehweyê kêfê bigirin.</string>
+    <string name="donation_encouragement">NewPipe ji hêla dilxwazan ve dema xweya vala derbas dikin ji we re ezmûna bikarhênerê çêtirîn anîne pêşve xistin. Vegerînin da ku ji pêşdebiran re bibin alîkar ku Tubular hê çêtir bikin dema ku ew ji fîncanek qehweyê kêfê bigirin.</string>
     <string name="donation_title">Bêşdan</string>
     <string name="view_on_github">GitHub-ê bibînin</string>
     <string name="contribution_encouragement">Ka ramanên we hene; werger, guherandinên sêwiranê, paqijkirina kodê, an guherînên koda giran ên rastîn-alîkarî her gav bi xêr hatî. Ya ku çêdibe çêtir dibe!</string>

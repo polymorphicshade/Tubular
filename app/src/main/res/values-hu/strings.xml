@@ -205,13 +205,13 @@
     <string name="contribution_encouragement">Legyen ötleted a fordítással, a dizájnnal, a forráskód tisztításával vagy egy komolyabb átszervezésével kapcsolatban, bármilyen segítséget szívesen fogadunk. Minél több minden készül el, annál jobb lesz!</string>
     <string name="view_on_github">Megtekintés a GitHubon</string>
     <string name="donation_title">Adományozás</string>
-    <string name="donation_encouragement">A Tubular alkalmazást önkéntesek fejlesztik a szabadidejükben, hogy a lehető legjobb felhasználói élményt nyújtsák. Járuljon hozzá, hogy a fejlesztők még jobbá tegyék alkalmazást, miközben egy csésze kávét szürcsölnek.</string>
+    <string name="donation_encouragement">A NewPipe alkalmazást önkéntesek fejlesztik a szabadidejükben, hogy a lehető legjobb felhasználói élményt nyújtsák. Járuljon hozzá, hogy a fejlesztők még jobbá tegyék alkalmazást, miközben egy csésze kávét szürcsölnek.</string>
     <string name="give_back">Hozzájárulás</string>
     <string name="website_title">Honlap</string>
-    <string name="website_encouragement">Látogassa meg a Tubular honlapját további információkért és hírekért.</string>
-    <string name="privacy_policy_title">A Tubular adatvédelmi irányelvei</string>
-    <string name="privacy_policy_encouragement">A Tubular projekt komolyan veszi az adatvédelmét. Az alkalmazás nem gyűjt semmilyen adatot a beleegyezése nélkül.
-\nA Tubular adatvédelmi irányelve részletesen elmagyarázza, mely adatok kerülnek elküldésre és tárolásra az alkalmazás összeomlásának jelentésekor.</string>
+    <string name="website_encouragement">Látogassa meg a NewPipe honlapját további információkért és hírekért.</string>
+    <string name="privacy_policy_title">A NewPipe adatvédelmi irányelvei</string>
+    <string name="privacy_policy_encouragement">A NewPipe projekt komolyan veszi az adatvédelmét. Az alkalmazás nem gyűjt semmilyen adatot a beleegyezése nélkül.
+\nA NewPipe adatvédelmi irányelve részletesen elmagyarázza, mely adatok kerülnek elküldésre és tárolásra az alkalmazás összeomlásának jelentésekor.</string>
     <string name="read_privacy_policy">Adatvédelmi irányelvek elolvasása</string>
     <string name="app_license_title">A Tubular licence</string>
     <string name="read_full_license">Licenc elolvasása</string>

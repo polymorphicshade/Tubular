@@ -187,9 +187,9 @@
     <string name="start_here_on_background">Démarrer la lecture en arrière-plan</string>
     <string name="start_here_on_popup">Démarrer la lecture dans une fenêtre flottante</string>
     <string name="donation_title">Donner</string>
-    <string name="donation_encouragement">Tubular est développé par des volontaires sur leur temps libre afin de vous proposer la meilleure expérience possible. Vous pouvez leur offrir un café pour les soutenir dans leurs efforts et rendre Tubular encore meilleur.</string>
+    <string name="donation_encouragement">NewPipe est développé par des volontaires sur leur temps libre afin de vous proposer la meilleure expérience possible. Vous pouvez leur offrir un café pour les soutenir dans leurs efforts et rendre Tubular encore meilleur.</string>
     <string name="website_title">Site Web</string>
-    <string name="website_encouragement">Visitez le site Web de Tubular pour plus d’informations et de nouvelles.</string>
+    <string name="website_encouragement">Visitez le site Web de NewPipe pour plus d’informations et de nouvelles.</string>
     <string name="give_back">Donner en retour</string>
     <string name="default_content_country_title">Pays du contenu par défaut</string>
     <string name="switch_to_background">Basculer en arrière-plan</string>
@@ -309,13 +309,13 @@
     <string name="search_history_deleted">Historique de recherche supprimé</string>
     <string name="one_item_deleted">1 élément supprimé.</string>
     <string name="app_license">Tubular est un logiciel sous licence libre copyleft : vous pouvez l’utiliser, l’étudier, le partager, et l’améliorer comme bon vous semble. Plus précisément, vous pouvez le redistribuer ou le modifier sous les termes de la licence générale publique GNU, comme publiée par la Free Software Foundation, dans sa version 3, ou, à votre convenance, dans une quelconque version ultérieure.</string>
-    <string name="privacy_policy_title">Politique de confidentialité de Tubular</string>
+    <string name="privacy_policy_title">Politique de confidentialité de NewPipe</string>
     <string name="read_privacy_policy">Lire la politique de confidentialité</string>
     <string name="import_settings">Voulez-vous également importer les paramètres \?</string>
     <string name="accept">Accepter</string>
     <string name="decline">Refuser</string>
-    <string name="privacy_policy_encouragement">Le projet Tubular prend votre vie privée très à cœur. Par conséquent, l’application n’envoie aucune donnée sans votre consentement.
-\nLa politique de confidentialité de Tubular explique en détail quelles données sont envoyées et stockées lorsque vous envoyez un rapport de plantage.</string>
+    <string name="privacy_policy_encouragement">Le projet NewPipe prend votre vie privée très à cœur. Par conséquent, l’application n’envoie aucune donnée sans votre consentement.
+\nLa politique de confidentialité de NewPipe explique en détail quelles données sont envoyées et stockées lorsque vous envoyez un rapport de plantage.</string>
     <string name="start_accept_privacy_policy">Afin de se conformer au Règlement Général sur la Protection des Données (RGPD), nous attirons ici votre attention sur la politique de confidentialité de Tubular. Veuillez la lire attentivement.
 \nVous devez l’accepter pour nous envoyer le rapport de bogue.</string>
     <string name="limit_data_usage_none_description">Aucune limite</string>

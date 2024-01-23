@@ -232,13 +232,13 @@
     <string name="read_full_license">Lexo licensën</string>
     <string name="app_license_title">Licensa e Tubular</string>
     <string name="read_privacy_policy">Lexoni politikën e privatësisë</string>
-    <string name="privacy_policy_encouragement">Projekti Tubular e merr privatësinë tuaj seriozisht. Kështu, aplikacioni nuk mbledh të dhëna pa dijeninë tuaj.
-\nPolitika e privatësisë së Tubular shpjegon në detaje se çfarë të dhënat dërgohen dhe ruhen kur ju dërgoni një raport dështimi/crash.</string>
-    <string name="privacy_policy_title">Politika e Privatësisë së Tubular</string>
-    <string name="website_encouragement">Shfletoni faqen e internetit të Tubular për më tepër informacion dhe lajme.</string>
+    <string name="privacy_policy_encouragement">Projekti NewPipe e merr privatësinë tuaj seriozisht. Kështu, aplikacioni nuk mbledh të dhëna pa dijeninë tuaj.
+\nPolitika e privatësisë së NewPipe shpjegon në detaje se çfarë të dhënat dërgohen dhe ruhen kur ju dërgoni një raport dështimi/crash.</string>
+    <string name="privacy_policy_title">Politika e Privatësisë së NewPipe</string>
+    <string name="website_encouragement">Shfletoni faqen e internetit të NewPipe për më tepër informacion dhe lajme.</string>
     <string name="website_title">Faqja e internetit</string>
     <string name="give_back">Jep</string>
-    <string name="donation_encouragement">Tubular zhvillohet nga zhvillues të cilët shpenzojnë kohën e tyre të lirë për t\'u prurë juve eksperiencën më të mirë për përdoruesin. Ktheni nderin duke ndihmuar zhvilluesit që ta bëjnë Tubular akoma edhe më të mirë ndërkohë që ata pijnë një filxhan kafe.</string>
+    <string name="donation_encouragement">NewPipe zhvillohet nga zhvillues të cilët shpenzojnë kohën e tyre të lirë për t\'u prurë juve eksperiencën më të mirë për përdoruesin. Ktheni nderin duke ndihmuar zhvilluesit që ta bëjnë Tubular akoma edhe më të mirë ndërkohë që ata pijnë një filxhan kafe.</string>
     <string name="donation_title">Dhuro</string>
     <string name="view_on_github">Shikoje në GitHub</string>
     <string name="contribution_encouragement">Nëse keni ide rreth; përkthimeve, ndryshimeve në dizajn, pastrimit të kodit, apo ndryshime rrënjësore të kodit—ndihma është gjithnjë e mirëpritur. Sa më shumë të bëhet aq më mirë do jetë!</string>

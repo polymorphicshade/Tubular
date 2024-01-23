@@ -129,10 +129,10 @@
     <string name="settings_category_appearance_title">Útlit</string>
     <string name="settings_category_history_title">Ferill og skyndiminni</string>
     <string name="msg_running">Tubular er að sækja</string>
-    <string name="website_encouragement">Fyrir frekari upplýsingar og nýjustu fréttir um Tubular geturðu skoðað heimasíðu okkar.</string>
-    <string name="privacy_policy_title">Persónuverndarstefna Tubular</string>
-    <string name="privacy_policy_encouragement">Tubular verkefnið tekur friðhelgi þína mjög alvarlega. Þess vegna safnar forritið ekkert án samþykkis þíns.
-\nPersónuverndarstefna Tubular útskýrir í smáatriðum hvaða gögn eru send og geymd þegar þú sendir hrunskýrslu.</string>
+    <string name="website_encouragement">Fyrir frekari upplýsingar og nýjustu fréttir um NewPipe geturðu skoðað heimasíðu okkar.</string>
+    <string name="privacy_policy_title">Persónuverndarstefna NewPipe</string>
+    <string name="privacy_policy_encouragement">NewPipe verkefnið tekur friðhelgi þína mjög alvarlega. Þess vegna safnar forritið ekkert án samþykkis þíns.
+\nPersónuverndarstefna NewPipe útskýrir í smáatriðum hvaða gögn eru send og geymd þegar þú sendir hrunskýrslu.</string>
     <string name="settings_category_player_title">Spilari</string>
     <string name="settings_category_debug_title">Aflúsa</string>
     <string name="content_language_title">Sjálfgefið tungumál efnis</string>
@@ -352,7 +352,7 @@
     <string name="radio">Útvarp</string>
     <string name="metadata_category">Flokkur</string>
     <string name="metadata_tags">Merki</string>
-    <string name="donation_encouragement">Tubular er þróað af sjálfboðaliðum sem eyða frítíma sínum í að færa þér bestu notendaupplifunina. Gefðu til baka til að hjálpa forriturum að gera Tubular enn betri á meðan þeir njóta kaffibolla.</string>
+    <string name="donation_encouragement">NewPipe er þróað af sjálfboðaliðum sem eyða frítíma sínum í að færa þér bestu notendaupplifunina. Gefðu til baka til að hjálpa forriturum að gera Tubular enn betri á meðan þeir njóta kaffibolla.</string>
     <string name="short_million">millj.</string>
     <string name="show_description_summary">Slökktu á til að fela myndbandslýsingu og viðbótarupplýsingar</string>
     <string name="error_occurred_detail">Villa kom upp: %1$s</string>

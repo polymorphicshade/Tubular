@@ -169,10 +169,10 @@
     <string name="contribution_encouragement">אם יש לך רעיון כלשהו בנוגע לתרגום, שינויי עיצוב, ניקוי הקוד או שינויים מהותיים בקוד - אנו תמיד שמחים לקבל עזרה. ככל שיותר דברים מתבצעים כך היישומון משתפר!</string>
     <string name="view_on_github">הצגה ב־GitHub</string>
     <string name="donation_title">תרומה</string>
-    <string name="donation_encouragement">הפיתוח של Tubular נערך ע״י מתנדבים שמשקיעים את זמנם הפנוי כדי להגיש לך את חווית השימוש הטובה ביותר. באפשרותך להעניק בחזרה כדי לסייע למפתחים לשפר את Tubular בעודם נהנים מכוס קפה.</string>
+    <string name="donation_encouragement">הפיתוח של Tubular נערך ע״י מתנדבים שמשקיעים את זמנם הפנוי כדי להגיש לך את חווית השימוש הטובה ביותר. באפשרותך להעניק בחזרה כדי לסייע למפתחים לשפר את NewPipe בעודם נהנים מכוס קפה.</string>
     <string name="give_back">לתרום בחזרה</string>
     <string name="website_title">אתר הבית</string>
-    <string name="website_encouragement">מומלץ לבקר באתר של Tubular לפרטים נוספים ולחדשות.</string>
+    <string name="website_encouragement">מומלץ לבקר באתר של NewPipe לפרטים נוספים ולחדשות.</string>
     <string name="app_license_title">הרישיון של Tubular</string>
     <string name="read_full_license">הצגת הרישיון</string>
     <string name="title_activity_history">היסטוריה</string>
@@ -286,9 +286,9 @@
     <string name="invalid_source">אין מקור תיקייה/תוכן</string>
     <string name="error_occurred_detail">אירעה שגיאה: %1$s</string>
     <string name="no_streams_available_download">אין תזרימים זמינים להורדה</string>
-    <string name="privacy_policy_title">מדיניות הפרטיות של Tubular</string>
+    <string name="privacy_policy_title">מדיניות הפרטיות של NewPipe</string>
     <string name="privacy_policy_encouragement">מיזם Tubular שומר על הפרטיות שלך בצורה מאוד קפדנית. לפיכך, היישומון אינו אוסף נתונים ללא הסכמתך.
-\nמדיניות הפרטיות של Tubular מסבירה בפרטי פרטים אילו נתונים נשלחים ומאוחסנים בעת שליחת דיווח על תקלה.</string>
+\nמדיניות הפרטיות של NewPipe מסבירה בפרטי פרטים אילו נתונים נשלחים ומאוחסנים בעת שליחת דיווח על תקלה.</string>
     <string name="read_privacy_policy">הצגת מדיניות הפרטיות</string>
     <string name="app_license">Tubular הוא יישומון חופשי בהתאם לרישיון קופילפט: מותר לך להשתמש, לחקור, לשתף ולשפר בכל דרך שנראית לך. במיוחד מותר לך להפיץ מחדש ו/או לשנות תחת תנאי הרישיון הציבורי הכללי של GNU כפי שמופץ על ידי קרן התכנה החופשית, בין אם גרסה 3 של הרישיון או (לשיקולך) כל גרסה עדכנית יותר שלו.</string>
     <string name="title_last_played">התנגנו אחרונים</string>
