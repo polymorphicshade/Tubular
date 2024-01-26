@@ -1478,26 +1478,42 @@
     <string name="sponsor_block_category_all_on_key" translatable="false">sponsor_block_category_all_on</string>
     <string name="sponsor_block_category_all_off_key" translatable="false">sponsor_block_category_all_off</string>
     <string name="sponsor_block_category_sponsor_key" translatable="false">sponsor_block_category_sponsor</string>
+    <string name="sponsor_block_category_sponsor_mode_key" translatable="false">sponsor_block_category_sponsor_mode</string>
     <string name="sponsor_block_category_sponsor_color_key" translatable="false">sponsor_block_category_sponsor_color</string>
     <string name="sponsor_block_category_intro_key" translatable="false">sponsor_block_category_intro</string>
+    <string name="sponsor_block_category_intro_mode_key" translatable="false">sponsor_block_category_intro_mode</string>
     <string name="sponsor_block_category_intro_color_key" translatable="false">sponsor_block_category_intro_color</string>
     <string name="sponsor_block_category_outro_key" translatable="false">sponsor_block_category_outro</string>
+    <string name="sponsor_block_category_outro_mode_key" translatable="false">sponsor_block_category_outro_mode</string>
     <string name="sponsor_block_category_outro_color_key" translatable="false">sponsor_block_category_outro_color</string>
     <string name="sponsor_block_category_interaction_key" translatable="false">sponsor_block_category_interaction</string>
+    <string name="sponsor_block_category_interaction_mode_key" translatable="false">sponsor_block_category_interaction_mode</string>
     <string name="sponsor_block_category_interaction_color_key" translatable="false">sponsor_block_category_interaction_color</string>
     <string name="sponsor_block_category_highlight_key" translatable="false">sponsor_block_category_highlight</string>
     <string name="sponsor_block_category_highlight_color_key" translatable="false">sponsor_block_category_highlight_color</string>
     <string name="sponsor_block_category_self_promo_key" translatable="false">sponsor_block_category_self_promo</string>
+    <string name="sponsor_block_category_self_promo_mode_key" translatable="false">sponsor_block_category_promo_mode</string>
     <string name="sponsor_block_category_self_promo_color_key" translatable="false">sponsor_block_category_self_promo_color</string>
     <string name="sponsor_block_category_non_music_key" translatable="false">sponsor_block_category_music</string>
+    <string name="sponsor_block_category_non_music_mode_key" translatable="false">sponsor_block_category_music_mode</string>
     <string name="sponsor_block_category_non_music_color_key" translatable="false">sponsor_block_category_music_color</string>
     <string name="sponsor_block_category_preview_key" translatable="false">sponsor_block_category_preview</string>
+    <string name="sponsor_block_category_preview_mode_key" translatable="false">sponsor_block_category_preview_mode</string>
     <string name="sponsor_block_category_preview_color_key" translatable="false">sponsor_block_category_preview_color</string>
     <string name="sponsor_block_category_filler_key" translatable="false">sponsor_block_category_filler</string>
+    <string name="sponsor_block_category_filler_mode_key" translatable="false">sponsor_block_category_filler_mode</string>
     <string name="sponsor_block_category_filler_color_key" translatable="false">sponsor_block_category_filler_color</string>
     <string name="sponsor_block_category_pending_key" translatable="false">sponsor_block_category_pending_key</string>
     <string name="sponsor_block_category_pending_color_key" translatable="false">sponsor_block_category_pending_color_key</string>
     <string name="sponsor_block_clear_whitelist_key" translatable="false">sponsor_block_clear_whitelist</string>
+    <string name="sponsor_block_graced_rewind_key" translatable="false">sponsor_block_skip</string>
+    <string name="sponsor_block_show_manual_skip_key" translatable="false">sponsor_block_skip</string>
+
+    <string-array name="sponsor_block_category_sponsor_modes_key">
+        <item>@string/sponsor_block_skip_mode_enabled</item>
+        <item>@string/sponsor_block_skip_mode_manual</item>
+        <item>@string/sponsor_block_skip_mode_highlight</item>
+    </string-array>
 
     <!-- ReturnYouTubeDislike -->
     <string name="return_youtube_dislike_home_page_key" translatable="false">return_youtube_dislike_home_page</string>

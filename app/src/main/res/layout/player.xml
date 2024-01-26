@@ -758,6 +758,75 @@
                     tools:src="@drawable/ic_brightness_high" />
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/unskipButton"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_rectangle_black_transparent"
+                android:padding="@dimen/player_main_buttons_padding">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/tooltipUnskipIcon"
+                    android:src="@drawable/ic_previous"
+                    android:clickable="false"
+                    app:tint="@color/white"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/tooltipUnskipText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sponsor_block_manual_unskip_button"
+                    android:paddingRight="5dp"
+                    android:layout_toRightOf="@+id/tooltipUnskipIcon"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#FFFFFF" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/skipButton"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background_rectangle_black_transparent"
+                android:visibility="gone"
+                android:padding="@dimen/player_main_buttons_padding">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/tooltipSkipIcon"
+                    android:src="@drawable/ic_next"
+                    android:clickable="false"
+                    app:tint="@color/white"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_toRightOf="@+id/tooltipSkipText"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/tooltipSkipText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sponsor_block_manual_skip_button"
+                    android:paddingLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#FFFFFF" />
+            </RelativeLayout>
+
         </RelativeLayout>
 
     </RelativeLayout>
