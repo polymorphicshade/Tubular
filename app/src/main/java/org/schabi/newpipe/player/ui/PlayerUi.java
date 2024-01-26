@@ -212,4 +212,28 @@ public abstract class PlayerUi {
      */
     public void onVideoSizeChanged(@NonNull final VideoSize videoSize) {
     }
+
+    /**
+     * Show SponsorBlock segment un-skip button.
+     */
+    public void showAutoUnskip() {
+    }
+
+    /**
+     * Hide SponsorBlock segment un-skip button.
+     */
+    public void hideAutoUnskip() {
+    }
+
+    /**
+     * Show SponsorBlock segment skip button.
+     */
+    public void showAutoSkip() {
+    }
+
+    /**
+     * Hide SponsorBlock segment skip button.
+     */
+    public void hideAutoSkip() {
+    }
 }
