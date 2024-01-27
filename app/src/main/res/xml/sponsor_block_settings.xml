@@ -38,6 +38,22 @@
             app:iconSpaceReserved="false"
             android:dependency="@string/sponsor_block_enable_key"
             android:defaultValue="true"
+            android:key="@string/sponsor_block_show_manual_skip_key"
+            android:summary="@string/sponsor_block_show_manual_skip_summary"
+            android:title="@string/sponsor_block_show_manual_skip_title"/>
+
+        <SwitchPreference
+            app:iconSpaceReserved="false"
+            android:dependency="@string/sponsor_block_enable_key"
+            android:defaultValue="true"
+            android:key="@string/sponsor_block_graced_rewind_key"
+            android:summary="@string/sponsor_block_graced_rewind_summary"
+            android:title="@string/sponsor_block_graced_rewind_title"/>
+
+        <SwitchPreference
+            app:iconSpaceReserved="false"
+            android:dependency="@string/sponsor_block_enable_key"
+            android:defaultValue="true"
             android:key="@string/sponsor_block_notifications_key"
             android:summary="@string/sponsor_block_notifications_summary"
             android:title="@string/sponsor_block_notifications_title"/>

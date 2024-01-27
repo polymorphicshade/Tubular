@@ -910,6 +910,7 @@
     <string name="settings_category_sponsor_block_categories_all_colors_on_title">All On</string>
     <string name="settings_category_sponsor_block_categories_all_colors_off_title">All Off</string>
     <string name="settings_category_sponsor_block_category_enable_title">Enable</string>
+    <string name="settings_category_sponsor_block_category_enable_mode_title">Skip Mode</string>
     <string name="settings_category_sponsor_block_category_color">Seek Bar Color</string>
     <string name="settings_category_sponsor_block_category_sponsor_summary">Paid promotion, paid referrals and direct advertisements. Not for self-promotion or free shoutouts to causes/creators/websites/products they like.</string>
     <string name="settings_category_sponsor_block_category_intro_summary">An interval without actual content. Could be a pause, static frame, repeating animation. This should not be used for transitions containing information or be used on music videos.</string>
@@ -929,6 +930,15 @@
     <string name="description_up_vote_segment">Up-vote segment</string>
     <string name="description_down_vote_segment">Down-vote segment</string>
     <string name="description_skip_to_highlight">Skip to highlight</string>
+    <string name="sponsor_block_skip_mode_enabled">Automatic</string>
+    <string name="sponsor_block_skip_mode_manual">Manual</string>
+    <string name="sponsor_block_skip_mode_highlight">Highlight Only</string>
+    <string name="sponsor_block_graced_rewind_title">Rewind pauses skipping</string>
+    <string name="sponsor_block_graced_rewind_summary">Rewinding the video back into automatically skipped segments will pause segment skipping until the segment ends.</string>
+    <string name="sponsor_block_manual_unskip_button">Un-skip</string>
+    <string name="sponsor_block_manual_skip_button">Skip</string>
+    <string name="sponsor_block_show_manual_skip_title">Shows Manual Buttons.</string>
+    <string name="sponsor_block_show_manual_skip_summary">Shows buttons on-screen to manually skip/unskip segments. It is recommended to enable this when configuring SponsorBlock Categories to use Manual Skipping.</string>
     <!-- ReturnYouTubeDislike -->
     <string name="return_youtube_dislike_home_page_title">View Website</string>
     <string name="return_youtube_dislike_home_page_summary">View the official ReturnYouTubeDislike website.</string>

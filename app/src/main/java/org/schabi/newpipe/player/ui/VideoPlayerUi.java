@@ -216,6 +216,8 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
 
         binding.repeatButton.setOnClickListener(v -> onRepeatClicked());
         binding.shuffleButton.setOnClickListener(v -> onShuffleClicked());
+        binding.unskipButton.setOnClickListener(v -> onUnskipClicked());
+        binding.skipButton.setOnClickListener(v -> onSkipClicked());
 
         binding.playPauseButton.setOnClickListener(makeOnClickListener(player::playPause));
         binding.playPreviousButton.setOnClickListener(makeOnClickListener(player::playPrevious));
@@ -292,6 +294,8 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
 
         binding.repeatButton.setOnClickListener(null);
         binding.shuffleButton.setOnClickListener(null);
+        binding.unskipButton.setOnClickListener(null);
+        binding.skipButton.setOnClickListener(null);
 
         binding.playPauseButton.setOnClickListener(null);
         binding.playPreviousButton.setOnClickListener(null);
@@ -857,6 +861,21 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
         binding.getRoot().setKeepScreenOn(true);
     }
 
+    public void showAutoUnskip() {
+        binding.unskipButton.setVisibility(View.VISIBLE);
+    }
+
+    public void hideAutoUnskip() {
+        binding.unskipButton.setVisibility(View.GONE);
+    }
+
+    public void showAutoSkip() {
+        binding.skipButton.setVisibility(View.VISIBLE);
+    }
+    public void hideAutoSkip() {
+        binding.skipButton.setVisibility(View.GONE);
+    }
+
     @Override
     public void onPaused() {
         super.onPaused();
@@ -951,6 +970,20 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
             Log.d(TAG, "onShuffleClicked() called");
         }
         player.toggleShuffleModeEnabled();
+    }
+
+    public void onUnskipClicked() {
+        if (DEBUG) {
+            Log.d(TAG, "onUnskipClicked() called");
+        }
+        player.toggleUnskip();
+    }
+
+    public void onSkipClicked() {
+        if (DEBUG) {
+            Log.d(TAG, "onSkipClicked() called");
+        }
+        player.toggleSkip();
     }
 
     @Override
