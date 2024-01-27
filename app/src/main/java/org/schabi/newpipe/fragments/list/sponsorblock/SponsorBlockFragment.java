@@ -44,11 +44,8 @@ public class SponsorBlockFragment
     private int currentProgress = -1;
     private @Nullable SponsorBlockFragmentListener sponsorBlockFragmentListener;
     private SponsorBlockDataManager sponsorBlockDataManager;
-    private Disposable workerIsWhitelisted;
     private Disposable workerAddToWhitelisted;
     private Disposable workerRemoveFromWhitelisted;
-    private SponsorBlockMode sponsorBlockMode = SponsorBlockMode.ENABLED;
-
 
     public SponsorBlockFragment() {
     }
@@ -80,9 +77,6 @@ public class SponsorBlockFragment
     public void onDetach() {
         super.onDetach();
 
-        if (workerIsWhitelisted != null) {
-            workerIsWhitelisted.dispose();
-        }
         if (workerAddToWhitelisted != null) {
             workerAddToWhitelisted.dispose();
         }
@@ -116,18 +110,8 @@ public class SponsorBlockFragment
 
         binding.segmentList.setAdapter(segmentListAdapter);
 
-        workerIsWhitelisted = sponsorBlockDataManager.isWhiteListed(streamInfo.getUploaderName())
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(isWhitelisted -> {
-                    binding.channelIsWhitelistedSwitch.setChecked(isWhitelisted);
-
-                    binding.skippingIsEnabledSwitch.setChecked(
-                            !isWhitelisted && sponsorBlockMode == SponsorBlockMode.ENABLED);
-
-                    binding.skippingIsEnabledSwitch.setOnCheckedChangeListener(this);
-                    binding.channelIsWhitelistedSwitch.setOnCheckedChangeListener(this);
-                });
+        binding.skippingIsEnabledSwitch.setOnCheckedChangeListener(this);
+        binding.channelIsWhitelistedSwitch.setOnCheckedChangeListener(this);
 
         return binding.getRoot();
     }
@@ -181,7 +165,15 @@ public class SponsorBlockFragment
     }
 
     public void setSponsorBlockMode(@NonNull final SponsorBlockMode mode) {
-        sponsorBlockMode = mode;
+        binding.skippingIsEnabledSwitch.setOnCheckedChangeListener(null);
+        binding.skippingIsEnabledSwitch.setChecked(mode == SponsorBlockMode.ENABLED);
+        binding.skippingIsEnabledSwitch.setOnCheckedChangeListener(this);
+    }
+
+    public void setIsWhitelisted(final boolean value) {
+        binding.channelIsWhitelistedSwitch.setOnCheckedChangeListener(null);
+        binding.channelIsWhitelistedSwitch.setChecked(value);
+        binding.channelIsWhitelistedSwitch.setOnCheckedChangeListener(this);
     }
 
     public void setCurrentProgress(final int progress) {

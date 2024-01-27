@@ -189,7 +189,7 @@ public final class VideoDetailFragment
 
     private final SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener =
             this::onSharedPreferencesChanged;
-    private Disposable workerIsWhitelisted;
+    private Disposable workerSponsorBlockModeCheck;
 
     private void onSharedPreferencesChanged(final SharedPreferences sharedPreferences,
                                             final String key) {
@@ -224,6 +224,8 @@ public final class VideoDetailFragment
     int lastStableBottomSheetState = BottomSheetBehavior.STATE_EXPANDED;
     @State
     protected boolean autoPlayEnabled = true;
+    @State
+    SponsorBlockMode currentSponsorBlockMode = null;
 
     @Nullable
     private StreamInfo currentInfo = null;
@@ -458,8 +460,8 @@ public final class VideoDetailFragment
         if (submitSegmentSubscriber != null) {
             submitSegmentSubscriber.dispose();
         }
-        if (workerIsWhitelisted != null) {
-            workerIsWhitelisted.dispose();
+        if (workerSponsorBlockModeCheck != null) {
+            workerSponsorBlockModeCheck.dispose();
         }
     }
 
@@ -998,6 +1000,21 @@ public final class VideoDetailFragment
             sponsorBlockFragment.setListener(this);
 
             pageAdapter.updateItem(SPONSOR_BLOCK_TAB_TAG, sponsorBlockFragment);
+
+            workerSponsorBlockModeCheck =
+                    sponsorBlockDataManager
+                            .isWhiteListed(info.getUploaderName())
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe(isWhitelisted -> {
+                                if (currentSponsorBlockMode == null) {
+                                    currentSponsorBlockMode = isWhitelisted
+                                            ? SponsorBlockMode.DISABLED
+                                            : SponsorBlockMode.ENABLED;
+                                }
+                                sponsorBlockFragment.setSponsorBlockMode(currentSponsorBlockMode);
+                                sponsorBlockFragment.setIsWhitelisted(isWhitelisted);
+                            });
         }
 
         binding.viewPager.setVisibility(View.VISIBLE);
@@ -1890,17 +1907,24 @@ public final class VideoDetailFragment
                 prefs.getBoolean(getString(R.string.sponsor_block_enable_key), false);
 
         if (player != null && isSponsorBlockEnabled) {
-            workerIsWhitelisted = sponsorBlockDataManager.isWhiteListed(info.getUploaderName())
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(isWhitelisted -> {
-                        final SponsorBlockMode mode = isWhitelisted
-                                ? SponsorBlockMode.DISABLED
-                                : SponsorBlockMode.ENABLED;
-                        player.setSponsorBlockMode(mode);
-                        getSponsorBlockFragment().ifPresent(
-                                fragment -> fragment.setSponsorBlockMode(mode));
-                    });
+            workerSponsorBlockModeCheck =
+                    sponsorBlockDataManager
+                            .isWhiteListed(info.getUploaderName())
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe(isWhitelisted -> {
+                                if (currentSponsorBlockMode == null) {
+                                    currentSponsorBlockMode = isWhitelisted
+                                            ? SponsorBlockMode.DISABLED
+                                            : SponsorBlockMode.ENABLED;
+                                }
+                                player.setSponsorBlockMode(currentSponsorBlockMode);
+                                getSponsorBlockFragment().ifPresent(
+                                        fragment -> {
+                                            fragment.setSponsorBlockMode(currentSponsorBlockMode);
+                                            fragment.setIsWhitelisted(isWhitelisted);
+                                        });
+                            });
         }
         final StackItem item = findQueueInStack(queue);
         if (item != null) {
@@ -2583,9 +2607,11 @@ public final class VideoDetailFragment
             return;
         }
 
-        player.setSponsorBlockMode(newValue
+        currentSponsorBlockMode = newValue
                 ? SponsorBlockMode.ENABLED
-                : SponsorBlockMode.DISABLED);
+                : SponsorBlockMode.DISABLED;
+
+        player.setSponsorBlockMode(currentSponsorBlockMode);
     }
 
     @Override
