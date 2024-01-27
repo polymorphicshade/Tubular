@@ -2682,7 +2682,7 @@ public final class VideoDetailFragment
                         SponsorBlockExtractorHelper.submitSponsorBlockSegment(
                                 currentInfo,
                                 newSegment,
-                                ""))
+                                apiUrl))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response -> {
