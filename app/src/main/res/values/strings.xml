@@ -934,11 +934,11 @@
     <string name="sponsor_block_skip_mode_manual">Manual</string>
     <string name="sponsor_block_skip_mode_highlight">Highlight Only</string>
     <string name="sponsor_block_graced_rewind_title">Rewind pauses skipping</string>
-    <string name="sponsor_block_graced_rewind_summary">Rewinding the video back into automatically skipped segments will pause segment skipping until the segment ends.</string>
+    <string name="sponsor_block_graced_rewind_summary">Rewinding the video back to automatically-skipped segments will pause skipping until the segment ends.</string>
     <string name="sponsor_block_manual_unskip_button">Un-skip</string>
     <string name="sponsor_block_manual_skip_button">Skip</string>
-    <string name="sponsor_block_show_manual_skip_title">Shows Manual Buttons.</string>
-    <string name="sponsor_block_show_manual_skip_summary">Shows buttons on-screen to manually skip/unskip segments. It is recommended to enable this when configuring SponsorBlock Categories to use Manual Skipping.</string>
+    <string name="sponsor_block_show_manual_skip_title">Show manual buttons</string>
+    <string name="sponsor_block_show_manual_skip_summary">Show buttons on-screen to manually skip/unskip segments. Enabling this is recommended when configuring SponsorBlock Categories to be skipped manually.</string>
     <!-- ReturnYouTubeDislike -->
     <string name="return_youtube_dislike_home_page_title">View Website</string>
     <string name="return_youtube_dislike_home_page_summary">View the official ReturnYouTubeDislike website.</string>

@@ -1506,8 +1506,8 @@
     <string name="sponsor_block_category_pending_key" translatable="false">sponsor_block_category_pending_key</string>
     <string name="sponsor_block_category_pending_color_key" translatable="false">sponsor_block_category_pending_color_key</string>
     <string name="sponsor_block_clear_whitelist_key" translatable="false">sponsor_block_clear_whitelist</string>
-    <string name="sponsor_block_graced_rewind_key" translatable="false">sponsor_block_skip</string>
-    <string name="sponsor_block_show_manual_skip_key" translatable="false">sponsor_block_skip</string>
+    <string name="sponsor_block_graced_rewind_key" translatable="false">sponsor_block_graced_rewind</string>
+    <string name="sponsor_block_show_manual_skip_key" translatable="false">sponsor_block_show_manual_skip</string>
 
     <string-array name="sponsor_block_category_sponsor_modes_key">
         <item>@string/sponsor_block_skip_mode_enabled</item>
