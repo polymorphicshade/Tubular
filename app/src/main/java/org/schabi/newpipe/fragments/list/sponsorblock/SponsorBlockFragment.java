@@ -46,6 +46,8 @@ public class SponsorBlockFragment
     private SponsorBlockDataManager sponsorBlockDataManager;
     private Disposable workerAddToWhitelisted;
     private Disposable workerRemoveFromWhitelisted;
+    private SponsorBlockMode currentSponsorBlockMode = null;
+    private boolean currentIsWhitelisted;
 
     public SponsorBlockFragment() {
     }
@@ -110,6 +112,16 @@ public class SponsorBlockFragment
 
         binding.segmentList.setAdapter(segmentListAdapter);
 
+        binding.skippingIsEnabledSwitch.setChecked(
+                currentSponsorBlockMode == SponsorBlockMode.ENABLED);
+
+        binding.channelIsWhitelistedSwitch.setChecked(currentIsWhitelisted);
+
+        if (currentIsWhitelisted) {
+            binding.skippingIsEnabledSwitch.setChecked(false);
+            binding.skippingIsEnabledSwitch.setEnabled(!currentIsWhitelisted);
+        }
+
         binding.skippingIsEnabledSwitch.setOnCheckedChangeListener(this);
         binding.channelIsWhitelistedSwitch.setOnCheckedChangeListener(this);
 
@@ -165,15 +177,35 @@ public class SponsorBlockFragment
     }
 
     public void setSponsorBlockMode(@NonNull final SponsorBlockMode mode) {
+        currentSponsorBlockMode = mode;
+
+        if (binding == null) {
+            return;
+        }
+
         binding.skippingIsEnabledSwitch.setOnCheckedChangeListener(null);
         binding.skippingIsEnabledSwitch.setChecked(mode == SponsorBlockMode.ENABLED);
         binding.skippingIsEnabledSwitch.setOnCheckedChangeListener(this);
     }
 
     public void setIsWhitelisted(final boolean value) {
+        currentIsWhitelisted = value;
+
+        if (binding == null) {
+            return;
+        }
+
         binding.channelIsWhitelistedSwitch.setOnCheckedChangeListener(null);
         binding.channelIsWhitelistedSwitch.setChecked(value);
         binding.channelIsWhitelistedSwitch.setOnCheckedChangeListener(this);
+
+        if (value) {
+            binding.skippingIsEnabledSwitch.setOnCheckedChangeListener(null);
+            binding.skippingIsEnabledSwitch.setChecked(false);
+            binding.skippingIsEnabledSwitch.setOnCheckedChangeListener(this);
+
+            binding.skippingIsEnabledSwitch.setEnabled(!currentIsWhitelisted);
+        }
     }
 
     public void setCurrentProgress(final int progress) {
