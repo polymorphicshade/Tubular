@@ -1918,7 +1918,9 @@ public final class VideoDetailFragment
                                             ? SponsorBlockMode.DISABLED
                                             : SponsorBlockMode.ENABLED;
                                 }
-                                player.setSponsorBlockMode(currentSponsorBlockMode);
+                                if (player != null) {
+                                    player.setSponsorBlockMode(currentSponsorBlockMode);
+                                }
                                 getSponsorBlockFragment().ifPresent(
                                         fragment -> {
                                             fragment.setSponsorBlockMode(currentSponsorBlockMode);
