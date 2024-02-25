@@ -2688,10 +2688,14 @@ public final class VideoDetailFragment
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response -> {
-                    if (response.responseCode() != 200) {
+                    final int responseCode = response.responseCode();
+
+                    // 200 = all good
+                    // 409 = all good, but the request timed out
+                    if (responseCode != 200 && responseCode != 409) {
                         String message = response.responseMessage();
                         if (message.equals("")) {
-                            message = "Error " + response.responseCode();
+                            message = "Error " + responseCode;
                         }
                         Toast.makeText(context,
                                 message,
