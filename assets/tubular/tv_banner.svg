@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="562.5"
+   viewBox="0 0 1000 562.5"
+   version="1.1"
+   id="svg5633"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="tubular_tv_banner.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview5635"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:lockguides="true"
+     inkscape:zoom="0.457453"
+     inkscape:cx="294.01927"
+     inkscape:cy="531.20211"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1072"
+     inkscape:window-y="143"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs5630" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-218.75)">
+    <rect
+       style="fill:#cd201f;stroke-width:1.77199;stroke:none"
+       id="rect5735"
+       width="1000"
+       height="562.5"
+       x="0"
+       y="218.75" />
+    <g
+       id="g8774"
+       transform="matrix(3.3194071,0,0,3.3194071,-443.87854,-164.85896)"
+       style="stroke:none">
+      <path
+         style="fill:#ffffff;stroke:none;stroke-width:0.408994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 159.79251,172.72669 0.12733,55.1356 46.0949,-27.50413 z"
+         id="path40" />
+      <path
+         style="fill:#cd201f;fill-opacity:1;stroke:none;stroke-width:0.408994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 168.70588,188.07043 0.0637,24.32079 20.6281,-12.22406 z"
+         id="path42" />
+      <path
+         style="fill:#ffffff;stroke:none;stroke-width:0.408994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 183.15829,172.79035 45.96756,27.44048 -45.96756,27.63146 -0.12734,-9.93205 29.98715,-17.76308 -29.92348,-17.57209 z"
+         id="path44" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:153.076px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:12.7763;stroke-opacity:1"
+       x="329.01877"
+       y="557.40344"
+       id="text8893"><tspan
+         sodipodi:role="line"
+         id="tspan8891"
+         x="329.01877"
+         y="557.40344"
+         style="font-weight:bold;fill:#ffffff;stroke:none;stroke-width:12.7763">Tubular</tspan></text>
+  </g>
+</svg>

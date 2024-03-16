@@ -4,9 +4,7 @@
     <item
         android:drawable="@color/dark_youtube_primary_color"/>
 
-    <item>
-        <bitmap
-            android:src="@drawable/ic_tubular_white"
-            android:gravity="center_vertical|center_horizontal" />
-    </item>
+    <item
+        android:gravity="center"
+        android:drawable="@drawable/splash_foreground"/>
 </layer-list>
