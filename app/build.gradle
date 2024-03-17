@@ -101,6 +101,13 @@ android {
             excludes += ['META-INF/README.md', 'META-INF/CHANGES']
         }
     }
+
+    dependenciesInfo {
+        // Disables dependency metadata when building APKs.
+        includeInApk = false
+        // Disables dependency metadata when building Android App Bundles.
+        includeInBundle = false
+    }
 }
 
 ext {
