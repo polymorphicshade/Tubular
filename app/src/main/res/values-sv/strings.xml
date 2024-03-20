@@ -806,4 +806,53 @@
     <string name="video_details_list_item">- %1$s: %2$s</string>
     <string name="share_playlist_with_titles_message">Dela spellistan med detaljer så som spellistans namn och video-titlarna eller som en enkel lista med URL till videorna</string>
     <string name="image_quality_summary">Välj bildkvalitet och om bilder överhuvudtaget ska laddas för att minska data och minnesanvändningen. Ändringar rensar både i minnet och bildcache på disk – %s</string>
+      
+    <!-- SponsorBlock -->
+    <string name="sponsor_block">SponsorBlock</string>
+    <string name="sponsor_block_home_page_title">Visa Hemsida</string>
+    <string name="sponsor_block_home_page_summary">Visa SponsorBlocks officiella hemsida.</string>
+    <string name="sponsor_block_enable_title">Hoppa över sponsorer</string>
+    <string name="sponsor_block_enable_summary">Använd Sponsorblocks API för att automatiskt hoppa över sponsorer i videor. Detta fungerar närvarande bara för Youtubevidor.</string>
+    <string name="sponsor_block_api_url_title">API-Url</string>
+    <string name="sponsor_block_api_url_summary">URL:n som förfrågas av SponsorBlocks API. Måste anges för att SponsorBlock skall fungera.</string>
+    <string name="sponsor_block_notifications_title">Avisera när sponsorer hoppas över</string>
+    <string name="sponsor_block_notifications_summary">Visa en avisering när en sponsor hoppas över automatiskt</string>
+    <string name="sponsor_block_privacy_title">Visa Integritetspolicy</string>
+    <string name="sponsor_block_privacy_summary">Visa SponsorBlocks Integritetspolicy</string>
+    <string name="sponsor_block_api_url_help_text">Det är denna URL som kommer förfrågas när applikationen behöver veta vilka delar av en video som skall hoppas över.\n\nDu kan välja den officiela URL genom att klicka "Use Official"-alternativet nedanför. men det rekomenderas starkt att du läser SponsorBlocks integritetspolicy innan du gör det.</string>
+<string name="sponsor_block_privacy_policy_text">SponsorBlocks Integritetspolicy</string>
+    <string name="sponsor_block_homepage_url">https://sponsor.ajay.app/</string>
+    <string name="sponsor_block_default_api_url">https://sponsor.ajay.app/api/</string>
+    <string name="sponsor_block_privacy_policy_url">https://gist.github.com/ajayyy/aa9f8ded2b573d4f73a3ffa0ef74f796</string>
+    <string name="sponsor_block_skip_sponsor_toast">Hoppade över sponsor</string>
+    <string name="sponsor_block_skip_intro_toast">Hoppade över uppehåll/introduktion</string>
+    <string name="sponsor_block_skip_outro_toast">Hoppade över slutkort/eftertexter</string>
+    <string name="sponsor_block_skip_interaction_toast">Hoppade över interaktionspåminnelse</string>
+    <string name="sponsor_block_skip_self_promo_toast">Hoppade över obetald/självbefodran</string>
+    <string name="sponsor_block_skip_non_music_toast">Hoppade över Musik: Icke-musiksavsnitt</string>
+    <string name="sponsor_block_skip_preview_toast">Hoppade över förhandstitt/sammanfattning</string>
+    <string name="sponsor_block_skip_filler_toast">Hoppade över ämnesavvikelse/skämt</string>
+    <string name="sponsor_block_toggle_skipping">Aktivera hoppa över sponsorer</string>
+    <string name="sponsor_block_clear_whitelist_title">Rensa Vitlista</string>
+    <string name="sponsor_block_clear_whitelist_summary">Rensar listan med uppladdare som SponsorBlock kommer ingorera.</string>
+    <string name="sponsor_block_enabled_toast">SponsorBlock aktiverad</string>
+    <string name="sponsor_block_disabled_toast">SponsorBlock inaktiverad</string>
+    <string name="sponsor_block_whitelist_cleared_toast">Vitlista rensad</string>
+    <string name="sponsor_block_uploader_added_to_whitelist_toast">Uppladdare tillagd i vitlistan</string>
+    <string name="sponsor_block_uploader_removed_from_whitelist_toast">Uppladdare borttagen från vitlistan</string>
+    <string name="sponsor_block_confirm_clear_whitelist">Är du säker du vill rensa vitlistan?</string>
+    <string name="sponsor_block_confirm_reset_colors">Är du säker du vill återställa kategoriernas färger?</string>
+    <string name="sponsor_block_reset_colors_toast">Återställ färger</string>
+    <!-- Extras -->
+    <string name="extras">Extra</string>
+    <string name="extras_todo_summary">Anpassningar, ändringar och övriga inställningar finns här.</string>
+    <string name="experimental_settings">Experimentella inställningar</string>
+    <string name="enable_local_player_title">Aktivera Lokal Spelare (alpha)</string>
+    <string name="enable_local_player_summary">Använd inbyggd spelare för lokal uppspelning. Detta är fortfarande tidigt i utvecklingen så det kommer troligen uppstå många fel, inklusive problem med existerade spelare.</string>
+    <string name="force_auto_fullscreen_title">Tvinga Automatisk Fullskärm</string>
+    <string name="force_auto_fullscreen_summary">Om aktiverat så kommer fullskärm tvingas om enheten är i landskapsläge, även om enheten är en TV eller padda.</string>
+    <string name="disable_error_reports_title">Inaktivera felrapporter</string>
+    <string name="disable_error_reports_summary">Förhindrar att alla felmeddelanden visas. Det kan resultera att appen beter sig märkligt. <b>ANVÄND PÅ EGEN RISK!</b></string>
+    <string name="enable_return_youtube_dislike_title">Visa antal ogillningar</string>
+    <string name="enable_return_youtube_dislike_summary">Använd ReturnYouTubeDislikes API för att visa antal ogillningar för en video. Funderar bara för Youtubevideor.\n<b>VARNING: Din IP-adress kommer bli syndlig för API:n. Används på egen risk!</b></string>
 </resources>
