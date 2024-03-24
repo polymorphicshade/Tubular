@@ -819,7 +819,7 @@
     <string name="sponsor_block_notifications_summary">Visa en avisering när en sponsor hoppas över automatiskt</string>
     <string name="sponsor_block_privacy_title">Visa Integritetspolicy</string>
     <string name="sponsor_block_privacy_summary">Visa SponsorBlocks Integritetspolicy</string>
-    <string name="sponsor_block_api_url_help_text">Det är denna URL som kommer förfrågas när applikationen behöver veta vilka delar av en video som skall hoppas över.\n\nDu kan välja den officiela URL genom att klicka "Use Official"-alternativet nedanför. men det rekomenderas starkt att du läser SponsorBlocks integritetspolicy innan du gör det.</string>
+    <string name="sponsor_block_api_url_help_text">Detta är URL:en som kommer förfrågas när applikationen behöver veta vilka delar av en video som skall hoppas över.\n\nDu kan välja den officiella URL:en genom att klicka "Use Official"-alternativet nedanför, men det rekomenderas starkt att du läser SponsorBlocks integritetspolicy innan du gör det.</string>
 <string name="sponsor_block_privacy_policy_text">SponsorBlocks Integritetspolicy</string>
     <string name="sponsor_block_homepage_url">https://sponsor.ajay.app/</string>
     <string name="sponsor_block_default_api_url">https://sponsor.ajay.app/api/</string>
@@ -834,7 +834,7 @@
     <string name="sponsor_block_skip_filler_toast">Hoppade över ämnesavvikelse/skämt</string>
     <string name="sponsor_block_toggle_skipping">Aktivera hoppa över sponsorer</string>
     <string name="sponsor_block_clear_whitelist_title">Rensa Vitlista</string>
-    <string name="sponsor_block_clear_whitelist_summary">Rensar listan med uppladdare som SponsorBlock kommer ingorera.</string>
+    <string name="sponsor_block_clear_whitelist_summary">Rensar listan med uppladdare som SponsorBlock kommer ignorera.</string>
     <string name="sponsor_block_enabled_toast">SponsorBlock aktiverad</string>
     <string name="sponsor_block_disabled_toast">SponsorBlock inaktiverad</string>
     <string name="sponsor_block_whitelist_cleared_toast">Vitlista rensad</string>
