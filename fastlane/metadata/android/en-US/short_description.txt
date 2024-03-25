@@ -1,1 +1,1 @@
-A free lightweight YouTube frontend for Android.
+A fork of NewPipe, a free lightweight YouTube frontend for Android.

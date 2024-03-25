@@ -1,1 +1,0 @@
-Herstel de extractie van de decoderingsfunctie van YouTube.

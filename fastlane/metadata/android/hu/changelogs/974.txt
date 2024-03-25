@@ -1,5 +1,0 @@
-Gyorsjavítás
-• Javítva a YouTube szabályozás által okozott pufferelési problémák
-• Javítva a YouTube megjegyzések kinyerése átal okozott összeomlás, letiltott megjegyzéseknél
-• Javítva a YouTube zenei keresés
-• Javítva a PeerTube élő közvetítések
