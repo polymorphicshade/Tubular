@@ -1,0 +1,57 @@
+name: Feature request
+description: Suggest an idea for this project
+labels: []
+body:
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "I made sure that there are *no existing issues* - [open](https://github.com/polymorphicshade/Tubular/issues) or [closed](https://github.com/polymorphicshade/Tubular/issues?q=is%3Aissue+is%3Aclosed) - which I could contribute my information to."
+          required: true
+        - label: "I have read the [FAQ](https://newpipe.net/FAQ/) and my problem isn't listed."
+          required: true
+        - label: "I'm aware that this is a request for Tubular itself and that requests for adding a new service need to be made in [vanilla NewPipeExtractor](https://github.com/TeamNewPipe/NewPipeExtractor/issues)."
+          required: true
+        - label: "I have taken the time to fill in all the required details. I understand that the feature request will be dismissed otherwise."
+          required: true
+        - label: "This issue contains only one feature request."
+          required: true
+        - label: "I have read and understood the vanilla NewPipe [contribution guidelines](https://github.com/TeamNewPipe/NewPipe/blob/dev/.github/CONTRIBUTING.md)."
+          required: true
+
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature description
+      description: |
+        Explain how you want the app's look or behavior to change to suit your needs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-is-the-feature-requested
+    attributes:
+      label: Why do you want this feature?
+      description: |
+        Describe any problem or limitation you come across while using the app which would be solved by this feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-relevant-to-fork
+    attributes:
+      label: Why ist the feature relevant to this fork?
+      description: |
+        Describe why your feature is relevant to the features this fork aims to provide over vanilla NewPipe, or demonstrate that [upstream](https://github.com/TeamNewPipe/NewPipe/issues) is *explicitly* against implementing your feature for *non-technical reasons*.
+
+        (This is not the place for stale upstream feature requests!)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional information
+      description: Any other information you'd like to include, for instance sketches, mockups, pictures of cats, etc.
