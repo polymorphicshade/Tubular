@@ -1,10 +1,7 @@
 <h1 align="center"><b>Tubular</b></h2>
-<h4 align="center">A fork of <a href="https://newpipe.net/">NewPipe</a> that implements <a href="https://sponsor.ajay.app/">SponsorBlock</a> and <a href="https://www.returnyoutubedislike.com/">ReturnYouTubeDislike</a>.</h4>
-
-## Previews
-[<img src="doc/gif/01.gif" width=200>](doc/gif/01.gif)
-[<img src="doc/gif/02.gif" width=200>](doc/gif/02.gif)
-[<img src="doc/gif/03.gif" width=200>](doc/gif/03.gif)
+<h4 align="center">A fork of <a href="https://newpipe.net/">NewPipe</a> (<a href="https://github.com/TeamNewPipe/NewPipe/">Github</a>) that implements <a href="https://sponsor.ajay.app/">SponsorBlock</a> (<a href="https://github.com/ajayyy/SponsorBlock/">Github</a>) and <a href="https://www.returnyoutubedislike.com/">ReturnYouTubeDislike</a> (<a href="https://github.com/Anarios/return-youtube-dislike/">Github</a>).</h4>
+<p align="center">Download the APK <a href="https://github.com/polymorphicshade/Tubular/releases/latest">here</a>.</p>
+<p align="center"><img src="doc/gif/preview_01.gif" width="400"></p>
 
 ## To Do
 Things I'll be working on next (not in any particular order):
