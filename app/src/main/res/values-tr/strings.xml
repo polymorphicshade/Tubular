@@ -51,7 +51,7 @@
     <string name="show_play_with_kodi_summary">Kodi medya merkezi aracılığıyla bir video oynatma seçeneği görüntüleme</string>
     <string name="crash_the_player">Oyuncuyu çökert</string>
     <string name="notification_scale_to_square_image_title">Küçük resmi 1:1 en boy oranına kırp</string>
-    <string name="notification_scale_to_square_image_summary">Bildirimde gösterilen video küçük resmini 16:9 'dan 1:1 en boy oranına kırpın</string>
+    <string name="notification_scale_to_square_image_summary">Bildirimde gösterilen video küçük resmini 16:9 \'dan 1:1 en boy oranına kırpın</string>
     <string name="notification_action_0_title">İlk eylem düğmesi</string>
     <string name="notification_action_1_title">İkinci eylem düğmesi</string>
     <string name="notification_action_2_title">Üçüncü eylem düğmesi</string>
@@ -64,7 +64,7 @@
     <string name="notification_action_buffering">Arabelleğe alma</string>
     <string name="notification_action_nothing">Hiçbir şey</string>
     <string name="notification_colorize_title">Renklendirme bildirimi</string>
-    <string name="notification_colorize_summary">Android'in bildirimin rengini küçük resimdeki ana renge göre özelleştirmesini sağlayın (bunun tüm cihazlarda mevcut olmadığını unutmayın)</string>
+    <string name="notification_colorize_summary">Android\'in bildirimin rengini küçük resimdeki ana renge göre özelleştirmesini sağlayın (bunun tüm cihazlarda mevcut olmadığını unutmayın)</string>
     <string name="play_audio">Ses</string>
     <string name="default_audio_format_title">Varsayılan ses formatı</string>
     <string name="default_video_format_title">Varsayılan video formatı</string>
@@ -139,9 +139,9 @@
     <string name="peertube_instance_url_summary">Favori PeerTube oturumlarınızı seçin</string>
     <string name="peertube_instance_url_help">%s üzerinde beğendiğiniz örnekleri bulun</string>
     <string name="peertube_instance_add_title">Örnek ekle</string>
-    <string name="peertube_instance_add_help">Örnek URL'sini girin</string>
+    <string name="peertube_instance_add_help">Örnek URL\sini girin</string>
     <string name="peertube_instance_add_fail">Örnek doğrulanamadı</string>
-    <string name="peertube_instance_add_https_only">Yalnızca https URL'leri desteklenir</string>
+    <string name="peertube_instance_add_https_only">Yalnızca https URL\'leri desteklenir</string>
     <string name="peertube_instance_add_exists">Örnek zaten var</string>
     <string name="settings_category_player_title">Oyuncu</string>
     <string name="settings_category_player_behavior_title">Davranış</string>
@@ -157,7 +157,7 @@
     <string name="content">İçerik</string>
     <string name="show_age_restricted_content_title">Yaş kısıtlamalı içeriği göster</string>
     <string name="show_age_restricted_content_summary">Yaş sınırı olduğu için çocuklar için uygun olmayan içerikleri göster (18+ gibi)</string>
-    <string name="youtube_restricted_mode_enabled_title">YouTube'un \" Kısıtlı Modu \" nu açın</string>
+    <string name="youtube_restricted_mode_enabled_title">YouTube\'un \" Kısıtlı Modu \" nu açın</string>
     <string name="youtube_restricted_mode_enabled_summary">YouTube, potansiyel olarak olgunlaşmış içeriği gizleyen bir \" Kısıtlı Mod \" sağlar</string>
     <string name="restricted_video">Bu video yaş kısıtlamalı.\ n\nGörmek istiyorsanız ayarlarda \" %1$s \" seçeneğini açın.</string>
     <string name="restricted_video_no_stream">Bu video yaş kısıtlamalıdır.
@@ -207,7 +207,7 @@
     <string name="recaptcha_cookies_cleared">reCAPTCHA çerezleri temizlendi</string>
     <string name="import_data_summary">Mevcut geçmişinizi, aboneliklerinizi, oynatma listelerinizi ve (isteğe bağlı olarak) ayarlarınızı geçersiz kılar</string>
     <string name="export_data_summary">Geçmişi, abonelikleri, oynatma listelerini ve ayarları dışa aktar</string>
-    <string name="clear_cookie_summary">Bir reCAPTCHA'yı çözdüğünüzde Tubular'ın sakladığı çerezleri temizleyin</string>
+    <string name="clear_cookie_summary">Bir reCAPTCHA\'yı çözdüğünüzde Tubular\'ın sakladığı çerezleri temizleyin</string>
     <string name="clear_views_history_title">İzleme geçmişini temizle</string>
     <string name="clear_views_history_summary">Oynatılan akışların ve oynatma konumlarının geçmişini siler</string>
     <string name="delete_view_history_alert">Tüm izleme geçmişi silinsin mi?</string>
@@ -308,7 +308,7 @@
       <item quantity="other">%s dinleyici</item>
     </plurals>
     <string name="no_videos">Video yok</string>
-    <string name="more_than_100_videos">100 'denfazla video</string>
+    <string name="more_than_100_videos">100 \'denfazla video</string>
     <string name="infinite_videos">∞ videolar</string>
     <plurals name="videos">
       <item quantity="one">%s video</item>
@@ -363,16 +363,16 @@
     <string name="copyright">© %1$s by %2$s under %3$s</string>
     <string name="tab_about">Hakkında \u0026 SSS</string>
     <string name="tab_licenses">Lisanslar</string>
-    <string name="app_description">Tubular, Android'de bir libre hafif akış olan NewPipe'dan çatallanmıştır.</string>
+    <string name="app_description">Tubular, Android\'de bir libre hafif akış olan NewPipe\'dan çatallanmıştır.</string>
     <string name="contribution_title">Katkıda Bulunun</string>
     <string name="contribution_encouragement">İster çeviri, tasarım değişiklikleri, kod temizleme veya gerçek ağır kod değişiklikleri gibi fikirleriniz olsun, yardım her zaman memnuniyetle karşılanır. Ne kadar çok şey yapılırsa o kadar iyi olur!</string>
-    <string name="view_on_github">GitHub'da görüntüle</string>
+    <string name="view_on_github">GitHub\'da görüntüle</string>
     <string name="donation_title">Bağış Yapın</string>
-    <string name="donation_encouragement">NewPipe, boş zamanlarını size en iyi kullanıcı deneyimini sunarak geçiren gönüllüler tarafından geliştirilmiştir. Geliştiricilerin bir fincan kahvenin tadını çıkarırken Tubular'ı daha da iyi hale getirmelerine yardımcı olmak için geri verin.</string>
+    <string name="donation_encouragement">NewPipe, boş zamanlarını size en iyi kullanıcı deneyimini sunarak geçiren gönüllüler tarafından geliştirilmiştir. Geliştiricilerin bir fincan kahvenin tadını çıkarırken Tubular\'ı daha da iyi hale getirmelerine yardımcı olmak için geri verin.</string>
     <string name="give_back">Geri ver</string>
     <string name="website_title">Web sitesi</string>
     <string name="website_encouragement">Daha fazla bilgi ve haber için NewPipe Web sitesini ziyaret edin.</string>
-    <string name="privacy_policy_title">NewPipe'ın Gizlilik Politikası</string>
+    <string name="privacy_policy_title">NewPipe\'ın Gizlilik Politikası</string>
     <string name="privacy_policy_encouragement">NewPipe projesi gizliliğinizi çok ciddiye alıyor. Bu nedenle, uygulama izniniz olmadan herhangi bir veri toplamaz.\NewPipe \'ın gizlilik politikası, bir kilitlenme raporu gönderdiğinizde hangi verilerin gönderildiğini ve depolandığını ayrıntılı olarak açıklar.</string>
     <string name="read_privacy_policy">Gizlilik politikasını okuyun</string>
     <string name="app_license_title">Tubular Lisansı</string>
@@ -489,7 +489,7 @@
     <string name="show_crash_the_player_summary">Oynatıcıyı kullanırken bir kilitlenme seçeneği gösterir</string>
     <string name="check_new_streams">Yeni akışları kontrol et</string>
     <string name="crash_the_app">Uygulamayı çökert</string>
-    <string name="show_error_snackbar">Bir hata snackbar'ı göster</string>
+    <string name="show_error_snackbar">Bir hata snackbar\'ı göster</string>
     <string name="create_error_notification">Hata bildirimi oluştur</string>
     <!-- Subscriptions import/export -->
     <string name="import_title">İçe Aktar</string>
@@ -503,14 +503,14 @@
     <string name="subscriptions_export_unsuccessful">Abonelikler dışa aktarılamadı</string>
     <string name="import_youtube_instructions">YouTube aboneliklerini Google paket servisinden içe aktarın:
   \n
-  \n1. Bu URL'ye gidin: %1$s
+  \n1. Bu URL\'ye gidin: %1$s
   \n2. Sorulduğunda oturum açın
   \n3. \" Tüm veriler dahil \" e tıklayın, ardından \" Tümünün seçimini kaldır \" a tıklayın, ardından yalnızca \" abonelikler \" i seçin ve \" Tamam \" a tıklayın
   \n4. \" Sonraki adım \" a tıklayın ve ardından \" Dışa aktarma oluştur \" a tıklayın
   \n5. Göründükten sonra \" İndir \" düğmesine tıklayın
   \n6. Aşağıdaki İÇE AKTARMA DOSYASINA tıklayın ve indirilen .zip dosyasını seçin
   \n7. [.zip içe aktarma başarısız olursa] .csv dosyasını çıkarın (genellikle \" YouTube ve YouTube Music/subscriptions/subscriptions.csv \" altında), aşağıdaki İÇE AKTARMA DOSYASINA tıklayın ve çıkarılan csv dosyasını seçin</string>
-    <string name="import_soundcloud_instructions">URL'yi veya kimliğinizi yazarak bir SoundCloud profilini içe aktarın:\n\n1. Bir web tarayıcısında \" masaüstü modunu \" etkinleştirin (site mobil cihazlar için kullanılamaz)\n2. Şu URL'ye gidin: %1$s\n3. Sorulduğunda oturum açın\n4. Yönlendirildiğiniz profil URL'sini kopyalayın.</string>
+    <string name="import_soundcloud_instructions">URL\'yi veya kimliğinizi yazarak bir SoundCloud profilini içe aktarın:\n\n1. Bir web tarayıcısında \" masaüstü modunu \" etkinleştirin (site mobil cihazlar için kullanılamaz)\n2. Şu URL\'ye gidin: %1$s\n3. Sorulduğunda oturum açın\n4. Yönlendirildiğiniz profil URL\'sini kopyalayın.</string>
     <string name="import_soundcloud_instructions_hint">kimliğiniz, soundcloud.com/yourid</string>
     <string name="import_network_expensive_warning">Bu işlemin ağa pahalıya mal olabileceğini unutmayın.\ n\nDevam etmek istiyor musunuz?</string>
     <!-- Playback Parameters -->
@@ -524,7 +524,7 @@
     <string name="percent">Yüzde</string>
     <string name="semitone">Semitone</string>
     <!-- GDPR dialog -->
-    <string name="start_accept_privacy_policy">Avrupa Genel Veri Koruma Yönetmeliği'ne (GDPR) uymak için dikkatinizi Tubular'ın gizlilik politikasına çekiyoruz. Lütfen dikkatlice okuyun.
+    <string name="start_accept_privacy_policy">Avrupa Genel Veri Koruma Yönetmeliği\'ne (GDPR) uymak için dikkatinizi Tubular\'ın gizlilik politikasına çekiyoruz. Lütfen dikkatlice okuyun.
   \ nBize hata raporunu göndermek için bunu kabul etmelisiniz.</string>
     <string name="accept">Kabul Et</string>
     <string name="decline">Reddet</string>
@@ -532,7 +532,7 @@
     <string name="limit_data_usage_none_description">Limit yok</string>
     <string name="limit_mobile_data_usage_title">Mobil verileri kullanırken çözünürlüğü sınırlayın</string>
     <string-array name="limit_data_usage_description_list">
-      <item>@string/limit_data_use_none_description</item>
+      <item>@string/limit_data_usage_none_description</item>
       <item>1080p60</item>
       <item>1080p</item>
       <item>720p60</item>
@@ -565,7 +565,7 @@
     <string name="minimize_on_exit_popup_description">Açılır oynatıcıyı simge durumuna küçült</string>
     <!-- Autoplay behavior -->
     <string name="autoplay_summary">Oynatmayı otomatik olarak başlat — %s</string>
-    <string name="wifi_only">Sadece Wi - Fi'da</string>
+    <string name="wifi_only">Sadece Wi - Fi\'da</string>
     <string name="never">Asla</string>
     <string name="list_view_mode">Liste görünümü modu</string>
     <string name="list">Liste</string>
@@ -578,7 +578,7 @@
     <string name="low_quality_smaller">Düşük kalite (daha küçük)</string>
     <string name="dont_show">Gösterme</string>
     <!-- App update notification -->
-    <string name="app_update_unavailable_toast">Tubular'ın en son sürümünü kullanıyorsunuz</string>
+    <string name="app_update_unavailable_toast">Tubular\'ın en son sürümünü kullanıyorsunuz</string>
     <string name="app_update_available_notification_title">Tübüler güncelleme mevcut!</string>
     <string name="app_update_available_notification_text">%s indirmek için dokunun</string>
     <string name="missions_header_finished">Bitti</string>
@@ -643,7 +643,7 @@
     <string name="downloads_storage_ask_summary_no_saf_notice">Her indirmeyi nereye kaydedeceğiniz sorulacaktır</string>
     <string name="downloads_storage_use_saf_title">Sistem klasörü seçiciyi (saf) kullan</string>
     <string name="downloads_storage_use_saf_summary">\' Depolama Erişim Çerçevesi \' harici bir SD karta indirmeye izin verir</string>
-    <string name="downloads_storage_use_saf_summary_api_29">Android 10 'dan başlayarak yalnızca \' Depolama Erişim Çerçevesi \' desteklenir</string>
+    <string name="downloads_storage_use_saf_summary_api_29">Android 10 \'dan başlayarak yalnızca \' Depolama Erişim Çerçevesi \' desteklenir</string>
     <string name="choose_instance_prompt">Bir örnek seçin</string>
     <string name="app_language_title">Uygulama dili</string>
     <string name="systems_language">Sistem varsayılanı</string>
@@ -797,9 +797,9 @@
     <string name="sort">Sırala</string>
     <string name="settings_category_exoplayer_title">ExoPlayer ayarları</string>
     <string name="settings_category_exoplayer_summary">Bazı ExoPlayer ayarlarını yönetin. Bu değişikliklerin etkili olması için bir oyuncunun yeniden başlatılması gerekir</string>
-    <string name="use_exoplayer_decoder_fallback_title">ExoPlayer'ın kod çözücü yedekleme özelliğini kullanın</string>
+    <string name="use_exoplayer_decoder_fallback_title">ExoPlayer\'ın kod çözücü yedekleme özelliğini kullanın</string>
     <string name="use_exoplayer_decoder_fallback_summary">Birincil kod çözücülerin başlatılması başarısız olursa düşük öncelikli kod çözücülere geri dönen kod çözücü başlatma sorunlarınız varsa bu seçeneği etkinleştirin. Bu, birincil kod çözücüleri kullanırken olduğundan daha düşük oynatma performansına neden olabilir</string>
-    <string name="always_use_exoplayer_set_output_surface_workaround_title">Her zaman ExoPlayer'ın video çıkışı yüzey ayarı geçici çözümünü kullanın</string>
+    <string name="always_use_exoplayer_set_output_surface_workaround_title">Her zaman ExoPlayer\'ın video çıkışı yüzey ayarı geçici çözümünü kullanın</string>
     <string name="always_use_exoplayer_set_output_surface_workaround_summary">Bu geçici çözüm, yüzeyi doğrudan kodeke ayarlamak yerine, bir yüzey değişikliği meydana geldiğinde video kodeklerini serbest bırakır ve yeniden örneklendirir. ExoPlayer tarafından bu sorunla bazı cihazlarda zaten kullanılıyor, bu ayarın yalnızca Android 6 ve üstü üzerinde bir etkisi vardır\n\ nBu seçeneğin etkinleştirilmesi, geçerli video oynatıcıyı değiştirirken veya tam ekrana geçerken oynatma hatalarını önleyebilir</string>
     <string name="audio_track_name">%1$s %2$s</string>
     <string name="audio_track_type_original">orijinal</string>
@@ -834,7 +834,7 @@
     <string name="image_quality_high">Yüksek kalite</string>
     <string name="question_mark">\?</string>
     <string name="share_playlist">Çalma Listesini Paylaş</string>
-    <string name="share_playlist_with_titles_message">Oynatma listesini oynatma listesi adı ve video başlıkları gibi ayrıntılarla veya video URL'lerinin basit bir listesi olarak paylaşın</string>
+    <string name="share_playlist_with_titles_message">Oynatma listesini oynatma listesi adı ve video başlıkları gibi ayrıntılarla veya video URL\'lerinin basit bir listesi olarak paylaşın</string>
     <string name="share_playlist_with_titles">Başlıklarla Paylaş</string>
     <string name="share_playlist_with_list">URL listesini paylaş</string>
     <string name="video_details_list_item">- %1$s: %2$s</string>
@@ -853,15 +853,15 @@
     <string name="sponsor_block_category_pending">Beklemede</string>
     <string name="sponsor_block_home_page_title">Web Sitesini Görüntüle</string>
     <string name="sponsor_block_home_page_summary">Resmi SponsorBlock web sitesini görüntüleyin.</string>
-    <string name="sponsor_block_enable_title">SponsorBlock'u Etkinleştir</string>
-    <string name="sponsor_block_enable_summary">Videolarda sponsorları otomatik olarak atlamak için SponsorBlock API'sini kullanın. Bu şu anda yalnızca YouTube videoları için geçerlidir.</string>
-    <string name="sponsor_block_api_url_title">API URL'si</string>
-    <string name="sponsor_block_api_url_summary">SponsorBlock API'sini sorgularken kullanılacak url. Bu, SponsorBlock'un çalışması için ayarlanmalıdır.</string>
+    <string name="sponsor_block_enable_title">SponsorBlock\'u Etkinleştir</string>
+    <string name="sponsor_block_enable_summary">Videolarda sponsorları otomatik olarak atlamak için SponsorBlock API\'sini kullanın. Bu şu anda yalnızca YouTube videoları için geçerlidir.</string>
+    <string name="sponsor_block_api_url_title">API URL\'si</string>
+    <string name="sponsor_block_api_url_summary">SponsorBlock API\'sini sorgularken kullanılacak url. Bu, SponsorBlock\'un çalışması için ayarlanmalıdır.</string>
     <string name="sponsor_block_notifications_title">Sponsorlar atlandığında bildir</string>
     <string name="sponsor_block_notifications_summary">Bir sponsor otomatik olarak atlandığında bir tost bildirimi göster.</string>
     <string name="sponsor_block_privacy_title">Gizlilik Politikasını Görüntüle</string>
-    <string name="sponsor_block_privacy_summary">SponsorBlock'un gizlilik politikasını görüntüleyin.</string>
-    <string name="sponsor_block_api_url_help_text">Bu, uygulamanın bir videonun hangi bölümlerinin atlanacağını bilmesi gerektiğinde sorgulanacak URL'dir.\ n\nAşağıdaki \' Resmi Kullan \' seçeneğini tıklayarak resmi URL'yi ayarlayabilirsiniz, ancak bunu yapmadan önce SponsorBlock'un gizlilik politikasını görüntülemeniz önemle tavsiye edilir.</string>
+    <string name="sponsor_block_privacy_summary">SponsorBlock\'un gizlilik politikasını görüntüleyin.</string>
+    <string name="sponsor_block_api_url_help_text">Bu, uygulamanın bir videonun hangi bölümlerinin atlanacağını bilmesi gerektiğinde sorgulanacak URL\'dir.\ n\nAşağıdaki \' Resmi Kullan \' seçeneğini tıklayarak resmi URL\'yi ayarlayabilirsiniz, ancak bunu yapmadan önce SponsorBlock\'un gizlilik politikasını görüntülemeniz önemle tavsiye edilir.</string>
     <string name="sponsor_block_privacy_policy_text">SponsorBlock Gizlilik Politikası</string>
     <string name="sponsor_block_homepage_url">https://sponsor.ajay.app/</string>
     <string name="sponsor_block_default_api_url">https://sponsor.ajay.app/api/</string>
@@ -877,7 +877,7 @@
     <string name="sponsor_block_skip_pending_toast">Bekleyen segment atlandı</string>
     <string name="sponsor_block_toggle_skipping">Sponsorları atlamayı aç/kapat</string>
     <string name="sponsor_block_clear_whitelist_title">Beyaz Listeyi Temizle</string>
-    <string name="sponsor_block_clear_whitelist_summary">SponsorBlock'un yok sayacağı yükleyicilerin listesini temizleyin.</string>
+    <string name="sponsor_block_clear_whitelist_summary">SponsorBlock\'un yok sayacağı yükleyicilerin listesini temizleyin.</string>
     <string name="sponsor_block_enabled_toast">SponsorBlock etkinleştirildi</string>
     <string name="sponsor_block_disabled_toast">SponsorBlock devre dışı</string>
     <string name="sponsor_block_whitelist_cleared_toast">Güvenli adresler listesi temizlendi</string>
@@ -916,7 +916,7 @@
     <string name="settings_category_sponsor_block_category_intro_summary">Gerçek içeriği olmayan bir aralık. Duraklama, statik çerçeve, tekrarlanan animasyon olabilir. Bu, bilgi içeren geçişler için kullanılmamalı veya müzik videolarında kullanılmamalıdır.</string>
     <string name="settings_category_sponsor_block_category_outro_summary">Krediler veya YouTube uç kartları göründüğünde. Sözlü sonuçlar için değil. Bu yararlı içerik içermemelidir. Bu, müzik videolarında kullanılmamalıdır.</string>
     <string name="settings_category_sponsor_block_category_interaction_summary">İçeriğin ortasında beğenmek, abone olmak veya takip etmek için kısa bir hatırlatma olduğunda. Uzunsa veya belirli bir şey hakkındaysa, bunun yerine kendi kendine tanıtım yapılmalıdır.</string>
-    <string name="settings_category_sponsor_block_category_highlight_summary">Videonun çoğu insanın aradığı kısmı. "Video x'te başlıyor" yorumlarına benzer.</string>
+    <string name="settings_category_sponsor_block_category_highlight_summary">Videonun çoğu insanın aradığı kısmı. "Video x\'te başlıyor" yorumlarına benzer.</string>
     <string name="settings_category_sponsor_block_category_self_promo_summary">Ücretsiz veya kendi kendine promosyon hariç "sponsor" a benzer. Bu, mallar, bağışlar veya kiminle işbirliği yaptıkları hakkında bilgi içeren bölümleri içerir.</string>
     <string name="settings_category_sponsor_block_category_non_music_summary">Sadece müzik videolarında kullanım içindir. Bu, müzik videolarındaki tanıtımları veya çıkışları içerir.</string>
     <string name="settings_category_sponsor_block_category_preview_summary">Önceki bölümlerin hızlı bir özeti veya mevcut videoda daha sonra neler olacağına dair bir önizleme. Sözlü özetler için değil, birlikte düzenlenmiş klipler anlamına gelir.</string>
@@ -942,18 +942,18 @@
     <!-- ReturnYouTubeDislike -->
     <string name="return_youtube_dislike_home_page_title">Web Sitesini Görüntüle</string>
     <string name="return_youtube_dislike_home_page_summary">Resmi ReturnYouTubeDislike web sitesini görüntüleyin.</string>
-    <string name="return_youtube_dislike_security_faq_title">Güvenlik SSS'sini Görüntüle</string>
-    <string name="return_youtube_dislike_security_faq_summary">Gizliliğinize önem veriyorsanız, ReturnYouTubeDislike'ın güvenlik ve neleri izledikleri hakkındaki SSS'sini görüntülemeniz önerilir.</string>
+    <string name="return_youtube_dislike_security_faq_title">Güvenlik SSS\'sini Görüntüle</string>
+    <string name="return_youtube_dislike_security_faq_summary">Gizliliğinize önem veriyorsanız, ReturnYouTubeDislike\'ın güvenlik ve neleri izledikleri hakkındaki SSS\'sini görüntülemeniz önerilir.</string>
     <string name="return_youtube_dislike_enable_title">ReturnYouTubeDislike Etkinleştir</string>
-    <string name="return_youtube_dislike_enable_summary">Bir videonun beğenilmeyen miktarını göstermek için ReturnYouTubeDislike API'sini kullanın. Bu yalnızca YouTube videoları için geçerlidir.</string>
+    <string name="return_youtube_dislike_enable_summary">Bir videonun beğenilmeyen miktarını göstermek için ReturnYouTubeDislike API\'sini kullanın. Bu yalnızca YouTube videoları için geçerlidir.</string>
     <string name="return_youtube_dislike_default_api_url">https://returnyoutubedislikeapi.com/</string>
-    <string name="return_youtube_dislike_api_url_title">API URL'si</string>
-    <string name="return_youtube_dislike_api_url_summary">ReturnYouTubeDislike API'sini sorgularken kullanılacak URL. Bu, ReturnYouTubeDislike'ın çalışması için ayarlanmalıdır.</string>
-    <string name="return_youtube_dislike_api_url_help_text">Bu, uygulama bir YouTube videosunda beğenmeme sayısını belirlediğinde sorgulanacak URL'dir.\ n\nAşağıdaki \' Resmi Kullan \' seçeneğini tıklayarak resmi URL'yi ayarlayabilirsiniz, ancak bunu yapmadan önce ReturnYouTubeDislike \'ın güvenlik SSS bölümünü görüntülemeniz önemle tavsiye edilir.</string>
+    <string name="return_youtube_dislike_api_url_title">API URL\'si</string>
+    <string name="return_youtube_dislike_api_url_summary">ReturnYouTubeDislike API\'sini sorgularken kullanılacak URL. Bu, ReturnYouTubeDislike\'ın çalışması için ayarlanmalıdır.</string>
+    <string name="return_youtube_dislike_api_url_help_text">Bu, uygulama bir YouTube videosunda beğenmeme sayısını belirlediğinde sorgulanacak URL\'dir.\ n\nAşağıdaki \' Resmi Kullan \' seçeneğini tıklayarak resmi URL\'yi ayarlayabilirsiniz, ancak bunu yapmadan önce ReturnYouTubeDislike \'ın güvenlik SSS bölümünü görüntülemeniz önemle tavsiye edilir.</string>
     <string name="return_youtube_dislike_override_like_count_title">Beğenme Sayısını Geçersiz Kıl</string>
-    <string name="return_youtube_dislike_override_like_count_summary">YouTube yerine ReturnYouTubeDislike API'sı tarafından bildirilen benzerlik sayısını kullanın.</string>
+    <string name="return_youtube_dislike_override_like_count_summary">YouTube yerine ReturnYouTubeDislike API\'sı tarafından bildirilen benzerlik sayısını kullanın.</string>
     <string name="return_youtube_dislike_override_view_count_title">Görünüm Sayısını Geçersiz Kıl</string>
-    <string name="return_youtube_dislike_override_view_count_summary">YouTube yerine ReturnYouTubeDislike API'si tarafından bildirilen görüntüleme sayısını kullanın.</string>
+    <string name="return_youtube_dislike_override_view_count_summary">YouTube yerine ReturnYouTubeDislike API\'si tarafından bildirilen görüntüleme sayısını kullanın.</string>
     <string name="return_youtube_dislike_privacy_policy_text">ReturnYouTubeDislike Güvenlik SSS</string>
     <string name="return_youtube_dislike_home_page_url">https://returnyoutubedislike.com/</string>
     <string name="return_youtube_dislike_security_faq_url">https://www.returnyoutubedislike.com/faq/</string>
