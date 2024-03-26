@@ -812,14 +812,14 @@
     <string name="sponsor_block_home_page_title">Visa Hemsida</string>
     <string name="sponsor_block_home_page_summary">Visa SponsorBlocks officiella hemsida.</string>
     <string name="sponsor_block_enable_title">Hoppa över sponsorer</string>
-    <string name="sponsor_block_enable_summary">Använd Sponsorblocks API för att automatiskt hoppa över sponsorer i videor. Detta fungerar närvarande bara för Youtubevidor.</string>
+    <string name="sponsor_block_enable_summary">Använd SponsorBlocks API för att automatiskt hoppa över sponsorer i videor. Detta fungerar närvarande bara för YouTube-videor.</string>
     <string name="sponsor_block_api_url_title">API-Url</string>
     <string name="sponsor_block_api_url_summary">URL:n som förfrågas av SponsorBlocks API. Måste anges för att SponsorBlock skall fungera.</string>
     <string name="sponsor_block_notifications_title">Avisera när sponsorer hoppas över</string>
     <string name="sponsor_block_notifications_summary">Visa en avisering när en sponsor hoppas över automatiskt</string>
     <string name="sponsor_block_privacy_title">Visa Integritetspolicy</string>
     <string name="sponsor_block_privacy_summary">Visa SponsorBlocks Integritetspolicy</string>
-    <string name="sponsor_block_api_url_help_text">Detta är URL:en som kommer förfrågas när applikationen behöver veta vilka delar av en video som skall hoppas över.\n\nDu kan välja den officiella URL:en genom att klicka "Use Official"-alternativet nedanför, men det rekomenderas starkt att du läser SponsorBlocks integritetspolicy innan du gör det.</string>
+    <string name="sponsor_block_api_url_help_text">Detta är URL:en som kommer förfrågas när applikationen behöver veta vilka delar av en video som skall hoppas över.\n\nDu kan välja den officiella URL:en genom att klicka "Use Official"-alternativet nedanför, men det rekommenderas starkt att du läser SponsorBlocks integritetspolicy innan du gör det.</string>
 <string name="sponsor_block_privacy_policy_text">SponsorBlocks Integritetspolicy</string>
     <string name="sponsor_block_homepage_url">https://sponsor.ajay.app/</string>
     <string name="sponsor_block_default_api_url">https://sponsor.ajay.app/api/</string>
@@ -854,5 +854,5 @@
     <string name="disable_error_reports_title">Inaktivera felrapporter</string>
     <string name="disable_error_reports_summary">Förhindrar att alla felmeddelanden visas. Det kan resultera att appen beter sig märkligt. <b>ANVÄND PÅ EGEN RISK!</b></string>
     <string name="enable_return_youtube_dislike_title">Visa antal ogillningar</string>
-    <string name="enable_return_youtube_dislike_summary">Använd ReturnYouTubeDislikes API för att visa antal ogillningar för en video. Funderar bara för Youtubevideor.\n<b>VARNING: Din IP-adress kommer bli syndlig för API:n. Används på egen risk!</b></string>
+    <string name="enable_return_youtube_dislike_summary">Använd ReturnYouTubeDislikes API för att visa antal ogillningar för en video. Fungerar bara för YouTube-videor.\n<b>VARNING: Din IP-adress kommer bli synlig för API:n. Används på egen risk!</b></string>
 </resources>
