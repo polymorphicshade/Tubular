@@ -854,5 +854,5 @@
     <string name="disable_error_reports_title">Inaktivera felrapporter</string>
     <string name="disable_error_reports_summary">Förhindrar att alla felmeddelanden visas. Det kan resultera att appen beter sig märkligt. <b>ANVÄND PÅ EGEN RISK!</b></string>
     <string name="enable_return_youtube_dislike_title">Visa antal ogillningar</string>
-    <string name="enable_return_youtube_dislike_summary">Använd ReturnYouTubeDislikes API för att visa antal ogillningar för en video. Funderar bara för Youtube videor.\n<b>VARNING: Din IP-adress kommer bli syndlig för API:n. Används på egen risk!</b></string>
+    <string name="enable_return_youtube_dislike_summary">Använd ReturnYouTubeDislikes API för att visa antal ogillningar för en video. Funderar bara för YouTube videor.\n<b>VARNING: Din IP-adress kommer bli synlig för API:n. Används på egen risk!</b></string>
 </resources>
