@@ -812,7 +812,7 @@
     <string name="sponsor_block_home_page_title">Visa Hemsida</string>
     <string name="sponsor_block_home_page_summary">Visa SponsorBlocks officiella hemsida.</string>
     <string name="sponsor_block_enable_title">Hoppa över sponsorer</string>
-    <string name="sponsor_block_enable_summary">Använd SponsorBlocks API för att automatiskt hoppa över sponsorer i videor. Detta fungerar närvarande bara för Youtube videor.</string>
+    <string name="sponsor_block_enable_summary">Använd SponsorBlocks API för att automatiskt hoppa över sponsorer i videor. Detta fungerar närvarande bara för Youtube-videor.</string>
     <string name="sponsor_block_api_url_title">API-Url</string>
     <string name="sponsor_block_api_url_summary">URL:n som förfrågas av SponsorBlocks API. Måste anges för att SponsorBlock skall fungera.</string>
     <string name="sponsor_block_notifications_title">Avisera när sponsorer hoppas över</string>
@@ -854,5 +854,5 @@
     <string name="disable_error_reports_title">Inaktivera felrapporter</string>
     <string name="disable_error_reports_summary">Förhindrar att alla felmeddelanden visas. Det kan resultera att appen beter sig märkligt. <b>ANVÄND PÅ EGEN RISK!</b></string>
     <string name="enable_return_youtube_dislike_title">Visa antal ogillningar</string>
-    <string name="enable_return_youtube_dislike_summary">Använd ReturnYouTubeDislikes API för att visa antal ogillningar för en video. Fungerar bara för YouTube videor.\n<b>VARNING: Din IP-adress kommer bli synlig för API:n. Används på egen risk!</b></string>
+    <string name="enable_return_youtube_dislike_summary">Använd ReturnYouTubeDislikes API för att visa antal ogillningar för en video. Fungerar bara för YouTube-videor.\n<b>VARNING: Din IP-adress kommer bli synlig för API:n. Används på egen risk!</b></string>
 </resources>
