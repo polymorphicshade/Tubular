@@ -34,4 +34,10 @@
         android:orderInCategory="3"
         android:title="@string/add_to_playlist"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_item_playlist_shuffle_all"
+        android:orderInCategory="4"
+        android:title="@string/shuffle_and_play"
+        app:showAsAction="never" />
 </menu>

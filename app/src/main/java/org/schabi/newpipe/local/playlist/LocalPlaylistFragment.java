@@ -377,6 +377,8 @@ public class LocalPlaylistFragment extends BaseLocalListFragment<List<PlaylistSt
             if (!isRewritingPlaylist) {
                 openRemoveDuplicatesDialog();
             }
+        } else if (item.getItemId() == R.id.menu_item_playlist_shuffle_all) {
+            NavigationHelper.playOnMainPlayer(activity, getShuffledQueue());
         } else {
             return super.onOptionsItemSelected(item);
         }
@@ -846,7 +848,16 @@ public class LocalPlaylistFragment extends BaseLocalListFragment<List<PlaylistSt
         return getPlayQueue(0);
     }
 
+    @Override
+    public PlayQueue getShuffledQueue() {
+        return getPlayQueue(0, true);
+    }
+
     private PlayQueue getPlayQueue(final int index) {
+        return getPlayQueue(index, false);
+    }
+
+    private PlayQueue getPlayQueue(final int index, final boolean shuffled) {
         if (itemListAdapter == null) {
             return new SinglePlayQueue(Collections.emptyList(), 0);
         }
@@ -858,6 +869,11 @@ public class LocalPlaylistFragment extends BaseLocalListFragment<List<PlaylistSt
                 streamInfoItems.add(((PlaylistStreamEntry) item).toStreamInfoItem());
             }
         }
+
+        if (shuffled) {
+            Collections.shuffle(streamInfoItems);
+        }
+
         return new SinglePlayQueue(streamInfoItems, index);
     }
 

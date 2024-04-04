@@ -57,6 +57,7 @@ import org.schabi.newpipe.util.image.PicassoHelper;
 import org.schabi.newpipe.util.text.TextEllipsizer;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Supplier;
@@ -259,6 +260,9 @@ public class PlaylistFragment extends BaseListInfoFragment<StreamInfoItem, Playl
                     ));
                 }
                 break;
+            case R.id.menu_item_playlist_shuffle_all:
+                NavigationHelper.playOnMainPlayer(activity, getShuffledQueue());
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -375,13 +379,27 @@ public class PlaylistFragment extends BaseListInfoFragment<StreamInfoItem, Playl
         return getPlayQueue(0);
     }
 
+    @Override
+    public PlayQueue getShuffledQueue() {
+        return getPlayQueue(0, true);
+    }
+
     private PlayQueue getPlayQueue(final int index) {
+        return getPlayQueue(index, false);
+    }
+
+    private PlayQueue getPlayQueue(final int index, final boolean shuffled) {
         final List<StreamInfoItem> infoItems = new ArrayList<>();
         for (final InfoItem i : infoListAdapter.getItemsList()) {
             if (i instanceof StreamInfoItem) {
                 infoItems.add((StreamInfoItem) i);
             }
         }
+
+        if (shuffled) {
+            Collections.shuffle(infoItems);
+        }
+
         return new PlaylistPlayQueue(
                 currentInfo.getServiceId(),
                 currentInfo.getUrl(),

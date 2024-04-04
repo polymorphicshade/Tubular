@@ -454,6 +454,7 @@
     <string name="rename_playlist">Rename</string>
     <string name="name">Name</string>
     <string name="add_to_playlist">Add to playlist</string>
+    <string name="shuffle_and_play">Shuffle and play</string>
     <string name="processing_may_take_a_moment">Processing… May take a moment</string>
     <string name="mute">Mute</string>
     <string name="unmute">Unmute</string>

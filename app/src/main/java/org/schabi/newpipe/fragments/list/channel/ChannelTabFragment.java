@@ -28,6 +28,7 @@ import org.schabi.newpipe.util.ChannelTabHelper;
 import org.schabi.newpipe.util.ExtractorHelper;
 import org.schabi.newpipe.util.PlayButtonHelper;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -164,5 +165,18 @@ public class ChannelTabFragment extends BaseListInfoFragment<InfoItem, ChannelTa
 
         return new ChannelTabPlayQueue(currentInfo.getServiceId(), tabHandler,
                 currentInfo.getNextPage(), streamItems, 0);
+    }
+
+    @Override
+    public PlayQueue getShuffledQueue() {
+        final List<StreamInfoItem> streamItems = infoListAdapter.getItemsList().stream()
+                .filter(StreamInfoItem.class::isInstance)
+                .map(StreamInfoItem.class::cast)
+                .collect(Collectors.toList());
+
+        Collections.shuffle(streamItems);
+
+        return new ChannelTabPlayQueue(currentInfo.getServiceId(),
+                tabHandler, currentInfo.getNextPage(), streamItems, 0);
     }
 }
