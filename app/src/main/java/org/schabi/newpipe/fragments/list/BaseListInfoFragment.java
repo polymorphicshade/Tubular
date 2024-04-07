@@ -246,7 +246,7 @@ public abstract class BaseListInfoFragment<I extends InfoItem, L extends ListInf
             errors.removeIf(ContentNotSupportedException.class::isInstance);
 
             if (!errors.isEmpty()) {
-                dynamicallyShowErrorPanelOrSnackbar(new ErrorInfo(result.getErrors(),
+                dynamicallyShowErrorPanelOrSnackbar(new ErrorInfo(errors,
                         errorUserAction, "Start loading: " + url, serviceId));
             }
         }

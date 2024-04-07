@@ -68,16 +68,31 @@ class ErrorInfo(
 
     // constructors with list of throwables
     constructor(throwable: List<Throwable>, userAction: UserAction, request: String) :
-        this(throwable, userAction, SERVICE_NONE, request)
+        this(removeDuplicates(throwable.toMutableList()), userAction, SERVICE_NONE, request)
     constructor(throwable: List<Throwable>, userAction: UserAction, request: String, serviceId: Int) :
-        this(throwable, userAction, ServiceHelper.getNameOfServiceById(serviceId), request)
+        this(removeDuplicates(throwable.toMutableList()), userAction, ServiceHelper.getNameOfServiceById(serviceId), request)
     constructor(throwable: List<Throwable>, userAction: UserAction, request: String, info: Info?) :
-        this(throwable, userAction, getInfoServiceName(info), request)
+        this(removeDuplicates(throwable.toMutableList()), userAction, getInfoServiceName(info), request)
 
     companion object {
         const val SERVICE_NONE = "none"
 
         fun throwableToStringList(throwable: Throwable) = arrayOf(throwable.stackTraceToString())
+
+        fun removeDuplicates(items: MutableList<Throwable>): List<Throwable> {
+            val messageCache = HashSet<String?>()
+            val iterator = items.listIterator()
+            while (iterator.hasNext()) {
+                val item = iterator.next()
+                val message = item.message
+                if (messageCache.contains(message)) {
+                    iterator.remove()
+                } else {
+                    messageCache.add(message)
+                }
+            }
+            return items
+        }
 
         fun throwableListToStringList(throwableList: List<Throwable>) =
             throwableList.map { it.stackTraceToString() }.toTypedArray()
