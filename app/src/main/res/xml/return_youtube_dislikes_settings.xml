@@ -48,6 +48,14 @@
             android:summary="@string/return_youtube_dislike_override_view_count_summary"
             android:title="@string/return_youtube_dislike_override_view_count_title"/>
 
+        <SwitchPreference
+            app:iconSpaceReserved="false"
+            android:dependency="@string/return_youtube_dislike_enable_key"
+            android:defaultValue="false"
+            android:key="@string/return_youtube_dislike_show_dislikes_as_percentage_key"
+            android:summary="@string/return_youtube_dislike_show_dislikes_as_percentage_summary"
+            android:title="@string/return_youtube_dislike_show_dislikes_as_percentage_title"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>

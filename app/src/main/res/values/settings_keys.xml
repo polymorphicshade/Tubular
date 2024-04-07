@@ -1525,4 +1525,5 @@
     <string name="return_youtube_dislike_api_url_key" translatable="false">return_youtube_dislike_api_url</string>
     <string name="return_youtube_dislike_override_like_count_key" translatable="false">return_youtube_dislike_override_like_count</string>
     <string name="return_youtube_dislike_override_view_count_key" translatable="false">return_youtube_dislike_override_view_count</string>
+    <string name="return_youtube_dislike_show_dislikes_as_percentage_key" translatable="false">return_youtube_dislike_show_dislikes_as_percentage</string>
 </resources>

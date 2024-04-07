@@ -971,6 +971,8 @@
     <string name="return_youtube_dislike_override_like_count_summary">Use the like count reported by the ReturnYouTubeDislike API instead of YouTube\'s.</string>
     <string name="return_youtube_dislike_override_view_count_title">Override View Count</string>
     <string name="return_youtube_dislike_override_view_count_summary">Use the view count reported by the ReturnYouTubeDislike API instead of YouTube\'s.</string>
+    <string name="return_youtube_dislike_show_dislikes_as_percentage_title">Show Dislikes as a percentage</string>
+    <string name="return_youtube_dislike_show_dislikes_as_percentage_summary">Display dislike count as a percentage instead of a number.</string>
     <string name="return_youtube_dislike_privacy_policy_text">ReturnYouTubeDislike Security FAQ</string>
     <string name="return_youtube_dislike_home_page_url">https://returnyoutubedislike.com/</string>
     <string name="return_youtube_dislike_security_faq_url">https://www.returnyoutubedislike.com/faq/</string>

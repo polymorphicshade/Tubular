@@ -165,6 +165,10 @@ public final class Localization {
                 localizeNumber(context, watchingCount));
     }
 
+    public static String localizePercentage(final double number) {
+        return String.format(Locale.US, "%.0f%%", number);
+    }
+
     public static String shortCount(@NonNull final Context context, final long count) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             return CompactDecimalFormat.getInstance(getAppLocale(context),

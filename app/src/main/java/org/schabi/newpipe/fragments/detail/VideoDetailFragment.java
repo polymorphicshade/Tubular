@@ -1619,8 +1619,23 @@ public final class VideoDetailFragment
 
             // RYD override: dislikes
             if (rydInfo != null && isRydEnabled) {
-                binding.detailThumbsDownCountView.setText(Localization
-                        .shortCount(activity, rydInfo.dislikes));
+                final boolean showAsPercentage = prefs.getBoolean(
+                        activity.getString(
+                                R.string.return_youtube_dislike_show_dislikes_as_percentage_key),
+                        false);
+
+                final String dislikeText;
+
+                if (showAsPercentage) {
+                    final double percentage =
+                            (double) rydInfo.dislikes / (rydInfo.likes + rydInfo.dislikes) * 100.0;
+
+                    dislikeText = Localization.localizePercentage(percentage);
+                } else {
+                    dislikeText = Localization.shortCount(activity, rydInfo.dislikes);
+                }
+
+                binding.detailThumbsDownCountView.setText(dislikeText);
                 binding.detailThumbsDownCountView.setVisibility(View.VISIBLE);
                 binding.detailThumbsDownImgView.setVisibility(View.VISIBLE);
             }
