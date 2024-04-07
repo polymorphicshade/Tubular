@@ -2501,7 +2501,13 @@ public final class Player implements PlaybackListener, Listener {
             if (lastSegment != null
                     && progress > lastSegment.endTime + UNSKIP_WINDOW_MILLIS) {
                 // un-skip window is over
-                destroyUnskipVars();
+                hideUnskipButtons();
+                lastSegment = null;
+                autoSkipGracePeriod = false;
+
+                if (DEBUG) {
+                    Log.d("SPONSOR_BLOCK", "Destroyed last segment variables (UNSKIP)");
+                }
             } else if (lastSegment != null
                     && progress < lastSegment.endTime + UNSKIP_WINDOW_MILLIS
                     && progress >= lastSegment.startTime) {
@@ -2509,17 +2515,15 @@ public final class Player implements PlaybackListener, Listener {
                 return lastSegment;
             }
 
-            destroyUnskipVars();
+            hideUnskipButtons();
             return null;
         });
     }
 
-    private void destroyUnskipVars() {
+    private void hideUnskipButtons() {
         if (DEBUG) {
-            Log.d("SPONSOR_BLOCK", "Destroying last segment variables, hiding manual skip buttons");
+            Log.d("SPONSOR_BLOCK", "Hiding manual skip buttons (UNSKIP)");
         }
-        lastSegment = null;
-        autoSkipGracePeriod = false;
         UIs.call(PlayerUi::hideAutoSkip);
         UIs.call(PlayerUi::hideAutoUnskip);
     }
