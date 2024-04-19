@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print environment
+        run: env | grep ^GITHUB
