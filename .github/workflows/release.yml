@@ -10,7 +10,7 @@ jobs:
     permissions: write-all
 
     steps:
-      - name: Checkout branch "${{ github.ref_name }}"
+      - name: checkout branch "${{ github.ref_name }}"
         run: |
           git clone --no-checkout https://github.com/polymorphicshade/Tubular.git .
           git config core.symlinks false
@@ -23,7 +23,7 @@ jobs:
           distribution: "temurin"
           cache: 'gradle'
 
-      - name: Build release APK
+      - name: build release APK
         run: ./gradlew assembleRelease
 
       - name: sign APK
