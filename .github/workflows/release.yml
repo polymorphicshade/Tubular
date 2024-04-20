@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: checkout branch "${{ github.ref_name }}"
         run: |
-          git clone --no-checkout https://github.com/thekyber/Tubular.git .
+          git clone --no-checkout https://github.com/polymorphicshade/Tubular.git .
           git config core.symlinks false
           git checkout --progress --force ${{ github.ref_name }}
         
@@ -41,9 +41,8 @@ jobs:
         run: |
           version=$( grep "versionName" app/build.gradle | awk -F'"' '{print $2}' )
           gh auth login --with-token <<<"${{ secrets.GH_TOKEN }}"
-          ls -la
-          gh release create "v$version" --title "v$version" --notes-file "changelog.md" --prerelease=false --repo thekyber/Tubular
-          gh release upload "v$version" app/build/outputs/apk/release/*.apk --repo thekyber/Tubular
+          gh release create "v$version" --title "v$version" --notes-file "changelog.md" --prerelease=false --repo polymorphicshade/Tubular
+          gh release upload "v$version" app/build/outputs/apk/release/*.apk --repo polymorphicshade/Tubular
 
       - name: archive reports for job
         uses: actions/upload-artifact@v4
