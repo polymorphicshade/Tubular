@@ -32,6 +32,15 @@ android {
         }
     }
 
+    signingConfigs {
+        release {
+            storeFile file("keystore.jks")
+            storePassword System.getenv("SIGNING_STORE_PASSWORD")
+            keyAlias System.getenv("SIGNING_KEY_ALIAS")
+            keyPassword System.getenv("SIGNING_KEY_PASSWORD")
+        }
+    }
+
     buildTypes {
         debug {
             debuggable true
@@ -51,6 +60,7 @@ android {
         }
 
         release {
+            signingConfig signingConfigs.release
             if (System.properties.containsKey('packageSuffix')) {
                 applicationIdSuffix System.getProperty('packageSuffix')
                 resValue "string", "app_name", "Tubular " + System.getProperty('packageSuffix')
