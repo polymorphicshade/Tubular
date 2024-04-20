@@ -41,6 +41,7 @@ jobs:
         run: |
           version=$( grep "versionName" app/build.gradle | awk -F'"' '{print $2}' )
           gh auth login --with-token <<<"${{ secrets.GH_TOKEN }}"
+          ls -la
           gh release create "v$version" --title "v$version" --notes-file "changelog.md" --prerelease=false --repo thekyber/Tubular
           gh release upload "v$version" app/build/outputs/apk/release/*.apk --repo thekyber/Tubular
 
