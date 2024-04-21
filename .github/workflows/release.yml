@@ -2,11 +2,22 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      title:
+        type: string
+        description: 'Title'
+        required: true
+        default: 'v0.00.0 R0'
+      is_pre_release:
+        type: boolean
+        description: 'Set as a pre-release'
+        required: true
+        default: true
 
 jobs:
-  build:
+  build-and-release:
     runs-on: ubuntu-latest
-
+    
     permissions: write-all
 
     steps:
@@ -15,7 +26,7 @@ jobs:
           git clone --no-checkout https://github.com/polymorphicshade/Tubular.git .
           git config core.symlinks false
           git checkout --progress --force ${{ github.ref_name }}
-
+        
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
@@ -23,21 +34,29 @@ jobs:
           distribution: "temurin"
           cache: 'gradle'
 
-      - name: Decode keystore
-        env:
-            ENCODED_STRING: ${{ secrets.KEYSTORE }}
-        run: |
-            echo $ENCODED_STRING | base64 -di > app/keystore.jks
-      
       - name: Build release APK
-        env:
-          SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
-          SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
-          SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
         run: ./gradlew assembleRelease
 
-      - name: Upload APK
+      - name: Sign APK
+        env:
+          KEYSTORE: ${{ secrets.KEYSTORE }}
+          SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
+        run: |
+          version=$( grep "versionName" app/build.gradle | awk -F'"' '{print $2}' )
+          echo "${KEYSTORE}" | base64 -d > apksign.keystore
+          ${ANDROID_HOME}/build-tools/34.0.0/apksigner sign --ks apksign.keystore --ks-pass env:SIGNING_STORE_PASSWORD "app/build/outputs/apk/release/app-release-unsigned.apk"
+          mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/"tubular_v${version}.apk"
+
+      - name: Create release and upload
+        run: |
+          version=$( grep "versionName" app/build.gradle | awk -F'"' '{print $2}' )
+          gh auth login --with-token <<<"${{ secrets.GITHUB_TOKEN }}"
+          gh release create "v${version}" --title "${{ inputs.title }}" --notes-file ".github/changelog.md" --prerelease=${{ inputs.is_pre_release }} --repo polymorphicshade/Tubular
+          gh release upload "v${version}" app/build/outputs/apk/release/*.apk --repo polymorphicshade/Tubular
+
+      - name: Archive reports for job
         uses: actions/upload-artifact@v4
         with:
-          name: app
-          path: app/build/outputs/apk/release/*.apk
+          name: reports
+          path: '*/build/reports'
+        if: ${{ always() }}
