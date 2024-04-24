@@ -249,7 +249,7 @@ public final class Localization {
      * @return a formatted duration String or {@code 0:00} if the duration is zero.
      */
     public static String getDurationString(final long duration) {
-        return getDurationString(duration, true);
+        return getDurationString(duration, true, false);
     }
 
     /**
@@ -258,9 +258,11 @@ public final class Localization {
      * duration string.
      * @param duration the duration in seconds
      * @param isDurationComplete whether the given duration is complete or whether info is missing
+     * @param showDurationPrefix whether the duration-prefix shall be shown
      * @return a formatted duration String or {@code 0:00} if the duration is zero.
      */
-    public static String getDurationString(final long duration, final boolean isDurationComplete) {
+    public static String getDurationString(final long duration, final boolean isDurationComplete,
+                                           final boolean showDurationPrefix) {
         final String output;
 
         final long days = duration / (24 * 60 * 60L); /* greater than a day */
@@ -278,8 +280,9 @@ public final class Localization {
         } else {
             output = String.format(Locale.US, "%d:%02d", minutes, seconds);
         }
+        final String durationPrefix = showDurationPrefix ? "⏱ " : "";
         final String durationPostfix = isDurationComplete ? "" : "+";
-        return output + durationPostfix;
+        return durationPrefix + output + durationPostfix;
     }
 
     /**
