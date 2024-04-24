@@ -252,9 +252,15 @@ public final class Migrations {
             database.execSQL("DELETE FROM search_history WHERE id NOT IN (SELECT id FROM (SELECT "
                     + "MIN(id) as id FROM search_history GROUP BY trim(search), service_id ) tmp)");
             database.execSQL("UPDATE search_history SET search = trim(search)");
+
+            // TODO: remove later - this meant to be a temporary fix for
+            //  "rolling back" the database to fix poly's dumb mistake...
+            database.execSQL("DROP TABLE `sponsorblock_whitelist`");
+            MIGRATION_9_10.migrate(database);
         }
     };
 
+    // TODO: change back to MIGRATION_8_9 = new Migration(DB_VER_8, DB_VER_9)
     public static final Migration MIGRATION_9_10 = new Migration(DB_VER_9, DB_VER_10) {
         @Override
         public void migrate(@NonNull final SupportSQLiteDatabase database) {

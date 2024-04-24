@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 10,
-    "identityHash": "377d92119f9bf8b38d1d4ec87453405e",
+    "identityHash": "7591e8039faa74d8c0517dc867af9d3e",
     "entities": [
       {
         "tableName": "subscriptions",
@@ -719,32 +719,12 @@
             ]
           }
         ]
-      },
-      {
-        "tableName": "sponsorblock_whitelist",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uploader` TEXT NOT NULL, PRIMARY KEY(`uploader`))",
-        "fields": [
-          {
-            "fieldPath": "uploader",
-            "columnName": "uploader",
-            "affinity": "TEXT",
-            "notNull": true
-          }
-        ],
-        "primaryKey": {
-          "autoGenerate": false,
-          "columnNames": [
-            "uploader"
-          ]
-        },
-        "indices": [],
-        "foreignKeys": []
       }
     ],
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '377d92119f9bf8b38d1d4ec87453405e')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7591e8039faa74d8c0517dc867af9d3e')"
     ]
   }
 }
