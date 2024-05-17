@@ -1056,7 +1056,10 @@ public final class Player implements PlaybackListener, Listener {
             seekTo(skipTarget);
 
             simpleExoPlayer.setSeekParameters(seekParams);
-            lastSegment = sponsorBlockSegment;
+            if (!isRewind || isGracedRewind) {
+                // DO NOT TRACK for non-graced rewinds to work, BUT always track for graced
+                lastSegment = sponsorBlockSegment;
+            }
 
             if (isUnSkip) {
                 return;
@@ -1881,6 +1884,7 @@ public final class Player implements PlaybackListener, Listener {
             return;
         }
 
+        destroyUnskipVars(); // destroy, else rewind into segment won't skip
         triggerProgressUpdate(true);
     }
     //endregion
@@ -2502,12 +2506,7 @@ public final class Player implements PlaybackListener, Listener {
                     && progress > lastSegment.endTime + UNSKIP_WINDOW_MILLIS) {
                 // un-skip window is over
                 hideUnskipButtons();
-                lastSegment = null;
-                autoSkipGracePeriod = false;
-
-                if (DEBUG) {
-                    Log.d("SPONSOR_BLOCK", "Destroyed last segment variables (UNSKIP)");
-                }
+                destroyUnskipVars();
             } else if (lastSegment != null
                     && progress < lastSegment.endTime + UNSKIP_WINDOW_MILLIS
                     && progress >= lastSegment.startTime) {
@@ -2526,6 +2525,15 @@ public final class Player implements PlaybackListener, Listener {
         }
         UIs.call(PlayerUi::hideAutoSkip);
         UIs.call(PlayerUi::hideAutoUnskip);
+    }
+
+    private void destroyUnskipVars() {
+        lastSegment = null;
+        autoSkipGracePeriod = false;
+
+        if (DEBUG) {
+            Log.d("SPONSOR_BLOCK", "Destroyed last segment variables (UNSKIP)");
+        }
     }
 
     private SponsorBlockSecondaryMode getSecondaryMode(final SponsorBlockSegment segment) {
