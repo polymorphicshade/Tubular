@@ -35,3 +35,10 @@
 
 ## For some reason NotificationModeConfigFragment wasn't kept (only referenced in a preference xml)
 -keep class org.schabi.newpipe.settings.notifications.** { *; }
+
+## TODO: figure out why we need these here to get a successful release build
+-dontwarn java.beans.BeanDescriptor
+-dontwarn java.beans.BeanInfo
+-dontwarn java.beans.IntrospectionException
+-dontwarn java.beans.Introspector
+-dontwarn java.beans.PropertyDescriptor
