@@ -1,3 +1,8 @@
+[Tubular]
+Updated:
+• merged latest changes from NewPipe's dev branch
+
+Changes From NewPipes's dev branch are as follows:
 This hotfix release fixes HTTP 403 errors in the middle of YouTube videos.
 
 New
