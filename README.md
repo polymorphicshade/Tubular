@@ -3,11 +3,6 @@
 <p align="center">Download the APK <a href="https://github.com/polymorphicshade/Tubular/releases/latest">here</a>.</p>
 <p align="center"><img src="doc/gif/preview_01.gif" width="400"></p>
 
-> [!warning]
-> <b>Because the database schema for Tubular is different than NewPipe, you currently cannot export the Tubular database and import it to NewPipe.</b>
->
-> <b>This will be changed in the future.</b>
-
 ## To Do
 Things I'll be working on next (not in any particular order):
 - [ ] persist custom SponsorBlock segments in the database
