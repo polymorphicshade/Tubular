@@ -24,7 +24,6 @@ jobs:
       - name: Checkout branch "${{ github.ref_name }}"
         run: |
           git clone --no-checkout https://github.com/polymorphicshade/Tubular.git .
-          git config core.symlinks false
           git checkout --progress --force ${{ github.ref_name }}
         
       - name: Set up JDK 17
