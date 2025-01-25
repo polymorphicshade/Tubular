@@ -1,4 +1,7 @@
-Fixed YouTube not playing any stream.
+[Tubular]
 
-This release only addresses the most pressing error that prevents YouTube video details from loading.
-We are aware there are other problems, and we will soon make a separate release to solve them.
+Updated:
+• merged latest changes from NewPipe's dev branch
+Changed:
+• changed app name in the database export file (thanks @roryokane)
+• removed core.symlinks=false git config from CI (thanks @Mynacol)
