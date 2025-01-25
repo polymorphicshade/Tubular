@@ -1453,6 +1453,10 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
         binding.subtitleView.setStyle(captionStyle);
     }
 
+    /**
+     *
+     * @param captionScale Value returned by {@link PlayerHelper#getCaptionScale}.
+     */
     protected abstract void setupSubtitleView(float captionScale);
     //endregion
 
