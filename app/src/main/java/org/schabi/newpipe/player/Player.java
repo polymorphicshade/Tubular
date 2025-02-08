@@ -893,6 +893,10 @@ public final class Player implements PlaybackListener, Listener {
         return getPlaybackParameters().pitch;
     }
 
+    public void setPlaybackPitch(final float pitch) {
+        setPlaybackParameters(getPlaybackSpeed(), pitch, getPlaybackSkipSilence());
+    }
+
     public boolean getPlaybackSkipSilence() {
         return !exoPlayerIsNull() && simpleExoPlayer.getSkipSilenceEnabled();
     }

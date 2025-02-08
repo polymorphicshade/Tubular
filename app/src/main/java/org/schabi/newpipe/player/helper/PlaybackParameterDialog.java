@@ -60,7 +60,7 @@ public class PlaybackParameterDialog extends DialogFragment {
     private static final double DEFAULT_PITCH_PERCENT = 1.00f;
     private static final double DEFAULT_STEP = STEP_25_PERCENT_VALUE;
     private static final boolean DEFAULT_SKIP_SILENCE = false;
-
+    private static final boolean DEFAULT_PLAYBACK_UNHOOK = false;
     private static final SliderStrategy QUADRATIC_STRATEGY = new SliderStrategy.Quadratic(
             MIN_PITCH_OR_SPEED,
             MAX_PITCH_OR_SPEED,
@@ -261,7 +261,7 @@ public class PlaybackParameterDialog extends DialogFragment {
         bindCheckboxWithBoolPref(
                 binding.unhookCheckbox,
                 R.string.playback_unhook_key,
-                true,
+                DEFAULT_PLAYBACK_UNHOOK,
                 isChecked -> {
                     if (!isChecked) {
                         // when unchecked, slide back to the minimum of current tempo or pitch
@@ -588,6 +588,32 @@ public class PlaybackParameterDialog extends DialogFragment {
     @NonNull
     private static String getPercentString(final double percent) {
         return PlayerHelper.formatPitch(percent);
+    }
+
+
+    public static boolean getPlaybackUnhooked(final Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(context.getString(R.string.playback_unhook_key),
+                        DEFAULT_PLAYBACK_UNHOOK);
+    }
+
+    public static boolean getPitchControlModeSemitone(final Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(context.getString(R.string.playback_adjust_by_semitones_key),
+                        PITCH_CTRL_MODE_PERCENT);
+    }
+
+    public static float getCurrentStepSize(final Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getFloat(context.getString(R.string.adjustment_step_key), (float) DEFAULT_STEP);
+    }
+
+    public static float getMinPitchOrSpeed() {
+        return (float) MIN_PITCH_OR_SPEED;
+    }
+
+    public static float getMaxPitchOrSpeed() {
+        return (float) MAX_PITCH_OR_SPEED;
     }
 
     public interface Callback {
