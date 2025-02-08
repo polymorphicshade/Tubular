@@ -234,6 +234,12 @@ public final class PlayerHelper {
                         context.getString(R.string.default_right_gesture_control_value));
     }
 
+    public static String getActionForMiddleGestureSide(@NonNull final Context context) {
+        return getPreferences(context)
+                .getString(context.getString(R.string.middle_gesture_control_key),
+                        context.getString(R.string.default_middle_gesture_control_value));
+    }
+
     public static String getActionForLeftGestureSide(@NonNull final Context context) {
         return getPreferences(context)
                 .getString(context.getString(R.string.left_gesture_control_key),

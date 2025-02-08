@@ -199,6 +199,16 @@
             app:iconSpaceReserved="false" />
 
         <ListPreference
+            android:defaultValue="@string/default_middle_gesture_control_value"
+            android:entries="@array/middle_gesture_control_description"
+            android:entryValues="@array/middle_gesture_control_values"
+            android:key="@string/middle_gesture_control_key"
+            android:summary="@string/middle_gesture_control_summary"
+            android:title="@string/middle_gesture_control_title"
+            app:singleLineTitle="false"
+            app:iconSpaceReserved="false" />
+
+        <ListPreference
             android:defaultValue="@string/default_right_gesture_control_value"
             android:entries="@array/right_gesture_control_description"
             android:entryValues="@array/right_gesture_control_values"
