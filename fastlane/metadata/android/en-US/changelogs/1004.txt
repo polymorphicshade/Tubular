@@ -2,3 +2,10 @@
 
 Updated:
 • merged latest changes from NewPipe's dev branch
+
+Improved:
+• better skipping behavior (thanks @mikooomich)
+
+Added:
+• option to adjust playback speed (tempo) via middle gesture on main player (thanks @klaviartur)
+• more playback speed options (thanks @asandikci)
