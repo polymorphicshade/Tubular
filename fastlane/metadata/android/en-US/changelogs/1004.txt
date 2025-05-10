@@ -1,3 +1,4 @@
-This release fixes YouTube only providing a 360p stream.
+[Tubular]
 
-Note that the solution employed in this version is likely temporary, and in the long run the SABR video protocol needs to be implemented, but TeamNewPipe members are currently busy so any help would be greatly appreciated! https://github.com/TeamNewPipe/NewPipe/issues/12248
+Updated:
+• merged latest changes from NewPipe's dev branch
