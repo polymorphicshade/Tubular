@@ -234,7 +234,7 @@ class MediaBrowserPlaybackPreparer(
 
         val serviceId = path[1].toInt()
         return when (/*val infoItemType = */infoItemTypeFromString(path[0])) {
-            InfoType.STREAM -> ExtractorHelper.getStreamInfo(serviceId, url, false)
+            InfoType.STREAM -> ExtractorHelper.getStreamInfo(context, serviceId, url, false)
                 .map { SinglePlayQueue(it) }
 
             InfoType.PLAYLIST -> ExtractorHelper.getPlaylistInfo(serviceId, url, false)
