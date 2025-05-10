@@ -221,7 +221,7 @@ dependencies {
     // the corresponding commit hash, since JitPack sometimes deletes artifacts.
     // If there’s already a git hash, just add more of it to the end (or remove a letter)
     // to cause jitpack to regenerate the artifact.
-    implementation 'com.github.polymorphicshade:TubularExtractor:943b6494e5087b503de9d6b58f092c34a0b0f92f'
+    implementation 'com.github.polymorphicshade:TubularExtractor:d1f1257f5af55da2247831fb4c923181473f0e36'
     implementation 'com.github.TeamNewPipe:NoNonsense-FilePicker:5.0.0'
 
 /** Checkstyle **/
