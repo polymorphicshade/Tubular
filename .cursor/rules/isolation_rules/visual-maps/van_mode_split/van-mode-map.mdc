@@ -1,0 +1,72 @@
+---
+description: Main orchestrator for VAN mode: platform detection, file verification, complexity determination, and optional QA. Fetched when VAN mode starts.
+globs: **/visual-maps/van_mode_split/van-mode-map.mdc
+alwaysApply: false
+---
+# VAN MODE: INITIALIZATION PROCESS MAP (AI Instructions)
+
+> **TL;DR:** Initialize project: **Perform quick triage for immediate L0/L1 fixes.** If not applicable, proceed with platform detection, file verification, complexity determination. For L2+ tasks, transition to PLAN. For formal L1, complete initialization. If 'VAN QA' is called, perform technical validation.
+
+## 🧭 VAN MODE PROCESS FLOW (AI Actions)
+
+1.  **Acknowledge & Determine Entry Point:**
+    *   If user typed "VAN": Respond "OK VAN - Beginning Initialization Process." Proceed with step 2.
+    *   If user typed "VAN QA": Respond "OK VAN QA - Beginning Technical Validation." Skip to **Step 7 (VAN QA)**.
+
+2.  **Initial Problem Intake & Quick Triage:**
+    a.  State: "Performing initial problem intake and quick triage."
+    b.  `read_file` the user's prompt and any immediately provided context files (like `error-delete-chat.txt`).
+    c.  `read_file` the 1-2 most directly implicated source files if obvious from the error/request (e.g., `server.py` if an API error is mentioned).
+    d.  **Decision Point - Quick Fix Assessment:**
+        *   Based on this *very limited initial review*, can you confidently identify:
+            1.  A highly localized problem (e.g., affects only one function or a few lines in one file)?
+            2.  A clear root cause?
+            3.  A simple, low-risk fix (e.g., correcting a variable name, adjusting a simple conditional, fixing a property access path like in the delete_chat example)?
+            4.  The fix requires no new dependencies or significant design changes?
+        *   **If YES to all above (High Confidence, Simple Fix):**
+            i.  State: "Initial analysis suggests a straightforward Level 0/1 fix for [brief problem description]."
+            ii. `edit_file memory-bank/tasks.md` to create a task: "L0/1 Quick Fix: [Problem Description]".
+            iii. `edit_file memory-bank/activeContext.md` to log: "Focus: L0/1 Quick Fix - [Problem]. Initial diagnosis: [Root Cause]. Proposed fix: [Brief Fix]."
+            iv. `fetch_rules` to load and follow `.cursor/rules/isolation_rules/Level1/optimized-workflow-level1.mdc`.
+                *   (This rule already guides: implement fix, verify, document concisely in `tasks.md`/`activeContext.md`, then state completion and readiness for a new task).
+            v.  **After `Level1/optimized-workflow-level1.mdc` completes, the VAN mode for THIS SPECIFIC QUICK TASK is considered complete.** State this and await further user instruction (e.g., new VAN for another task, or switch to another mode).
+            vi. **SKIP to Step 8 (QA Command Precedence Check & End of VAN for this task).**
+        *   **If NO (Problem is not immediately obvious/simple, or any uncertainty):**
+            i.  State: "Initial triage indicates further analysis is needed. Proceeding with standard VAN initialization."
+            ii. Proceed to Step 3.
+
+3.  **Platform Detection (Sub-Rule - Standard VAN Path):**
+    a.  State: "Performing platform detection."
+    b.  `fetch_rules` to load and follow `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-platform-detection.mdc`.
+    c.  (Logs to `activeContext.md`).
+
+4.  **File Verification & Creation (Memory Bank Setup) (Sub-Rule - Standard VAN Path):**
+    a.  State: "Performing Memory Bank file verification and setup."
+    b.  `fetch_rules` to load and follow `.cursor/rules/isolation_rules/Core/file-verification.mdc`.
+    c.  (Creates/verifies `memory-bank/` structure and core files).
+
+5.  **Full Context Analysis & Complexity Determination (Sub-Rule - Standard VAN Path):**
+    a.  State: "Performing detailed context analysis and determining task complexity."
+    b.  `read_file` relevant project files (README, main source files, etc.) as needed for a broader understanding.
+    c.  `fetch_rules` to load and follow `.cursor/rules/isolation_rules/Core/complexity-decision-tree.mdc`.
+    d.  (This rule guides assessing Level 1-4 and updating `activeContext.md` and `tasks.md`).
+    e.  `read_file memory-bank/activeContext.md` to confirm the determined complexity level.
+
+6.  **Mode Transition based on Complexity (Standard VAN Path):**
+    a.  **If Level 1 determined (and not handled by Quick Triage):**
+        i.  State: "Task assessed as Level 1. Completing VAN initialization."
+        ii. Use `edit_file` to update `memory-bank/activeContext.md` with: "VAN Process Status: Level 1 Initialization Complete. Task ready for IMPLEMENT mode."
+        iii. State: "VAN Initialization Complete for Level 1 task [Task Name]. Recommend IMPLEMENT mode." Await user.
+    b.  **If Level 2, 3, or 4 determined:**
+        i.  State: "🚫 LEVEL [2/3/4] TASK DETECTED: [Task Name]. This task REQUIRES detailed planning."
+        ii. State: "Transitioning to PLAN mode is necessary. Type 'PLAN' to proceed with planning." Await user.
+
+7.  **VAN QA - Technical Validation (Entry point if "VAN QA" was typed, or if called after CREATIVE mode by user):**
+    a.  State: "Initiating VAN QA Technical Validation."
+    b.  `fetch_rules` to load and follow `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-main.mdc`.
+    c.  (Handles QA process). Await user action based on QA report.
+
+8.  **QA COMMAND PRECEDENCE (If user types "QA" during steps 3-5 of Standard VAN Initialization):**
+    a.  State: "General QA command received, pausing current VAN initialization step ([current step])."
+    b.  `fetch_rules` to load and follow `.cursor/rules/isolation_rules/visual-maps/qa-mode-map.mdc`.
+    c.  After general QA is complete: State "Resuming VAN initialization." Continue from paused step.

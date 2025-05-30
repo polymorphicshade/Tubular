@@ -1,0 +1,51 @@
+---
+description: VAN QA utility providing common fixes for validation failures. Fetched by `van-qa-main.mdc` on QA fail.
+globs: **/visual-maps/van_mode_split/van-qa-utils/common-fixes.mdc
+alwaysApply: false
+---
+# VAN QA: COMMON VALIDATION FIXES (AI Guidance)
+
+> **TL;DR:** Provides common troubleshooting steps and fix suggestions when VAN QA checks fail. This rule is fetched by `van-qa-main.mdc` after a QA failure is reported.
+
+## ⚙️ AI ACTIONS (Present this information to the user):
+
+State: "Here are some common troubleshooting steps based on the type of QA failure. Please review the detailed failure report and attempt these fixes:"
+
+### 1. Dependency Issues:
+*   **Missing Tools (Node, Python, Git, etc.):**
+    *   "Ensure the required tool ([Tool Name]) is installed and available in your system's PATH. You might need to download it from its official website or install it via your system's package manager."
+*   **Incorrect Tool Version:**
+    *   "The version of [Tool Name] found is [Found Version], but [Required Version] is expected. Consider using a version manager (like nvm for Node, pyenv for Python) to switch to the correct version, or update/downgrade the tool."
+*   **Project Dependencies (`npm install` / `pip install` failed):**
+    *   "Check the error messages from the package manager (`npm`, `pip`). Common causes include network issues, permission problems, or incompatible sub-dependencies."
+    *   "Try deleting `node_modules/` and `package-lock.json` (or `venv/` and `requirements.txt` conflicts) and running the install command again."
+    *   "Ensure your `package.json` or `requirements.txt` is correctly formatted and specifies valid package versions."
+
+### 2. Configuration Issues:
+*   **File Not Found:**
+    *   "The configuration file `[filepath]` was not found. Ensure it exists at the correct location in your project."
+*   **Syntax Errors (JSON, JS, etc.):**
+    *   "The file `[filepath]` appears to have syntax errors. Please open it and check for typos, missing commas, incorrect brackets, etc. Using a code editor with linting can help."
+*   **Missing Key Settings:**
+    *   "The configuration file `[filepath]` is missing an expected setting: `[setting_name]`. Please add it according to the project's requirements (e.g., add `jsx: 'react-jsx'` to `tsconfig.json`)."
+
+### 3. Environment Issues:
+*   **Command Not Found (for build tools like `vite`, `tsc`):**
+    *   "The command `[command_name]` was not found. If it's a project-local tool, ensure you've run `npm install` (or equivalent) and try prefixing with `npx` (e.g., `npx vite build`). If it's a global tool, ensure it's installed globally."
+*   **Permission Denied:**
+    *   "An operation failed due to insufficient permissions. You might need to run your terminal/IDE as an administrator (Windows) or use `sudo` (macOS/Linux) for specific commands, but be cautious with `sudo`."
+    *   "Check file/folder permissions if trying to write to a restricted area."
+*   **Port in Use:**
+    *   "The build or dev server tried to use port `[port_number]`, which is already in use. Identify and stop the process using that port, or configure your project to use a different port."
+
+### 4. Minimal Build Test Issues:
+*   **Build Script Fails:**
+    *   "The command `[build_command]` failed. Examine the full error output from the build process. It often points to missing dependencies, configuration errors, or code syntax issues."
+    *   "Ensure all dependencies from `dependency-check.mdc` are resolved first."
+*   **Entry Point Errors / Module Not Found:**
+    *   "The build process reported it couldn't find a key file or module. Check paths in your configuration files (e.g., `vite.config.js`, `webpack.config.js`) and in your import statements in code."
+
+**General Advice to User:**
+"After attempting fixes, please type 'VAN QA' again to re-run the technical validation process."
+
+(Control returns to `van-qa-main.mdc` which awaits user action).

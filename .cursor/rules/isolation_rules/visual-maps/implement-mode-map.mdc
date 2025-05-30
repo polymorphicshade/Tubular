@@ -1,0 +1,47 @@
+---
+description: Orchestrates IMPLEMENT mode. Fetched after PLAN/CREATIVE. Guides AI to implement features/fixes using level-specific rules, `edit_file` for code, `run_terminal_cmd` for builds/tests, and `Core/command-execution.mdc` for tool usage.
+globs: **/visual-maps/implement-mode-map.mdc
+alwaysApply: false
+---
+# IMPLEMENT MODE: CODE EXECUTION PROCESS MAP (AI Instructions)
+
+> **TL;DR:** Implement the planned and designed features or bug fixes. Use `edit_file` for all code and documentation changes. Use `run_terminal_cmd` for builds, tests, etc. Fetch level-specific implementation rules and `Core/command-execution.mdc` for detailed tool guidance.
+
+## 🧭 IMPLEMENT MODE PROCESS FLOW (AI Actions)
+
+1.  **Acknowledge & Context Gathering:**
+    a.  State: "Initiating IMPLEMENT mode for the current task."
+    b.  `read_file memory-bank/activeContext.md` to identify the current task, its complexity level, and any outputs from PLAN/CREATIVE modes.
+    c.  `read_file memory-bank/tasks.md` for the detailed sub-tasks, implementation plan, and references to creative design documents.
+    d.  `read_file memory-bank/progress.md` for any ongoing implementation status.
+    e.  If L3/L4 task, `read_file` relevant `memory-bank/creative/creative-[component]-[date].md` documents.
+2.  **Pre-Implementation Checks (AI Self-Correction):**
+    a.  **PLAN Complete?** Verify in `tasks.md` that the planning phase for the current task is marked complete.
+    b.  **CREATIVE Complete (for L3/L4)?** `fetch_rules` for `.cursor/rules/isolation_rules/Core/creative-phase-enforcement.mdc` to check. If it blocks, await user action (e.g., switch to CREATIVE mode).
+    c.  **VAN QA Passed (if applicable)?** Check `activeContext.md` or a dedicated status file if VAN QA was run. If VAN QA failed, state: "IMPLEMENTATION BLOCKED: VAN QA checks previously failed. Please resolve issues and re-run VAN QA." Await user.
+    d.  If any critical pre-check fails, state the blockage and await user instruction.
+3.  **Fetch General Command Execution Guidelines:**
+    a.  `fetch_rules` for `.cursor/rules/isolation_rules/Core/command-execution.mdc`. Keep these guidelines in mind for all tool usage.
+4.  **Fetch Level-Specific Implementation Rule:**
+    a.  Based on the complexity level:
+        *   **Level 1:** `fetch_rules` for `.cursor/rules/isolation_rules/Level1/workflow-level1.mdc` (or a more specific L1 implement rule if it exists, e.g., `Level1/implement-quick-fix.mdc`).
+        *   **Level 2:** `fetch_rules` for `.cursor/rules/isolation_rules/Level2/workflow-level2.mdc` (or `Level2/implement-basic.mdc`).
+        *   **Level 3:** `fetch_rules` for `.cursor/rules/isolation_rules/Level3/implementation-intermediate.mdc`.
+        *   **Level 4:** `fetch_rules` for `.cursor/rules/isolation_rules/Level4/phased-implementation.mdc`.
+5.  **Follow Fetched Rule (Iterative Implementation):**
+    a.  The level-specific rule will guide you through the implementation steps, which will involve:
+        i.  Identifying the next specific sub-task from `tasks.md`.
+        ii. Creating/modifying source code files using `edit_file`.
+        iii. Creating/modifying documentation (e.g., code comments, README sections) using `edit_file`.
+        iv. Running build scripts or compilers using `run_terminal_cmd` (platform-aware).
+        v.  Running tests using `run_terminal_cmd`.
+        vi. Verifying file creation/modification (e.g., using `read_file` or `list_dir`).
+        vii. Documenting each significant action (tool used, command, outcome) in `memory-bank/activeContext.md` (in a "Build Log" section) using `edit_file`.
+        viii. Updating `memory-bank/progress.md` with detailed progress for each sub-task using `edit_file`.
+        ix. Updating `memory-bank/tasks.md` to mark sub-tasks as complete using `edit_file`.
+    b.  This is an iterative process. Continue until all implementation sub-tasks in `tasks.md` are complete.
+6.  **Notify Completion:**
+    a.  Once all implementation sub-tasks are complete, state: "IMPLEMENTATION COMPLETE for task [task_name]."
+    b.  Update `memory-bank/tasks.md` to mark the main IMPLEMENT phase as complete.
+    c.  Update `memory-bank/activeContext.md`: "Implementation phase complete for [task_name]. Ready for REFLECT mode."
+    d.  Recommend: "Recommend transitioning to REFLECT mode for review and lessons learned." Await user.

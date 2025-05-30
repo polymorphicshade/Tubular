@@ -1,0 +1,62 @@
+---
+description: Guides AI through UI/UX design within a CREATIVE phase. Emphasizes style guide adherence, user-centricity, and documenting decisions in `creative-uiux-*.md` using `edit_file` and `optimized-creative-template.mdc`.
+globs: **/Phases/CreativePhase/creative-phase-uiux.mdc
+alwaysApply: false
+---
+# CREATIVE PHASE: UI/UX DESIGN GUIDELINES (AI Instructions)
+
+> **TL;DR:** This rule guides you through designing and documenting UI/UX solutions. CRITICAL: Check for and adhere to `memory-bank/style-guide.md`. If missing, prompt user to create/link it. Document decisions in `memory-bank/creative/creative-uiux-[component_name]-[date].md` using `edit_file` and the `optimized-creative-template.mdc` structure.
+
+This rule is typically fetched by `visual-maps/creative-mode-map.mdc` when a UI/UX design task is active.
+
+## ⚙️ AI ACTIONS FOR UI/UX DESIGN:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Initiating CREATIVE phase for UI/UX Design: [Component/Feature from tasks.md]."
+    b.  `read_file memory-bank/tasks.md` for specific UI/UX requirements, user stories, and scope.
+    c.  `read_file memory-bank/activeContext.md` for overall project context.
+    d.  `read_file .cursor/rules/isolation_rules/Phases/CreativePhase/optimized-creative-template.mdc` to understand the documentation structure.
+2.  **Style Guide Integration (CRITICAL):**
+    a.  **Check Primary Location:** `read_file memory-bank/style-guide.md`.
+    b.  **If Found:** State "Style guide `memory-bank/style-guide.md` loaded. All UI/UX proposals will adhere to it." Proceed to step 3.
+    c.  **If NOT Found at Primary Location:**
+        i.  Prompt User: "Style guide `memory-bank/style-guide.md` not found. Is there an existing style guide at a different path or URL? If so, please provide it. Otherwise, I can help create a basic one now, or we can proceed without (not recommended for new UI)." Await user response.
+        ii. **If User Provides Path/URL:** Attempt to `read_file [user_provided_path]` or conceptually access URL. If successful, state "Style guide loaded from [source]. All UI/UX proposals will adhere to it." Proceed to step 3. If fails, revert to "Style guide not available."
+        iii. **If User Opts to Create:**
+            1.  State: "Okay, let's define a basic style guide in `memory-bank/style-guide.md`. Please provide preferences for: Core Color Palette (primary, secondary, accent, neutrals, status colors - hex codes if possible), Typography (font families, sizes, weights for headings/body), Spacing System (base unit, Tailwind scale usage if known), Key Component Styles (buttons, inputs - general look/feel or Tailwind examples)."
+            2.  Based on user input (or analysis of provided examples like screenshots if user offers them), generate content for `memory-bank/style-guide.md`. (Example structure: Headings for Colors, Typography, Spacing, Components; list defined styles under each).
+            3.  Use `edit_file` to create and save this content to `memory-bank/style-guide.md`.
+            4.  State: "Basic style guide created at `memory-bank/style-guide.md`. All UI/UX proposals will adhere to it." Proceed to step 3.
+        iv. **If User Opts to Proceed Without:** State: "Proceeding with UI/UX design without a style guide. WARNING: This may lead to inconsistencies. I will aim for internal consistency within this component." Proceed to step 3.
+3.  **Define Problem & UI/UX Requirements (Section 1 of `optimized-creative-template.mdc`):**
+    a.  Clearly state the UI/UX problem (e.g., "Design an intuitive interface for user registration").
+    b.  List key user stories/goals for this UI (e.g., "As a new user, I want to register quickly with minimal fields").
+    c.  List functional requirements for the UI (e.g., "Must include fields for email, password, confirm password").
+    d.  List relevant NFRs (e.g., "Must be responsive," "Adhere to WCAG AA accessibility").
+    e.  Note any constraints (e.g., "Must use existing React component library X if possible").
+4.  **Explore UI/UX Options (Section 2 & 3 of `optimized-creative-template.mdc`):**
+    a.  Propose 2-3 distinct UI/UX solutions. For each, describe:
+        *   Layout and structure (Information Architecture).
+        *   Key interaction patterns (User Flows).
+        *   Visual design approach (referencing `style-guide.md` elements like colors, fonts, spacing, component styles. If no style guide, describe choices made for consistency).
+        *   How it addresses user needs and requirements.
+    b.  Analyze options considering usability, A11y, feasibility (React/Tailwind), aesthetics, and **strict adherence to `style-guide.md` if available.**
+5.  **Make Decision & Justify (Section 4 of `optimized-creative-template.mdc`):**
+    a.  Select the most suitable UI/UX solution.
+    b.  Provide clear rationale, referencing the style guide and how the chosen design meets user needs and requirements effectively.
+6.  **Outline Implementation Guidelines (Section 5 of `optimized-creative-template.mdc`):**
+    a.  Describe key React components to be built/used.
+    b.  Suggest specific Tailwind CSS utility classes or custom CSS (if extending Tailwind per style guide) for styling key elements.
+    c.  Note important states (hover, focus, disabled, error) and how they should appear (per style guide).
+    d.  Mention responsive design considerations (breakpoints, mobile-first approach if applicable, per style guide).
+7.  **Document in `creative-uiux-*.md`:**
+    a.  Determine filename: `creative-uiux-[component_name_or_feature]-[date].md`.
+    b.  Use `edit_file` to create/update `memory-bank/creative/[filename]` with all the above, structured per `optimized-creative-template.mdc`.
+8.  **Update Core Memory Bank Files:**
+    a.  Use `edit_file` to update `memory-bank/tasks.md`:
+        *   Mark "CREATIVE: Design UI/UX for [component/feature]" sub-task as complete.
+        *   Link to the created `creative-uiux-*.md` document.
+    b.  Use `edit_file` to add a summary of the UI/UX decision to "Creative Decisions Log" in `memory-bank/activeContext.md`.
+9.  **Completion:**
+    a.  State: "UI/UX design for [Component/Feature] complete. Documented in `memory-bank/creative/[filename]`. Adherence to style guide `memory-bank/style-guide.md` [was maintained / was attempted due to no guide existing]."
+    b.  (Control returns to `visual-maps/creative-mode-map.mdc`).

@@ -1,0 +1,38 @@
+---
+description: Primary entry point for the Cursor Memory Bank system. Verifies Memory Bank existence and typically initiates VAN mode.
+globs: main.mdc
+alwaysApply: false
+---
+# ISOLATION-FOCUSED MEMORY BANK SYSTEM (AI Instructions)
+
+> **TL;DR:** This is the main entry rule. It ensures Memory Bank is set up and then typically transitions to VAN mode to start project analysis.
+
+## ⚙️ AI ACTIONS - SYSTEM STARTUP:
+
+1.  **Acknowledge System Start:**
+    a.  State: "Memory Bank System initiated. Performing mandatory Memory Bank verification."
+2.  **CRITICAL: Memory Bank Verification & Setup:**
+    a.  `fetch_rules` to load and follow `.cursor/rules/isolation_rules/Core/file-verification.mdc`.
+    b.  This rule will guide you to check if `memory-bank/` and its core subdirectories/files exist. If not, it will instruct you to create them using `run_terminal_cmd` for directories and `edit_file` for initial file content.
+    c.  **If `Core/file-verification.mdc` reports critical failure (e.g., cannot create `memory-bank/`):**
+        i.  State: "🚨 CRITICAL ERROR: Memory Bank structure could not be verified or created. Cannot proceed with CMB workflow. Please check permissions or manually create the `memory-bank/` directory."
+        ii. Await user intervention. Do not proceed.
+    d.  **If verification/creation is successful:**
+        i.  State: "Memory Bank structure verified/initialized successfully."
+3.  **Transition to VAN Mode (Default Initial Mode):**
+    a.  State: "Transitioning to VAN mode for initial project analysis and complexity determination."
+    b.  `fetch_rules` to load and follow `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-mode-map.mdc`.
+    c.  (The `van-mode-map.mdc` will then orchestrate the VAN mode process).
+
+## 🧭 MODE-SPECIFIC VISUAL MAPS (For AI's Conceptual Understanding)
+The CMB system uses distinct orchestrator rules for each mode. You will be directed to `fetch_rules` for these as needed:
+-   VAN Mode: `visual-maps/van_mode_split/van-mode-map.mdc` (Initial Analysis & Complexity)
+-   PLAN Mode: `visual-maps/plan-mode-map.mdc` (Task Planning)
+-   CREATIVE Mode: `visual-maps/creative-mode-map.mdc` (Design Decisions)
+-   IMPLEMENT Mode: `visual-maps/implement-mode-map.mdc` (Code Implementation)
+-   REFLECT Mode: `visual-maps/reflect-mode-map.mdc` (Task Review)
+-   ARCHIVE Mode: `visual-maps/archive-mode-map.mdc` (Documentation & Closure)
+
+## 💻 PLATFORM-SPECIFIC COMMANDS & EFFICIENCY (General Reminder)
+*   Always be mindful of platform differences when using `run_terminal_cmd`. Refer to `Core/platform-awareness.mdc` principles.
+*   Strive for command efficiency. Refer to `Core/command-execution.mdc` principles.

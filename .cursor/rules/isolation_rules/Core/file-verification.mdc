@@ -1,0 +1,56 @@
+---
+description: Core rule for AI to verify and create Memory Bank file structures, prioritizing `edit_file` for content and `run_terminal_cmd` for `mkdir`.
+globs: **/Core/file-verification.mdc
+alwaysApply: false
+---
+# OPTIMIZED FILE VERIFICATION & CREATION SYSTEM (Memory Bank Setup)
+
+> **TL;DR:** Verify/create essential Memory Bank directories and files. Use `edit_file` to create/populate files, `run_terminal_cmd` (platform-aware) for `mkdir`. Log actions.
+
+## ⚙️ AI ACTIONS FOR MEMORY BANK SETUP (Typically during early VAN)
+
+1.  **Acknowledge:** State: "Performing Memory Bank file verification and setup."
+2.  **Reference Paths:** Mentally (or by `read_file` if necessary) refer to `.cursor/rules/isolation_rules/Core/memory-bank-paths.mdc` for canonical paths.
+3.  **Verify/Create `memory-bank/` Root Directory:**
+    a.  Use `list_dir .` (project root) to check if `memory-bank/` exists.
+    b.  If missing:
+        i.  `run_terminal_cmd` (platform-aware, e.g., `mkdir memory-bank` or `New-Item -ItemType Directory -Path memory-bank`).
+        ii. Verify creation (e.g., `list_dir .` again).
+4.  **Verify/Create Core Subdirectories in `memory-bank/`:**
+    a.  The subdirectories are: `creative/`, `reflection/`, `archive/`.
+    b.  For each (e.g., `creative`):
+        i.  `list_dir memory-bank/` to check if `memory-bank/creative/` exists.
+        ii. If missing: `run_terminal_cmd` (e.g., `mkdir memory-bank/creative`). Verify.
+5.  **Verify/Create Core `.md` Files in `memory-bank/` (Using `edit_file`):**
+    a.  The core files are: `tasks.md`, `activeContext.md`, `progress.md`, `projectbrief.md`, `productContext.md`, `systemPatterns.md`, `techContext.md`, `style-guide.md`.
+    b.  For each file (e.g., `tasks.md`):
+        i.  Attempt to `read_file memory-bank/tasks.md`.
+        ii. If it fails (file doesn't exist) or content is empty/default placeholder:
+            Use `edit_file memory-bank/tasks.md` to write an initial template. Example for `tasks.md`:
+            ```markdown
+            # Memory Bank: Tasks
+
+            ## Current Task
+            - Task ID: T000
+            - Name: [Task not yet defined]
+            - Status: PENDING_INITIALIZATION
+            - Complexity: Not yet assessed
+            - Assigned To: AI
+
+            ## Backlog
+            (Empty)
+            ```
+            *(Provide similar minimal templates for other core files if creating them anew. `activeContext.md` could start with `# Active Context - Initialized [Timestamp]`).*
+        iii. Optionally, `read_file memory-bank/tasks.md` again to confirm content.
+6.  **Log Verification Actions:**
+    a.  Use `edit_file` to append a summary to `memory-bank/activeContext.md` under a "File Verification Log" heading. List directories/files checked, created, or found existing. Note any errors.
+    b.  Example log entry:
+        ```markdown
+        ### File Verification Log - [Timestamp]
+        - Checked/Created `memory-bank/` directory.
+        - Checked/Created `memory-bank/creative/` directory.
+        - Checked/Created `memory-bank/tasks.md` (initial template written).
+        - ... (other files/dirs) ...
+        - Status: All essential Memory Bank structures verified/created.
+        ```
+7.  **Completion:** State: "Memory Bank file structure verification and setup complete."

@@ -1,0 +1,39 @@
+---
+description: VAN QA sub-rule for minimal build test. Fetched by `van-qa-main.mdc`. Guides AI to attempt a basic build/compilation.
+globs: **/visual-maps/van_mode_split/van-qa-checks/build-test.mdc
+alwaysApply: false
+---
+# VAN QA: MINIMAL BUILD TEST (AI Instructions)
+
+> **TL;DR:** Attempt a minimal or dry-run build of the project to catch early integration or setup issues. Log findings to `activeContext.md` using `edit_file`. This rule is fetched by `van-qa-main.mdc`.
+
+## ⚙️ AI ACTIONS FOR MINIMAL BUILD TEST:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Starting Minimal Build Test."
+    b.  `read_file package.json` (or equivalent like `Makefile`, `pom.xml`) to identify build commands.
+    c.  `read_file memory-bank/techContext.md` for info on build tools.
+2.  **Define Build Command:**
+    a.  Identify the primary build script (e.g., `npm run build`, `mvn package`, `make`).
+    b.  Consider if a "dry run" or "lint-only" or "compile-only" version of the build command exists to test the toolchain without full artifact generation (e.g., `tsc --noEmit` for TypeScript). If so, prefer it for a *minimal* test. If not, use the standard build command.
+3.  **Execute Build Command (Using `run_terminal_cmd`):**
+    a.  State the exact build command you are about to run.
+    b.  Ensure you are in the correct directory (usually project root). `list_dir .` to confirm presence of `package.json` etc. If not, use `cd` via `run_terminal_cmd`.
+    c.  `run_terminal_cmd [build_command]`.
+    d.  Capture the full output.
+4.  **Evaluate Results & Log:**
+    a.  Analyze the output for success messages or error codes/messages.
+    b.  Use `edit_file` to append detailed findings to the "VAN QA Log" in `memory-bank/activeContext.md`:
+        ```markdown
+        #### Minimal Build Test Log - [Timestamp]
+        - Command: `npm run build`
+        - Output:
+          \`\`\`
+          [Full or summarized build output]
+          \`\`\`
+        - Status: [PASS/FAIL - with key error if FAIL]
+        - Overall Minimal Build Test Status: [PASS/FAIL]
+        ```
+5.  **Completion:**
+    a.  State: "Minimal Build Test complete. Overall Status: [PASS/FAIL]."
+    b.  (The `van-qa-main.mdc` orchestrator will use this outcome).

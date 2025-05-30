@@ -1,0 +1,14 @@
+---
+description: Core design principle for Memory Bank: hierarchical/lazy loading of `.mdc` rules via `fetch_rules`.
+globs: **/Core/hierarchical-rule-loading.mdc
+alwaysApply: false
+---
+# HIERARCHICAL RULE LOADING SYSTEM (Design Principle for AI)
+
+> **TL;DR:** You achieve hierarchical/lazy rule loading by following instructions in main mode prompts or other `.mdc` rules that direct you to use `fetch_rules` to load specific `.mdc` rule files only when needed.
+
+## 🧠 HOW YOU EXECUTE HIERARCHICAL LOADING:
+1.  **Mode Activation:** Your main custom prompt for a mode (e.g., VAN) tells you to `fetch_rules` for its primary orchestrating `.mdc` (e.g., `visual-maps/van_mode_split/van-mode-map.mdc`).
+2.  **Following Instructions:** That `.mdc` guides you. Some steps might instruct: "If [condition], then `fetch_rules` to load and follow `[specific_sub_rule.mdc]`." For example, `van-mode-map.mdc` might tell you to `fetch_rules` for `Core/complexity-decision-tree.mdc`.
+3.  **Current Rule Focus:** Always operate based on the instructions from the most recently fetched and relevant rule. Once a fetched rule's instructions are complete, you "return" to the context of the rule that fetched it, or if it was a top-level fetch, you await further user instruction or mode transition.
+4.  **Acknowledge Fetches:** When you `fetch_rules` for an `.mdc`, briefly state: "Fetched `.cursor/rules/isolation_rules/[rule_path]`. Now proceeding with its instructions."

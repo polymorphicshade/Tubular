@@ -1,0 +1,96 @@
+---
+description: Comprehensive planning for Level 3 intermediate features. Guides AI to update `tasks.md` with detailed requirements, components, strategy, risks, and flag CREATIVE needs, using `edit_file`.
+globs: **/Level3/planning-comprehensive.mdc
+alwaysApply: false
+---
+# LEVEL 3 COMPREHENSIVE PLANNING (AI Instructions)
+
+> **TL;DR:** This rule guides the comprehensive planning for Level 3 (Intermediate Feature) tasks. Use `edit_file` to update `memory-bank/tasks.md` with detailed requirements, component analysis, implementation strategy, dependencies, risks, and critically, flag aspects needing CREATIVE mode.
+
+This rule is typically fetched by the PLAN mode orchestrator when a task is identified as Level 3.
+
+## ⚙️ AI ACTIONS FOR LEVEL 3 COMPREHENSIVE PLANNING (Updating `tasks.md`):
+
+1.  **Acknowledge & Context:**
+    a.  State: "Initiating Comprehensive Planning for Level 3 feature: [Feature Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` to locate the existing entry for this L3 feature.
+    c.  `read_file memory-bank/projectbrief.md`, `productContext.md`, `systemPatterns.md`, `techContext.md` for broader context.
+2.  **Define/Refine Task Entry in `tasks.md` (using `edit_file`):**
+    a.  Ensure the task entry in `memory-bank/tasks.md` for the L3 feature is structured with the following sections. Create or elaborate on these sections.
+
+        **Comprehensive L3 Task Structure (Content for `edit_file` on `tasks.md`):**
+        ```markdown
+        ## Task: [Task Name/ID - e.g., L3-001: Implement User Profile Feature]
+
+        - **Status:** IN_PROGRESS_PLANNING
+        - **Priority:** [High/Medium/Low - user may specify, or default to Medium]
+        - **Complexity Level:** 3
+        - **Assigned To:** AI
+        - **Target Completion Date (Optional):** [User may specify]
+
+        ### 1. Feature Description & Goals
+        [Detailed description of the feature, its purpose, business value, and key objectives. What problems does it solve? What are the success criteria?]
+
+        ### 2. Detailed Requirements
+        #### 2.1. Functional Requirements
+        [List specific functional requirements. Use actionable language. e.g., "FR1: System MUST allow users to upload an avatar image." ]
+        - [ ] FR1: ...
+        - [ ] FR2: ...
+        #### 2.2. Non-Functional Requirements
+        [List NFRs like performance, security, usability, maintainability. e.g., "NFR1: Profile page MUST load within 2 seconds."]
+        - [ ] NFR1: ...
+        - [ ] NFR2: ...
+
+        ### 3. Component Analysis
+        #### 3.1. New Components to be Created
+        [List new components/modules needed for this feature. For each, briefly describe its responsibility.]
+        - Component A: [Responsibility]
+        - Component B: [Responsibility]
+        #### 3.2. Existing Components to be Modified
+        [List existing components/modules that will be affected or need modification.]
+        - Component X: [Nature of modification]
+        - Component Y: [Nature of modification]
+        #### 3.3. Component Interactions
+        [Describe or diagram (textually) how new/modified components will interact with each other and existing system parts.]
+
+        ### 4. Implementation Strategy & High-Level Steps
+        [Outline the overall approach to building the feature. Break it down into major phases or steps. These will become more detailed sub-tasks later.]
+        1.  Step 1: [e.g., Design database schema changes for user profile.]
+        2.  Step 2: [e.g., Develop backend API endpoints for profile data.]
+        3.  Step 3: [e.g., Build frontend UI for profile page.]
+        4.  Step 4: [e.g., Integrate frontend with backend.]
+        5.  Step 5: [e.g., Write comprehensive tests.]
+
+        ### 5. Dependencies & Integrations
+        [List any technical dependencies (libraries, tools), data dependencies, or integrations with other systems/features.]
+        - Dependency 1: [e.g., Requires `ImageMagick` library for image processing.]
+        - Integration 1: [e.g., Integrates with existing Authentication service.]
+
+        ### 6. Risk Assessment & Mitigation
+        [Identify potential risks (technical, resource, schedule) and suggest mitigation strategies.]
+        - Risk 1: [e.g., Performance of image upload at scale.]
+          - Mitigation: [e.g., Implement asynchronous processing and CDN for images.]
+        - Risk 2: [e.g., Compatibility with older browsers.]
+          - Mitigation: [e.g., Use polyfills and perform cross-browser testing.]
+
+        ### 7. Creative Phase Requirements (CRITICAL for L3)
+        [Identify specific aspects of this feature that require dedicated design exploration in CREATIVE mode. Be specific.]
+        - [ ] CREATIVE: Design UI/UX for the new User Profile page. (Type: UI/UX)
+        - [ ] CREATIVE: Architect the avatar storage and processing pipeline. (Type: Architecture)
+        - [ ] CREATIVE: Develop algorithm for profile data recommendations (if applicable). (Type: Algorithm)
+        (If no creative phase is deemed necessary for a particular aspect, note "CREATIVE: Not required for [aspect]" or omit.)
+
+        ### 8. Testing Strategy Overview
+        [Briefly outline the testing approach: unit tests, integration tests, E2E tests, UAT focus areas.]
+
+        ### 9. Notes & Open Questions
+        [Any other relevant notes, assumptions, or questions to be resolved.]
+        ```
+3.  **Log Update:**
+    a.  Use `edit_file` to add a note to `memory-bank/activeContext.md`:
+        `[Timestamp] - Comprehensive plan for L3 feature [Feature Name] updated in tasks.md. Creative phases identified.`
+4.  **Completion & Recommendation:**
+    a.  State: "Comprehensive planning for Level 3 feature [Feature Name] is complete. `tasks.md` has been updated with the detailed plan."
+    b.  **If Creative Phase Requirements were identified:** "The plan indicates that creative design is needed for [list aspects]. Recommend transitioning to CREATIVE mode."
+    c.  **If NO Creative Phase Requirements were identified (uncommon for L3 but possible):** "No specific creative design phases were flagged. Recommend proceeding to IMPLEMENT mode (or VAN QA if complex tech setup is anticipated)."
+    d.  (Control returns to the PLAN mode orchestrator).

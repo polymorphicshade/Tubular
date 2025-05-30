@@ -1,0 +1,59 @@
+---
+description: Describes the design principles of the Optimized Memory Bank system, focusing on token efficiency, adaptive complexity, and hierarchical rule loading. For AI's conceptual understanding.
+globs: main-optimized.mdc
+alwaysApply: false
+---
+# OPTIMIZED MEMORY BANK SYSTEM (Design Principles - AI Understanding)
+
+> **TL;DR:** This document explains the design principles behind the Memory Bank's optimizations. You, the AI, enact these optimizations by following the specific instructions in other `.mdc` rules that guide hierarchical rule loading, adaptive complexity, progressive documentation, and efficient Memory Bank updates.
+
+## 🚨 CRITICAL PREMISE: MEMORY BANK EXISTENCE
+*   The entire CMB system, optimized or not, relies on the `memory-bank/` directory and its core files being present. This is typically ensured by the `main.mdc` rule fetching `Core/file-verification.mdc` at startup.
+
+## 🧭 OPTIMIZED MODE ARCHITECTURE (Conceptual Overview)
+The system uses:
+*   **Context Manager (Conceptual):** Achieved by your diligent use of `read_file` for relevant context from `activeContext.md`, `tasks.md`, etc., and `edit_file` to update them.
+*   **Rule Loader (Conceptual):** This is the `fetch_rules` tool, which you use as instructed by prompts or other `.mdc` files.
+*   **File Manager (Conceptual):** This is primarily the `edit_file` tool for content, and `run_terminal_cmd` for directory operations.
+*   **Mode Transition (Conceptual):** Managed by updating `activeContext.md` before switching modes, as guided by `Core/mode-transition-optimization.mdc` principles.
+
+## 📈 ADAPTIVE COMPLEXITY MODEL (How You Implement This)
+*   You determine task complexity (Level 1-4) by following `Core/complexity-decision-tree.mdc` (usually fetched in VAN mode).
+*   Based on the determined level, the workflow orchestrators (e.g., `LevelX/workflow-levelX.mdc` or main mode maps) will guide you through a process tailored to that complexity, fetching appropriate level-specific rules.
+    *   L1: Streamlined (e.g., VAN → IMPLEMENT → Minimal REFLECT/ARCHIVE).
+    *   L2: Balanced (e.g., VAN → PLAN → IMPLEMENT → REFLECT).
+    *   L3: Comprehensive (e.g., VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT).
+    *   L4: Full Governance (e.g., VAN → PLAN (Arch) → CREATIVE → Phased IMPLEMENT → REFLECT → ARCHIVE).
+
+## 🧠 HIERARCHICAL RULE LOADING (How You Implement This)
+*   You achieve this by starting with a high-level orchestrator rule (e.g., `visual-maps/van_mode_split/van-mode-map.mdc`) fetched via your main custom prompt.
+*   This orchestrator then instructs you to `fetch_rules` for more specific sub-rules (from `Core/`, `LevelX/`, `Phases/`, or other `visual-maps/`) only when they are needed for the current step or context.
+*   This keeps your active instruction set focused and token-efficient.
+
+## 🔄 TOKEN-OPTIMIZED CREATIVE PHASE (How You Implement This)
+*   When in CREATIVE mode, and guided by rules like `Phases/CreativePhase/creative-phase-architecture.mdc` or `Phases/CreativePhase/creative-phase-uiux.mdc`, you will be instructed to use the structure from `Phases/CreativePhase/optimized-creative-template.mdc`.
+*   This template encourages progressive documentation: define the problem, list options briefly, then provide detailed analysis *for selected options* or as requested, rather than exhaustively for all.
+
+## 🔀 OPTIMIZED MODE TRANSITIONS (How You Implement This)
+*   Before transitioning from one mode to another, the current mode's orchestrator will instruct you to use `edit_file` to update `memory-bank/activeContext.md` with a summary of outputs and focus for the next mode.
+*   The next mode's orchestrator will then instruct you to `read_file memory-bank/activeContext.md` to pick up this context. (See `Core/mode-transition-optimization.mdc`).
+
+## 📊 MEMORY BANK EFFICIENT UPDATES (How You Implement This)
+*   When using `edit_file` to update Memory Bank files (`tasks.md`, `activeContext.md`, etc.):
+    *   Be precise. Modify only the relevant sections.
+    *   If appending, add to the correct section.
+    *   This avoids rewriting entire large files for small changes.
+
+## 💻 COMPLEXITY-BASED DOCUMENTATION (How You Implement This)
+*   The `LevelX/*.mdc` rules for planning, reflection, and archiving will guide the *depth* of documentation required.
+    *   Level 1: Minimal documentation, often consolidated.
+    *   Level 4: Extensive, comprehensive documentation.
+*   Follow the specific documentation structure and content requirements outlined in the active Level-specific rule.
+
+## 💡 USAGE GUIDANCE (Summary for AI)
+1.  The CMB workflow typically starts with VAN mode, triggered by `main.mdc`.
+2.  Follow the instructions from the currently fetched `.mdc` rule.
+3.  Use `fetch_rules` only when explicitly instructed, to load more specific rules.
+4.  Use `edit_file` for all content creation/modification in Memory Bank files.
+5.  Adhere to the principles of platform awareness and command execution from Core rules.
+By following these specific, contextual instructions, you inherently enact the system's optimizations.

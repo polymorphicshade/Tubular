@@ -1,0 +1,57 @@
+---
+description: Main orchestrator for VAN QA technical validation. Fetched by `van-mode-map.mdc` when 'VAN QA' is triggered. Fetches specific check rules and utility rules.
+globs: **/visual-maps/van_mode_split/van-qa-main.mdc
+alwaysApply: false
+---
+# VAN QA: TECHNICAL VALIDATION - MAIN ORCHESTRATOR (AI Instructions)
+
+> **TL;DR:** Orchestrate the four-point technical validation (Dependencies, Configuration, Environment, Minimal Build Test) by fetching specific check rules. Then, fetch reporting and mode transition rules based on results. Use `edit_file` for logging to `activeContext.md`.
+
+## 🧭 VAN QA PROCESS FLOW (AI Actions)
+
+1.  **Acknowledge & Context:**
+    a.  State: "VAN QA Main Orchestrator activated. Starting technical validation process."
+    b.  `read_file memory-bank/activeContext.md` for current task, complexity, and any relevant tech stack info from CREATIVE phase.
+    c.  `read_file memory-bank/tasks.md` for task details.
+    d.  `read_file memory-bank/techContext.md` (if it exists and is populated).
+    e.  Use `edit_file` to add to `memory-bank/activeContext.md`: "VAN QA Log - [Timestamp]: Starting technical validation."
+2.  **Perform Four-Point Validation (Fetch sub-rules sequentially):**
+    a.  **Dependency Verification:**
+        i.  State: "Performing Dependency Verification."
+        ii. `fetch_rules` for `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/dependency-check.mdc`.
+        iii. (This rule will guide checks and log results to `activeContext.md`). Let `pass_dep_check` be true/false based on its outcome.
+    b.  **Configuration Validation (if `pass_dep_check` is true):**
+        i.  State: "Performing Configuration Validation."
+        ii. `fetch_rules` for `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/config-check.mdc`.
+        iii. Let `pass_config_check` be true/false.
+    c.  **Environment Validation (if `pass_config_check` is true):**
+        i.  State: "Performing Environment Validation."
+        ii. `fetch_rules` for `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/environment-check.mdc`.
+        iii. Let `pass_env_check` be true/false.
+    d.  **Minimal Build Test (if `pass_env_check` is true):**
+        i.  State: "Performing Minimal Build Test."
+        ii. `fetch_rules` for `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-checks/build-test.mdc`.
+        iii. Let `pass_build_check` be true/false.
+3.  **Consolidate Results & Generate Report:**
+    a.  Overall QA Status: `pass_qa = pass_dep_check AND pass_config_check AND pass_env_check AND pass_build_check`.
+    b.  State: "Technical validation checks complete. Overall QA Status: [PASS/FAIL]."
+    c.  `fetch_rules` for `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/reports.mdc`.
+    d.  Follow instructions in `reports.mdc` to use `edit_file` to:
+        i.  Generate the full QA report (success or failure format) and display it to the user.
+        ii. Write "PASS" or "FAIL" to `memory-bank/.qa_validation_status` (a hidden file for programmatic checks).
+4.  **Determine Next Steps:**
+    a.  **If `pass_qa` is TRUE:**
+        i.  State: "All VAN QA checks passed."
+        ii. `fetch_rules` for `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/mode-transitions.mdc`.
+        iii. (This rule will guide recommending BUILD mode).
+    b.  **If `pass_qa` is FALSE:**
+        i.  State: "One or more VAN QA checks failed. Please review the report."
+        ii. `fetch_rules` for `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/common-fixes.mdc`.
+        iii. (This rule will provide general fix guidance).
+        iv. State: "Please address the issues and then re-type 'VAN QA' to re-run the validation."
+5.  **Completion of this Orchestrator:**
+    a.  Use `edit_file` to add to `memory-bank/activeContext.md`: "VAN QA Log - [Timestamp]: Technical validation process orchestrated. Outcome: [PASS/FAIL]."
+    b.  (Control returns to `van-mode-map.mdc` or awaits user input based on QA outcome).
+
+## 🧰 Utility Rule Reminder:
+*   For detailed guidance on how to structure `fetch_rules` calls, you can (if necessary for your own understanding) `read_file` `.cursor/rules/isolation_rules/visual-maps/van_mode_split/van-qa-utils/rule-calling-guide.mdc` or `rule-calling-help.mdc`. However, this orchestrator explicitly tells you which rules to fetch.

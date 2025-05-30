@@ -1,0 +1,58 @@
+---
+description: Phased Implementation for Level 4 (Complex System) tasks. Guides AI to manage implementation in distinct phases (Foundation, Core, Extension, Integration, Finalization) using `edit_file` and `run_terminal_cmd`.
+globs: **/Level4/phased-implementation.mdc
+alwaysApply: false
+---
+# PHASED IMPLEMENTATION FOR LEVEL 4 TASKS (AI Instructions)
+
+> **TL;DR:** This rule guides the structured, phased implementation of a Level 4 (Complex System) task. It involves breaking down the implementation into logical phases, each with its own objectives, tasks, and verification. Use `edit_file` for code and documentation, `run_terminal_cmd` for builds/tests.
+
+This rule is typically fetched by the IMPLEMENT mode orchestrator if the task is L4.
+
+## ⚙️ AI ACTIONS FOR LEVEL 4 PHASED IMPLEMENTATION:
+
+1.  **Acknowledge & Preparation:**
+    a.  State: "Initiating Phased Implementation for Level 4 system: [System Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` for the architectural plan, component breakdown, and any pre-defined implementation phases.
+    c.  `read_file` all relevant `memory-bank/architecture/` and `memory-bank/creative/` documents.
+    d.  `read_file memory-bank/style-guide.md` and `memory-bank/techContext.md`.
+    e.  `fetch_rules` for `.cursor/rules/isolation_rules/Core/command-execution.mdc` for tool usage guidelines.
+2.  **Define/Confirm Implementation Phases (if not already detailed in `tasks.md`):**
+    a.  Based on the architectural plan, propose or confirm a phased approach (e.g., Foundation, Core Services, Feature Extensions, Integration, Finalization).
+    b.  For each phase, define:
+        *   Primary objectives.
+        *   Key components/modules to be built/integrated.
+        *   High-level sub-tasks within that phase.
+        *   Exit criteria / verification for the phase.
+    c.  Use `edit_file` to document these phases and their sub-tasks within the L4 task entry in `memory-bank/tasks.md`.
+3.  **Iterate Through Implementation Phases:**
+    a.  For each defined phase (e.g., "Foundation Phase"):
+        i.  State: "Starting [Phase Name] for system [System Name]."
+        ii. `edit_file memory-bank/activeContext.md` to set focus: "Current Focus: L4 Implementation - [System Name] - [Phase Name]."
+        iii. **Implement Sub-tasks for the Current Phase (from `tasks.md`):**
+            *   For each sub-task in the current phase:
+                *   Perform coding using `edit_file`, adhering to architectural designs, creative specs, and style guide.
+                *   Write unit tests using `edit_file`.
+                *   Run tests using `run_terminal_cmd`.
+                *   Log actions, code changes, test results in `memory-bank/progress.md` using `edit_file`.
+                *   Mark sub-task complete in `memory-bank/tasks.md` using `edit_file`.
+        iv. **Phase Verification:**
+            *   Once all sub-tasks for the phase are complete, perform verification as per the phase's exit criteria (e.g., specific integration tests, review of foundational components).
+            *   Log verification results in `memory-bank/progress.md`.
+        v.  If phase verification fails, identify issues, create new sub-tasks in `tasks.md` to address them, and re-iterate implementation/verification for those parts.
+        vi. State: "[Phase Name] complete and verified for system [System Name]."
+        vii. `edit_file memory-bank/tasks.md` to mark the phase as complete.
+4.  **System-Wide Integration & Testing (Typically after Core/Extension phases):**
+    a.  Perform broader integration tests across major components.
+    b.  Conduct end-to-end system testing against key user scenarios and NFRs.
+    c.  Log results in `memory-bank/progress.md`.
+5.  **Finalization Phase (Last Phase):**
+    a.  Performance tuning, final security reviews, documentation cleanup.
+    b.  User Acceptance Testing (UAT) coordination (AI supports by providing info, user executes UAT).
+    c.  Preparation for deployment (e.g., final build scripts, deployment notes).
+6.  **Final Memory Bank Updates & Completion:**
+    a.  Ensure `tasks.md` L4 implementation is marked complete.
+    b.  Ensure `progress.md` has a comprehensive log.
+    c.  Use `edit_file` to update `memory-bank/activeContext.md`: "Level 4 Phased Implementation for [System Name] complete. Ready for REFLECT mode."
+    d.  State: "Level 4 system [System Name] phased implementation complete. All phases and tests passed. Recommend REFLECT mode."
+    e.  (Control returns to the fetching rule).

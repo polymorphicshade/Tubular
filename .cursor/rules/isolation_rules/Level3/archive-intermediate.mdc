@@ -1,0 +1,87 @@
+---
+description: Intermediate archiving for Level 3 features. Guides AI to create a detailed archive document, linking to creative/reflection docs, using `edit_file`.
+globs: **/Level3/archive-intermediate.mdc
+alwaysApply: false
+---
+# LEVEL 3 ARCHIVE: INTERMEDIATE FEATURE DOCUMENTATION (AI Instructions)
+
+> **TL;DR:** This rule guides the creation of an intermediate archive document for a completed Level 3 feature using `edit_file`. It ensures key information, including links to creative and reflection documents, is preserved.
+
+This rule is typically fetched by the Level 3 workflow orchestrator or the main ARCHIVE mode orchestrator if the task is L3.
+
+## ⚙️ AI ACTIONS FOR LEVEL 3 ARCHIVING:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Initiating Intermediate Archiving for Level 3 feature: [Feature Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` for the completed feature details (original plan, requirements, links to creative docs).
+    c.  `read_file memory-bank/reflection/reflect-[feature_name_or_id]-[date].md` for detailed lessons learned.
+    d.  `read_file memory-bank/progress.md` for implementation summary and key milestones.
+    e.  `read_file` all relevant `memory-bank/creative/creative-[aspect_name]-[date].md` documents associated with this feature.
+2.  **Pre-Archive Checklist (AI Self-Correction):**
+    a.  Confirm from `tasks.md` that the REFLECT phase for this L3 feature is marked complete.
+    b.  Verify `memory-bank/reflection/reflect-[feature_name_or_id]-[date].md` exists and is finalized.
+    c.  Verify all `memory-bank/creative/creative-*.md` documents linked in `tasks.md` for this feature exist.
+    d.  If checks fail, state: "L3 ARCHIVE BLOCKED: Prerequisite documents (Reflection, Creative) are missing or incomplete for feature [Feature Name]. Please complete REFLECT / CREATIVE modes first." Await user.
+3.  **Prepare Archive Content (Based on Template Below):**
+    a.  Synthesize information from all gathered documents.
+4.  **Create Archive File:**
+    a.  Determine archive filename: `archive-[feature_name_or_id]-[date].md` (e.g., `archive-user-profile-enhancement-20250515.md`).
+    b.  Use `edit_file` to create/update `memory-bank/archive/[archive_filename.md]` with the structured content.
+        **L3 Archive Structure (Content for `edit_file`):**
+        ```markdown
+        # Feature Archive: [Feature Name from tasks.md]
+
+        ## Feature ID: [Feature ID from tasks.md]
+        ## Date Archived: [Current Date]
+        ## Complexity Level: 3
+        ## Status: COMPLETED & ARCHIVED
+
+        ## 1. Feature Overview
+        [Brief description of the feature and its purpose. Extract from `tasks.md` (original plan) or `projectbrief.md`.]
+
+        ## 2. Key Requirements Met
+        [List the main functional and non-functional requirements this feature addressed, from `tasks.md`.]
+        - Requirement 1
+        - Requirement 2
+
+        ## 3. Design Decisions & Creative Outputs
+        [Summary of key design choices made during the CREATIVE phase(s).]
+        - **Links to Creative Documents:**
+          - `../../creative/creative-[aspect1_name]-[date].md`
+          - `../../creative/creative-[aspect2_name]-[date].md`
+          - (Add all relevant creative docs)
+        - Link to Style Guide (if applicable): `../../style-guide.md` (version used, if known)
+
+        ## 4. Implementation Summary
+        [High-level overview of how the feature was implemented. Summarize from `progress.md` or reflection document.]
+        - Primary new components/modules created: [List]
+        - Key technologies/libraries utilized: [List]
+        - Link to main feature branch merge commit / PR (if available from `progress.md`): [URL]
+
+        ## 5. Testing Overview
+        [Brief summary of the testing strategy (unit, integration, E2E) and outcomes. From `progress.md` or reflection.]
+
+        ## 6. Reflection & Lessons Learned
+        - **Link to Reflection Document:** `../../reflection/reflect-[feature_name_or_id]-[date].md`
+        - **Critical Lessons (copied from reflection for quick summary):**
+          - Lesson 1: [Critical lesson]
+          - Lesson 2: [Critical lesson]
+
+        ## 7. Known Issues or Future Considerations (Optional)
+        [Any minor known issues deferred or potential future enhancements related to this feature, from reflection doc.]
+
+        ## 8. Affected Files/Components (Summary from `tasks.md` plan)
+        [List key files/components that were created or significantly modified.]
+        ```
+5.  **Update Core Memory Bank Files (using `edit_file`):**
+    a.  **`tasks.md`:**
+        *   Mark the Level 3 feature task as "ARCHIVED".
+        *   Add a link to the archive document: `Archived: ../archive/[archive_filename.md]`.
+    b.  **`progress.md`:**
+        *   Add a final entry: `[Date] - Feature [Feature Name] ARCHIVED. See archive/[archive_filename.md]`.
+    c.  **`activeContext.md`:**
+        *   Clear current feature focus.
+        *   Add to log: "Archived Level 3 feature [Feature Name]. Archive at `archive/[archive_filename.md]`."
+6.  **Completion:**
+    a.  State: "Intermediate archiving for Level 3 feature [Feature Name] complete. Archive document created at `memory-bank/archive/[archive_filename.md]`."
+    b.  (Control returns to the fetching rule).

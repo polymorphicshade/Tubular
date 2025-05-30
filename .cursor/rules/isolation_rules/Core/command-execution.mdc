@@ -1,0 +1,81 @@
+---
+description: Core guidelines for AI command execution, emphasizing tool priority (edit_file, fetch_rules, run_terminal_cmd), platform awareness, and result documentation within the Memory Bank system.
+globs: **/Core/command-execution.mdc
+alwaysApply: false
+---
+# COMMAND EXECUTION SYSTEM
+
+> **TL;DR:** This system provides guidelines for efficient and reliable command and tool usage. Prioritize `edit_file` for file content, `fetch_rules` for loading `.mdc` rules, and `run_terminal_cmd` for execution tasks. Always document actions and results in `memory-bank/activeContext.md`.
+
+## 🛠️ TOOL PRIORITY & USAGE
+
+1.  **`edit_file` (Primary for Content):**
+    *   Use for ALL creation and modification of `.md` files in `memory-bank/` and `documentation/`.
+    *   Use for ALL source code modifications.
+    *   `edit_file` can create a new file if it doesn't exist and populate it.
+    *   Provide clear instructions or full content blocks for `edit_file`.
+2.  **`fetch_rules` (Primary for `.mdc` Rules):**
+    *   Use to load and follow instructions from other `.mdc` rule files within `.cursor/rules/isolation_rules/`.
+    *   Specify the full path to the target `.mdc` file.
+3.  **`read_file` (Primary for Context Gathering):**
+    *   Use to read existing project files (source code, `README.md`), `memory-bank/*.md` files for context, or `.mdc` files if `fetch_rules` is not appropriate for the specific need (e.g., just extracting a template).
+4.  **`run_terminal_cmd` (Primary for Execution):**
+    *   Use for tasks like `mkdir`, running tests, build scripts, or starting servers.
+    *   **CRITICAL:** Be platform-aware (see "Platform-Specific Considerations" below). If unsure of the OS, state your default command (e.g., for Linux) and ask for the Windows PowerShell equivalent if needed.
+5.  **`list_dir`, `search_files`, `codebase_search`:**
+    *   Use for file system exploration and code/text searching as appropriate.
+
+## 🔍 COMMAND EFFICIENCY & PLANNING WORKFLOW (Conceptual for AI)
+```mermaid
+graph TD
+    Start["Command Planning"] --> Analyze["Analyze Requirements"]
+    Analyze --> ToolSelect["Select Correct Tool<br>(edit_file, fetch_rules, run_terminal_cmd, etc.)"]
+    ToolSelect --> Complexity{"Action Complexity?"}
+    Complexity -->|"Simple File Edit"| SingleEdit["Use `edit_file` directly"]
+    Complexity -->|"Simple Terminal Cmd"| SingleCmd["Use `run_terminal_cmd`"]
+    Complexity -->|"Complex Sequence"| GroupedSteps["Break into Logical Textual Steps<br>using appropriate tools for each step"]
+    SingleEdit & SingleCmd & GroupedSteps --> Verify["Verify Results<br>(e.g., `read_file` back, check terminal output)"]
+    Verify --> Document["Document Action & Result<br>in `activeContext.md` using `edit_file`"]
+    Document --> Next["Next Action"]
+```
+**Textual Guide for AI:**
+1.  **Analyze Requirements:** Understand what needs to be achieved.
+2.  **Select Correct Tool:** Choose `edit_file` for content, `fetch_rules` for rules, `run_terminal_cmd` for execution, etc.
+3.  **Execute:** Perform the action. For complex sequences, break it down into clear, tool-specific steps.
+4.  **Verify Results:** If you used `edit_file`, consider using `read_file` to confirm the content. If `run_terminal_cmd`, examine the output.
+5.  **Document Action & Result:** Use `edit_file` to append a summary of the command/tool call and its outcome to the "Build Log" or relevant section in `memory-bank/activeContext.md`.
+
+## 🚦 DIRECTORY VERIFICATION (for `run_terminal_cmd`)
+**Textual Guide for AI:**
+1.  Before running build scripts or package manager commands (npm, pip) via `run_terminal_cmd`, verify you are in the correct project root directory.
+2.  Use `list_dir` to check for key files like `package.json` or `requirements.txt`.
+3.  If not in the correct directory, use `run_terminal_cmd` with `cd [path_to_project_root]` to navigate.
+
+## 📋 COMMAND DOCUMENTATION TEMPLATE (for `activeContext.md` "Build Log")
+When documenting your actions, use `edit_file` to append entries like this to `memory-bank/activeContext.md`:
+```markdown
+### Action: [Purpose of the action]
+- **Tool Used:** `[edit_file | fetch_rules | run_terminal_cmd | etc.]`
+- **Target/Command:** `[file_path | rule_path | actual_terminal_command]`
+- **Parameters (if applicable):** `[e.g., content for edit_file, search query]`
+- **Expected Outcome:** `[Briefly what you expected]`
+- **Actual Result:**
+  \`\`\`
+  [Output from run_terminal_cmd, or confirmation of file edit/read]
+  \`\`\`
+- **Effect:** `[Brief description of what changed in the system or Memory Bank]`
+- **Next Steps:** `[What you plan to do next]`
+```
+
+## 🔍 PLATFORM-SPECIFIC CONSIDERATIONS (for `run_terminal_cmd`)
+**Textual Guide for AI:**
+*   **Windows (PowerShell):** Path separator: `\`, Dir creation: `mkdir my_dir` or `New-Item -ItemType Directory -Path my_dir`.
+*   **Unix/Linux/Mac (Bash/Zsh):** Path separator: `/`, Dir creation: `mkdir -p my_dir`.
+*   **Action:** If unsure of OS, state default (Linux) and ask for Windows PowerShell equivalent or user OS specification.
+
+## 📝 COMMAND EXECUTION CHECKLIST (AI Self-Correction)
+- Purpose clear? Correct tool chosen? Platform considerations for `run_terminal_cmd`? Action/result documented in `activeContext.md` via `edit_file`? Outcome verified?
+
+## 🚨 WARNINGS
+*   Avoid `run_terminal_cmd` with `echo > file` or `Add-Content` for multi-line content. **Always use `edit_file`**.
+*   For destructive `run_terminal_cmd` (e.g., `rm`), seek user confirmation.

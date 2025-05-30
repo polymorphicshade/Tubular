@@ -1,0 +1,30 @@
+---
+description: VAN QA utility: Quick helper on `fetch_rules` syntax. Rarely fetched directly.
+globs: **/visual-maps/van_mode_split/van-qa-utils/rule-calling-help.mdc
+alwaysApply: false
+---
+# VAN QA: HOW TO CALL RULES (Quick Syntax Reminder)
+
+> **TL;DR:** This provides a very basic syntax reminder for using `fetch_rules`. You generally won't need to fetch this rule; it's a developer note.
+
+## ⚙️ `fetch_rules` SYNTAX REMINDER:
+
+When your instructions tell you to "fetch rule X", the underlying mechanism uses the `fetch_rules` tool.
+
+If you were to represent the call you make (conceptually, as the tool call is handled by the Cursor environment):
+
+You would be invoking `fetch_rules` with a parameter specifying the rule name(s) as a list of strings. For a single rule:
+
+```xml
+<invoke_tool>
+  <tool_name>fetch_rules</tool_name>
+  <parameters>
+    <rule_names>["FULL_PATH_FROM_ISOLATION_RULES_DIR_TO_MDC_FILE"]</rule_names>
+  </parameters>
+</invoke_tool>
+```
+For example:
+`rule_names=["visual-maps/van_mode_split/van-qa-main.mdc"]`
+(Assuming the system resolves this relative to `.cursor/rules/isolation_rules/`)
+
+**You typically don't construct this XML. You just follow the instruction "fetch rule X" and the system handles the invocation.** The key is providing the correct, full path to the `.mdc` file as specified in the instructions.

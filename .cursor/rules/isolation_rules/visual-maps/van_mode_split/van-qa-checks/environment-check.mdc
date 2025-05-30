@@ -1,0 +1,46 @@
+---
+description: VAN QA sub-rule for environment validation. Fetched by `van-qa-main.mdc`. Guides AI to check build tools, permissions, etc.
+globs: **/visual-maps/van_mode_split/van-qa-checks/environment-check.mdc
+alwaysApply: false
+---
+# VAN QA: ENVIRONMENT VALIDATION (AI Instructions)
+
+> **TL;DR:** Validate the development/build environment (e.g., required CLI tools available, necessary permissions, environment variables). Log findings to `activeContext.md` using `edit_file`. This rule is fetched by `van-qa-main.mdc`.
+
+## ⚙️ AI ACTIONS FOR ENVIRONMENT VALIDATION:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Starting Environment Validation."
+    b.  `read_file memory-bank/techContext.md` to identify expected environment characteristics (e.g., OS, required CLIs like Git, Docker).
+2.  **Define Checks (Based on Context):**
+    *   **General Checks:**
+        *   Git CLI: `run_terminal_cmd git --version`.
+        *   Network connectivity (if external resources needed for build): (Conceptual check, or a simple `ping google.com` if allowed and relevant).
+    *   **Example for Web Development:**
+        *   Build tool (e.g., Vite, Webpack if used globally): `run_terminal_cmd vite --version` (if applicable).
+        *   Port availability (e.g., for dev server): (Conceptual, AI can't directly check. Note if a common port like 3000 or 8080 is usually needed).
+    *   **Permissions:**
+        *   (Conceptual) Does the AI anticipate needing to write files outside `memory-bank/` or project dir during build? If so, note potential permission needs. Actual permission checks are hard for AI.
+3.  **Execute Checks (Using `run_terminal_cmd` where appropriate):**
+    a.  For each defined check:
+        i.  State the command or check being performed.
+        ii. If using `run_terminal_cmd`, record the output.
+4.  **Evaluate Results & Log:**
+    a.  Based on command outputs and conceptual checks, determine if the environment seems suitable.
+    b.  Use `edit_file` to append detailed findings to the "VAN QA Log" in `memory-bank/activeContext.md`:
+        ```markdown
+        #### Environment Check Log - [Timestamp]
+        - Check: Git CLI availability
+          - Command: `git --version`
+          - Output: `git version 2.30.0`
+          - Status: PASS
+        - Check: Port 3000 availability for dev server
+          - Method: Conceptual (not directly testable by AI)
+          - Assumption: Port 3000 should be free.
+          - Status: NOTE (User should ensure port is free)
+        - ... (other checks) ...
+        - Overall Environment Status: [PASS/WARN/FAIL]
+        ```
+5.  **Completion:**
+    a.  State: "Environment Validation complete. Overall Status: [PASS/WARN/FAIL]."
+    b.  (The `van-qa-main.mdc` orchestrator will use this outcome).

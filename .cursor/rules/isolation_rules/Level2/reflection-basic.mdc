@@ -1,0 +1,69 @@
+---
+description: Basic reflection for Level 2 (Simple Enhancement) tasks. Guides AI to create a structured reflection document using `edit_file`.
+globs: **/Level2/reflection-basic.mdc
+alwaysApply: false
+---
+# BASIC REFLECTION FOR LEVEL 2 TASKS (AI Instructions)
+
+> **TL;DR:** This rule guides the creation of a basic reflection document for a completed Level 2 task using `edit_file`. It focuses on key outcomes, challenges, and lessons.
+
+This rule is typically fetched by the Level 2 workflow orchestrator or the main REFLECT mode orchestrator if the task is L2.
+
+## ⚙️ AI ACTIONS FOR LEVEL 2 REFLECTION:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Initiating Basic Reflection for Level 2 task: [Task Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` for the completed task details (original plan, requirements).
+    c.  `read_file memory-bank/progress.md` for the implementation journey and any logged challenges/successes.
+    d.  `read_file memory-bank/activeContext.md` to confirm implementation is marked complete.
+2.  **Prepare Reflection Content (Based on Template Below):**
+    a.  Synthesize information from `tasks.md` and `progress.md`.
+3.  **Create Reflection File:**
+    a.  Determine reflection filename: `reflect-[task_name_or_id]-[date].md` (e.g., `reflect-user-profile-update-20250515.md`).
+    b.  Use `edit_file` to create/update `memory-bank/reflection/[reflection_filename.md]` with the structured content.
+        **Basic Reflection Structure (Content for `edit_file`):**
+        ```markdown
+        # Level 2 Enhancement Reflection: [Feature Name from tasks.md]
+
+        ## Task ID: [Task ID from tasks.md]
+        ## Date of Reflection: [Current Date]
+        ## Complexity Level: 2
+
+        ## 1. Enhancement Summary
+        [Brief one-paragraph summary of the enhancement: What was the goal? What was achieved?]
+
+        ## 2. What Went Well?
+        [Identify 2-3 specific positive aspects of the development process for this enhancement.]
+        - Success point 1: [e.g., Integration with existing module was straightforward.]
+        - Success point 2: [e.g., Testing covered all main use cases effectively.]
+
+        ## 3. Challenges Encountered & Solutions
+        [Identify 1-2 specific challenges and how they were addressed.]
+        - Challenge 1: [e.g., Initial approach for X was inefficient.]
+          - Solution: [e.g., Refactored to use Y pattern, improving performance.]
+        - Challenge 2: (if any)
+
+        ## 4. Key Learnings (Technical or Process)
+        [List 1-2 key insights or lessons learned.]
+        - Learning 1: [e.g., Realized library Z is better suited for this type of UI component.]
+        - Learning 2: [e.g., Updating `tasks.md` more frequently for sub-tasks helps maintain clarity.]
+
+        ## 5. Time Estimation Accuracy (If applicable)
+        - Estimated time: [From tasks.md, if estimated]
+        - Actual time: [Approximate actual time based on progress.md entries]
+        - Variance & Reason: [Briefly, e.g., "+2 hours due to unexpected CSS conflict."]
+
+        ## 6. Action Items for Future Work (Optional for L2, but good practice)
+        [Any specific, actionable improvements for future tasks or for this feature.]
+        - Action item 1: [e.g., Document the new CSS utility class created.]
+        ```
+4.  **Update Core Memory Bank Files (using `edit_file`):**
+    a.  **`tasks.md`:**
+        *   Mark the Level 2 task's REFLECT phase as "COMPLETE".
+        *   Add a link to the reflection document: `Reflection: ../reflection/[reflection_filename.md]`.
+    b.  **`activeContext.md`:**
+        *   Update current focus: "Reflection complete for L2 task [Task Name]. Ready for ARCHIVE."
+        *   Add to log: "Completed reflection for L2 task [Task Name]. Document at `reflection/[reflection_filename.md]`."
+5.  **Completion:**
+    a.  State: "Basic reflection for Level 2 task [Task Name] complete. Reflection document created at `memory-bank/reflection/[reflection_filename.md]`."
+    b.  (Control returns to the fetching rule, e.g., `Level2/workflow-level2.mdc` or `visual-maps/reflect-mode-map.mdc`).

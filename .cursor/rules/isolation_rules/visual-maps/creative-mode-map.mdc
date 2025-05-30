@@ -1,0 +1,43 @@
+---
+description: Orchestrates CREATIVE mode. Fetched by PLAN mode when design is needed. Guides AI to facilitate design for components flagged in `tasks.md`, using `fetch_rules` for design-type guidance and `edit_file` for documentation.
+globs: **/visual-maps/creative-mode-map.mdc
+alwaysApply: false
+---
+# CREATIVE MODE: DESIGN PROCESS MAP (AI Instructions)
+
+> **TL;DR:** Facilitate design for components flagged in `tasks.md` as needing creative input. Use `fetch_rules` to get specific design-type guidance (Arch, UI/UX, Algo) and `edit_file` to create/update `memory-bank/creative/creative-[component_name]-[date].md` documents.
+
+## 🧭 CREATIVE MODE PROCESS FLOW (AI Actions)
+
+1.  **Acknowledge & Context Gathering:**
+    a.  State: "Initiating CREATIVE mode. Identifying components requiring design."
+    b.  `read_file memory-bank/tasks.md`. Look for sub-tasks under the current main task that are marked like "CREATIVE: Design [Component Name] ([Design Type: Architecture/UI-UX/Algorithm])" and are not yet complete.
+    c.  `read_file memory-bank/activeContext.md` for overall project context and the current main task focus.
+    d.  If no active "CREATIVE: Design..." sub-tasks are found for the current main task, state: "No pending creative design tasks found for [main_task_name]. Please specify a component and design type, or transition to another mode." Await user.
+2.  **Iterate Through Pending Creative Sub-Tasks:**
+    a.  For each pending "CREATIVE: Design [Component Name] ([Design Type])" sub-task:
+        i.  Announce: "Starting CREATIVE phase for: [Component Name] - Design Type: [Architecture/UI-UX/Algorithm]."
+        ii. Update `memory-bank/activeContext.md` using `edit_file` to set current focus: "Creative Focus: Designing [Component Name] ([Design Type])."
+        iii. **Fetch Specific Design-Type Rule:**
+            *   If Design Type is Architecture: `fetch_rules` for `.cursor/rules/isolation_rules/Phases/CreativePhase/creative-phase-architecture.mdc`.
+            *   If Design Type is UI/UX: `fetch_rules` for `.cursor/rules/isolation_rules/Phases/CreativePhase/creative-phase-uiux.mdc`.
+            *   If Design Type is Algorithm: `fetch_rules` for `.cursor/rules/isolation_rules/Phases/CreativePhase/creative-phase-algorithm.mdc`.
+            *   (If design type is other/generic, fetch `Phases/CreativePhase/optimized-creative-template.mdc` and adapt general design principles).
+        iv. **Follow Fetched Rule:** The fetched rule will guide you through:
+            *   Defining the problem for that component.
+            *   Exploring options.
+            *   Analyzing trade-offs.
+            *   Making a design decision.
+            *   Outlining implementation guidelines.
+        v.  **Document Design:**
+            *   The fetched rule will instruct you to use `edit_file` to create or update the specific creative document: `memory-bank/creative/creative-[component_name]-[date].md`.
+            *   It will likely reference `.cursor/rules/isolation_rules/Phases/CreativePhase/optimized-creative-template.mdc` (which you can `read_file` if not fetched directly) for the structure of this document.
+        vi. **Update `memory-bank/activeContext.md`:** Use `edit_file` to append a summary of the design decision for [Component Name] to a "Creative Decisions Log" section.
+        vii. **Update `memory-bank/tasks.md`:** Use `edit_file` to mark the "CREATIVE: Design [Component Name]..." sub-task as complete.
+3.  **Overall Verification & Transition:**
+    a.  After all identified creative sub-tasks for the main task are complete, state: "All CREATIVE design phases for [main_task_name] are complete. Design documents are located in `memory-bank/creative/`."
+    b.  Recommend next mode: "Recommend transitioning to IMPLEMENT mode to build these components, or VAN QA mode for technical pre-flight checks if applicable." Await user.
+
+## 📊 PRE-CREATIVE CHECK (AI Self-Correction):
+1.  `read_file memory-bank/tasks.md`: Is there a main task currently in a state that expects creative design (e.g., PLAN phase completed, and specific "CREATIVE: Design..." sub-tasks are listed and pending)?
+2.  If not, or if PLAN phase is not complete for the main task, state: "CREATIVE mode requires a planned task with identified components for design. Please ensure PLAN mode is complete for [main_task_name] and creative sub-tasks are defined in `tasks.md`." Await user.

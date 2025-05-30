@@ -1,0 +1,106 @@
+---
+description: Intermediate task tracking for Level 3 features. Guides AI to update `tasks.md` with structured components, steps, creative markers, and checkpoints using `edit_file`.
+globs: **/Level3/task-tracking-intermediate.mdc
+alwaysApply: false
+---
+# LEVEL 3 INTERMEDIATE TASK TRACKING (AI Instructions)
+
+> **TL;DR:** This rule provides guidelines for structured task tracking in `memory-bank/tasks.md` for Level 3 (Intermediate Feature) tasks. Use `edit_file` to create and maintain this structure.
+
+This rule is typically fetched by the PLAN mode orchestrator (`Level3/planning-comprehensive.mdc` will refer to this structure).
+
+## ⚙️ AI ACTIONS FOR LEVEL 3 TASK TRACKING (Structure for `tasks.md`):
+
+When `Level3/planning-comprehensive.mdc` guides you to detail the plan in `tasks.md`, use `edit_file` to ensure the entry for the Level 3 feature includes the following structure.
+
+**Task Entry Template for `tasks.md` (L3 Feature):**
+```markdown
+## Task: [L3-ID: Feature Name, e.g., L3-001: Implement User Profile Page with Avatar Upload]
+
+- **Status:** [e.g., IN_PROGRESS_PLANNING, PENDING_CREATIVE, IN_PROGRESS_IMPLEMENTATION, etc.]
+- **Priority:** [High/Medium/Low]
+- **Complexity Level:** 3
+- **Assigned To:** AI
+- **Target Completion Date (Optional):** [YYYY-MM-DD]
+- **Links:**
+    - Project Brief: `../projectbrief.md`
+    - Creative Docs: (List links as they are created, e.g., `../creative/creative-profile-ui-20250515.md`)
+    - Reflection Doc: (Link when created)
+    - Archive Doc: (Link when created)
+
+### 1. Feature Description & Goals
+[As defined in `planning-comprehensive.mdc` guidance]
+
+### 2. Detailed Requirements
+#### 2.1. Functional Requirements
+[As defined in `planning-comprehensive.mdc` guidance]
+- [ ] FR1: ...
+#### 2.2. Non-Functional Requirements
+[As defined in `planning-comprehensive.mdc` guidance]
+- [ ] NFR1: ...
+
+### 3. Component Analysis
+#### 3.1. New Components
+[As defined in `planning-comprehensive.mdc` guidance]
+- Component A: ...
+#### 3.2. Modified Components
+[As defined in `planning-comprehensive.mdc` guidance]
+- Component X: ...
+#### 3.3. Component Interactions
+[As defined in `planning-comprehensive.mdc` guidance]
+
+### 4. Implementation Strategy & Sub-Tasks
+[Break down the high-level steps from `planning-comprehensive.mdc` into more granular, checkable sub-tasks for implementation. Prefix with `IMPL:`]
+- **Phase 1: Backend API Development**
+  - [ ] IMPL: Define data models for user profile and avatar.
+  - [ ] IMPL: Create API endpoint for fetching profile data.
+  - [ ] IMPL: Create API endpoint for updating profile data.
+  - [ ] IMPL: Create API endpoint for avatar image upload.
+  - [ ] IMPL: Write unit tests for API endpoints.
+- **Phase 2: Frontend UI Development**
+  - [ ] IMPL: Build profile display component.
+  - [ ] IMPL: Build profile edit form component.
+  - [ ] IMPL: Implement avatar upload UI.
+  - [ ] IMPL: Integrate frontend components with backend APIs.
+  - [ ] IMPL: Write component tests for UI.
+- **Phase 3: Testing & Refinement**
+  - [ ] IMPL: Perform integration testing.
+  - [ ] IMPL: Address any bugs found.
+  - [ ] IMPL: Code review and cleanup.
+
+### 5. Dependencies & Integrations
+[As defined in `planning-comprehensive.mdc` guidance]
+
+### 6. Risk Assessment & Mitigation
+[As defined in `planning-comprehensive.mdc` guidance]
+
+### 7. Creative Phase Requirements & Outcomes
+[List aspects flagged for CREATIVE mode in `planning-comprehensive.mdc`. Update with status and link to creative doc once done.]
+- [ ] CREATIVE: Design UI/UX for the new User Profile page. (Type: UI/UX)
+  - Status: [PENDING/IN_PROGRESS/COMPLETED]
+  - Document: `../creative/creative-profile-ui-[date].md` (once created)
+- [ ] CREATIVE: Architect avatar storage. (Type: Architecture)
+  - Status: [PENDING/IN_PROGRESS/COMPLETED]
+  - Document: `../creative/creative-avatar-storage-[date].md` (once created)
+
+### 8. Testing Strategy Overview
+[As defined in `planning-comprehensive.mdc` guidance]
+
+### 9. Checkpoints & Phase Gates
+- [ ] **PLAN Phase Complete:** [Date]
+- [ ] **CREATIVE Phase(s) Complete:** [Date] (All creative sub-tasks in section 7 marked complete)
+- [ ] **IMPLEMENT Phase Complete:** [Date] (All IMPL sub-tasks in section 4 marked complete)
+- [ ] **REFLECT Phase Complete:** [Date]
+- [ ] **ARCHIVE Phase Complete:** [Date] (Feature fully archived)
+
+### 10. Notes & Open Questions
+[As defined in `planning-comprehensive.mdc` guidance]
+```
+
+## 🔄 PROGRESS TRACKING (AI Actions during IMPLEMENT, REFLECT, etc.)
+*   As sub-tasks (IMPL, CREATIVE, etc.) are completed, use `edit_file` to mark them `[x]` in `tasks.md`.
+*   Update the main `Status:` field of the L3 task entry.
+*   Update the `Checkpoints & Phase Gates` section as each major phase concludes.
+*   Log detailed activities in `memory-bank/progress.md`.
+
+**Key Principle:** `tasks.md` for L3 features should be a living document, meticulously updated via `edit_file` to reflect the comprehensive plan and ongoing progress through all CMB modes.

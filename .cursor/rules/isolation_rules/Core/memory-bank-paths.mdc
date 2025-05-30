@@ -1,0 +1,35 @@
+---
+description: Defines canonical paths for core Memory Bank files and directories. CRITICAL reference for all file operations.
+globs: **/Core/memory-bank-paths.mdc
+alwaysApply: true
+---
+# CORE MEMORY BANK FILE & DIRECTORY LOCATIONS
+
+**CRITICAL REFERENCE:** Adhere strictly to these paths for all file operations (`edit_file`, `read_file`, `list_dir`, `run_terminal_cmd` for `mkdir`).
+
+## Root Memory Bank Directory:
+*   `memory-bank/` (at project root)
+
+## Core `.md` Files (in `memory-bank/`):
+*   Tasks: `memory-bank/tasks.md`
+*   Active Context: `memory-bank/activeContext.md`
+*   Progress: `memory-bank/progress.md`
+*   Project Brief: `memory-bank/projectbrief.md`
+*   Product Context: `memory-bank/productContext.md`
+*   System Patterns: `memory-bank/systemPatterns.md`
+*   Tech Context: `memory-bank/techContext.md`
+*   Style Guide: `memory-bank/style-guide.md`
+
+## Subdirectories in `memory-bank/`:
+*   Creative: `memory-bank/creative/` (Files: `creative-[feature_or_component_name]-[YYYYMMDD].md`)
+*   Reflection: `memory-bank/reflection/` (Files: `reflect-[task_id_or_feature_name]-[YYYYMMDD].md`)
+*   Archive: `memory-bank/archive/` (Files: `archive-[task_id_or_feature_name]-[YYYYMMDD].md`)
+
+## Project Documentation Directory (Separate from Memory Bank, but related):
+*   `documentation/` (at project root, for final, polished, user-facing docs)
+
+## AI Verification Mandate:
+*   Before using `edit_file` on Memory Bank artifacts, confirm the path starts with `memory-bank/` or one of its specified subdirectories.
+*   When creating new core files (e.g., `tasks.md`), use `edit_file` with the exact path (e.g., `memory-bank/tasks.md`).
+*   For `run_terminal_cmd mkdir`, ensure correct target paths (e.g., `mkdir memory-bank/creative`).
+*   Filenames for creative, reflection, and archive documents should include a descriptive name and a date (YYYYMMDD format is good practice).

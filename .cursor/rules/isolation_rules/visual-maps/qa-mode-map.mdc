@@ -1,0 +1,67 @@
+---
+description: Orchestrates general QA mode (distinct from VAN QA). Fetched when user invokes 'QA'. Guides AI to perform context-aware validation of Memory Bank consistency, task tracking, and phase-specific checks.
+globs: **/visual-maps/qa-mode-map.mdc
+alwaysApply: false
+---
+# QA MODE: GENERAL VALIDATION PROCESS MAP (AI Instructions)
+
+> **TL;DR:** Perform comprehensive validation of Memory Bank consistency, task tracking, and current phase status. This is a general QA mode, callable anytime, distinct from the pre-build VAN QA. Use `read_file` extensively and `edit_file` to log QA findings.
+
+## 🧭 QA MODE PROCESS FLOW (AI Actions)
+
+1.  **Acknowledge & Context Gathering:**
+    a.  State: "Initiating general QA MODE. Analyzing current project state."
+    b.  `read_file memory-bank/activeContext.md` to determine the current task, its perceived phase (VAN, PLAN, CREATIVE, IMPLEMENT, REFLECT, ARCHIVE), and complexity.
+    c.  `read_file memory-bank/tasks.md` for task statuses and details.
+    d.  `read_file memory-bank/progress.md` for activity log.
+2.  **Universal Validation Checks (AI Self-Correction & Reporting):**
+    a.  **Memory Bank Core File Integrity:**
+        i.  `fetch_rules` for `.cursor/rules/isolation_rules/Core/memory-bank-paths.mdc` to get list of core files.
+        ii. For each core file: Attempt `read_file`. Report if any are missing or seem corrupted (e.g., empty when they shouldn't be).
+    b.  **`tasks.md` Consistency:**
+        i.  Is there a clearly defined current task?
+        ii. Are statuses (PENDING, IN_PROGRESS, COMPLETE, BLOCKED, CREATIVE_NEEDED, QA_NEEDED, REFLECT_NEEDED, ARCHIVE_NEEDED) used consistently?
+        iii. Do sub-tasks roll up logically to the main task's status?
+    c.  **`activeContext.md` Relevance:**
+        i.  Does the `activeContext.md` accurately reflect the current focus apparent from `tasks.md` and `progress.md`?
+        ii. Is the "Last Updated" timestamp recent relative to `progress.md`?
+    d.  **`progress.md` Completeness:**
+        i.  Are there entries for recent significant activities?
+        ii. Do entries clearly state actions taken and outcomes?
+    e.  **Cross-Reference Check (Conceptual):**
+        i.  Do task IDs in `progress.md` or `activeContext.md` match those in `tasks.md`?
+        ii. Do references to creative/reflection/archive documents seem plausible (e.g., filenames match task names)?
+3.  **Phase-Specific Validation (Based on perceived current phase from `activeContext.md`):**
+    *   **If VAN phase:** Are `projectbrief.md`, `techContext.md` populated? Is complexity assessed in `tasks.md`?
+    *   **If PLAN phase:** Is `tasks.md` detailed with sub-tasks, requirements? Are creative needs identified for L3/L4?
+    *   **If CREATIVE phase:** Do `memory-bank/creative/` documents exist for components marked in `tasks.md`? Are decisions logged in `activeContext.md`?
+    *   **If IMPLEMENT phase:** Is there a "Build Log" in `activeContext.md`? Is `progress.md` being updated with code changes and test results? Are sub-tasks in `tasks.md` being marked complete?
+    *   **If REFLECT phase:** Does `memory-bank/reflection/reflect-[task_name]-[date].md` exist and seem complete? Is `tasks.md` updated for reflection?
+    *   **If ARCHIVE phase:** Does `memory-bank/archive/archive-[task_name]-[date].md` exist? Is `tasks.md` marked fully complete/archived?
+4.  **Report Generation:**
+    a.  Use `edit_file` to create a new QA report in `memory-bank/qa_reports/qa-report-[date]-[time].md`.
+    b.  **Structure of the report:**
+        ```markdown
+        # General QA Report - [Date] [Time]
+        - Perceived Current Task: [Task Name/ID]
+        - Perceived Current Phase: [Phase]
+        - Perceived Complexity: [Level]
+
+        ## Universal Validation Findings:
+        - Memory Bank Core Files: [OK/Issues found: list them]
+        - `tasks.md` Consistency: [OK/Issues found: list them]
+        - `activeContext.md` Relevance: [OK/Issues found: list them]
+        - `progress.md` Completeness: [OK/Issues found: list them]
+        - Cross-References: [OK/Issues found: list them]
+
+        ## Phase-Specific ([Phase]) Validation Findings:
+        - [Check 1]: [OK/Issue]
+        - [Check 2]: [OK/Issue]
+
+        ## Summary & Recommendations:
+        - Overall Status: [GREEN/YELLOW/RED]
+        - [Specific recommendations for fixes or areas to improve]
+        ```
+    c.  Announce: "General QA validation complete. Report generated at `memory-bank/qa_reports/qa-report-[date]-[time].md`."
+    d.  Present a summary of key findings (especially any RED/YELLOW status items) directly to the user.
+5.  **Await User Action:** Await user instructions for addressing any reported issues or proceeding.

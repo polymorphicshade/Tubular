@@ -1,0 +1,99 @@
+---
+description: Orchestrates the comprehensive workflow for Level 4 (Complex System) tasks, guiding AI through all 7 CMB modes by fetching specific L4 and Core rules.
+globs: **/Level4/workflow-level4.mdc
+alwaysApply: false
+---
+# COMPREHENSIVE WORKFLOW FOR LEVEL 4 TASKS (AI Instructions)
+
+> **TL;DR:** This rule orchestrates the full, comprehensive workflow for Level 4 (Complex System) tasks. It guides the AI through all 7 CMB modes (Initialization, Documentation Setup, Architectural Planning, Creative Phases, Phased Implementation, Reflection, and Archiving) by fetching specific L4 and Core rules.
+
+This workflow is typically fetched after VAN mode has confirmed the task as Level 4.
+
+## 🧭 LEVEL 4 WORKFLOW PHASES (AI Actions)
+
+### Phase 1: INITIALIZATION (Confirmation & Deep Context)
+1.  **Acknowledge & Confirm L4:**
+    a.  State: "Initiating Level 4 Workflow for system: [System Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` and `memory-bank/activeContext.md` to confirm task is Level 4 and gather initial high-level scope.
+2.  **Core Setup Verification (Crucial for L4):**
+    a.  Ensure platform awareness: `fetch_rules` for `.cursor/rules/isolation_rules/Core/platform-awareness.mdc`.
+    b.  Ensure Memory Bank structure: `fetch_rules` for `.cursor/rules/isolation_rules/Core/file-verification.mdc`.
+3.  **Task Framework & Enterprise Context:**
+    a.  Verify `tasks.md` has a main entry for this L4 system.
+    b.  `edit_file memory-bank/activeContext.md` to set focus: "Focus: L4 System - [System Name] - Initializing & Documentation Setup."
+    c.  (User might provide initial enterprise context, or AI might need to synthesize from `projectbrief.md`).
+4.  **Milestone:** State "L4 Initialization complete. Proceeding to Documentation Setup."
+
+### Phase 2: DOCUMENTATION SETUP (L4 Comprehensive)
+1.  **Load Comprehensive Templates (Conceptual):** AI should be aware of the need for detailed documentation.
+2.  **Update Core Memory Bank Files:**
+    a.  Use `edit_file` to extensively update/populate:
+        *   `memory-bank/projectbrief.md` (detailed system description, goals, scope).
+        *   `memory-bank/productContext.md` (business drivers, stakeholders, market needs).
+        *   `memory-bank/systemPatterns.md` (any known enterprise patterns to adhere to, or placeholder for new patterns).
+        *   `memory-bank/techContext.md` (existing tech landscape, constraints, preferred stack).
+3.  **Establish Documentation Framework:**
+    a.  If not already present, use `run_terminal_cmd` to create `memory-bank/architecture/` and `memory-bank/architecture/adrs/` directories.
+4.  **Milestone:** State "L4 Documentation Setup complete. Proceeding to Architectural Planning."
+
+### Phase 3: ARCHITECTURAL PLANNING (PLAN Mode Actions for L4)
+1.  **Fetch L4 Planning Rules:**
+    a.  State: "Fetching Level 4 architectural planning and advanced task tracking guidelines."
+    b.  `fetch_rules` for `.cursor/rules/isolation_rules/Level4/task-tracking-advanced.mdc`. (This sets up the detailed structure in `tasks.md`).
+    c.  `fetch_rules` for `.cursor/rules/isolation_rules/Level4/architectural-planning.mdc`.
+2.  **Follow Fetched Rules:**
+    a.  `task-tracking-advanced.mdc` guides structuring `tasks.md` for L4 complexity.
+    b.  `architectural-planning.mdc` guides defining the architecture (requirements, context, vision, principles, alternatives, ADRs, diagrams) within `tasks.md` or linked documents. Use `edit_file` for all documentation.
+3.  **Update Context & Recommend Next Mode:**
+    a.  `read_file memory-bank/tasks.md` (specifically the architectural plan and WBS) to identify components/features needing CREATIVE design.
+    b.  Use `edit_file` to update `memory-bank/activeContext.md`: "Architectural planning complete for L4 system [System Name]. Creative phases for [list key components/features] identified."
+    c.  State: "Level 4 Architectural Planning complete. Detailed plan and architecture documented. Recommend CREATIVE mode for designated components." Await user.
+4.  **Milestone:** Architectural Planning phase complete. Await user confirmation for CREATIVE mode.
+
+### Phase 4: CREATIVE PHASES (CREATIVE Mode Actions for L4)
+1.  **Acknowledge & Fetch Creative Orchestrator:**
+    a.  State: "Initiating CREATIVE mode for L4 system [System Name] components as per architectural plan."
+    b.  `fetch_rules` for `.cursor/rules/isolation_rules/visual-maps/creative-mode-map.mdc`.
+2.  **Follow Fetched Rule (`creative-mode-map.mdc`):**
+    a.  This orchestrator will guide identifying "CREATIVE: Design..." tasks from the L4 plan in `tasks.md` and fetching specific `Phases/CreativePhase/*.mdc` rules for each.
+    b.  Ensure detailed design documents are created in `memory-bank/creative/` using `edit_file`.
+3.  **Update Context & Recommend:**
+    a.  Use `edit_file` to update `memory-bank/activeContext.md`: "Creative design phases complete for L4 system [System Name]. Ready for Phased Implementation."
+    b.  State: "Level 4 Creative phases complete. Design documents finalized. Recommend IMPLEMENT mode for phased development."
+4.  **Milestone:** Creative phase complete. Await user confirmation for IMPLEMENT mode.
+
+### Phase 5: PHASED IMPLEMENTATION (IMPLEMENT Mode Actions for L4)
+1.  **Fetch L4 Implementation Rule:**
+    a.  State: "Initiating Phased Implementation for L4 system [System Name]."
+    b.  `fetch_rules` for `.cursor/rules/isolation_rules/Level4/phased-implementation.mdc`.
+2.  **Follow Fetched Rule (`phased-implementation.mdc`):**
+    a.  This rule guides defining implementation phases (Foundation, Core, Extension, Integration, Finalization) in `tasks.md`.
+    b.  For each phase, implement sub-tasks using `edit_file` for code, `run_terminal_cmd` for builds/tests.
+    c.  Perform rigorous verification at each phase gate.
+    d.  Update `tasks.md` and `progress.md` meticulously.
+3.  **Update Context & Recommend:**
+    a.  Use `edit_file` to update `memory-bank/activeContext.md`: "Phased Implementation complete for L4 system [System Name]. Ready for Comprehensive Reflection."
+    b.  State: "Level 4 Phased Implementation complete. System built and tested. Recommend REFLECT mode."
+4.  **Milestone:** Phased Implementation complete. Await user confirmation for REFLECT mode.
+
+### Phase 6: COMPREHENSIVE REFLECTION (REFLECT Mode Actions for L4)
+1.  **Fetch L4 Reflection Rule:**
+    a.  State: "Initiating Comprehensive Reflection for L4 system [System Name]."
+    b.  `fetch_rules` for `.cursor/rules/isolation_rules/Level4/reflection-comprehensive.mdc`.
+2.  **Follow Fetched Rule (`reflection-comprehensive.mdc`):**
+    a.  This rule guides creating an extensive reflection document in `memory-bank/reflection/` using `edit_file`, analyzing all project aspects (performance, architecture, process, lessons, strategic actions).
+3.  **Update Context & Recommend:**
+    a.  Use `edit_file` to update `memory-bank/activeContext.md`: "Comprehensive Reflection complete for L4 system [System Name]. Ready for Archiving."
+    b.  State: "Level 4 Comprehensive Reflection complete. Reflection document created. Recommend ARCHIVE mode."
+4.  **Milestone:** Reflection phase complete. Await user confirmation for ARCHIVE mode.
+
+### Phase 7: COMPREHENSIVE ARCHIVING (ARCHIVE Mode Actions for L4)
+1.  **Fetch L4 Archiving Rule:**
+    a.  State: "Initiating Comprehensive Archiving for L4 system [System Name]."
+    b.  `fetch_rules` for `.cursor/rules/isolation_rules/Level4/archive-comprehensive.mdc`.
+2.  **Follow Fetched Rule (`archive-comprehensive.mdc`):**
+    a.  This rule guides creating a detailed system archive document in `memory-bank/archive/` (or `documentation/`) using `edit_file`, consolidating all project artifacts and knowledge.
+    b.  Update `tasks.md` marking the L4 system ARCHIVED.
+3.  **Finalize Context:**
+    a.  Use `edit_file` to update `memory-bank/activeContext.md`: "L4 System [System Name] comprehensively archived. Memory Bank ready for new top-level task (VAN mode)."
+4.  **Milestone:** State "Level 4 System [System Name] fully completed and archived. Recommend VAN mode for new system/project."
