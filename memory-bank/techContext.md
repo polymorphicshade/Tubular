@@ -12,7 +12,7 @@
 
 ## Project Technical Stack
 - Language: Java/Kotlin
-- JDK Version: JDK 17
+- JDK Version: JDK 17 (F:\Program Files (x86)\jdk-17)
 - Build System: Gradle 8.9
 - Gradle Version: 8.7.1
 - Kotlin Version: 1.9.25
