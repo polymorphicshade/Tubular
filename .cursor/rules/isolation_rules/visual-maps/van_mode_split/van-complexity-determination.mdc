@@ -1,0 +1,15 @@
+---
+description: VAN sub-rule for task complexity determination (DEPRECATED - Logic moved to Core/complexity-decision-tree.mdc). This file is a placeholder.
+globs: **/visual-maps/van_mode_split/van-complexity-determination.mdc
+alwaysApply: false
+---
+# VAN MODE: COMPLEXITY DETERMINATION (Placeholder - Logic Moved)
+
+> **TL;DR:** This rule is a placeholder. The primary task complexity determination logic has been consolidated into `.cursor/rules/isolation_rules/Core/complexity-decision-tree.mdc`.
+
+## ⚙️ AI ACTION:
+
+1.  **Acknowledge:** State: "Note: `van_mode_split/van-complexity-determination.mdc` is a placeholder. The main complexity determination logic is in `Core/complexity-decision-tree.mdc`."
+2.  **Guidance:** If you were instructed to determine task complexity, you should have been (or should be) directed to `fetch_rules` for `.cursor/rules/isolation_rules/Core/complexity-decision-tree.mdc`.
+
+(Control returns to the fetching rule, likely `van-mode-map.mdc` which should fetch the Core rule directly).

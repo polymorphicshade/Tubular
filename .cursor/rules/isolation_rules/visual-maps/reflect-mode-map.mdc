@@ -1,0 +1,43 @@
+---
+description: Orchestrates REFLECT mode. Fetched after IMPLEMENT. Guides AI to review implementation, document lessons in `reflection/...md`, and update Memory Bank using level-specific rules and `edit_file`.
+globs: **/visual-maps/reflect-mode-map.mdc
+alwaysApply: false
+---
+# REFLECT MODE: TASK REVIEW PROCESS MAP (AI Instructions)
+
+> **TL;DR:** Review the completed implementation, document insights and lessons learned in `memory-bank/reflection/reflect-[task_name]-[date].md`. Use `edit_file` for all documentation. Fetch level-specific reflection rules for detailed guidance.
+
+## 🧭 REFLECT MODE PROCESS FLOW (AI Actions)
+
+1.  **Acknowledge & Context Gathering:**
+    a.  State: "Initiating REFLECT mode for the current task."
+    b.  `read_file memory-bank/activeContext.md` to identify the current task, its complexity level, and confirmation that IMPLEMENT phase is complete.
+    c.  `read_file memory-bank/tasks.md` for the original plan, sub-tasks, and requirements.
+    d.  `read_file memory-bank/progress.md` to review the implementation journey and any challenges logged.
+    e.  `read_file` any relevant `memory-bank/creative/creative-[component]-[date].md` documents (for L3/L4) to compare design with implementation.
+2.  **Pre-Reflection Check (AI Self-Correction):**
+    a.  Verify from `tasks.md` or `activeContext.md` that the IMPLEMENT phase for the current task is marked as complete.
+    b.  If not, state: "REFLECT BLOCKED: Implementation phase is not yet complete for task [task_name]. Please complete IMPLEMENT mode first." Await user.
+3.  **Fetch Level-Specific Reflection Rule:**
+    a.  Based on the complexity level:
+        *   **Level 1:** `fetch_rules` for `.cursor/rules/isolation_rules/Level1/reflection-basic.mdc`. (If not present, use L2)
+        *   **Level 2:** `fetch_rules` for `.cursor/rules/isolation_rules/Level2/reflection-basic.mdc`. (Note: `rules-visual-maps.txt` refers to `reflection-standard.md` for L2, I'll use `reflection-basic` as per `STRUCTURE.md` or assume they are similar. If a specific `reflection-standard.mdc` exists, use that).
+        *   **Level 3:** `fetch_rules` for `.cursor/rules/isolation_rules/Level3/reflection-intermediate.mdc`.
+        *   **Level 4:** `fetch_rules` for `.cursor/rules/isolation_rules/Level4/reflection-comprehensive.mdc`.
+4.  **Follow Fetched Rule (Structured Reflection):**
+    a.  The fetched level-specific `.mdc` rule will guide you through the reflection process, which involves creating/updating `memory-bank/reflection/reflect-[task_name_or_id]-[date].md` using `edit_file`. Key sections to populate (guided by the fetched rule):
+        i.  **Summary of Task & Outcome:** What was built, did it meet goals?
+        ii. **What Went Well:** Successful aspects, efficient processes.
+        iii. **Challenges Encountered:** Difficulties, roadblocks, unexpected issues. How were they overcome?
+        iv. **Lessons Learned:** Key takeaways, new knowledge gained (technical, process-wise).
+        v.  **Comparison with Plan/Design:** Deviations from original plan/design and why.
+        vi. **Process Improvements:** Suggestions for future tasks.
+        vii. **Technical Improvements/Alternatives:** Better technical approaches for similar future tasks.
+        viii. **Code Quality/Maintainability Assessment (if applicable).**
+    b.  Use `edit_file` to meticulously populate the reflection document.
+    c.  Update `memory-bank/activeContext.md` with notes like "Reflection in progress for [task_name]."
+5.  **Notify Completion:**
+    a.  Once the reflection document is complete as per the fetched rule, state: "REFLECTION COMPLETE for task [task_name]. Reflection document created/updated at `memory-bank/reflection/reflect-[task_name_or_id]-[date].md`."
+    b.  Use `edit_file` to update `memory-bank/tasks.md`, marking the REFLECT phase as complete for the task.
+    c.  Use `edit_file` to update `memory-bank/activeContext.md`: "Reflection phase complete for [task_name]. Ready for ARCHIVE mode."
+    d.  Recommend: "Recommend transitioning to ARCHIVE mode to finalize and store task documentation." Await user.

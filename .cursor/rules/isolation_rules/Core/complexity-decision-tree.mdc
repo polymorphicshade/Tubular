@@ -1,0 +1,37 @@
+---
+description: Core rule for AI to determine task complexity (Level 1-4) and initiate appropriate workflow using Memory Bank principles.
+globs: **/Core/complexity-decision-tree.mdc
+alwaysApply: false
+---
+# TASK COMPLEXITY DETERMINATION
+
+> **TL;DR:** This rule guides you to determine task complexity (Level 1-4). Based on the level, you will then be instructed to `fetch_rules` for the corresponding primary mode map.
+
+## 🌳 COMPLEXITY DECISION TREE (Conceptual for AI)
+**Textual Guide for AI:**
+Based on user's request and initial analysis (e.g., from `read_file` on `README.md`):
+
+1.  **Bug fix/error correction?**
+    *   **Yes:** Single, isolated component? -> **Level 1 (Quick Bug Fix)**
+    *   **Yes:** Multiple components, straightforward fix? -> **Level 2 (Simple Enhancement/Refactor)**
+    *   **Yes:** Complex interactions, architectural impact? -> **Level 3 (Intermediate Feature/Bug)**
+    *   **No (new feature/enhancement):**
+        *   Small, self-contained addition? -> **Level 2 (Simple Enhancement)**
+        *   Complete new feature, multiple components, needs design? -> **Level 3 (Intermediate Feature)**
+        *   System-wide, major subsystem, deep architectural design? -> **Level 4 (Complex System)**
+
+## 📝 ACTION: DOCUMENT & ANNOUNCE COMPLEXITY
+
+1.  **Determine Level:** Decide Level 1, 2, 3, or 4.
+2.  **Document in `activeContext.md`:** Use `edit_file` to update `memory-bank/activeContext.md`:
+    ```markdown
+    ## Task Complexity Assessment
+    - Task: [User's request]
+    - Determined Complexity: Level [1/2/3/4] - [Name]
+    - Rationale: [Justification]
+    ```
+3.  **Update `tasks.md`:** Use `edit_file` to update `memory-bank/tasks.md` with the level, e.g., `Level 3: Implement user auth`.
+4.  **Announce & Next Step:**
+    *   State: "Assessed as Level [N]: [Name]."
+    *   **Level 1:** "Proceeding with Level 1 workflow. Will `fetch_rules` for `.cursor/rules/isolation_rules/Level1/workflow-level1.mdc` (or directly to IMPLEMENT map if simple enough, e.g., `visual-maps/implement-mode-map.mdc` which might then fetch a Level 1 implement rule)."
+    *   **Level 2-4:** "Requires detailed planning. Transitioning to PLAN mode. Will `fetch_rules` for `.cursor/rules/isolation_rules/visual-maps/plan-mode-map.mdc`."

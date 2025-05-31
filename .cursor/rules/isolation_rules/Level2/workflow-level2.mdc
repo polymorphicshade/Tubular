@@ -1,0 +1,87 @@
+---
+description: Basic workflow for Level 2 (Simple Enhancement) tasks. Guides AI through Initialization, Documentation Setup, Planning, Implementation, Reflection, and Archiving using `fetch_rules` for level-specific details.
+globs: **/Level2/workflow-level2.mdc
+alwaysApply: false
+---
+# WORKFLOW FOR LEVEL 2 TASKS (AI Instructions)
+
+> **TL;DR:** This rule orchestrates the workflow for Level 2 (Simple Enhancement) tasks. It guides the AI through 6 key phases, fetching specific Level 2 rules for planning, reflection, and archiving.
+
+This workflow is typically fetched after VAN mode has confirmed the task as Level 2.
+
+## 🧭 LEVEL 2 WORKFLOW PHASES (AI Actions)
+
+### Phase 1: INITIALIZATION (Confirmation & Context)
+1.  **Acknowledge & Confirm L2:**
+    a.  State: "Initiating Level 2 Workflow for [Task Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` and `memory-bank/activeContext.md` to confirm task is indeed Level 2 and gather initial scope.
+2.  **Platform & File Verification (If not done by VAN):**
+    a.  If VAN mode didn't fully complete platform detection or Memory Bank setup (e.g., if transitioning from a different context), briefly ensure core setup:
+        i.  `fetch_rules` for `.cursor/rules/isolation_rules/Core/platform-awareness.mdc`.
+        ii. `fetch_rules` for `.cursor/rules/isolation_rules/Core/file-verification.mdc`.
+3.  **Task Entry:**
+    a.  Ensure `tasks.md` has an entry for this L2 task. `activeContext.md` should reflect "Focus: L2 Task - [Task Name]".
+4.  **Milestone:** State "L2 Initialization complete. Proceeding to Documentation Setup."
+
+### Phase 2: DOCUMENTATION SETUP (Minimal Context Update)
+1.  **Update `projectbrief.md` (If necessary):**
+    a.  `read_file memory-bank/projectbrief.md`.
+    b.  If the L2 enhancement significantly alters or adds to project goals, use `edit_file` to add a brief note. Often not needed for L2.
+2.  **Update `activeContext.md`:**
+    a.  Use `edit_file` to ensure `memory-bank/activeContext.md` clearly states: "Current Focus: Planning Level 2 Enhancement - [Task Name]".
+3.  **Milestone:** State "L2 Documentation Setup complete. Proceeding to Task Planning."
+
+### Phase 3: TASK PLANNING (PLAN Mode Actions)
+1.  **Fetch L2 Planning Rule:**
+    a.  State: "Fetching Level 2 task planning guidelines."
+    b.  `fetch_rules` for `.cursor/rules/isolation_rules/Level2/task-tracking-basic.mdc`.
+2.  **Follow Fetched Rule:**
+    a.  The `task-tracking-basic.mdc` rule will guide you to use `edit_file` to update `memory-bank/tasks.md` with:
+        *   Clear requirements/acceptance criteria.
+        *   A list of 3-7 high-level sub-tasks for implementation.
+        *   Minimal dependencies and notes.
+3.  **Update Context & Recommend:**
+    a.  Use `edit_file` to update `memory-bank/activeContext.md`: "Planning complete for L2 task [Task Name]. Ready for Implementation."
+    b.  State: "Level 2 Planning complete. Sub-tasks defined in `tasks.md`. Recommend IMPLEMENT mode."
+4.  **Milestone:** Await user confirmation to proceed to IMPLEMENT mode.
+
+### Phase 4: IMPLEMENTATION (IMPLEMENT Mode Actions)
+1.  **Acknowledge & Review Plan:**
+    a.  State: "Initiating Implementation for L2 task [Task Name]."
+    b.  `read_file memory-bank/tasks.md` to review the sub-tasks.
+    c.  `fetch_rules` for `.cursor/rules/isolation_rules/Core/command-execution.mdc` for tool usage guidelines.
+2.  **Implement Sub-tasks:**
+    a.  Iterate through sub-tasks in `tasks.md`.
+    b.  For each sub-task:
+        i.  Use `edit_file` for code changes.
+        ii. Use `run_terminal_cmd` for simple builds or tests if applicable (platform-aware).
+        iii. Use `edit_file` to update `memory-bank/progress.md` with actions taken and outcomes.
+        iv. Use `edit_file` to mark the sub-task as complete in `tasks.md`.
+3.  **Final Verification:**
+    a.  Perform basic overall verification of the enhancement.
+4.  **Update Context & Recommend:**
+    a.  Use `edit_file` to update `memory-bank/activeContext.md`: "Implementation complete for L2 task [Task Name]. Ready for Reflection."
+    b.  State: "Level 2 Implementation complete. Recommend REFLECT mode."
+5.  **Milestone:** Await user confirmation to proceed to REFLECT mode.
+
+### Phase 5: REFLECTION (REFLECT Mode Actions)
+1.  **Fetch L2 Reflection Rule:**
+    a.  State: "Fetching Level 2 reflection guidelines."
+    b.  `fetch_rules` for `.cursor/rules/isolation_rules/Level2/reflection-basic.mdc`.
+2.  **Follow Fetched Rule:**
+    a.  The `reflection-basic.mdc` rule will guide you to use `edit_file` to create `memory-bank/reflection/reflect-[task_name_or_id]-[date].md` with sections for summary, what went well, challenges, and key learnings.
+3.  **Update Context & Recommend:**
+    a.  Use `edit_file` to update `memory-bank/activeContext.md`: "Reflection complete for L2 task [Task Name]. Ready for Archiving."
+    b.  State: "Level 2 Reflection complete. Reflection document created. Recommend ARCHIVE mode."
+4.  **Milestone:** Await user confirmation to proceed to ARCHIVE mode.
+
+### Phase 6: ARCHIVING (ARCHIVE Mode Actions)
+1.  **Fetch L2 Archiving Rule:**
+    a.  State: "Fetching Level 2 archiving guidelines."
+    b.  `fetch_rules` for `.cursor/rules/isolation_rules/Level2/archive-basic.mdc`.
+2.  **Follow Fetched Rule:**
+    a.  The `archive-basic.mdc` rule will guide you to use `edit_file` to create `memory-bank/archive/archive-[task_name_or_id]-[date].md`, summarizing the enhancement, implementation, and linking to the reflection doc.
+    b.  It will also guide updates to `tasks.md` (mark ARCHIVED) and `progress.md`.
+3.  **Finalize Context:**
+    a.  Use `edit_file` to update `memory-bank/activeContext.md` to clear focus from the completed L2 task and state: "L2 Task [Task Name] archived. Ready for new task (VAN mode)."
+4.  **Milestone:** State "Level 2 Task [Task Name] fully completed and archived. Recommend VAN mode for new task."

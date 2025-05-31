@@ -1,0 +1,44 @@
+---
+description: VAN QA sub-rule for specific file/artifact verification post-build or during QA. Fetched by `van-qa-main.mdc` if deeper file checks are needed.
+globs: **/visual-maps/van_mode_split/van-qa-checks/file-verification.mdc
+alwaysApply: false
+---
+# VAN QA: DETAILED FILE VERIFICATION (AI Instructions)
+
+> **TL;DR:** Verify existence, content, or structure of specific project files or build artifacts, beyond initial Memory Bank setup. Log findings to `activeContext.md`. This rule is typically fetched by `van-qa-main.mdc` if specific file checks are part of the QA plan.
+
+## ⚙️ AI ACTIONS FOR DETAILED FILE VERIFICATION:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Starting Detailed File Verification."
+    b.  `read_file memory-bank/tasks.md` or `activeContext.md` to understand which specific files or artifact locations need verification as part of the current QA scope (e.g., "ensure `dist/bundle.js` is created after build", "check `config.yaml` has specific keys").
+    c.  If no specific files are targeted for this QA check, state so and this check can be considered trivially PASS.
+2.  **Define Checks (Based on QA Scope):**
+    *   **Existence Check:** `list_dir [path_to_dir]` to see if `[filename]` is present.
+    *   **Content Snippet Check:** `read_file [filepath]` and then search for a specific string or pattern within the content.
+    *   **File Size Check (Conceptual):** If a build artifact is expected, `list_dir -l [filepath]` (Unix-like) or `Get-ChildItem [filepath] | Select-Object Length` (PowerShell) might give size. AI notes if it's unexpectedly zero or very small.
+    *   **Structure Check (Conceptual for complex files like XML/JSON):** `read_file [filepath]` and describe if it generally conforms to expected structure (e.g., "appears to be valid JSON with a root object containing 'data' and 'errors' keys").
+3.  **Execute Checks (Using `list_dir`, `read_file`, or `run_terminal_cmd` for file system info):**
+    a.  For each defined file check:
+        i.  State the file and the check being performed.
+        ii. Execute the appropriate tool/command.
+        iii. Record the observation/output.
+4.  **Evaluate Results & Log:**
+    a.  Based on observations, determine if file verifications pass.
+    b.  Use `edit_file` to append findings to the "VAN QA Log" in `memory-bank/activeContext.md`:
+        ```markdown
+        #### Detailed File Verification Log - [Timestamp]
+        - File: `dist/app.js`
+          - Check: Existence after build.
+          - Observation: File exists.
+          - Status: PASS
+        - File: `src/config/settings.json`
+          - Check: Contains key `"api_url"`.
+          - Observation: `read_file` content shows `"api_url": "https://example.com"`.
+          - Status: PASS
+        - ... (other checks) ...
+        - Overall Detailed File Verification Status: [PASS/FAIL]
+        ```
+5.  **Completion:**
+    a.  State: "Detailed File Verification complete. Overall Status: [PASS/FAIL]."
+    b.  (The `van-qa-main.mdc` orchestrator will use this outcome).

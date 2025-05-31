@@ -1,0 +1,91 @@
+---
+description: Architectural planning guidelines for Level 4 (Complex System) tasks. Guides AI to create comprehensive architectural documentation using `edit_file` and link to `tasks.md`.
+globs: **/Level4/architectural-planning.mdc
+alwaysApply: false
+---
+# ARCHITECTURAL PLANNING FOR LEVEL 4 TASKS (AI Instructions)
+
+> **TL;DR:** This rule guides comprehensive architectural planning for Level 4 (Complex System) tasks. Use `edit_file` to create detailed architectural documents (or sections within `tasks.md` / linked documents), covering requirements, context, vision, principles, alternatives, decisions (ADRs), and diagrams (descriptively).
+
+This rule is typically fetched by the PLAN mode orchestrator (`Level4/workflow-level4.mdc` will fetch this after `Level4/task-tracking-advanced.mdc`).
+
+## ⚙️ AI ACTIONS FOR LEVEL 4 ARCHITECTURAL PLANNING:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Initiating Architectural Planning for Level 4 system: [System Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` (for the L4 task structure created by `task-tracking-advanced.mdc`).
+    c.  `read_file memory-bank/projectbrief.md`, `productContext.md`, `systemPatterns.md` (existing patterns), `techContext.md`.
+2.  **Document Architectural Plan (using `edit_file` to update `tasks.md` or a dedicated `memory-bank/architecture/system-[system_name]-arch-plan-[date].md` linked from `tasks.md`):**
+
+    Create/Populate the following sections:
+
+    ```markdown
+    ### Section X: Architectural Planning for [System Name] (L4)
+
+    #### X.1. Architectural Requirements Analysis (Derived from main requirements)
+    - **Key Functional Drivers for Architecture:** [e.g., High concurrency user access, Real-time data processing, Complex workflow orchestration]
+    - **Key Non-Functional Requirements (Quality Attributes):**
+      - Performance: [Specific targets, e.g., Sub-second API response under X load]
+      - Scalability: [e.g., Support Y concurrent users, Z TPS, linear scaling strategy]
+      - Availability: [e.g., 99.99% uptime, fault tolerance mechanisms]
+      - Security: [e.g., Compliance with PCI-DSS, data encryption at rest and in transit, robust authN/authZ]
+      - Maintainability: [e.g., Modular design, clear interfaces, comprehensive testability]
+      - Extensibility: [e.g., Ability to add new service types with minimal core changes]
+    - **Domain Model Overview:** [Briefly describe key entities and relationships relevant to architecture].
+
+    #### X.2. Business Context for Architecture
+    - **Business Objectives Driving Architecture:** [e.g., Reduce operational costs by 20%, Enable new market entry]
+    - **Key Stakeholder Concerns (Architectural):** [e.g., CTO requires use of existing Kubernetes infrastructure]
+    - **Architectural Constraints (Technical, Organizational, External, Regulatory):**
+      - Technical: [e.g., Must integrate with legacy System Z via SOAP API]
+      - Organizational: [e.g., Development team skill set primarily Java and Python]
+      - Budgetary: [e.g., Preference for open-source technologies where feasible]
+
+    #### X.3. Architectural Vision & Goals
+    - **Vision Statement:** [A concise statement for the system's architecture, e.g., "A resilient, scalable microservices architecture enabling rapid feature development..."]
+    - **Strategic Architectural Goals:** [e.g., Achieve loose coupling between services, Ensure data consistency across distributed components]
+
+    #### X.4. Architectural Principles (Guiding Decisions)
+    [List 3-5 core architectural principles for this system, e.g.:]
+    - Principle 1: Event-Driven Design for asynchronous operations.
+    - Principle 2: API-First approach for all service interactions.
+    - Principle 3: Design for Failure - anticipate and handle component failures gracefully.
+
+    #### X.5. Architectural Alternatives Explored (High-Level)
+    [Briefly describe 1-2 major architectural patterns/styles considered and why the chosen one (or a hybrid) is preferred. E.g., "Considered monolithic vs. microservices. Chose microservices for scalability..."]
+
+    #### X.6. Key Architectural Decisions (ADRs - Create separate ADRs or summarize here)
+    [For each major architectural decision, document using an ADR-like format or link to separate ADR files in `memory-bank/architecture/adrs/`.]
+    - **ADR-001: Choice of Messaging Queue**
+      - Status: Decided
+      - Context: Need for asynchronous communication between services A and B.
+      - Decision: Use RabbitMQ.
+      - Rationale: Proven reliability, supports required messaging patterns, team familiarity.
+      - Alternatives Considered: Kafka (overkill for current needs), Redis Streams (less mature).
+    - **ADR-002: Database Technology for Service C**
+      - ...
+
+    #### X.7. High-Level Architecture Diagrams (Textual Descriptions)
+    [AI describes diagrams. User might create actual diagrams based on these descriptions.]
+    - **System Context Diagram Description:** [Describe the system, its users, and external systems it interacts with.]
+    - **Component Diagram Description:** [Describe major logical components/services and their primary interactions/dependencies.]
+    - **Data Flow Diagram Description (Key Flows):** [Describe how data flows through the system for 1-2 critical use cases.]
+    - **Deployment View Description (Conceptual):** [Describe how components might be deployed, e.g., "Services A, B, C as Docker containers in Kubernetes. Database D as a managed cloud service."]
+
+    #### X.8. Technology Stack (Key Choices)
+    [List key technologies chosen for backend, frontend, database, messaging, caching, etc., with brief rationale if not covered in ADRs.]
+    - Backend: [e.g., Java Spring Boot]
+    - Database: [e.g., PostgreSQL]
+
+    #### X.9. Architectural Risks & Mitigation
+    [Identify key risks related to the chosen architecture and how they will be mitigated.]
+    - Risk: [e.g., Complexity of managing distributed transactions in microservices.]
+      - Mitigation: [e.g., Employ SAGA pattern, implement robust monitoring and compensating transactions.]
+    ```
+3.  **Log Update:**
+    a.  Use `edit_file` to add a note to `memory-bank/activeContext.md`:
+        `[Timestamp] - Architectural planning for L4 system [System Name] documented in tasks.md / linked architecture plan.`
+4.  **Completion & Recommendation:**
+    a.  State: "Architectural planning for Level 4 system [System Name] is complete. Key decisions and structure documented."
+    b.  "Recommend proceeding to CREATIVE phases for detailed design of specific components/services identified in the architectural plan, or directly to Phased Implementation planning if architecture is sufficiently detailed."
+    c.  (Control returns to the PLAN mode orchestrator / L4 Workflow orchestrator).

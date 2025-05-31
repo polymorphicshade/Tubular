@@ -1,0 +1,19 @@
+---
+description: Design overview of Memory Bank optimization strategies. For AI understanding of system goals.
+globs: **/Core/optimization-integration.mdc
+alwaysApply: false
+---
+# MEMORY BANK OPTIMIZATION INTEGRATION (AI Understanding)
+
+> **TL;DR:** You enact Memory Bank optimizations by following specific instructions from other rule files that guide hierarchical rule loading, adaptive complexity, and progressive documentation. This is not a standalone process you run, but a result of adhering to the CMB framework.
+
+## 🔄 HOW YOU ACHIEVE OPTIMIZATIONS:
+You don't "run" an optimization integration flow. You achieve system optimizations by:
+1.  **Hierarchical Rule Loading:** Following `fetch_rules` instructions in main prompts and other `.mdc` files to load only necessary rules when they are needed. This keeps your immediate context focused and relevant. (See `Core/hierarchical-rule-loading.mdc`).
+2.  **Adaptive Complexity Model:** Following `Core/complexity-decision-tree.mdc` (when fetched in VAN mode) to assess task complexity. Then, loading level-specific rules (from `LevelX/` directories) as directed by subsequent instructions. This tailors the process to the task's needs.
+3.  **Dynamic Context Management:** Diligently using `read_file` to get context from, and `edit_file` to update, key Memory Bank files like `memory-bank/activeContext.md`, `memory-bank/tasks.md`, and `memory-bank/progress.md`. This ensures context is current and progressively built.
+4.  **Transition Optimization:** Following the process in `Core/mode-transition-optimization.mdc` (i.e., updating `activeContext.md` before a mode switch to ensure smooth handover).
+5.  **Creative Phase Optimization:** Using templates and structured guidance like `Phases/CreativePhase/optimized-creative-template.mdc` (when fetched in CREATIVE mode) to ensure thorough but efficient design exploration.
+6.  **Tool Prioritization:** Consistently using the right tool for the job (e.g., `edit_file` for content, `run_terminal_cmd` for execution) as outlined in `Core/command-execution.mdc`. This avoids inefficient or error-prone methods.
+
+**This document explains the *design goals* of the CMB system. Your role is to execute the specific, actionable instructions in other `.mdc` files. By following those rules, you are inherently participating in and enabling these optimizations.**

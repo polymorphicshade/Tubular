@@ -1,0 +1,46 @@
+---
+description: Defines the content and structure for quick documentation of Level 1 (Quick Bug Fix) tasks, primarily within `tasks.md` using `edit_file`.
+globs: **/Level1/quick-documentation.mdc
+alwaysApply: false
+---
+# QUICK DOCUMENTATION FOR LEVEL 1 TASKS (AI Instructions)
+
+> **TL;DR:** This rule outlines the concise documentation approach for Level 1 tasks. The primary record is made in `memory-bank/tasks.md` using `edit_file`.
+
+## 📋 DOCUMENTATION PRINCIPLES (AI Self-Guide)
+*   **Conciseness:** Brief but complete.
+*   **Focus:** Only essential information to understand the fix.
+*   **Findability:** Ensure the fix can be referenced via `tasks.md`.
+
+## 📝 QUICK FIX DOCUMENTATION TEMPLATE (For `tasks.md` update via `edit_file`)
+When a Level 1 task is completed, use `edit_file` to update its entry or add a new entry in `memory-bank/tasks.md` under a "Completed Level 1 Fixes" or similar section, following this structure:
+
+```markdown
+- **L1 Fix:** [Issue Title/ID from original task]
+  - **Issue:** [Brief description of the problem - 1-2 sentences]
+  - **Root Cause:** [Concise description of what caused the issue - 1-2 sentences, if readily apparent]
+  - **Solution:** [Brief description of the fix implemented - 2-3 sentences, e.g., "Modified `user_controller.js` line 75 to correctly handle null input for username."]
+  - **Files Changed:**
+    - `[path/to/file1.ext]`
+    - `[path/to/file2.ext]` (if applicable)
+  - **Verification:** [How the fix was tested/verified - 1-2 sentences, e.g., "Manually tested login with empty username field.", "Ran linter on changed file."]
+  - **Status:** COMPLETED - [Date]
+```
+
+## 🔄 MEMORY BANK UPDATES (AI Actions)
+
+1.  **`tasks.md` (Primary Record):**
+    *   Use `edit_file` to add/update the entry as per the template above. This is the main documentation for L1 fixes.
+2.  **`activeContext.md` (Minimal Update):**
+    *   Use `edit_file` to append a brief note to `memory-bank/activeContext.md` if desired, e.g.:
+        ```markdown
+        ### Recent L1 Fixes - [Date]
+        - Fixed [Issue Title] in `[main_file_changed]`. See `tasks.md` for details.
+        ```
+    *   More importantly, clear the L1 task from the "Current Focus" in `activeContext.md`.
+3.  **`progress.md` (Optional Minimal Update):**
+    *   Use `edit_file` to append a one-liner to `memory-bank/progress.md` if desired, e.g.:
+        `[Date] - L1 Fix: Completed [Issue Title].`
+
+**Focus:** The goal is efficient capture of essential information directly in `tasks.md` using `edit_file`.
+(This rule provides the *content structure*. The actual workflow is often directed by `Level1/workflow-level1.mdc` or `Level1/optimized-workflow-level1.mdc` which might refer to these content guidelines).

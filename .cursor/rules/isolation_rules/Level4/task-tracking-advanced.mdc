@@ -1,0 +1,120 @@
+---
+description: Advanced task tracking for Level 4 (Complex System) tasks. Guides AI to structure `tasks.md` with detailed hierarchy, dependencies, milestones, risks, and progress visualization using `edit_file`.
+globs: **/Level4/task-tracking-advanced.mdc
+alwaysApply: false
+---
+# ADVANCED TASK TRACKING FOR LEVEL 4 TASKS (AI Instructions)
+
+> **TL;DR:** This rule outlines a comprehensive task tracking approach for Level 4 (Complex System) tasks. Use `edit_file` to structure `memory-bank/tasks.md` with a detailed hierarchy (System > Component > Feature > Task > Subtask), explicit dependencies, milestones, risk register, resource allocation, and progress visualizations (textual descriptions).
+
+This rule is typically fetched by the PLAN mode orchestrator (`Level4/workflow-level4.mdc` will fetch this as part of architectural planning).
+
+## ⚙️ AI ACTIONS FOR LEVEL 4 ADVANCED TASK TRACKING (Structuring `tasks.md`):
+
+1.  **Acknowledge & Context:**
+    a.  State: "Applying Advanced Task Tracking for Level 4 system: [System Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` (to establish or update the L4 system entry).
+    c.  This rule works in conjunction with `Level4/architectural-planning.mdc`. The architectural plan will define many of the components and features.
+2.  **Establish/Update L4 System Entry in `tasks.md` (using `edit_file`):**
+    a.  Ensure the main entry for the L4 system in `memory-bank/tasks.md` is structured to accommodate advanced tracking details.
+
+        **Comprehensive L4 Task Structure (Main Sections in `tasks.md` for the L4 System):**
+        ```markdown
+        # System: [System-ID: System Name, e.g., L4-001: Enterprise Resource Planning System]
+
+        - **Overall Status:** [e.g., IN_PROGRESS_PLANNING, PENDING_ARCH_REVIEW, IN_PROGRESS_IMPLEMENT_FOUNDATION_PHASE, etc.]
+        - **Complexity Level:** 4
+        - **Lead Architect/Team (if known):** [User may specify]
+        - **Target Go-Live Date (Optional):** [User may specify]
+        - **Links:**
+            - Project Brief: `../projectbrief.md`
+            - Architectural Plan: `../architecture/system-[System_Name]-arch-plan-[date].md` (or relevant section in this tasks.md)
+            - Comprehensive Reflection: (Link when created)
+            - Comprehensive Archive: (Link when created)
+
+        ## 1. System Overview & Goals
+        [Brief summary from architectural plan or project brief.]
+
+        ## 2. Key Milestones
+        [List major project milestones with target dates and status. Update as project progresses.]
+        - [ ] MILE-01: Architectural Plan Approved - Target: [YYYY-MM-DD] - Status: [PENDING/COMPLETE]
+        - [ ] MILE-02: Foundation Phase Complete - Target: [YYYY-MM-DD] - Status: [PENDING/COMPLETE]
+        - [ ] MILE-03: Core Services Implemented & Tested - Target: [YYYY-MM-DD] - Status: [PENDING/COMPLETE]
+        - ...
+        - [ ] MILE-XX: System Go-Live - Target: [YYYY-MM-DD] - Status: [PENDING/COMPLETE]
+
+        ## 3. Work Breakdown Structure (WBS) - Components & Features
+        [This section will detail Components, their Features, and then Tasks/Sub-tasks. Update iteratively as planning and implementation proceed.]
+
+        ### 3.1. Component: [COMP-ID-A: Component A Name, e.g., User Management Service]
+        - **Purpose:** [Brief description]
+        - **Status:** [PLANNING/IN_PROGRESS/COMPLETED]
+        - **Lead (if applicable):**
+        - **Dependencies (other components):** [e.g., COMP-ID-B: Authentication Service]
+
+        #### 3.1.1. Feature: [FEAT-ID-A1: Feature A1 Name, e.g., User Registration]
+        - **Description:** [Detailed description]
+        - **Status:** [PLANNING/PENDING_CREATIVE/IN_PROGRESS_IMPL/COMPLETED]
+        - **Priority:** [Critical/High/Medium/Low]
+        - **Quality Criteria:** [Specific acceptance criteria]
+        - **Creative Docs (if any):** `../../creative/creative-[Feature_A1_aspect]-[date].md`
+
+        ##### Tasks for Feature A1:
+        - [ ] TASK-A1.1: [Detailed task description] - Status: [TODO/WIP/DONE] - Assignee: [AI/User] - Est. Effort: [e.g., 2d]
+          - Sub-tasks:
+            - [ ] SUB-A1.1.1: [Sub-task description]
+            - [ ] SUB-A1.1.2: [Sub-task description]
+          - Dependencies: [e.g., TASK-B2.3]
+          - Risks: [Brief risk note]
+        - [ ] TASK-A1.2: [...]
+
+        #### 3.1.2. Feature: [FEAT-ID-A2: Feature A2 Name, e.g., Profile Update]
+        [...]
+
+        ### 3.2. Component: [COMP-ID-B: Component B Name, e.g., Authentication Service]
+        [...]
+
+        ## 4. System-Wide Tasks (Cross-Cutting Concerns)
+        [Tasks that span multiple components, e.g., setting up CI/CD, defining logging standards.]
+        - [ ] SYS-TASK-01: Establish CI/CD Pipeline - Status: [...]
+        - [ ] SYS-TASK-02: Define System-Wide Logging Strategy - Status: [...]
+
+        ## 5. Dependency Matrix (High-Level Inter-Component/Inter-Feature)
+        [Summarize critical dependencies. Detailed task dependencies are within WBS.]
+        - Feature A1 (COMP-A) depends on Core Auth API (COMP-B).
+        - Component C integration requires completion of Feature B2 (COMP-B).
+
+        ## 6. Risk Register
+        [Track major system-level risks. Task-specific risks can be in WBS.]
+        | ID      | Risk Description                     | Probability | Impact | Mitigation Strategy                      | Status    |
+        |---------|--------------------------------------|-------------|--------|------------------------------------------|-----------|
+        | RISK-01 | Scalability of notification service  | Medium      | High   | Load testing, optimize message queue     | OPEN      |
+        | RISK-02 | Integration with legacy System X     | High        | Medium | Develop anti-corruption layer, mock tests | MITIGATED |
+
+        ## 7. Resource Allocation Overview (Optional - User Managed)
+        [High-level notes on team allocation if provided by user.]
+
+        ## 8. Progress Visualization (Textual - AI describes, user might visualize)
+        - **Overall System Progress (Conceptual):** [e.g., "Estimated 20% complete based on milestone tracking."]
+        - **Component Progress (Conceptual):**
+          - User Management Service: [e.g., "Foundation built, registration feature in progress."]
+          - Authentication Service: [e.g., "Core APIs complete, awaiting integration."]
+
+        ## 9. Latest Updates & Decisions Log
+        [Chronological log of major updates, decisions, or changes to the plan. More detailed logs go in `progress.md`.]
+        - [Date]: Architectural decision ADR-003 (Data Storage) finalized.
+        - [Date]: Milestone MILE-01 (Arch Plan Approved) completed.
+        ```
+3.  **Iterative Updates:**
+    a.  This `tasks.md` structure for L4 is a living document. As the project progresses through architectural planning, creative phases, and phased implementation, use `edit_file` to:
+        *   Add/refine components, features, tasks, and sub-tasks.
+        *   Update statuses and progress percentages.
+        *   Mark milestones as complete.
+        *   Log new risks or update existing ones.
+        *   Record key decisions in the "Latest Updates" section.
+4.  **Log Update:**
+    a.  Use `edit_file` to add a note to `memory-bank/activeContext.md`:
+        `[Timestamp] - Advanced task tracking structure for L4 system [System Name] established/updated in tasks.md.`
+5.  **Completion (of this rule's execution):**
+    a.  State: "Advanced task tracking structure for Level 4 system [System Name] applied to `tasks.md`. This document will be updated throughout the project lifecycle."
+    b.  (Control returns to the PLAN mode orchestrator / L4 Workflow orchestrator).

@@ -1,0 +1,64 @@
+---
+description: Basic task tracking for Level 2 (Simple Enhancement) tasks. Guides AI to structure `tasks.md` using `edit_file`.
+globs: **/Level2/task-tracking-basic.mdc
+alwaysApply: false
+---
+# BASIC TASK TRACKING FOR LEVEL 2 (AI Instructions)
+
+> **TL;DR:** This rule outlines a streamlined task tracking approach for Level 2 (Simple Enhancement) tasks. Use `edit_file` to update `memory-bank/tasks.md` with the defined structure.
+
+This rule is typically fetched by the PLAN mode orchestrator when a task is identified as Level 2.
+
+## ⚙️ AI ACTIONS FOR LEVEL 2 TASK TRACKING (Updating `tasks.md`):
+
+1.  **Acknowledge & Context:**
+    a.  State: "Applying Basic Task Tracking for Level 2 task: [Task Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` to locate the existing entry for this task (likely created minimally by VAN mode).
+2.  **Update Task Entry in `tasks.md` (using `edit_file`):**
+    a.  Ensure the task entry in `memory-bank/tasks.md` includes the following sections. If the task entry is new or minimal, create/populate these sections. If it exists, update them.
+
+        **Task Structure for Level 2 (Content for `edit_file` on `tasks.md`):**
+        ```markdown
+        ## Task: [Task Name/ID - e.g., L2-001: Enhance User Profile Page]
+
+        - **Status:** IN_PROGRESS_PLANNING (or update as planning proceeds)
+        - **Priority:** [High/Medium/Low - user may specify, or default to Medium]
+        - **Estimated Effort:** [Small/Medium - L2 tasks are generally not Large]
+        - **Complexity Level:** 2
+        - **Assigned To:** AI
+
+        ### 1. Description
+        [Brief description of the enhancement. What is the goal? What user problem does it solve? Synthesize from user request or `projectbrief.md`.]
+
+        ### 2. Requirements / Acceptance Criteria
+        [List 2-5 clear, testable requirements or acceptance criteria for the enhancement.]
+        - [ ] Requirement 1: [e.g., User can upload a profile picture.]
+        - [ ] Requirement 2: [e.g., Uploaded picture is displayed on the profile page.]
+        - [ ] Requirement 3: [e.g., Error message shown if upload fails.]
+
+        ### 3. Sub-tasks (Implementation Steps)
+        [Break the enhancement into 3-7 high-level sub-tasks. These are for planning and will be checked off during IMPLEMENT mode.]
+        - [ ] Sub-task 1: [e.g., Add file input field to profile form.]
+        - [ ] Sub-task 2: [e.g., Implement backend endpoint for image upload.]
+        - [ ] Sub-task 3: [e.g., Store image reference in user model.]
+        - [ ] Sub-task 4: [e.g., Display uploaded image on profile page.]
+        - [ ] Sub-task 5: [e.g., Add basic error handling for upload.]
+        - [ ] Sub-task 6: [e.g., Write unit tests for upload endpoint.]
+        - [ ] Sub-task 7: [e.g., Manual test of upload and display.]
+
+        ### 4. Dependencies (If any)
+        [List any other tasks, modules, or external factors this enhancement depends on. For L2, these should be minimal.]
+        - Dependency 1: [e.g., User authentication module must be functional.]
+
+        ### 5. Notes
+        [Any additional brief notes, context, or links relevant to planning this enhancement.]
+        - [e.g., Max image size should be 2MB.]
+        ```
+3.  **Log Update:**
+    a.  Use `edit_file` to add a note to `memory-bank/activeContext.md`:
+        `[Timestamp] - Updated `tasks.md` with detailed plan for L2 task: [Task Name].`
+4.  **Completion:**
+    a.  State: "Basic task tracking structure applied to `tasks.md` for Level 2 task [Task Name]."
+    b.  (Control returns to the PLAN mode orchestrator, which will then typically recommend CREATIVE (if any minor design needed and flagged) or IMPLEMENT mode).
+
+**Key Principle:** For L2 tasks, `tasks.md` should provide a clear, actionable plan without excessive detail. Sub-tasks guide implementation.

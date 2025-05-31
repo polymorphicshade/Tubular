@@ -1,0 +1,50 @@
+---
+description: VAN sub-rule for platform detection. Fetched by `van-mode-map.mdc`. Guides AI to detect OS and document in `activeContext.md`.
+globs: **/visual-maps/van_mode_split/van-platform-detection.mdc
+alwaysApply: false
+---
+# VAN MODE: PLATFORM DETECTION (AI Instructions)
+
+> **TL;DR:** Detect the Operating System. Document the detected OS and path separator style in `memory-bank/activeContext.md` and `memory-bank/techContext.md` using `edit_file`. This rule is typically fetched by `van-mode-map.mdc`.
+
+## ⚙️ AI ACTIONS FOR PLATFORM DETECTION:
+
+1.  **Acknowledge:** State: "Attempting to determine Operating System."
+2.  **Attempt Detection (via `run_terminal_cmd` - carefully):**
+    *   **Strategy:** Use a simple, non-destructive command that has distinct output or behavior across OSes.
+    *   Example 1 (Check for `uname`):
+        *   `run_terminal_cmd uname`
+        *   If output is "Linux", "Darwin" (macOS), or similar: OS is Unix-like. Path separator likely `/`.
+        *   If command fails or output is unrecognized: OS might be Windows.
+    *   Example 2 (Check PowerShell specific variable, if assuming PowerShell might be present):
+        *   `run_terminal_cmd echo $PSVersionTable.PSVersion` (PowerShell)
+        *   If successful with version output: OS is Windows (with PowerShell). Path separator likely `\`.
+        *   If fails: Not PowerShell, or not Windows.
+    *   **If still unsure after one attempt, DO NOT run many speculative commands.**
+3.  **Decision & User Interaction if Unsure:**
+    a.  **If Confident:** (e.g., `uname` returned "Linux")
+        i.  Detected OS: Linux. Path Separator: `/`.
+    b.  **If Unsure:**
+        i.  State: "Could not definitively determine the OS automatically."
+        ii. Ask User: "Please specify your Operating System (e.g., Windows, macOS, Linux) and preferred path separator (`/` or `\`)."
+        iii. Await user response.
+        iv. Detected OS: [User's response]. Path Separator: [User's response].
+4.  **Document Findings:**
+    a.  Use `edit_file` to update `memory-bank/activeContext.md` with a section:
+        ```markdown
+        ## Platform Detection Log - [Timestamp]
+        - Detected OS: [Windows/macOS/Linux/User-Specified]
+        - Path Separator Style: [/ or \]
+        - Confidence: [High/Medium/Low/User-Provided]
+        ```
+    b.  Use `edit_file` to update (or create if not exists) `memory-bank/techContext.md` with:
+        ```markdown
+        # Technical Context
+        ## Operating System
+        - OS: [Windows/macOS/Linux/User-Specified]
+        - Path Separator: [/ or \]
+        ## Key Command Line Interface (if known)
+        - CLI: [Bash/Zsh/PowerShell/CMD/User-Specified]
+        ```
+5.  **Completion:** State: "Platform detection complete. OS identified as [OS_Name]. Proceeding with VAN initialization."
+    (Control returns to the fetching rule, likely `van-mode-map.mdc`).

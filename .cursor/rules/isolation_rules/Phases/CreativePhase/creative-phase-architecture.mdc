@@ -1,0 +1,53 @@
+---
+description: Guides the AI through the architectural design process within a CREATIVE phase. Instructs on using `edit_file` to document architectural decisions in a `creative-architecture-*.md` file, referencing the `optimized-creative-template.mdc`.
+globs: **/Phases/CreativePhase/creative-phase-architecture.mdc
+alwaysApply: false
+---
+# CREATIVE PHASE: ARCHITECTURE DESIGN (AI Instructions)
+
+> **TL;DR:** This rule guides you through designing and documenting architectural solutions for a specific component or system aspect. Use `edit_file` to create/update a `memory-bank/creative/creative-architecture-[component_name]-[date].md` document, structured using the `optimized-creative-template.mdc`.
+
+This rule is typically fetched by `visual-maps/creative-mode-map.mdc` when an architectural design task is active.
+
+## ⚙️ AI ACTIONS FOR ARCHITECTURE DESIGN:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Initiating CREATIVE phase for Architecture Design: [Component/System Aspect from tasks.md]."
+    b.  `read_file memory-bank/tasks.md` for specific requirements, constraints, and scope for this architectural design task.
+    c.  `read_file memory-bank/activeContext.md` for overall project context.
+    d.  `read_file memory-bank/systemPatterns.md` and `techContext.md` for existing architectural patterns and technology landscape.
+    e.  `read_file .cursor/rules/isolation_rules/Phases/CreativePhase/optimized-creative-template.mdc` to understand the documentation structure.
+2.  **Define Problem & Requirements (Section 1 of `optimized-creative-template.mdc`):**
+    a.  Clearly state the architectural problem being solved (e.g., "Design a scalable backend for real-time notifications").
+    b.  List key functional requirements (e.g., "Must handle 1000 concurrent users," "Deliver notifications within 500ms").
+    c.  List key non-functional requirements (quality attributes) like scalability, performance, security, maintainability, cost.
+    d.  Identify architectural constraints (e.g., "Must use AWS services," "Integrate with existing user database").
+3.  **Explore Architectural Options (Section 2 & 3 of `optimized-creative-template.mdc`):**
+    a.  Brainstorm 2-3 distinct architectural patterns or high-level design options (e.g., Microservices vs. Monolith, Event-driven vs. Request-response, SQL vs. NoSQL for a specific data store).
+    b.  For each option, briefly describe it.
+    c.  Analyze each option against the requirements and constraints. Consider:
+        *   Pros & Cons.
+        *   Impact on scalability, performance, security, maintainability, cost.
+        *   Complexity of implementation.
+        *   Team familiarity with technologies.
+    d.  Use a summary table for quick comparison if helpful.
+4.  **Make Decision & Justify (Section 4 of `optimized-creative-template.mdc`):**
+    a.  Select the most suitable architectural option.
+    b.  Provide a clear and detailed rationale for the decision, explaining why it's preferred over alternatives, referencing the analysis.
+5.  **Outline Implementation Guidelines (Section 5 of `optimized-creative-template.mdc`):**
+    a.  Describe key components of the chosen architecture.
+    b.  Suggest primary technologies, frameworks, or libraries.
+    c.  Outline high-level interaction patterns between components (textually describe data flows or sequence diagrams if complex).
+    d.  Identify major interfaces or APIs to be defined.
+    e.  Note any critical next steps for detailed design or implementation planning.
+6.  **Document in `creative-architecture-*.md`:**
+    a.  Determine filename: `creative-architecture-[component_name_or_aspect]-[date].md`.
+    b.  Use `edit_file` to create/update `memory-bank/creative/[filename]` with all the above information, structured according to the `optimized-creative-template.mdc`.
+7.  **Update Core Memory Bank Files:**
+    a.  Use `edit_file` to update `memory-bank/tasks.md`:
+        *   Mark the specific "CREATIVE: Architect [component/aspect]" sub-task as complete.
+        *   Add a link to the created `creative-architecture-*.md` document.
+    b.  Use `edit_file` to add a summary of the architectural decision to the "Creative Decisions Log" in `memory-bank/activeContext.md`.
+8.  **Completion:**
+    a.  State: "Architecture design for [Component/Aspect] complete. Documented in `memory-bank/creative/[filename]`."
+    b.  (Control returns to `visual-maps/creative-mode-map.mdc` to check for more creative tasks or recommend next mode).

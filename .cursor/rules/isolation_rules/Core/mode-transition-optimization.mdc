@@ -1,0 +1,29 @@
+---
+description: Core design principles for optimized mode transitions using `activeContext.md` as the handover document.
+globs: **/Core/mode-transition-optimization.mdc
+alwaysApply: false
+---
+# MODE TRANSITION OPTIMIZATION (AI Actions)
+
+> **TL;DR:** Efficient mode transitions are achieved by updating `memory-bank/activeContext.md` (via `edit_file`) before a transition. The next mode's orchestrator rule then reads this file for context.
+
+## 🔄 CONTEXT TRANSFER PROCESS (AI Actions):
+
+1.  **Before Current Mode Exits (or suggests exiting):**
+    a.  Your current instructions (from main prompt or an `.mdc` via `fetch_rules`) will guide you to use `edit_file` to update `memory-bank/activeContext.md`.
+    b.  This update should include a section like:
+        ```markdown
+        ## Mode Transition Prepared - [Timestamp]
+        - **From Mode:** [Current Mode, e.g., PLAN]
+        - **To Mode Recommended:** [Target Mode, e.g., CREATIVE or IMPLEMENT]
+        - **Current Task Focus:** [Specific task name or ID from tasks.md]
+        - **Key Outputs/Decisions from [Current Mode]:**
+            - [Summary of what was achieved, e.g., "Plan for user authentication feature is complete."]
+            - [Reference to key artifacts created/updated, e.g., "See `memory-bank/tasks.md` for detailed sub-tasks. Creative design needed for UI components."]
+        - **Primary Goal for [Target Mode]:** [What the next mode should focus on, e.g., "Design UI mockups for login and registration pages."]
+        ```
+2.  **When New Mode Starts:**
+    a.  The new mode's main custom prompt (in Cursor's Advanced Settings) will instruct you to `fetch_rules` for its primary orchestrating `.mdc` file (e.g., `visual-maps/creative-mode-map.mdc`).
+    b.  That orchestrating `.mdc` will (as an early step) instruct you to `read_file memory-bank/activeContext.md` to understand the incoming context, task focus, and goals.
+
+**Key Principle:** `memory-bank/activeContext.md` is the primary "handover document" between modes, managed by `edit_file`. Keep its "Mode Transition Prepared" section concise and actionable for the next mode.
