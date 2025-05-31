@@ -23,7 +23,9 @@
 - Application ID:
   - Release: org.polymorphicshade.tubular
   - Debug: org.polymorphicshade.tubular.debug
-- Launch Command: adb shell am start -n org.schabi.newpipe/.MainActivity
+- Launch Command: 
+  - ADB: `adb shell am start -n org.polymorphicshade.tubular.debug/org.schabi.newpipe.MainActivity`
+  - VS Code: Need both packageName and activityName in launch.json
 
 ## Device Information
 - Physical Device: Yes
@@ -48,15 +50,17 @@
 - Current workaround: Building with `.\gradlew build -x test`
 
 ## Development Goals
-- Fix: Device launch with correct package/namespace `org.schabi.newpipe/.MainActivity`
+- ✅ Fix: Device launch with correct package/namespace format
 - Fix: USB disconnection issues
-- Fix: Debugger "waiting for debugger" issue
+- ✅ Fix: Debugger "waiting for debugger" issue
 - Features to implement: SponsorBlock and ReturnYouTubeDislike enhancements
 
 ## Known Issues
 - Project location in Program Files may cause permission issues
 - ADB connection stability problems
 - Missing debug output
-- Package name confusion:
-  - Internal namespace: org.schabi.newpipe (from original NewPipe)
-  - Application IDs: org.polymorphicshade.tubular & org.polymorphicshade.tubular.debug 
+- Package name structure:
+  - Internal namespace: `org.schabi.newpipe` (for Java/Kotlin code)
+  - Application IDs: `org.polymorphicshade.tubular` & `org.polymorphicshade.tubular.debug` 
+  - Launch syntax: `[applicationId]/[namespace].[ActivityName]`
+  - Example: `org.polymorphicshade.tubular.debug/org.schabi.newpipe.MainActivity` 

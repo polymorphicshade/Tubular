@@ -29,18 +29,21 @@
   - Verified Gradle works with `.\gradlew --version`
 - Fixed app launch configuration:
   - Updated `.vscode/launch.json` to include:
-    - `"packageName": "org.schabi.newpipe"` (correct internal namespace)
+    - `"packageName": "org.polymorphicshade.tubular.debug"`
+    - `"activityName": "org.schabi.newpipe.MainActivity"`
     - `"noDebug": true` (prevent waiting for debugger)
   - Modified `app/build.gradle` to set `debuggable false` for debug builds
-  - These changes should resolve the "waiting for debugger" issue
+  - These changes resolved the "waiting for debugger" issue
 
 ## Package Name Clarification - May 30, 2025
 - Tubular inherits the internal namespace from NewPipe: `org.schabi.newpipe`
 - The application ID is customized for Tubular:
   - Release builds: `org.polymorphicshade.tubular`
   - Debug builds: `org.polymorphicshade.tubular.debug`
-- Launch commands must use the internal namespace: `org.schabi.newpipe/.MainActivity`
-- This distinction explains the previous confusion with package names
+- Launch commands must use both:
+  - Correct format: `[applicationId]/[namespace].[ActivityName]`
+  - Example: `org.polymorphicshade.tubular.debug/org.schabi.newpipe.MainActivity`
+- This syntax difference explains the previous launch failures
 
 ## Task Complexity Assessment - May 30, 2025
 - Task: Fix app launch configuration and address debugging issues
@@ -48,21 +51,27 @@
 - Rationale: The task involves multiple components (launch configuration, USB connection, debugger settings) but has straightforward fixes that don't require architectural changes
 
 ## Current Project Status
-- **Last Build Status**: Successful with `.\gradlew build -x test` (skipping failing tests)
-- **Run Status**: APK installs but fails to launch due to namespace/package confusion
-- **Current Issue**: App doesn't launch correctly, device connection stability issues
+- **Last Build Status**: ✅ Successful with `.\gradlew build -x test` (skipping failing tests)
+- **Run Status**: ✅ App installs and launches successfully
+- **Current Issue**: USB connection stability issues
 - **Focus Areas**: 
-  1. Fix app launch with correct namespace (`org.schabi.newpipe/.MainActivity`)
+  1. ✅ Fix app launch with correct format
   2. Resolve USB disconnection issues
-  3. Address "waiting for debugger" issue
+  3. ✅ Address "waiting for debugger" issue
   4. Fix unit tests by adding missing resources
   
+## Terminal Command Log - May 31, 2025
+- ✅ `adb devices` - Device 0I73C18I24101774 found and connected
+- ✅ `.\gradlew :app:assembleDebug` - Build successful
+- ✅ `adb install -r .\app\build\outputs\apk\debug\app-debug.apk` - Installation successful
+- ✅ `adb shell am start -n org.polymorphicshade.tubular.debug/org.schabi.newpipe.MainActivity` - App launched successfully
+
 ## Action Items
 1. **Immediate**: 
    - ✅ Update launch configuration to use correct namespace
    - ✅ Add `noDebug: true` to launch.json
    - ✅ Fix Java configuration
-   - Test launch with `adb shell am start -n org.schabi.newpipe/.MainActivity`
+   - ✅ Test launch with correct syntax
 
 2. **Short-term**:
    - Stabilize USB connection
@@ -80,4 +89,22 @@
 
 ## VAN Process Status
 - Level 2 Task Initialization Complete
-- Task ready for PLAN mode followed by IMPLEMENT mode 
+- Major configuration issues resolved
+- Project ready for feature development 
+
+## Reflection Status - May 31, 2025
+- ✅ Reflection complete for L2 task "Fix App Launch Configuration"
+- Reflection document created at `memory-bank/reflection/reflect-app-launch-configuration-20250531.md`
+- Ready for ARCHIVE phase
+- Awaiting "ARCHIVE NOW" command from user
+
+## Archive Status - May 31, 2025
+- ✅ Task T001 "Fix App Launch Configuration" has been successfully archived
+- Archive document created at `memory-bank/archive/archive-app-launch-configuration-20250531.md`
+- Task status updated to ARCHIVED in tasks.md
+- Memory Bank is ready for new tasks
+
+## Current Focus
+- Next task can be initiated (Suggested: T002 "Fix Unit Tests")
+- USB connection stability issues still need to be addressed
+- Project is functional for basic development tasks 

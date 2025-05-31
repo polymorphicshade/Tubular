@@ -72,4 +72,67 @@ Fixed configuration issues related to Java home path and app debugging setup to 
 - Launch Configuration: ✅ Fixed
 - Package Structure: ✅ Clarified
 - Run Status: ⏳ Pending testing (device not currently connected)
-- Unit Tests: ❌ Still failing (to be addressed next) 
+- Unit Tests: ❌ Still failing (to be addressed next)
+
+## May 31, 2025 - Application Launch Success
+
+### Summary
+Successfully fixed the app launch issues by determining the correct launch syntax that combines both the application ID and the namespace. The app now builds, installs, and runs on the target device.
+
+### Accomplishments
+- Discovered the correct launch syntax: `[applicationId]/[namespace].[ActivityName]`
+- Successfully launched the app using `adb shell am start -n org.polymorphicshade.tubular.debug/org.schabi.newpipe.MainActivity`
+- Updated launch.json to include both elements:
+  ```json
+  "packageName": "org.polymorphicshade.tubular.debug",
+  "activityName": "org.schabi.newpipe.MainActivity"
+  ```
+- Built and installed the app with `.\gradlew :app:assembleDebug` and `adb install -r .\app\build\outputs\apk\debug\app-debug.apk`
+- Verified the app launches and runs correctly on the device
+- Updated all documentation to reflect the correct package structure and launch syntax
+
+### Next Steps
+1. **Address remaining issues**:
+   - Fix USB connection stability issues
+   - Implement better logging through `adb logcat > logcat.txt`
+2. **Focus on unit tests**:
+   - Create missing test resources
+   - Fix Mockito stubbing issues
+   - Run and validate tests
+3. **Implement feature enhancements**:
+   - ReturnYouTubeDislike toggle
+   - SponsorBlock enhancements
+
+### Key Metrics
+- Build Status: ✅ Success (with `.\gradlew :app:assembleDebug`)
+- Installation: ✅ Success
+- Launch Status: ✅ Success
+- Debugger Issue: ✅ Resolved
+- USB Stability: ❌ Still needs improvement
+- Unit Tests: ❌ Still failing (now the next priority)
+
+### Insights Gained
+- Android apps can have different application IDs (used for installation and identification) and namespaces (used for internal code organization)
+- When launching via ADB or configuring launch.json, both elements must be specified correctly
+- The format `[applicationId]/[namespace].[ActivityName]` is critical for proper launching
+- VS Code launch configuration requires both `packageName` and `activityName` fields to be set correctly
+
+## May 31, 2025 - Task Archived
+
+### Summary
+Task T001 "Fix App Launch Configuration" has been successfully completed, reflected upon, and archived. The app now builds, installs, and runs correctly on the physical device.
+
+### Key Accomplishments
+- Identified and documented the correct package/namespace relationship
+- Fixed JDK configuration and launch settings
+- Ensured the app builds and runs properly with debugger settings correctly configured
+- Created comprehensive documentation for future reference
+
+### Next Steps
+- Address the remaining USB stability issues (T001.4)
+- Implement better logging (T001.5)
+- Focus on fixing unit tests (T002)
+
+### Reference Documentation
+- Archive document: [archive-app-launch-configuration-20250531.md](archive/archive-app-launch-configuration-20250531.md)
+- Reflection document: [reflect-app-launch-configuration-20250531.md](reflection/reflect-app-launch-configuration-20250531.md) 
