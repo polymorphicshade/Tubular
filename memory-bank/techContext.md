@@ -19,8 +19,11 @@
 - Compile SDK: 34
 - Min SDK: 21
 - Target SDK: 33
-- Package Name: org.schabi.newpipe (for launching)
-- Application ID: org.polymorphicshade.tubular (for building)
+- Package/Namespace: org.schabi.newpipe (inherited from original NewPipe project)
+- Application ID:
+  - Release: org.polymorphicshade.tubular
+  - Debug: org.polymorphicshade.tubular.debug
+- Launch Command: adb shell am start -n org.schabi.newpipe/.MainActivity
 
 ## Device Information
 - Physical Device: Yes
@@ -45,13 +48,15 @@
 - Current workaround: Building with `.\gradlew build -x test`
 
 ## Development Goals
-- Fix: Device launch with correct package name `org.schabi.newpipe/.MainActivity`
+- Fix: Device launch with correct package/namespace `org.schabi.newpipe/.MainActivity`
 - Fix: USB disconnection issues
 - Fix: Debugger "waiting for debugger" issue
 - Features to implement: SponsorBlock and ReturnYouTubeDislike enhancements
 
 ## Known Issues
-- Project location in Program Files may cause permission issues (recommended move to `C:\Users\Administrator\Tubular`)
+- Project location in Program Files may cause permission issues
 - ADB connection stability problems
 - Missing debug output
-- Package name confusion between `org.polymorphicshade.tubular.debug` and `org.schabi.newpipe` 
+- Package name confusion:
+  - Internal namespace: org.schabi.newpipe (from original NewPipe)
+  - Application IDs: org.polymorphicshade.tubular & org.polymorphicshade.tubular.debug 

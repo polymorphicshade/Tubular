@@ -29,10 +29,18 @@
   - Verified Gradle works with `.\gradlew --version`
 - Fixed app launch configuration:
   - Updated `.vscode/launch.json` to include:
-    - `"packageName": "org.schabi.newpipe"` (correct package name)
+    - `"packageName": "org.schabi.newpipe"` (correct internal namespace)
     - `"noDebug": true` (prevent waiting for debugger)
   - Modified `app/build.gradle` to set `debuggable false` for debug builds
   - These changes should resolve the "waiting for debugger" issue
+
+## Package Name Clarification - May 30, 2025
+- Tubular inherits the internal namespace from NewPipe: `org.schabi.newpipe`
+- The application ID is customized for Tubular:
+  - Release builds: `org.polymorphicshade.tubular`
+  - Debug builds: `org.polymorphicshade.tubular.debug`
+- Launch commands must use the internal namespace: `org.schabi.newpipe/.MainActivity`
+- This distinction explains the previous confusion with package names
 
 ## Task Complexity Assessment - May 30, 2025
 - Task: Fix app launch configuration and address debugging issues
@@ -41,17 +49,17 @@
 
 ## Current Project Status
 - **Last Build Status**: Successful with `.\gradlew build -x test` (skipping failing tests)
-- **Run Status**: APK installs but fails to launch due to package name mismatch
+- **Run Status**: APK installs but fails to launch due to namespace/package confusion
 - **Current Issue**: App doesn't launch correctly, device connection stability issues
 - **Focus Areas**: 
-  1. Fix app launch with correct package name (`org.schabi.newpipe/.MainActivity`)
+  1. Fix app launch with correct namespace (`org.schabi.newpipe/.MainActivity`)
   2. Resolve USB disconnection issues
   3. Address "waiting for debugger" issue
   4. Fix unit tests by adding missing resources
   
 ## Action Items
 1. **Immediate**: 
-   - ✅ Update launch configuration to use correct package name
+   - ✅ Update launch configuration to use correct namespace
    - ✅ Add `noDebug: true` to launch.json
    - ✅ Fix Java configuration
    - Test launch with `adb shell am start -n org.schabi.newpipe/.MainActivity`
