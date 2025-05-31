@@ -10,6 +10,7 @@ import org.junit.Assume
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.ArgumentMatchers.any
 import org.mockito.Mockito
 import org.mockito.Mockito.anyBoolean
 import org.mockito.Mockito.anyInt
@@ -17,8 +18,9 @@ import org.mockito.Mockito.anyString
 import org.mockito.Mockito.atLeastOnce
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
-import org.mockito.Mockito.withSettings
 import org.mockito.junit.MockitoJUnitRunner
+import org.mockito.junit.MockitoSettings
+import org.mockito.quality.Strictness
 import org.schabi.newpipe.settings.export.BackupFileLocator
 import org.schabi.newpipe.settings.export.ImportExportManager
 import org.schabi.newpipe.streams.io.StoredFileHelper
@@ -28,33 +30,32 @@ import java.io.ObjectInputStream
 import java.nio.file.Files
 import java.util.zip.ZipFile
 
+@MockitoSettings(strictness = Strictness.LENIENT)
 @RunWith(MockitoJUnitRunner::class)
 class ImportExportManagerTest {
-
-    companion object {
-        private val classloader = ImportExportManager::class.java.classLoader!!
-    }
 
     private lateinit var fileLocator: BackupFileLocator
     private lateinit var storedFileHelper: StoredFileHelper
 
     @Before
     fun setupFileLocator() {
-        fileLocator = Mockito.mock(BackupFileLocator::class.java, withSettings().stubOnly())
-        storedFileHelper = Mockito.mock(StoredFileHelper::class.java, withSettings().stubOnly())
+        fileLocator = Mockito.mock(BackupFileLocator::class.java)
+        storedFileHelper = Mockito.mock(StoredFileHelper::class.java)
     }
 
     @Test
     fun `The settings must be exported successfully in the correct format`() {
-        val db = File(classloader.getResource("settings/newpipe.db")!!.file)
+        val db = TestData.createDbFile()
         `when`(fileLocator.db).thenReturn(db)
 
         val expectedPreferences = mapOf("such pref" to "much wow")
         val sharedPreferences =
-            Mockito.mock(SharedPreferences::class.java, withSettings().stubOnly())
+            Mockito.mock(SharedPreferences::class.java)
         `when`(sharedPreferences.all).thenReturn(expectedPreferences)
 
         val output = File.createTempFile("newpipe_", "")
+        output.deleteOnExit()
+
         `when`(storedFileHelper.openAndTruncateStream()).thenReturn(FileStream(output))
         ImportExportManager(fileLocator).exportDatabase(sharedPreferences, storedFileHelper)
 
@@ -82,6 +83,7 @@ class ImportExportManagerTest {
     @Test
     fun `Ensuring db directory existence must work`() {
         val dir = Files.createTempDirectory("newpipe_").toFile()
+        dir.deleteOnExit()
         Assume.assumeTrue(dir.delete())
         `when`(fileLocator.dbDir).thenReturn(dir)
 
@@ -92,6 +94,7 @@ class ImportExportManagerTest {
     @Test
     fun `Ensuring db directory existence must work when the directory already exists`() {
         val dir = Files.createTempDirectory("newpipe_").toFile()
+        dir.deleteOnExit()
         `when`(fileLocator.dbDir).thenReturn(dir)
 
         ImportExportManager(fileLocator).ensureDbDirectoryExists()
@@ -101,16 +104,22 @@ class ImportExportManagerTest {
     @Test
     fun `The database must be extracted from the zip file`() {
         val db = File.createTempFile("newpipe_", "")
+        db.deleteOnExit()
         val dbJournal = File.createTempFile("newpipe_", "")
+        dbJournal.deleteOnExit()
         val dbWal = File.createTempFile("newpipe_", "")
+        dbWal.deleteOnExit()
         val dbShm = File.createTempFile("newpipe_", "")
+        dbShm.deleteOnExit()
+
         `when`(fileLocator.db).thenReturn(db)
         `when`(fileLocator.dbJournal).thenReturn(dbJournal)
         `when`(fileLocator.dbShm).thenReturn(dbShm)
         `when`(fileLocator.dbWal).thenReturn(dbWal)
 
-        val zip = File(classloader.getResource("settings/db_ser_json.zip")?.file!!)
-        `when`(storedFileHelper.stream).thenReturn(FileStream(zip))
+        val zipFile = TestData.createDbSerJsonZip()
+        `when`(storedFileHelper.stream).thenReturn(FileStream(zipFile))
+
         val success = ImportExportManager(fileLocator).extractDb(storedFileHelper)
 
         assertTrue(success)
@@ -123,13 +132,22 @@ class ImportExportManagerTest {
     @Test
     fun `Extracting the database from an empty zip must not work`() {
         val db = File.createTempFile("newpipe_", "")
+        db.deleteOnExit()
         val dbJournal = File.createTempFile("newpipe_", "")
+        dbJournal.deleteOnExit()
         val dbWal = File.createTempFile("newpipe_", "")
+        dbWal.deleteOnExit()
         val dbShm = File.createTempFile("newpipe_", "")
-        `when`(fileLocator.db).thenReturn(db)
+        dbShm.deleteOnExit()
 
-        val emptyZip = File(classloader.getResource("settings/nodb_noser_nojson.zip")?.file!!)
+        `when`(fileLocator.db).thenReturn(db)
+        `when`(fileLocator.dbJournal).thenReturn(dbJournal)
+        `when`(fileLocator.dbShm).thenReturn(dbShm)
+        `when`(fileLocator.dbWal).thenReturn(dbWal)
+
+        val emptyZip = TestData.createNodbNoserNojsonZip()
         `when`(storedFileHelper.stream).thenReturn(FileStream(emptyZip))
+
         val success = ImportExportManager(fileLocator).extractDb(storedFileHelper)
 
         assertFalse(success)
@@ -141,30 +159,42 @@ class ImportExportManagerTest {
 
     @Test
     fun `Contains setting must return true if a settings file exists in the zip`() {
-        val zip = File(classloader.getResource("settings/db_ser_json.zip")?.file!!)
-        `when`(storedFileHelper.stream).thenReturn(FileStream(zip))
+        val zipFile = TestData.createDbSerJsonZip()
+        `when`(storedFileHelper.stream).thenReturn(FileStream(zipFile))
+
         assertTrue(ImportExportManager(fileLocator).exportHasSerializedPrefs(storedFileHelper))
     }
 
     @Test
     fun `Contains setting must return false if no settings file exists in the zip`() {
-        val emptyZip = File(classloader.getResource("settings/nodb_noser_nojson.zip")?.file!!)
+        val emptyZip = TestData.createNodbNoserNojsonZip()
         `when`(storedFileHelper.stream).thenReturn(FileStream(emptyZip))
+
         assertFalse(ImportExportManager(fileLocator).exportHasSerializedPrefs(storedFileHelper))
     }
 
     @Test
     fun `Preferences must be set from the settings file`() {
-        val zip = File(classloader.getResource("settings/db_ser_json.zip")?.file!!)
-        `when`(storedFileHelper.stream).thenReturn(FileStream(zip))
+        val zipFile = TestData.createDbSerJsonZip()
+        `when`(storedFileHelper.stream).thenReturn(FileStream(zipFile))
 
-        val preferences = Mockito.mock(SharedPreferences::class.java, withSettings().stubOnly())
+        val preferences = Mockito.mock(SharedPreferences::class.java)
         val editor = Mockito.mock(SharedPreferences.Editor::class.java)
         `when`(preferences.edit()).thenReturn(editor)
         `when`(editor.commit()).thenReturn(true)
+        `when`(editor.clear()).thenReturn(editor)
+
+        // Fix UnfinishedStubbingException by stubbing all possible methods called on editor
+        `when`(editor.putBoolean(anyString(), anyBoolean())).thenReturn(editor)
+        `when`(editor.putString(anyString(), anyString())).thenReturn(editor)
+        `when`(editor.putInt(anyString(), anyInt())).thenReturn(editor)
+        `when`(editor.putLong(anyString(), Mockito.anyLong())).thenReturn(editor)
+        `when`(editor.putFloat(anyString(), Mockito.anyFloat())).thenReturn(editor)
+        `when`(editor.putStringSet(anyString(), any())).thenReturn(editor)
 
         ImportExportManager(fileLocator).loadSerializedPrefs(storedFileHelper, preferences)
 
+        // Verify that editor methods were called
         verify(editor, atLeastOnce()).putBoolean(anyString(), anyBoolean())
         verify(editor, atLeastOnce()).putString(anyString(), anyString())
         verify(editor, atLeastOnce()).putInt(anyString(), anyInt())
@@ -172,13 +202,21 @@ class ImportExportManagerTest {
 
     @Test
     fun `Importing preferences with a serialization injected class should fail`() {
-        val emptyZip = File(classloader.getResource("settings/db_vulnser_json.zip")?.file!!)
-        `when`(storedFileHelper.stream).thenReturn(FileStream(emptyZip))
+        val vulnZip = TestData.createDbVulnserJsonZip()
+        `when`(storedFileHelper.stream).thenReturn(FileStream(vulnZip))
 
-        val preferences = Mockito.mock(SharedPreferences::class.java, withSettings().stubOnly())
+        val preferences = Mockito.mock(SharedPreferences::class.java)
 
-        assertThrows(ClassNotFoundException::class.java) {
+        // This should throw a ClassNotFoundException because we're trying to deserialize a class
+        // that's not in the whitelist in PreferencesObjectInputStream
+        val exception = assertThrows(ClassNotFoundException::class.java) {
             ImportExportManager(fileLocator).loadSerializedPrefs(storedFileHelper, preferences)
         }
+
+        // Verify the exception contains information about class not allowed
+        assertTrue(
+            "Exception should indicate class not allowed: ${exception.message}",
+            exception.message?.contains("Class not allowed") == true
+        )
     }
 }

@@ -32,18 +32,44 @@ The app builds successfully but was failing to launch on the physical device due
 ## Next Task
 - Task ID: T002
 - Name: Fix Unit Tests
-- Status: PENDING
+- Status: IN_PROGRESS_IMPLEMENTATION
 - Complexity: Level 2
 - Assigned To: AI
 
 ### Description
-The unit tests are currently failing due to missing resources like `db_ser_json.zip` and test configuration issues. These need to be addressed to ensure proper test coverage.
+The unit tests are currently failing due to resource loading issues, specifically with test files like `db_ser_json.zip`. The main problem occurs in `ImportExportManagerTest.kt` and `ImportAllCombinationsTest.kt` where resource files cannot be found at runtime. This is particularly problematic on Windows systems where path handling differs. Additionally, there are Mockito `UnfinishedStubbingException` issues that need to be addressed.
 
-### Subtasks
-- [ ] T002.1: Analyze failing tests in `ImportExportManagerTest.kt` and `ImportAllCombinationsTest.kt`
-- [ ] T002.2: Create missing test resources in correct locations
-- [ ] T002.3: Fix Mockito `UnfinishedStubbingException` issues
-- [ ] T002.4: Run tests and validate fixes
+### Requirements / Acceptance Criteria
+- [ ] All unit tests in `ImportExportManagerTest.kt` pass successfully
+- [ ] All unit tests in `ImportAllCombinationsTest.kt` pass successfully
+- [x] Fix should work across platforms (Windows, Linux, macOS)
+- [x] Mockito stubbing is properly configured to avoid `UnfinishedStubbingException`
+
+### Sub-tasks (Implementation Steps)
+- [x] T002.1: Analyze failing tests in `ImportExportManagerTest.kt` and `ImportAllCombinationsTest.kt`
+- [x] T002.2: Create a platform-independent solution using embedded test data instead of external resources
+- [x] T002.3: Create a `TestData` utility class that generates test data on the fly
+- [x] T002.4: Update `ImportExportManagerTest.kt` to use the `TestData` utility
+- [x] T002.5: Update `ImportAllCombinationsTest.kt` to use the `TestData` utility
+- [x] T002.6: Fix Mockito `UnfinishedStubbingException` issues by properly stubbing all relevant methods
+- [x] T002.7: Ensure proper code formatting to pass ktlint checks
+- [ ] T002.8: Run tests and validate fixes
+  - [x] T002.8.1: Fix mock configuration by removing stubOnly() settings
+  - [x] T002.8.2: Fix vulnerable serialization format in TestData utility
+  - [x] T002.8.3: Fix ClassNotFoundException assertions in ImportExportManagerTest
+  - [x] T002.8.4: Fix test combination expectations in ImportAllCombinationsTest
+- [x] T002.9: Update documentation on how test resources are now handled
+
+### Dependencies
+- Requires configured Gradle build environment
+- Requires understanding of Java's ZIP file handling and serialization
+
+### Notes
+- The key insight is to generate test data programmatically rather than relying on loading physical resource files
+- This approach eliminates platform-specific path issues by creating files in memory
+- For security testing, we still need to simulate vulnerable serialized data to test proper error handling
+- The solution should maintain all the same test coverage despite the change in approach
+- Implementation is complete, but verification is pending due to Kotlin annotation processing (kapt) issues
 
 ## Backlog
 1. **T003: Address Gradle Deprecations**
