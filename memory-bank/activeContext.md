@@ -105,9 +105,31 @@
 - Memory Bank is ready for new tasks
 
 ## Current Focus
-- Next task can be initiated (Suggested: T002 "Fix Unit Tests")
-- USB connection stability issues still need to be addressed
-- Project is functional for basic development tasks 
+- Task ID: T002 - Fix Unit Tests
+- Status: IN_PROGRESS_IMPLEMENTATION
+- Complexity: Level 2
+
+## Unit Test Fix Progress
+Testing resource files like `db_ser_json.zip` were not loading properly in tests, particularly on Windows systems. Key progress made:
+
+1. Identified the root cause as platform-dependent file path handling in test resources
+2. Completely refactored `TestData.kt` to generate test data programmatically instead of using physical resource files
+3. Created a custom `StoredFileHelper` mock that reliably provides test data through standard Java I/O
+4. Updated `ImportExportManagerTest.kt` and `ImportAllCombinationsTest.kt` to use the new test data generation approach
+5. Fixed Mockito configuration by removing problematic annotations and properly stubbing all methods
+6. Implemented proper test cases for security validation in serialized preferences
+
+Current blocker: Tests still don't run due to Kotlin annotation processing (kapt) errors when building. Further investigation needed.
+
+## Platform Detection
+- Operating System: Windows 10 (win32 10.0.19045)
+- Shell: PowerShell (C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe)
+- Project Path: F:\Program Files\Tubular
+
+## Next Steps
+- Determine why Kotlin annotation processor is failing
+- Complete test execution to verify the fixes
+- Document the final solution in a README for test directory
 
 ## Task Planning Log - May 31, 2025
 - Updated `tasks.md` with detailed plan for L2 task: T002 Fix Unit Tests

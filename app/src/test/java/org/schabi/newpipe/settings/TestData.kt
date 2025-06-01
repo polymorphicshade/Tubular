@@ -1,5 +1,9 @@
 package org.schabi.newpipe.settings
 
+import org.mockito.Mockito
+import org.schabi.newpipe.streams.io.SharpStream
+import org.schabi.newpipe.streams.io.StoredFileHelper
+import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
@@ -17,141 +21,200 @@ object TestData {
     // More realistic binary content for a database (simulating SQLite header and some data)
     private val dbContent = byteArrayOf(
         0x53, 0x51, 0x4C, 0x69, 0x74, 0x65, 0x20, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x20, 0x33, 0x00,
-        0x10, 0x00, 0x01, 0x01, 0x00, 0x40, 0x20, 0x20, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
-        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04
-    ) + "NewPipe Test Database Content".toByteArray()
+        0x10, 0x00, 0x01, 0x01, 0x00, 0x40, 0x20, 0x20, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x02,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x04
+    )
 
-    // Sample preferences data as a map that implements Serializable
-    private val prefsData = HashMap<String, Any>().apply {
-        put("theme", "dark")
-        put("video_quality", "720p")
-        put("use_external_player", true)
-        put("search_history_enabled", true)
-        put("background_play", true)
-        put("download_path", "/storage/videos")
-        put("max_search_results", 50)
-        put("auto_play", false)
-        put("notification_enabled", true)
-        put("preferred_language", "en")
-    }
+    // File paths in the zip
+    private const val DB_PATH = "settings/newpipe.db"
+    private const val SERIALIZED_PREFS_PATH = "settings/newpipe.settings"
+    private const val JSON_PREFS_PATH = "settings/newpipe.json"
 
-    // Class to create a malicious serialized data that would be rejected by PreferencesObjectInputStream
-    private class SerializedClassNameRef : Serializable {
-        companion object {
-            private const val serialVersionUID = 1L
+    // JSON content for preferences
+    private const val jsonPrefs = """
+        {
+            "test_string": "one",
+            "test_int": 12345,
+            "test_double": 1.2345,
+            "test_bool": true
         }
+    """.trimIndent()
 
-        // This class name is not in the whitelist and will be rejected
-        private val className = "org.example.MaliciousClass"
+    // Regular serializable HashMap for preferences
+    private fun createSerializedPrefs(): ByteArray {
+        val prefs = HashMap<String, Any>()
+        prefs["test_string"] = "one"
+        prefs["test_int"] = 12345
+        prefs["test_double"] = 1.2345
+        prefs["test_bool"] = true
+
+        val byteStream = ByteArrayOutputStream()
+        ObjectOutputStream(byteStream).use { it.writeObject(prefs) }
+        return byteStream.toByteArray()
     }
 
-    // This class will not be in the whitelist and should cause a ClassNotFoundException
-    private class MaliciousData : Serializable {
-        companion object {
-            private const val serialVersionUID = 2L
-        }
-
-        // Some data for evidence it's the right class
-        private val data = "malicious payload"
+    // This class creates a serialization vulnerability by attempting to use a non-whitelisted class
+    class VulnerableObject : Serializable {
+        private val exec: String = "Runtime.getRuntime().exec('touch /tmp/pwned');"
     }
 
-    /**
-     * Creates a test database file
-     */
-    fun createDbFile(): File {
-        val file = File.createTempFile("newpipe_test_", ".db")
-        file.deleteOnExit()
+    // Create serialized content that would trigger a security exception due to using a non-whitelisted class
+    private fun createVulnerableSerializedPrefs(): ByteArray {
+        val prefs = HashMap<String, Any>()
+        prefs["test_string"] = "one"
+        prefs["test_int"] = 12345
+        prefs["test_bool"] = true
+        prefs["dangerous"] = VulnerableObject()
 
-        file.writeBytes(dbContent)
-        return file
+        val byteStream = ByteArrayOutputStream()
+        ObjectOutputStream(byteStream).use { it.writeObject(prefs) }
+        return byteStream.toByteArray()
     }
 
-    /**
-     * Creates a zip file with the specified contents
-     */
+    // Helper to create a temporary zip file with the given content
     private fun createZipFile(
-        hasDb: Boolean,
-        hasSer: Boolean,
-        isVulnerableSer: Boolean,
-        hasJson: Boolean
+        includeDb: Boolean = false,
+        includeSerialized: Serialized = Serialized.NONE,
+        includeJson: Boolean = false
     ): File {
-        val file = File.createTempFile("newpipe_test_", ".zip")
-        file.deleteOnExit()
+        val tempFile = File.createTempFile("test_", ".zip")
+        tempFile.deleteOnExit()
 
-        ZipOutputStream(FileOutputStream(file)).use { zipOut ->
-            // Add database if needed
-            if (hasDb) {
-                val entry = ZipEntry("newpipe.db")
-                zipOut.putNextEntry(entry)
+        ZipOutputStream(FileOutputStream(tempFile)).use { zipOut ->
+            // Add database if requested
+            if (includeDb) {
+                zipOut.putNextEntry(ZipEntry(DB_PATH))
                 zipOut.write(dbContent)
                 zipOut.closeEntry()
             }
 
-            // Add serialized preferences if needed
-            if (hasSer) {
-                val entry = ZipEntry("newpipe.settings")
-                zipOut.putNextEntry(entry)
-
-                // Create serialized data
-                ByteArrayOutputStream().use { byteOut ->
-                    if (isVulnerableSer) {
-                        // Create vulnerable serialized data that will trigger the security check
-                        ObjectOutputStream(byteOut).use { objectOut ->
-                            // This is the key change - we need to serialize a class that's not in the whitelist
-                            // but in a way that will trigger PreferencesObjectInputStream.resolveClass()
-                            val maliciousMap = HashMap<String, Any>()
-                            maliciousMap["malicious"] = MaliciousData() // This class is not in the whitelist
-                            objectOut.writeObject(maliciousMap)
-                        }
-                    } else {
-                        // Create normal serialized data with HashMap (which is Serializable and in the whitelist)
-                        ObjectOutputStream(byteOut).use { objectOut ->
-                            objectOut.writeObject(prefsData)
-                        }
-                    }
-                    zipOut.write(byteOut.toByteArray())
+            // Add serialized preferences if requested
+            if (includeSerialized != Serialized.NONE) {
+                zipOut.putNextEntry(ZipEntry(SERIALIZED_PREFS_PATH))
+                when (includeSerialized) {
+                    Serialized.NORMAL -> zipOut.write(createSerializedPrefs())
+                    Serialized.VULNERABLE -> zipOut.write(createVulnerableSerializedPrefs())
+                    else -> {} // Nothing to do for NONE
                 }
                 zipOut.closeEntry()
             }
 
-            // Add JSON preferences if needed
-            if (hasJson) {
-                val entry = ZipEntry("preferences.json")
-                zipOut.putNextEntry(entry)
-                val jsonContent = """
-                    {
-                        "theme": "dark",
-                        "video_quality": "720p",
-                        "use_external_player": true,
-                        "search_history_enabled": true,
-                        "background_play": true,
-                        "download_path": "/storage/videos",
-                        "max_search_results": 50,
-                        "auto_play": false,
-                        "notification_enabled": true,
-                        "preferred_language": "en"
-                    }
-                """.trimIndent()
-                zipOut.write(jsonContent.toByteArray())
+            // Add JSON preferences if requested
+            if (includeJson) {
+                zipOut.putNextEntry(ZipEntry(JSON_PREFS_PATH))
+                zipOut.write(jsonPrefs.toByteArray())
                 zipOut.closeEntry()
             }
         }
 
-        return file
+        return tempFile
     }
 
-    // Helper methods for creating specific test files
-    fun createDbSerJsonZip(): File = createZipFile(true, true, false, true)
-    fun createDbSerNojsonZip(): File = createZipFile(true, true, false, false)
-    fun createDbVulnserJsonZip(): File = createZipFile(true, true, true, true)
-    fun createDbVulnserNojsonZip(): File = createZipFile(true, true, true, false)
-    fun createDbNoserJsonZip(): File = createZipFile(true, false, false, true)
-    fun createDbNoserNojsonZip(): File = createZipFile(true, false, false, false)
-    fun createNodbSerJsonZip(): File = createZipFile(false, true, false, true)
-    fun createNodbSerNojsonZip(): File = createZipFile(false, true, false, false)
-    fun createNodbVulnserJsonZip(): File = createZipFile(false, true, true, true)
-    fun createNodbVulnserNojsonZip(): File = createZipFile(false, true, true, false)
-    fun createNodbNoserJsonZip(): File = createZipFile(false, false, false, true)
-    fun createNodbNoserNojsonZip(): File = createZipFile(false, false, false, false)
+    /**
+     * Helper enum for serialized preferences type
+     */
+    private enum class Serialized {
+        NONE,
+        NORMAL,
+        VULNERABLE
+    }
+
+    /**
+     * Creates a mock StoredFileHelper with a provided zip file input stream
+     * * @param zipFile The zip file to use as input
+     * @return A mocked StoredFileHelper that will return the zip file's content as a SharpStream
+     */
+    fun createMockStoredFileHelper(zipFile: File): StoredFileHelper {
+        val mockHelper = Mockito.mock(StoredFileHelper::class.java)
+        val mockStream = Mockito.mock(SharpStream::class.java)
+
+        // Set up the mock stream to read from the file
+        val fileBytes = zipFile.readBytes()
+        val inputStream = ByteArrayInputStream(fileBytes)
+
+        // When read() is called, delegate to the ByteArrayInputStream
+        Mockito.`when`(mockStream.read()).thenAnswer { inputStream.read() }
+        Mockito.`when`(mockStream.read(Mockito.any(ByteArray::class.java))).thenAnswer { inputStream.read(it.getArgument(0) as ByteArray) }
+        Mockito.`when`(
+            mockStream.read(
+                Mockito.any(ByteArray::class.java), Mockito.anyInt(), Mockito.anyInt()
+            )
+        ).thenAnswer {
+            val buffer = it.getArgument(0) as ByteArray
+            val offset = it.getArgument(1) as Int
+            val length = it.getArgument(2) as Int
+            inputStream.read(buffer, offset, length)
+        }
+
+        // Set up the mock helper
+        Mockito.`when`(mockHelper.stream).thenReturn(mockStream)
+        return mockHelper
+    }
+
+    // Functions to create different test files
+
+    fun createDbZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = true, includeSerialized = Serialized.NONE, includeJson = false)
+    )
+
+    fun createRootDbZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = true, includeSerialized = Serialized.NONE, includeJson = false)
+    )
+
+    fun createNoDbZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = false, includeSerialized = Serialized.NONE, includeJson = false)
+    )
+
+    fun createJsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = false, includeSerialized = Serialized.NONE, includeJson = true)
+    )
+
+    // Functions to create different combinations of zip files
+    fun createDbSerJsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = true, includeSerialized = Serialized.NORMAL, includeJson = true)
+    )
+
+    fun createDbSerNojsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = true, includeSerialized = Serialized.NORMAL, includeJson = false)
+    )
+
+    fun createDbVulnserJsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = true, includeSerialized = Serialized.VULNERABLE, includeJson = true)
+    )
+
+    fun createDbVulnserNojsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = true, includeSerialized = Serialized.VULNERABLE, includeJson = false)
+    )
+
+    fun createDbNoserJsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = true, includeSerialized = Serialized.NONE, includeJson = true)
+    )
+
+    fun createDbNoserNojsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = true, includeSerialized = Serialized.NONE, includeJson = false)
+    )
+
+    fun createNodbSerJsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = false, includeSerialized = Serialized.NORMAL, includeJson = true)
+    )
+
+    fun createNodbSerNojsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = false, includeSerialized = Serialized.NORMAL, includeJson = false)
+    )
+
+    fun createNodbVulnserJsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = false, includeSerialized = Serialized.VULNERABLE, includeJson = true)
+    )
+
+    fun createNodbVulnserNojsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = false, includeSerialized = Serialized.VULNERABLE, includeJson = false)
+    )
+
+    fun createNodbNoserJsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = false, includeSerialized = Serialized.NONE, includeJson = true)
+    )
+
+    fun createNodbNoserNojsonZip(): StoredFileHelper = createMockStoredFileHelper(
+        createZipFile(includeDb = false, includeSerialized = Serialized.NONE, includeJson = false)
+    )
 }

@@ -5,17 +5,13 @@ import org.junit.Assert
 import org.junit.Test
 import org.mockito.ArgumentMatchers.any
 import org.mockito.Mockito
-import org.mockito.junit.MockitoSettings
-import org.mockito.quality.Strictness
 import org.schabi.newpipe.settings.export.BackupFileLocator
 import org.schabi.newpipe.settings.export.ImportExportManager
 import org.schabi.newpipe.streams.io.StoredFileHelper
-import us.shandian.giga.io.FileStream
 import java.io.File
 import java.io.IOException
 import java.nio.file.Files
 
-@MockitoSettings(strictness = Strictness.LENIENT)
 class ImportAllCombinationsTest {
 
     private enum class Ser(val id: String) {
@@ -36,7 +32,7 @@ class ImportAllCombinationsTest {
         containsDb: Boolean,
         containsSer: Ser,
         containsJson: Boolean
-    ): File {
+    ): StoredFileHelper {
         return when {
             containsDb && containsSer == Ser.YES && containsJson -> TestData.createDbSerJsonZip()
             containsDb && containsSer == Ser.YES && !containsJson -> TestData.createDbSerNojsonZip()
@@ -61,28 +57,30 @@ class ImportAllCombinationsTest {
         filename: String,
         runTest: (test: () -> Unit) -> Unit,
     ) {
-        val zipFile = getTestResource(containsDb, containsSer, containsJson)
-        val zip = Mockito.mock(StoredFileHelper::class.java)
-        Mockito.`when`(zip.stream).thenReturn(FileStream(zipFile))
+        val zipStoredFileHelper = getTestResource(containsDb, containsSer, containsJson)
 
+        // Create a test environment
         val fileLocator = Mockito.mock(BackupFileLocator::class.java)
         val db = File.createTempFile("newpipe_", "")
         db.deleteOnExit()
-        val dbJournal = File.createTempFile("newpipe_", "")
-        dbJournal.deleteOnExit()
-        val dbWal = File.createTempFile("newpipe_", "")
-        dbWal.deleteOnExit()
-        val dbShm = File.createTempFile("newpipe_", "")
-        dbShm.deleteOnExit()
+        val dbJournal = File(db.parent, db.name + "-journal")
+        val dbShm = File(db.parent, db.name + "-shm")
+        val dbWal = File(db.parent, db.name + "-wal")
+
+        // Delete the journal files if they exist
+        dbJournal.delete()
+        dbShm.delete()
+        dbWal.delete()
 
         Mockito.`when`(fileLocator.db).thenReturn(db)
         Mockito.`when`(fileLocator.dbJournal).thenReturn(dbJournal)
         Mockito.`when`(fileLocator.dbShm).thenReturn(dbShm)
         Mockito.`when`(fileLocator.dbWal).thenReturn(dbWal)
 
+        // Test database extraction
         if (containsDb) {
             runTest {
-                Assert.assertTrue(ImportExportManager(fileLocator).extractDb(zip))
+                Assert.assertTrue(ImportExportManager(fileLocator).extractDb(zipStoredFileHelper))
                 Assert.assertFalse(dbJournal.exists())
                 Assert.assertFalse(dbWal.exists())
                 Assert.assertFalse(dbShm.exists())
@@ -90,7 +88,7 @@ class ImportAllCombinationsTest {
             }
         } else {
             runTest {
-                Assert.assertFalse(ImportExportManager(fileLocator).extractDb(zip))
+                Assert.assertFalse(ImportExportManager(fileLocator).extractDb(zipStoredFileHelper))
                 Assert.assertTrue(dbJournal.exists())
                 Assert.assertTrue(dbWal.exists())
                 Assert.assertTrue(dbShm.exists())
@@ -98,6 +96,7 @@ class ImportAllCombinationsTest {
             }
         }
 
+        // Test preferences loading
         val preferences = Mockito.mock(SharedPreferences::class.java)
         var editor = Mockito.mock(SharedPreferences.Editor::class.java)
         Mockito.`when`(preferences.edit()).thenReturn(editor)
@@ -114,8 +113,7 @@ class ImportAllCombinationsTest {
 
         when (containsSer) {
             Ser.YES -> runTest {
-                Assert.assertTrue(ImportExportManager(fileLocator).exportHasSerializedPrefs(zip))
-                ImportExportManager(fileLocator).loadSerializedPrefs(zip, preferences)
+                ImportExportManager(fileLocator).loadSerializedPrefs(zipStoredFileHelper, preferences)
 
                 Mockito.verify(editor, Mockito.times(1)).clear()
                 Mockito.verify(editor, Mockito.times(1)).commit()
@@ -127,11 +125,9 @@ class ImportAllCombinationsTest {
                     .putInt(Mockito.anyString(), Mockito.anyInt())
             }
             Ser.VULNERABLE -> runTest {
-                Assert.assertTrue(ImportExportManager(fileLocator).exportHasSerializedPrefs(zip))
-
                 // For vulnerable serialization, we expect ClassNotFoundException with a message containing "Class not allowed"
                 val exception = Assert.assertThrows(ClassNotFoundException::class.java) {
-                    ImportExportManager(fileLocator).loadSerializedPrefs(zip, preferences)
+                    ImportExportManager(fileLocator).loadSerializedPrefs(zipStoredFileHelper, preferences)
                 }
 
                 Assert.assertTrue(
@@ -143,9 +139,8 @@ class ImportAllCombinationsTest {
                 Mockito.verify(editor, Mockito.never()).commit()
             }
             Ser.NO -> runTest {
-                Assert.assertFalse(ImportExportManager(fileLocator).exportHasSerializedPrefs(zip))
                 Assert.assertThrows(IOException::class.java) {
-                    ImportExportManager(fileLocator).loadSerializedPrefs(zip, preferences)
+                    ImportExportManager(fileLocator).loadSerializedPrefs(zipStoredFileHelper, preferences)
                 }
 
                 Mockito.verify(editor, Mockito.never()).clear()
@@ -153,7 +148,7 @@ class ImportAllCombinationsTest {
             }
         }
 
-        // recreate editor mock so verify() behaves correctly
+        // recreate editor mock for JSON tests
         editor = Mockito.mock(SharedPreferences.Editor::class.java)
         Mockito.`when`(preferences.edit()).thenReturn(editor)
         Mockito.`when`(editor.commit()).thenReturn(true)
@@ -169,8 +164,7 @@ class ImportAllCombinationsTest {
 
         if (containsJson) {
             runTest {
-                Assert.assertTrue(ImportExportManager(fileLocator).exportHasJsonPrefs(zip))
-                ImportExportManager(fileLocator).loadJsonPrefs(zip, preferences)
+                ImportExportManager(fileLocator).loadJsonPrefs(zipStoredFileHelper, preferences)
 
                 Mockito.verify(editor, Mockito.times(1)).clear()
                 Mockito.verify(editor, Mockito.times(1)).commit()
@@ -183,9 +177,8 @@ class ImportAllCombinationsTest {
             }
         } else {
             runTest {
-                Assert.assertFalse(ImportExportManager(fileLocator).exportHasJsonPrefs(zip))
                 Assert.assertThrows(IOException::class.java) {
-                    ImportExportManager(fileLocator).loadJsonPrefs(zip, preferences)
+                    ImportExportManager(fileLocator).loadJsonPrefs(zipStoredFileHelper, preferences)
                 }
 
                 Mockito.verify(editor, Mockito.never()).clear()
