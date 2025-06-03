@@ -1,0 +1,22 @@
+---
+description: Core reference on metrics and quality assessment for Creative Phase outputs. For AI understanding of quality expectations.
+globs: **/Core/creative-phase-metrics.mdc
+alwaysApply: false
+---
+# CREATIVE PHASE METRICS & QUALITY ASSESSMENT (AI Guidance)
+
+> **TL;DR:** This outlines quality expectations for `creative-*.md` documents. Use this as a guide when generating or reviewing creative outputs.
+
+## 📊 QUALITY EXPECTATIONS FOR `memory-bank/creative/creative-[feature_name].md` (AI Self-Guide)
+A good creative document (created/updated via `edit_file`) should cover:
+1.  **Problem & Objectives:** Clearly defined. What problem is this design solving? What are the goals?
+2.  **Requirements & Constraints:** List functional and non-functional requirements. Note any technical or business constraints.
+3.  **Options Explored:** At least 2-3 viable design options should be considered and briefly described.
+4.  **Analysis of Options:** For each option:
+    *   Pros (advantages).
+    *   Cons (disadvantages).
+    *   Feasibility (technical, time, resources).
+    *   Impact (on other system parts, user experience).
+5.  **Recommended Design & Justification:** Clearly state the chosen design option and provide a strong rationale for why it was selected over others, referencing the analysis.
+6.  **Implementation Guidelines:** High-level steps or considerations for implementing the chosen design. This is not a full plan, but key pointers for the IMPLEMENT phase.
+7.  **Visualizations (if applicable):** Reference or describe any diagrams (e.g., flowcharts, component diagrams) that clarify the design. (Actual diagram creation might be a separate step or user-provided).

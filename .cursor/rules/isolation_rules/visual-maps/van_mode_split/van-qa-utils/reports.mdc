@@ -1,0 +1,83 @@
+---
+description: VAN QA utility for generating success/failure reports. Fetched by `van-qa-main.mdc`. Guides AI to format and present QA results using `edit_file`.
+globs: **/visual-maps/van_mode_split/van-qa-utils/reports.mdc
+alwaysApply: false
+---
+# VAN QA: VALIDATION REPORTS (AI Instructions)
+
+> **TL;DR:** Generate and present a formatted success or failure report based on the outcomes of the VAN QA checks. Update `activeContext.md` and `.qa_validation_status`. This rule is fetched by `van-qa-main.mdc`.
+
+## ⚙️ AI ACTIONS FOR GENERATING REPORTS:
+
+You will be told by `van-qa-main.mdc` whether the overall QA passed or failed, and will have access to the detailed logs in `activeContext.md`.
+
+1.  **Acknowledge:** State: "Generating VAN QA Report."
+2.  **Gather Data from `activeContext.md`:**
+    a.  `read_file memory-bank/activeContext.md`.
+    b.  Extract the findings from the "VAN QA Log" sections for:
+        *   Dependency Check Status & Details
+        *   Configuration Check Status & Details
+        *   Environment Check Status & Details
+        *   Minimal Build Test Status & Details
+3.  **Format the Report:**
+
+    **If Overall QA Status is PASS:**
+    ```markdown
+    ╔═════════════════════ 🔍 QA VALIDATION REPORT ══════════════════════╗
+    │ PROJECT: [Project Name from activeContext.md/projectbrief.md]
+    │ TIMESTAMP: [Current Date/Time]
+    ├─────────────────────────────────────────────────────────────────────┤
+    │ 1️⃣ DEPENDENCIES:   ✓ PASS. [Brief summary, e.g., "Node & npm OK"]
+    │ 2️⃣ CONFIGURATION:  ✓ PASS. [Brief summary, e.g., "package.json & tsconfig OK"]
+    │ 3️⃣ ENVIRONMENT:    ✓ PASS. [Brief summary, e.g., "Git found, permissions assumed OK"]
+    │ 4️⃣ MINIMAL BUILD:  ✓ PASS. [Brief summary, e.g., "npm run build script executed successfully"]
+    ├─────────────────────────────────────────────────────────────────────┤
+    │ 🚨 FINAL VERDICT: PASS                                              │
+    │ ➡️ Clear to proceed to BUILD mode.                                  │
+    ╚═════════════════════════════════════════════════════════════════════╝
+    ```
+
+    **If Overall QA Status is FAIL:**
+    ```markdown
+    ⚠️⚠️⚠️ QA VALIDATION FAILED ⚠️⚠️⚠️
+
+    Project: [Project Name]
+    Timestamp: [Current Date/Time]
+
+    The following issues must be resolved before proceeding to BUILD mode:
+
+    1️⃣ DEPENDENCY ISSUES: [Status: FAIL/WARN]
+       - Details: [Extracted from activeContext.md log for dependencies]
+       - Recommended Fix: (Refer to common-fixes.mdc or specific error messages)
+
+    2️⃣ CONFIGURATION ISSUES: [Status: FAIL/WARN]
+       - Details: [Extracted from activeContext.md log for configurations]
+       - Recommended Fix: (Refer to common-fixes.mdc or specific error messages)
+
+    3️⃣ ENVIRONMENT ISSUES: [Status: FAIL/WARN]
+       - Details: [Extracted from activeContext.md log for environment]
+       - Recommended Fix: (Refer to common-fixes.mdc or specific error messages)
+
+    4️⃣ MINIMAL BUILD TEST ISSUES: [Status: FAIL/WARN]
+       - Details: [Extracted from activeContext.md log for build test]
+       - Recommended Fix: (Refer to common-fixes.mdc or specific error messages)
+
+    ⚠️ BUILD MODE IS BLOCKED until these issues are resolved.
+    Type 'VAN QA' after fixing the issues to re-validate.
+    ```
+4.  **Present Report to User:**
+    a.  Display the formatted report directly to the user in the chat.
+5.  **Update `.qa_validation_status` File:**
+    a.  Use `edit_file` to write "PASS" or "FAIL" to `memory-bank/.qa_validation_status`. This file acts as a simple flag for other rules.
+        *   Example content for PASS: `QA_STATUS: PASS - [Timestamp]`
+        *   Example content for FAIL: `QA_STATUS: FAIL - [Timestamp]`
+6.  **Log Report Generation in `activeContext.md`:**
+    a.  Use `edit_file` to append to `memory-bank/activeContext.md`:
+        ```markdown
+        #### VAN QA Report Generation - [Timestamp]
+        - Overall QA Status: [PASS/FAIL]
+        - Report presented to user.
+        - `.qa_validation_status` file updated.
+        ```
+7.  **Completion:** State: "VAN QA Report generated and presented."
+    (Control returns to `van-qa-main.mdc`).

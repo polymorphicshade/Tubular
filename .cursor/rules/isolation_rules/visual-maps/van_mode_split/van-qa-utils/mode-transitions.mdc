@@ -1,0 +1,28 @@
+---
+description: VAN QA utility for handling mode transitions after QA. Fetched by `van-qa-main.mdc` on QA pass. Guides AI to recommend BUILD mode.
+globs: **/visual-maps/van_mode_split/van-qa-utils/mode-transitions.mdc
+alwaysApply: false
+---
+# VAN QA: MODE TRANSITIONS (AI Instructions)
+
+> **TL;DR:** Handles mode transition recommendations after VAN QA validation. If QA passed, recommend BUILD mode. This rule is fetched by `van-qa-main.mdc` after a successful QA.
+
+## ⚙️ AI ACTIONS FOR MODE TRANSITION (POST QA SUCCESS):
+
+1.  **Acknowledge:** State: "VAN QA validation passed successfully."
+2.  **Update `activeContext.md`:**
+    a.  Use `edit_file` to update `memory-bank/activeContext.md` with:
+        ```markdown
+        ## VAN QA Status - [Timestamp]
+        - Overall Result: PASS
+        - Next Recommended Mode: BUILD
+        ```
+3.  **Recommend BUILD Mode:**
+    a.  State: "All technical pre-flight checks are green. The project appears ready for implementation."
+    b.  State: "Recommend transitioning to BUILD mode. Type 'BUILD' to begin implementation."
+4.  **Await User Confirmation:** Await the user to type 'BUILD' or another command.
+
+## 🔒 BUILD MODE ACCESS (Conceptual Reminder for AI):
+*   The system is designed such that if a user tries to enter 'BUILD' mode directly without VAN QA having passed (for tasks requiring it), the BUILD mode orchestrator (or a preceding check) should ideally verify the `.qa_validation_status` file or `activeContext.md` and block if QA was needed but not passed. This current rule (`mode-transitions.mdc`) focuses on the *recommendation* after a *successful* QA.
+
+(Control returns to `van-qa-main.mdc` which awaits user input).

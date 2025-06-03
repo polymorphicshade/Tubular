@@ -1,0 +1,42 @@
+---
+description: VAN QA sub-rule for configuration validation. Fetched by `van-qa-main.mdc`. Guides AI to check project configuration files.
+globs: **/visual-maps/van_mode_split/van-qa-checks/config-check.mdc
+alwaysApply: false
+---
+# VAN QA: CONFIGURATION VALIDATION (AI Instructions)
+
+> **TL;DR:** Validate project configuration files (e.g., `package.json` syntax, `tsconfig.json`, linters, build tool configs). Log findings to `activeContext.md` using `edit_file`. This rule is fetched by `van-qa-main.mdc`.
+
+## ⚙️ AI ACTIONS FOR CONFIGURATION VALIDATION:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Starting Configuration Validation."
+    b.  `read_file memory-bank/techContext.md` and `memory-bank/tasks.md` to identify relevant configuration files based on the project type and technology stack.
+2.  **Define Checks (Based on Context):**
+    *   **Example for a TypeScript/React project:**
+        *   `package.json`: `read_file package.json`. Check for valid JSON structure (conceptually, AI doesn't parse JSON strictly but looks for malformations). Check for essential scripts (`build`, `start`, `test`).
+        *   `tsconfig.json`: `read_file tsconfig.json`. Check for valid JSON. Check for key compiler options like `jsx`, `target`, `moduleResolution`.
+        *   `.eslintrc.js` or `eslint.config.js`: `read_file [config_name]`. Check for basic structural integrity.
+        *   `vite.config.js` or `webpack.config.js`: `read_file [config_name]`. Check for presence of key plugins (e.g., React plugin).
+3.  **Execute Checks (Primarily using `read_file` and analysis):**
+    a.  For each configuration file:
+        i.  `read_file [config_filepath]`.
+        ii. Analyze its content against expected structure or key settings.
+        iii. For linting/formatting configs, note their presence. Actual linting runs are usually part of build/test steps.
+4.  **Evaluate Results & Log:**
+    a.  Based on file content analysis, determine if configurations seem correct and complete.
+    b.  Use `edit_file` to append detailed findings to the "VAN QA Log" in `memory-bank/activeContext.md`:
+        ```markdown
+        #### Configuration Check Log - [Timestamp]
+        - File: `package.json`
+          - Check: Valid JSON structure, presence of `build` script.
+          - Status: PASS
+        - File: `tsconfig.json`
+          - Check: Presence of `jsx: react-jsx`.
+          - Status: FAIL (jsx option missing or incorrect)
+        - ... (other checks) ...
+        - Overall Configuration Status: [PASS/FAIL]
+        ```
+5.  **Completion:**
+    a.  State: "Configuration Validation complete. Overall Status: [PASS/FAIL]."
+    b.  (The `van-qa-main.mdc` orchestrator will use this outcome).

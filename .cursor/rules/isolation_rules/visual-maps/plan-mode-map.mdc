@@ -1,0 +1,47 @@
+---
+description: Orchestrates PLAN mode. Fetched by VAN for L2+ tasks. Guides AI to create detailed plans in `tasks.md` using level-specific rules, `edit_file`, and identifies needs for CREATIVE mode.
+globs: **/visual-maps/plan-mode-map.mdc
+alwaysApply: false
+---
+# PLAN MODE: TASK PLANNING PROCESS MAP (AI Instructions)
+
+> **TL;DR:** Create a detailed implementation plan for Level 2-4 tasks. Update `tasks.md` extensively using `edit_file`. Identify components needing CREATIVE design. Fetch level-specific planning rules for detailed guidance.
+
+## 🧭 PLAN MODE PROCESS FLOW (AI Actions)
+
+1.  **Acknowledge & Context Gathering:**
+    a.  State: "Initiating PLAN mode for the current task."
+    b.  `read_file memory-bank/activeContext.md` to understand the task name, determined complexity level (should be L2, L3, or L4), and any initial notes from VAN mode.
+    c.  `read_file memory-bank/tasks.md` for the current state of the task entry.
+    d.  `read_file memory-bank/projectbrief.md`, `productContext.md`, `systemPatterns.md`, `techContext.md` for broader project understanding.
+2.  **Pre-Planning Check (AI Self-Correction):**
+    a.  Verify from `activeContext.md` or `tasks.md` that the task complexity is indeed Level 2, 3, or 4.
+    b.  If complexity is Level 1 or not assessed, state: "PLAN mode is intended for Level 2-4 tasks. Current task is [Level/Status]. Please clarify or run VAN mode for complexity assessment." Await user.
+3.  **Fetch Level-Specific Planning Rule:**
+    a.  Based on the complexity level:
+        *   **Level 2:** `fetch_rules` for `.cursor/rules/isolation_rules/Level2/task-tracking-basic.mdc` (or a dedicated L2 planning rule like `Level2/planning-basic.mdc` if it exists).
+        *   **Level 3:** `fetch_rules` for `.cursor/rules/isolation_rules/Level3/planning-comprehensive.mdc`.
+        *   **Level 4:** `fetch_rules` for `.cursor/rules/isolation_rules/Level4/architectural-planning.mdc`.
+4.  **Follow Fetched Rule (Detailed Planning):**
+    a.  The fetched level-specific rule will guide you through the detailed planning steps, which will involve extensive updates to `memory-bank/tasks.md` using `edit_file`. This includes:
+        i.  Breaking down the main task into smaller, actionable sub-tasks.
+        ii. Defining requirements, acceptance criteria for each sub-task.
+        iii. Identifying affected components, files, or modules.
+        iv. Estimating effort/dependencies for sub-tasks (qualitatively).
+        v.  **Crucially for L3/L4:** Identifying specific components or aspects that require a dedicated CREATIVE design phase (e.g., "CREATIVE: Design User Authentication UI", "CREATIVE: Design Database Schema for Orders"). These should be added as specific sub-tasks in `tasks.md`.
+        vi. Outlining a high-level implementation sequence.
+        vii. Documenting potential challenges and mitigation strategies.
+    b.  Throughout this process, use `edit_file` to meticulously update the relevant sections in `memory-bank/tasks.md`.
+    c.  Update `memory-bank/activeContext.md` periodically with planning progress notes using `edit_file`.
+5.  **Technology Validation (Conceptual - AI doesn't run code here but plans for it):**
+    a.  The fetched planning rule might instruct you to consider and document the technology stack, any new dependencies, or build configurations needed. This is documented in `tasks.md` or `techContext.md` using `edit_file`.
+    b.  If significant new technologies or complex configurations are involved, add a sub-task in `tasks.md` for "VAN QA: Technical Validation" to be performed before IMPLEMENT.
+6.  **Notify Completion & Recommend Next Mode:**
+    a.  Once the detailed plan is formulated in `tasks.md` as per the fetched rule, state: "PLANNING COMPLETE for task [task_name]. Detailed plan and sub-tasks are updated in `memory-bank/tasks.md`."
+    b.  Update `memory-bank/tasks.md` to mark the main PLAN phase as complete.
+    c.  Update `memory-bank/activeContext.md`: "Planning phase complete for [task_name]."
+    d.  **Recommendation:**
+        *   If "CREATIVE: Design..." sub-tasks were identified: "Recommend transitioning to CREATIVE mode to address design requirements."
+        *   If no CREATIVE sub-tasks (e.g., simpler L2 task) and no VAN QA flagged: "Recommend transitioning to IMPLEMENT mode."
+        *   If VAN QA was flagged as needed: "Recommend transitioning to VAN QA mode for technical pre-flight checks."
+    e.  Await user instruction.

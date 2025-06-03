@@ -1,0 +1,49 @@
+---
+description: VAN QA sub-rule for dependency verification. Fetched by `van-qa-main.mdc`. Guides AI to check required dependencies and log results.
+globs: **/visual-maps/van_mode_split/van-qa-checks/dependency-check.mdc
+alwaysApply: false
+---
+# VAN QA: DEPENDENCY VERIFICATION (AI Instructions)
+
+> **TL;DR:** Verify project dependencies (e.g., Node.js, npm, Python, pip, specific libraries) are installed and versions are compatible. Log findings to `activeContext.md` using `edit_file`. This rule is fetched by `van-qa-main.mdc`.
+
+## ⚙️ AI ACTIONS FOR DEPENDENCY VERIFICATION:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Starting Dependency Verification."
+    b.  `read_file memory-bank/techContext.md` and `memory-bank/tasks.md` (or `activeContext.md` if it has tech stack info from CREATIVE phase) to identify key technologies and expected dependencies (e.g., Node.js version, Python version, package manager, specific libraries).
+2.  **Define Checks (Based on Context):**
+    *   **Example for Node.js project:**
+        *   Check Node.js installed and version (e.g., `node -v`).
+        *   Check npm installed and version (e.g., `npm -v`).
+        *   Check `package.json` exists (e.g., `list_dir .`).
+        *   If `package-lock.json` or `yarn.lock` exists, consider running `npm ci` or `yarn install --frozen-lockfile` (or just `npm install`/`yarn install` if less strict) to verify/install packages.
+    *   **Example for Python project:**
+        *   Check Python installed and version (e.g., `python --version` or `python3 --version`).
+        *   Check pip installed (usually comes with Python).
+        *   Check `requirements.txt` exists.
+        *   Consider creating a virtual environment and `pip install -r requirements.txt`.
+3.  **Execute Checks (Using `run_terminal_cmd`):**
+    a.  For each defined check:
+        i.  Clearly state the command you are about to run.
+        ii. `run_terminal_cmd` with the command.
+        iii. Record the output.
+4.  **Evaluate Results & Log:**
+    a.  Based on command outputs, determine if dependencies are met.
+    b.  Use `edit_file` to append detailed findings to the "VAN QA Log" in `memory-bank/activeContext.md`:
+        ```markdown
+        #### Dependency Check Log - [Timestamp]
+        - Check: Node.js version
+          - Command: `node -v`
+          - Output: `v18.12.0`
+          - Status: PASS (meets requirement >=16)
+        - Check: npm install
+          - Command: `npm install`
+          - Output: `... up to date ...` or error messages
+          - Status: [PASS/FAIL - with error summary if FAIL]
+        - ... (other checks) ...
+        - Overall Dependency Status: [PASS/FAIL]
+        ```
+5.  **Completion:**
+    a.  State: "Dependency Verification complete. Overall Status: [PASS/FAIL]."
+    b.  (The `van-qa-main.mdc` orchestrator will use this outcome).

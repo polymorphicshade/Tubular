@@ -1,0 +1,73 @@
+---
+description: Basic archiving for Level 2 (Simple Enhancement) tasks. Guides AI to create a structured archive document using `edit_file`.
+globs: **/Level2/archive-basic.mdc
+alwaysApply: false
+---
+# BASIC ARCHIVING FOR LEVEL 2 TASKS (AI Instructions)
+
+> **TL;DR:** This rule guides the creation of a basic archive document for a completed Level 2 task using `edit_file`. It ensures key information is preserved.
+
+This rule is typically fetched by the Level 2 workflow orchestrator or the main ARCHIVE mode orchestrator if the task is L2.
+
+## ⚙️ AI ACTIONS FOR LEVEL 2 ARCHIVING:
+
+1.  **Acknowledge & Context:**
+    a.  State: "Initiating Basic Archiving for Level 2 task: [Task Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` for the completed task details (requirements, sub-tasks).
+    c.  `read_file memory-bank/reflection/reflect-[task_name_or_id]-[date].md` for lessons learned.
+    d.  `read_file memory-bank/progress.md` for implementation summary.
+2.  **Prepare Archive Content (Based on Template Below):**
+    a.  Synthesize information from `tasks.md`, `reflection-*.md`, and `progress.md`.
+3.  **Create Archive File:**
+    a.  Determine archive filename: `archive-[task_name_or_id]-[date].md` (e.g., `archive-user-profile-update-20250515.md`).
+    b.  Use `edit_file` to create/update `memory-bank/archive/[archive_filename.md]` with the structured content.
+        **Basic Archive Structure (Content for `edit_file`):**
+        ```markdown
+        # Enhancement Archive: [Feature Name from tasks.md]
+
+        ## Task ID: [Task ID from tasks.md]
+        ## Date Completed: [Date from tasks.md or reflection document]
+        ## Complexity Level: 2
+
+        ## 1. Summary of Enhancement
+        [Brief summary of what was enhanced or added. Extract from tasks.md or reflection summary.]
+
+        ## 2. Key Requirements Addressed
+        [List the main requirements from tasks.md that this enhancement fulfilled.]
+        - Requirement 1
+        - Requirement 2
+
+        ## 3. Implementation Overview
+        [Brief description of how the enhancement was implemented. Summarize from progress.md or reflection document.]
+        - Key files modified:
+          - `[path/to/file1.ext]`
+          - `[path/to/file2.ext]`
+        - Main components changed: [List components]
+
+        ## 4. Testing Performed
+        [Summary of testing done, e.g., "Unit tests for new logic passed. Manual UI verification completed." From progress.md or reflection.]
+
+        ## 5. Lessons Learned
+        [Copy key lessons learned from `memory-bank/reflection/reflect-[task_name_or_id]-[date].md` or summarize them.]
+        - Lesson 1
+        - Lesson 2
+
+        ## 6. Related Documents
+        - Reflection: `../../reflection/reflect-[task_name_or_id]-[date].md`
+        - (Link to specific creative docs if any were exceptionally made for L2)
+
+        ## Notes
+        [Any additional brief notes.]
+        ```
+4.  **Update Core Memory Bank Files (using `edit_file`):**
+    a.  **`tasks.md`:**
+        *   Mark the Level 2 task as "ARCHIVED".
+        *   Add a link to the archive document: `Archived: ../archive/[archive_filename.md]`.
+    b.  **`progress.md`:**
+        *   Add a final entry: `[Date] - Task [Task Name] ARCHIVED. See archive/[archive_filename.md]`.
+    c.  **`activeContext.md`:**
+        *   Clear current task focus.
+        *   Add to log: "Archived Level 2 task [Task Name]. Archive at `archive/[archive_filename.md]`."
+5.  **Completion:**
+    a.  State: "Basic archiving for Level 2 task [Task Name] complete. Archive document created at `memory-bank/archive/[archive_filename.md]`."
+    b.  (Control returns to the fetching rule, e.g., `Level2/workflow-level2.mdc` or `visual-maps/archive-mode-map.mdc`).

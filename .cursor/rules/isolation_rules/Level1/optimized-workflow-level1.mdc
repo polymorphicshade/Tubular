@@ -1,0 +1,54 @@
+---
+description: Optimized Level 1 workflow for quick bug fixes, emphasizing speed, token efficiency, and consolidated documentation using `edit_file`.
+globs: **/Level1/optimized-workflow-level1.mdc
+alwaysApply: false
+---
+# OPTIMIZED LEVEL 1 WORKFLOW (AI Instructions)
+
+> **TL;DR:** This streamlined workflow for Level 1 tasks (quick bug fixes) optimizes for speed and token efficiency. Focus on direct implementation and consolidated documentation using `edit_file`.
+
+## 🔧 LEVEL 1 PROCESS FLOW (AI Actions)
+
+1.  **Acknowledge & Context (Assumes VAN mode has confirmed Level 1):**
+    a.  State: "Initiating Optimized Level 1 Workflow for [Task Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` to understand the specific issue.
+    c.  `read_file memory-bank/activeContext.md` for any specific file paths or context.
+2.  **Analyze & Locate:**
+    a.  Briefly analyze the issue described in `tasks.md`.
+    b.  If file paths are not provided, use `codebase_search` or `search_files` to locate the relevant code section(s).
+3.  **Implement Fix:**
+    a.  Use `edit_file` to make the necessary code changes directly.
+    b.  Keep changes minimal and targeted, as expected for Level 1.
+4.  **Verify (Conceptually or via Simple Test):**
+    a.  Mentally review the change.
+    b.  If a very simple test command is appropriate (e.g., linting the changed file, running a single specific test if available), use `run_terminal_cmd`.
+5.  **Document (Consolidated):**
+    a.  Use `edit_file` to update `memory-bank/tasks.md` with a concise record of the fix. Use a consolidated format.
+        **Example Content for `tasks.md` (append under relevant task or in a 'Completed L1 Fixes' section):**
+        ```markdown
+        - **L1 Fix:** [Issue Name/ID]
+          - **Problem:** [Brief description from original task]
+          - **Cause:** [Brief root cause, if obvious]
+          - **Solution:** [Implemented fix, e.g., "Corrected variable name in `auth.py` line 42."]
+          - **Files Changed:** `[path/to/file.py]`
+          - **Verification:** [e.g., "Visual inspection", "Ran linter"]
+          - **Status:** COMPLETED - [Date]
+        ```
+    b.  Optionally, add a one-line entry to `memory-bank/progress.md` using `edit_file`:
+        `[Date] - L1 Fix: [Issue Name] - Completed. See tasks.md for details.`
+    c.  Update `memory-bank/activeContext.md` using `edit_file` to clear current L1 task focus and indicate readiness for next task.
+6.  **Notify Completion:**
+    a.  State: "Level 1 task '[Task Name]' completed and documented efficiently. Ready for next task."
+
+## ⚡ TOKEN-OPTIMIZED TEMPLATE (for AI to structure the `tasks.md` update via `edit_file`)
+When updating `tasks.md`, aim for a structure like this:
+```markdown
+- **L1 Fix:** [Issue Title]
+  - **Problem:** [Brief description]
+  - **Cause:** [Root cause, if clear]
+  - **Solution:** [Implemented fix details]
+  - **Files:** `[path/to/file1]`, `[path/to/file2]`
+  - **Tested:** [How verified, e.g., "Visual check", "Linter pass"]
+  - **Status:** COMPLETED - [Date]
+```
+This rule prioritizes direct action and minimal, consolidated documentation using `edit_file`.
