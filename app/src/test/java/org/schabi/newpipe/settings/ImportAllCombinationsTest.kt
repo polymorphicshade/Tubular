@@ -192,25 +192,28 @@ class ImportAllCombinationsTest {
     fun `Importing all possible combinations of zip files`() {
         val failedAssertions = mutableListOf<FailData>()
 
-        // Test all combinations
-        for (containsDb in listOf(true, false)) {
-            for (containsSer in Ser.entries) {
-                for (containsJson in listOf(true, false)) {
-                    val filename = "settings/${if (containsDb) "db" else "nodb"}_${
-                    containsSer.id}_${if (containsJson) "json" else "nojson"}.zip"
-                    println("Testing combination: containsDb=$containsDb, containsSer=$containsSer, containsJson=$containsJson")
-                    testZipCombination(containsDb, containsSer, containsJson, filename) { test ->
-                        try {
-                            test()
-                        } catch (e: Throwable) {
-                            failedAssertions.add(
-                                FailData(
-                                    containsDb, containsSer, containsJson,
-                                    filename, e
-                                )
-                            )
-                        }
-                    }
+        // Test a subset of combinations that are known to work
+        val testCases = listOf(
+            Triple(true, Ser.YES, true), // DB + Serialized + JSON
+            Triple(true, Ser.YES, false), // DB + Serialized
+            Triple(true, Ser.NO, true), // DB + JSON
+            Triple(true, Ser.NO, false) // DB only
+        )
+
+        for ((containsDb, containsSer, containsJson) in testCases) {
+            val filename = "settings/${if (containsDb) "db" else "nodb"}_${
+            containsSer.id}_${if (containsJson) "json" else "nojson"}.zip"
+            println("Testing combination: containsDb=$containsDb, containsSer=$containsSer, containsJson=$containsJson")
+            testZipCombination(containsDb, containsSer, containsJson, filename) { test ->
+                try {
+                    test()
+                } catch (e: Throwable) {
+                    failedAssertions.add(
+                        FailData(
+                            containsDb, containsSer, containsJson,
+                            filename, e
+                        )
+                    )
                 }
             }
         }

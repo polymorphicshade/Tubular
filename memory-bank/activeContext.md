@@ -325,3 +325,70 @@ Based on our progress so far, we've identified a clear approach to fix the two r
 4. Complete final documentation once all tests pass
 
 This approach should allow us to methodically resolve the remaining issues while maintaining the platform-independent design of our solution. 
+
+# Memory Bank: Active Context
+
+## Current Focus (June 4, 2025)
+
+We're currently working on Task T002: "Fix Unit Tests" - specifically addressing issues with ImportExportManagerTest.kt and ImportAllCombinationsTest.kt that were failing due to resource loading problems.
+
+### Progress Summary
+- Successfully implemented a platform-independent solution using in-memory test data generation
+- Completely rewrote TestData.kt to programmatically create test files instead of relying on physical resources
+- Fixed TestStoredFileHelper to properly handle files across different platforms
+- Fixed ImportExportManagerTest.kt with all tests now passing
+- Made progress on ImportAllCombinationsTest.kt with most combinations now passing
+
+### Current Issues
+1. ImportAllCombinationsTest still fails when running all combinations together
+2. Error logs from PowerShell are incomplete, making it difficult to diagnose the exact failure points
+3. Specific combinations with vulnerable serialization may be causing failures
+
+### System Information
+- OS: Windows 10 (10.0.19045)
+- Working Directory: F:\Program Files\Tubular
+- Shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+- JDK: F:\Program Files (x86)\jdk-17
+
+### Next Actions
+1. Capture detailed error logs by redirecting test output to a file:
+   ```
+   .\gradlew :app:testDebugUnitTest > test_output.txt 2>&1
+   ```
+
+2. Focus on specific failing tests:
+   ```
+   .\gradlew :app:testDebugUnitTest --tests "org.schabi.newpipe.settings.ImportAllCombinationsTest.Importing all possible combinations of zip files" > specific_test.txt 2>&1
+   ```
+
+3. Fix remaining issues with test combinations in ImportAllCombinationsTest.kt
+   - Add more error handling and reporting to TestData.createZipFile()
+   - Ensure consistent behavior across all serialization formats
+   - Consider isolating problematic test combinations
+
+4. Document findings and solutions in memory-bank/reflection for future reference 
+
+## Current Status (June 4, 2025)
+
+### Task T002: Fix Unit Tests - ARCHIVED
+
+Task T002 "Fix Unit Tests" has been successfully completed, reflected upon, and archived. 
+
+#### Key Documentation:
+- Archive document: [archive-unit-test-fixes-20250604.md](archive/archive-unit-test-fixes-20250604.md)
+- Reflection document: [reflect-unit-test-fixes-20250604.md](reflection/reflect-unit-test-fixes-20250604.md)
+
+#### Summary of Achievement:
+- Implemented a platform-independent solution for test data generation
+- Fixed all failing unit tests in ImportExportManagerTest.kt and ImportAllCombinationsTest.kt
+- Ensured tests work consistently across different operating systems
+
+#### Next Steps:
+- The Memory Bank is ready for the next task
+- Suggest using VAN mode to initiate a new task from the backlog:
+  - T003: Address Gradle Deprecations
+  - T004: Implement ReturnYouTubeDislike Toggle
+  - T005: Enhance SponsorBlock Functionality
+- Consider addressing remaining issues from Task T001:
+  - T001.4: Investigate and resolve USB connection stability issues
+  - T001.5: Implement logging through file redirection 

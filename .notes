@@ -1,1 +1,9 @@
+# Questions
 what did you find from the file @test_output 1 and 2 ?
+the edit_file tool is taking a really long time, just for adding 3 lines of text 
+the final is just letting the problem persist ( skipped )
+whats the difference between REFLECT and ARCHIVE phase
+
+# Suggestions
+when successfully fixing problems / making progress, update memory-bank ? (too much work for the AI)
+    i hope there's a way to do it outside of using the AI on the IDE ( so less context-window used ), but it could be less effective since the summarizer AI doesnt have previous or the exact context of the AI Agents on Cursor IDE ( or is it? we can enhance the chat-extractor further ).

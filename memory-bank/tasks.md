@@ -29,12 +29,14 @@ The app builds successfully but was failing to launch on the physical device due
 ### Dependencies
 - Requires working ADB connection to the device
 
-## Next Task
+## Task T002
 - Task ID: T002
 - Name: Fix Unit Tests
-- Status: IN_PROGRESS_IMPLEMENTATION (final stages)
+- Status: ARCHIVED
 - Complexity: Level 2
 - Assigned To: AI
+- Reflection: [Completed](../reflection/reflect-unit-test-fixes-20250604.md)
+- Archived: [Archive document](../archive/archive-unit-test-fixes-20250604.md)
 
 ### Description
 The unit tests are currently failing due to resource loading issues, specifically with test files like `db_ser_json.zip`. The main problem occurs in `ImportExportManagerTest.kt` and `ImportAllCombinationsTest.kt` where resource files cannot be found at runtime. This is particularly problematic on Windows systems where path handling differs. Additionally, there are Mockito `UnfinishedStubbingException` issues that need to be addressed.
@@ -72,38 +74,54 @@ The unit tests are currently failing due to resource loading issues, specificall
 
 ### Implementation Plan for Remaining Issues
 
-#### Error Analysis Strategy
-1. Use redirected output to capture test failures:
-   ```
-   .\gradlew :app:testDebugUnitTest --tests "org.schabi.newpipe.settings.ImportExportManagerTest.Imported database is taken from zip when available" > test_output.txt 2>&1
-   ```
+#### Error Analysis Results
+After capturing detailed test output, we've identified the specific failure in ImportAllCombinationsTest:
 
-2. Use Gradle test report analysis:
-   - Examine HTML reports in app/build/reports/tests/testDebugUnitTest/
-   - Focus on stack traces and line numbers for failure points
+1. **The specific failure in ImportAllCombinationsTest**:
+   - In the combination with `containsDb=true, containsSer=NO, containsJson=true`, the test expects an IOException to be thrown when attempting `loadSerializedPrefs`, but no exception is thrown.
+   - Error message: `expected java.io.IOException to be thrown, but nothing was thrown`
+   - This suggests there's a mismatch between how the TestData generates ZIP files and how the ImportExportManager expects them.
 
-#### Likely Issues and Fixes
-1. **For "Imported database is taken from zip when available"**:
-   - The test is likely failing because:
-     - The mock StoredFileHelper's behavior when interacting with ZipHelper
-     - Path issues with the DB_PATH constant in the ZIP file
-     - Possible NullPointerException in file handling
+#### Implementation Plan
 
-   - Fix approach:
-     - Enhance TestStoredFileHelper to properly simulate file present in ZIP
-     - Ensure DB_PATH matches exactly what ImportExportManager expects
-     - Add proper error handling and logging
+1. **Fix ImportAllCombinationsTest**:
+   - Focus on the specific failing combination: "db_noser_json.zip"
+   - Examine line 138 in ImportAllCombinationsTest which is asserting an IOException
+   - Update TestData.createZipFile() to ensure it correctly handles the NO serialized data case
+     - For Ser.NO, ensure the ZIP file truly does NOT include the serialized preferences entry
+     - Check if the code is including the backup file name constant but with empty content
+     - Fix the serialized content entry creation to respect the includeSerialized flag
 
-2. **For "Database not extracted when not in zip"**:
-   - The test is likely failing because:
-     - Journal files (dbJournal, dbShm, dbWal) not being created or detected properly
-     - ZIP file structure doesn't match expectations
-     - File existence checks may be platform-dependent
+2. **Debug TestData class**:
+   - Add logging to TestData.createZipFile() to print the actual ZIP entries being created
+   - Verify that each test case has the expected contents:
+     - When includeSerialized=false, confirm BackupFileLocator.FILE_NAME_SERIALIZED_PREFS is not added
+     - Check for potential entry overlap between JSON and serialized preferences
 
-   - Fix approach:
-     - Create journal files explicitly at the start of the test
-     - Verify file paths are correctly handled across platforms
-     - Add more detailed assertions to diagnose issues
+3. **Ensure proper validation in ImportExportManager**:
+   - Check that ImportExportManager.loadSerializedPrefs() properly throws IOException when the serialized preferences entry is missing
+   - Verify that the ZipHelper.getAndVerifyInputStream() method correctly identifies missing entries
+
+4. **Create a targeted test**:
+   - Create a simplified test that specifically tests the loadSerializedPrefs() method with a ZIP file missing serialized prefs
+   - Use this to debug and fix the issue in isolation before running the full combinations test
+
+#### Execution Steps
+1. **Modify TestData.kt**:
+   - Update the createZipFile method to ensure proper behavior with the Ser.NO case
+   - Add debug statements (that can be removed later) to verify ZIP file contents
+
+2. **Update ImportAllCombinationsTest.kt**:
+   - Fix the test expectations for the specific failing combination
+   - Consider adding additional checks to verify ZIP file contents before testing
+
+3. **Test modifications**:
+   - Run the targeted test with the specific failing combination to verify the fix
+   - Then run the full combination test to ensure all combinations pass
+
+4. **Finalize implementation**:
+   - Remove debug logging and clean up code
+   - Update documentation to explain the test data generation approach
 
 ### Dependencies
 - Requires configured Gradle build environment

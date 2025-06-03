@@ -89,7 +89,7 @@ object TestData {
                 zipOut.closeEntry()
             }
 
-            // Add serialized preferences if requested
+            // Add serialized preferences if requested - FIX: Only add when explicitly requested
             if (includeVulnerable) {
                 zipOut.putNextEntry(ZipEntry(BackupFileLocator.FILE_NAME_SERIALIZED_PREFS))
                 zipOut.write(createVulnerableSerializedPrefs())
@@ -98,11 +98,8 @@ object TestData {
                 zipOut.putNextEntry(ZipEntry(BackupFileLocator.FILE_NAME_SERIALIZED_PREFS))
                 zipOut.write(createSerializedPrefs())
                 zipOut.closeEntry()
-            } else if (includeJson) { // Only add regular serialized prefs if not adding vulnerable ones
-                zipOut.putNextEntry(ZipEntry(BackupFileLocator.FILE_NAME_SERIALIZED_PREFS))
-                zipOut.write(createSerializedPrefs())
-                zipOut.closeEntry()
             }
+            // REMOVED: Previous bug - was adding serialized prefs when includeJson was true
 
             // Add JSON preferences if requested
             if (includeJson) {
