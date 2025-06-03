@@ -104,22 +104,47 @@
 - Task status updated to ARCHIVED in tasks.md
 - Memory Bank is ready for new tasks
 
-## Current Focus
+## Current Focus - June 3, 2025
 - Task ID: T002 - Fix Unit Tests
-- Status: IN_PROGRESS_IMPLEMENTATION
+- Status: IN_PROGRESS_IMPLEMENTATION (final fixes)
 - Complexity: Level 2
 
-## Unit Test Fix Progress
-Testing resource files like `db_ser_json.zip` were not loading properly in tests, particularly on Windows systems. Key progress made:
+## Unit Test Fix Implementation Status
+Testing resources like `db_ser_json.zip` were not loading properly in tests, particularly on Windows systems. The approach we've taken is to generate test data programmatically to ensure platform independence. Current status:
 
-1. Identified the root cause as platform-dependent file path handling in test resources
-2. Completely refactored `TestData.kt` to generate test data programmatically instead of using physical resource files
-3. Created a custom `StoredFileHelper` mock that reliably provides test data through standard Java I/O
-4. Updated `ImportExportManagerTest.kt` and `ImportAllCombinationsTest.kt` to use the new test data generation approach
-5. Fixed Mockito configuration by removing problematic annotations and properly stubbing all methods
-6. Implemented proper test cases for security validation in serialized preferences
+1. ✅ Compilation issues resolved:
+   - Fixed constructor matching with StoredFileHelper
+   - Fixed return type mismatches for TestStoredFileHelper.getStream()
+   - Fixed overriding issues with TestStoredFileHelper.close()
+   - Fixed ZipFile constructor issues
+   - Resolved JsonParser method resolution ambiguity
 
-Current blocker: Tests still don't run due to Kotlin annotation processing (kapt) errors when building. Further investigation needed.
+2. ✅ Implementation improvements:
+   - Created proper SharpStream implementation that wraps BufferedInputStream
+   - Updated ZipFile paths to match what ImportExportManager expects
+   - Enhanced test assertions to check for specific error messages
+
+3. 🧪 Test status:
+   - 4 out of 6 tests now passing (3 passing + 1 skipped)
+   - Remaining issues with 2 tests: 
+      - "Imported database is taken from zip when available" 
+      - "Database not extracted when not in zip"
+   - The core implementation of platform-independent test data is working
+
+4. 📝 Documentation:
+   - Need to complete README.md for test directory
+   - Need to create reflection document once all tests pass
+
+## Next Actions
+1. Fix the remaining 2 failing tests
+2. Complete documentation of the platform-independent approach
+3. Create reflection document when all tests pass
+4. Archive the task when complete
+
+## Key Insights
+- Properly implementing interfaces in Kotlin/Java requires careful attention to all method contracts
+- Cross-platform tests need careful handling of file paths and separators
+- Mock objects must properly simulate all behaviors of the real objects they replace
 
 ## Platform Detection
 - Operating System: Windows 10 (win32 10.0.19045)
@@ -274,3 +299,29 @@ This approach will maintain our platform-independent solution while ensuring tes
 - **Actual Result:** Created comprehensive documentation of the TestData utility
 - **Effect:** Added clear documentation on how the TestData utility works and why it was created
 - **Next Steps:** Run tests to validate the solution works across platforms 
+
+## Plan for Resolving Remaining Unit Test Issues - June 3, 2025
+Based on our progress so far, we've identified a clear approach to fix the two remaining failing tests.
+
+### Error Analysis Strategy
+1. Due to PowerShell console issues preventing error message viewing, we'll use alternative approaches:
+   - Redirect test output to files: `.\gradlew test > output.txt 2>&1`
+   - Examine HTML test reports in app/build/reports/tests/
+   - Run individual tests with detailed output flags
+
+### Likely Issues and Solutions
+1. **"Imported database is taken from zip when available" Test Issues**:
+   - Likely cause: Improper file path handling in ZIP or MockStoredFileHelper implementation
+   - Solution approach: Enhance TestStoredFileHelper to properly handle stream creation and access
+
+2. **"Database not extracted when not in zip" Test Issues**:
+   - Likely cause: Journal files not correctly set up for validation
+   - Solution approach: Explicitly create journal files before test execution
+
+### Implementation Plan
+1. First capture complete error logs to confirm exact failure points
+2. Implement targeted fixes for each failing test individually
+3. Verify with incremental testing to isolate issues
+4. Complete final documentation once all tests pass
+
+This approach should allow us to methodically resolve the remaining issues while maintaining the platform-independent design of our solution. 

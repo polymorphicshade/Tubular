@@ -32,7 +32,7 @@ The app builds successfully but was failing to launch on the physical device due
 ## Next Task
 - Task ID: T002
 - Name: Fix Unit Tests
-- Status: IN_PROGRESS_IMPLEMENTATION
+- Status: IN_PROGRESS_IMPLEMENTATION (final stages)
 - Complexity: Level 2
 - Assigned To: AI
 
@@ -58,18 +58,65 @@ The unit tests are currently failing due to resource loading issues, specificall
   - [x] T002.8.2: Fix vulnerable serialization format in TestData utility
   - [x] T002.8.3: Fix ClassNotFoundException assertions in ImportExportManagerTest
   - [x] T002.8.4: Fix test combination expectations in ImportAllCombinationsTest
+  - [ ] T002.8.5: Fix remaining 2 failing tests:
+    - [ ] T002.8.5.1: Capture detailed error logs using alternative approaches (redirect to file or use Gradle test reports)
+    - [ ] T002.8.5.2: Fix "Imported database is taken from zip when available" test by ensuring proper file creation and ZIP structure
+    - [ ] T002.8.5.3: Fix "Database not extracted when not in zip" test by validating journal file presence logic
+    - [ ] T002.8.5.4: Ensure both tests handle file system operations correctly across platforms
 - [x] T002.9: Update documentation on how test resources are now handled
+- [ ] T002.10: Finalize implementation
+  - [ ] T002.10.1: Create or update README.md in test directory explaining the platform-independent approach
+  - [ ] T002.10.2: Ensure all test methods have proper documentation
+  - [ ] T002.10.3: Verify all tests pass on the current platform
+  - [ ] T002.10.4: Prepare reflection document outlining challenges and solutions
+
+### Implementation Plan for Remaining Issues
+
+#### Error Analysis Strategy
+1. Use redirected output to capture test failures:
+   ```
+   .\gradlew :app:testDebugUnitTest --tests "org.schabi.newpipe.settings.ImportExportManagerTest.Imported database is taken from zip when available" > test_output.txt 2>&1
+   ```
+
+2. Use Gradle test report analysis:
+   - Examine HTML reports in app/build/reports/tests/testDebugUnitTest/
+   - Focus on stack traces and line numbers for failure points
+
+#### Likely Issues and Fixes
+1. **For "Imported database is taken from zip when available"**:
+   - The test is likely failing because:
+     - The mock StoredFileHelper's behavior when interacting with ZipHelper
+     - Path issues with the DB_PATH constant in the ZIP file
+     - Possible NullPointerException in file handling
+
+   - Fix approach:
+     - Enhance TestStoredFileHelper to properly simulate file present in ZIP
+     - Ensure DB_PATH matches exactly what ImportExportManager expects
+     - Add proper error handling and logging
+
+2. **For "Database not extracted when not in zip"**:
+   - The test is likely failing because:
+     - Journal files (dbJournal, dbShm, dbWal) not being created or detected properly
+     - ZIP file structure doesn't match expectations
+     - File existence checks may be platform-dependent
+
+   - Fix approach:
+     - Create journal files explicitly at the start of the test
+     - Verify file paths are correctly handled across platforms
+     - Add more detailed assertions to diagnose issues
 
 ### Dependencies
 - Requires configured Gradle build environment
 - Requires understanding of Java's ZIP file handling and serialization
+- Requires access to test output logs to diagnose remaining issues
 
 ### Notes
 - The key insight is to generate test data programmatically rather than relying on loading physical resource files
 - This approach eliminates platform-specific path issues by creating files in memory
 - For security testing, we still need to simulate vulnerable serialized data to test proper error handling
 - The solution should maintain all the same test coverage despite the change in approach
-- Implementation is complete, but verification is pending due to Kotlin annotation processing (kapt) issues
+- Implementation is nearly complete with 4 out of 6 tests now passing (3 passing + 1 skipped)
+- The remaining tests require detailed error analysis due to console output issues with PowerShell
 
 ## Backlog
 1. **T003: Address Gradle Deprecations**

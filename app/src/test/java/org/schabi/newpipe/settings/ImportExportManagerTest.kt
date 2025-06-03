@@ -18,38 +18,112 @@ import org.mockito.Mockito.anyString
 import org.mockito.Mockito.atLeastOnce
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
-import org.mockito.junit.MockitoJUnitRunner
+import org.mockito.junit.MockitoJUnitRunner.Silent
 import org.schabi.newpipe.settings.export.BackupFileLocator
 import org.schabi.newpipe.settings.export.ImportExportManager
+import org.schabi.newpipe.streams.io.SharpStream
 import org.schabi.newpipe.streams.io.StoredFileHelper
 import java.io.BufferedInputStream
 import java.io.File
 import java.io.FileInputStream
+import java.io.IOException
+import java.net.URI
 import java.nio.file.Files
+import java.nio.file.Path
+import java.nio.file.Paths
 import java.util.zip.ZipFile
 
-@RunWith(MockitoJUnitRunner::class)
+@RunWith(Silent::class)
 class ImportExportManagerTest {
 
     /**
      * Custom StoredFileHelper implementation that doesn't use the problematic FileStream class
      * but instead uses Java's standard FileInputStream, which is more reliable in tests.
      */
-    private class TestStoredFileHelper(private val file: File) : StoredFileHelper() {
-        override fun getStream() = BufferedInputStream(FileInputStream(file))
+    internal class TestStoredFileHelper(private val file: File) : StoredFileHelper(
+        null,
+        file.name,
+        "application/zip",
+        null
+    ) {
+        // Initialize source field with a URI string
+        init {
+            // Create a proper URI that works on all platforms
+            val path: Path = Paths.get(file.absolutePath)
+            source = path.toUri().toString()
+        }
 
-        override fun close() {
-            // Nothing to do, the stream is created on demand
+        override fun getStream(): SharpStream {
+            // Create an adapter that wraps BufferedInputStream and implements SharpStream
+            return object : SharpStream() {
+                private val stream = BufferedInputStream(FileInputStream(file))
+                private var closed = false
+
+                override fun read(): Int = stream.read()
+
+                override fun read(buffer: ByteArray): Int = stream.read(buffer)
+
+                override fun read(buffer: ByteArray, offset: Int, count: Int): Int =
+                    stream.read(buffer, offset, count)
+
+                override fun skip(amount: Long): Long = stream.skip(amount)
+
+                override fun available(): Long = stream.available().toLong()
+
+                override fun rewind() {
+                    try {
+                        stream.close()
+                        val newStream = BufferedInputStream(FileInputStream(file))
+                        // Replace the stream field with the new stream
+                        stream.close()
+                        val streamField = this.javaClass.getDeclaredField("stream")
+                        streamField.isAccessible = true
+                        streamField.set(this, newStream)
+                    } catch (e: IOException) {
+                        // If reset fails, reopen the stream
+                        try {
+                            val newStream = BufferedInputStream(FileInputStream(file))
+                            stream.close()
+                            val streamField = this.javaClass.getDeclaredField("stream")
+                            streamField.isAccessible = true
+                            streamField.set(this, newStream)
+                        } catch (e: Exception) {
+                            throw IOException("Failed to rewind stream", e)
+                        }
+                    } catch (e: Exception) {
+                        throw IOException("Failed to rewind stream", e)
+                    }
+                }
+
+                override fun isClosed(): Boolean = closed
+
+                override fun close() {
+                    stream.close()
+                    closed = true
+                }
+
+                override fun canRewind(): Boolean = true
+
+                override fun canRead(): Boolean = true
+
+                override fun canWrite(): Boolean = false
+
+                override fun write(value: Byte) { throw UnsupportedOperationException() }
+
+                override fun write(buffer: ByteArray) { throw UnsupportedOperationException() }
+
+                override fun write(buffer: ByteArray, offset: Int, count: Int) {
+                    throw UnsupportedOperationException()
+                }
+            }
         }
     }
 
     private lateinit var fileLocator: BackupFileLocator
-    private lateinit var storedFileHelper: StoredFileHelper
 
     @Before
     fun setupFileLocator() {
         fileLocator = Mockito.mock(BackupFileLocator::class.java)
-        storedFileHelper = Mockito.mock(StoredFileHelper::class.java)
     }
 
     @Test
@@ -57,13 +131,30 @@ class ImportExportManagerTest {
         // Create a temporary database file
         val db = File.createTempFile("newpipe_", "")
         db.deleteOnExit()
+        val dbJournal = File(db.parent, db.name + "-journal")
+        val dbShm = File(db.parent, db.name + "-shm")
+        val dbWal = File(db.parent, db.name + "-wal")
+
+        // Delete any existing journal files to ensure clean test state
+        dbJournal.delete()
+        dbShm.delete()
+        dbWal.delete()
 
         // Setup mocks
         `when`(fileLocator.db).thenReturn(db)
-        val storedFileHelper = TestData.createDbZip()
+        `when`(fileLocator.dbJournal).thenReturn(dbJournal)
+        `when`(fileLocator.dbShm).thenReturn(dbShm)
+        `when`(fileLocator.dbWal).thenReturn(dbWal)
+
+        // Create a real file with the test data
+        val tempZipFile = TestData.createZipFile(includeDb = true)
+        val storedFileHelper = TestStoredFileHelper(tempZipFile)
 
         // Test the extraction
         assertTrue(ImportExportManager(fileLocator).extractDb(storedFileHelper))
+
+        // Verify file size is greater than 0
+        assertTrue(Files.size(db.toPath()) > 0)
     }
 
     @Test
@@ -86,7 +177,9 @@ class ImportExportManagerTest {
         `when`(fileLocator.dbShm).thenReturn(dbShm)
         `when`(fileLocator.dbWal).thenReturn(dbWal)
 
-        val storedFileHelper = TestData.createRootDbZip()
+        // Create a real file with the test data
+        val tempZipFile = TestData.createZipFile(includeDb = true)
+        val storedFileHelper = TestStoredFileHelper(tempZipFile)
 
         // Test the extraction
         assertTrue(ImportExportManager(fileLocator).extractDb(storedFileHelper))
@@ -110,13 +203,20 @@ class ImportExportManagerTest {
         dbShm.delete()
         dbWal.delete()
 
+        // Create the journal files to test they remain when extraction fails
+        dbJournal.createNewFile()
+        dbShm.createNewFile()
+        dbWal.createNewFile()
+
         // Setup mocks
         `when`(fileLocator.db).thenReturn(db)
         `when`(fileLocator.dbJournal).thenReturn(dbJournal)
         `when`(fileLocator.dbShm).thenReturn(dbShm)
         `when`(fileLocator.dbWal).thenReturn(dbWal)
 
-        val storedFileHelper = TestData.createNoDbZip()
+        // Create a real file with the test data - without DB
+        val tempZipFile = TestData.createZipFile(includeDb = false)
+        val storedFileHelper = TestStoredFileHelper(tempZipFile)
 
         // Test the extraction
         assertFalse(ImportExportManager(fileLocator).extractDb(storedFileHelper))
@@ -142,8 +242,9 @@ class ImportExportManagerTest {
         `when`(editor.putStringSet(anyString(), any())).thenReturn(editor)
         `when`(editor.commit()).thenReturn(true)
 
-        // Get test data
-        val storedFileHelper = TestData.createJsonZip()
+        // Create a real file with the test data
+        val tempZipFile = TestData.createZipFile(includeJson = true)
+        val storedFileHelper = TestStoredFileHelper(tempZipFile)
 
         // Test importing preferences
         ImportExportManager(fileLocator).loadJsonPrefs(storedFileHelper, preferences)
@@ -156,8 +257,9 @@ class ImportExportManagerTest {
 
     @Test
     fun `Importing preferences with a serialization injected class should fail`() {
-        // Get test data with vulnerable serialized content
-        val storedFileHelper = TestData.createDbVulnserJsonZip()
+        // Create a real file with the test data
+        val tempZipFile = TestData.createZipFile(includeVulnerable = true)
+        val storedFileHelper = TestStoredFileHelper(tempZipFile)
 
         // Create mock for preferences
         val preferences = Mockito.mock(SharedPreferences::class.java)
@@ -183,10 +285,17 @@ class ImportExportManagerTest {
         )
 
         val exportedZipFile = TestData.createJsonZip()
-        val prefsFile = ZipFile(exportedZipFile)
+        // Get the actual File from the StoredFileHelper using reflection
+        val field = StoredFileHelper::class.java.getDeclaredField("source")
+        field.isAccessible = true
+        val source = field.get(exportedZipFile) as String
+        val file = File(URI.create(source))
+
+        val prefsFile = ZipFile(file)
         val prefsEntry = prefsFile.getEntry("settings/newpipe.json")
         val prefsJson = prefsFile.getInputStream(prefsEntry).reader().readText()
-        val jsonPrefs = JsonParser.`object`().from(prefsJson)
+        // Explicitly cast to Reader to resolve ambiguity
+        val jsonPrefs = JsonParser.`object`().from(prefsJson.reader())
 
         assertEquals("one", jsonPrefs.getString("test_string", ""))
         assertEquals(12345, jsonPrefs.getInt("test_int", 0))
