@@ -42,7 +42,7 @@ body:
   - type: textarea
     id: why-relevant-to-fork
     attributes:
-      label: Why ist the feature relevant to this fork?
+      label: Why is the feature relevant to this fork?
       description: |
         Describe why your feature is relevant to the features this fork aims to provide over vanilla NewPipe, or demonstrate that [upstream](https://github.com/TeamNewPipe/NewPipe/issues) is *explicitly* against implementing your feature for *non-technical reasons*.
 
