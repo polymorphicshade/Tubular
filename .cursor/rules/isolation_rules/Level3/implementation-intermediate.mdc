@@ -1,0 +1,57 @@
+---
+description: Implementation guidelines for Level 3 intermediate features. Guides AI on modular development, design adherence, testing, and documentation using `edit_file` and `run_terminal_cmd`.
+globs: **/Level3/implementation-intermediate.mdc
+alwaysApply: false
+---
+# LEVEL 3 IMPLEMENTATION: BUILDING INTERMEDIATE FEATURES (AI Instructions)
+
+> **TL;DR:** This rule guides the systematic implementation of a planned and designed Level 3 feature. Emphasize modular development, strict adherence to creative decisions and style guide, integration, testing, and ongoing Memory Bank updates using `edit_file` and `run_terminal_cmd`.
+
+This rule is typically fetched by the IMPLEMENT mode orchestrator if the task is L3.
+
+## ⚙️ AI ACTIONS FOR LEVEL 3 IMPLEMENTATION:
+
+1.  **Acknowledge & Preparation:**
+    a.  State: "Initiating Level 3 Implementation for feature: [Feature Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` for the detailed feature plan, sub-tasks, and links to creative documents.
+    c.  `read_file` all relevant `memory-bank/creative/creative-[aspect_name]-[date].md` documents.
+    d.  `read_file memory-bank/style-guide.md`.
+    e.  `read_file memory-bank/techContext.md` for existing tech stack details.
+    f.  `fetch_rules` for `.cursor/rules/isolation_rules/Core/command-execution.mdc` for tool usage guidelines.
+2.  **Development Environment Setup (Conceptual):**
+    a.  Assume user has set up the dev environment (branch, tools, dependencies). If specific new dependencies were noted in PLAN/CREATIVE, remind user if they haven't confirmed installation.
+3.  **Iterative Module/Component Implementation (Follow `tasks.md` sub-tasks):**
+    a.  For each implementation sub-task in `tasks.md` for the L3 feature:
+        i.  State: "Starting sub-task: [Sub-task description]."
+        ii. **Code Module/Component:**
+            *   Use `edit_file` to create/modify source code files.
+            *   Adhere strictly to designs from `creative-*.md` docs and `style-guide.md`.
+            *   Implement with modularity, encapsulation, and coding standards in mind.
+            *   Address state management, API interactions, error handling, performance, and security as per designs or best practices.
+        iii. **Write & Run Unit Tests:**
+            *   Use `edit_file` to write unit tests for new/modified logic.
+            *   Use `run_terminal_cmd` to execute these tests (e.g., `npm test [test_file_spec]`). Log output.
+        iv. **Self-Review/Linting:**
+            *   Conceptually review code against requirements and style guide.
+            *   If linters are part of the project, use `run_terminal_cmd` to run linter on changed files.
+        v.  **Update Memory Bank:**
+            *   Use `edit_file` to update `memory-bank/progress.md` with details of the completed sub-task, files changed, test results, and any decisions made.
+            *   Use `edit_file` to mark the sub-task as complete in `memory-bank/tasks.md`.
+            *   Use `edit_file` to update `memory-bank/activeContext.md` with current sub-task progress.
+4.  **Integrate Feature Modules/Components:**
+    a.  Once individual modules/components are built, ensure they integrate correctly.
+    b.  This may involve `edit_file` changes to connect them.
+5.  **Perform Integration Testing:**
+    a.  Use `run_terminal_cmd` to execute integration tests that cover interactions between the new feature's components and with existing system parts. Log output.
+    b.  If UI is involved, perform manual or automated UI integration tests.
+6.  **End-to-End Feature Testing:**
+    a.  Validate the complete feature against user stories and requirements from `tasks.md`.
+    b.  If UI involved, check accessibility and responsiveness.
+7.  **Code Cleanup & Refinement:**
+    a.  Review all new/modified code for clarity, efficiency, and adherence to standards. Use `edit_file` for refinements.
+8.  **Final Memory Bank Updates & Completion:**
+    a.  Ensure `tasks.md` implementation phase is marked complete.
+    b.  Ensure `progress.md` has a comprehensive log of the implementation.
+    c.  Use `edit_file` to update `memory-bank/activeContext.md`: "Level 3 Implementation for [Feature Name] complete. Ready for REFLECT mode."
+    d.  State: "Level 3 feature [Feature Name] implementation complete. All sub-tasks and tests passed. Recommend REFLECT mode."
+    e.  (Control returns to the fetching rule).

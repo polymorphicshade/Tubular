@@ -1,0 +1,15 @@
+---
+description: VAN sub-rule for initial Memory Bank file structure verification (DEPRECATED - Logic moved to Core/file-verification.mdc). This file is a placeholder.
+globs: **/visual-maps/van_mode_split/van-file-verification.mdc
+alwaysApply: false
+---
+# VAN MODE: FILE VERIFICATION (Placeholder - Logic Moved)
+
+> **TL;DR:** This rule is a placeholder. The primary Memory Bank file verification and creation logic has been consolidated into `.cursor/rules/isolation_rules/Core/file-verification.mdc`.
+
+## ⚙️ AI ACTION:
+
+1.  **Acknowledge:** State: "Note: `van_mode_split/van-file-verification.mdc` is a placeholder. The main file verification logic is in `Core/file-verification.mdc`."
+2.  **Guidance:** If you were instructed to perform initial Memory Bank file verification, you should have been (or should be) directed to `fetch_rules` for `.cursor/rules/isolation_rules/Core/file-verification.mdc`.
+
+(Control returns to the fetching rule, likely `van-mode-map.mdc` which should fetch the Core rule directly).

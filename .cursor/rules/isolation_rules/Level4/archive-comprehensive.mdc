@@ -1,0 +1,116 @@
+---
+description: Comprehensive archiving for Level 4 (Complex System) tasks. Guides AI to create extensive archive documentation using `edit_file`, consolidating all project artifacts.
+globs: **/Level4/archive-comprehensive.mdc
+alwaysApply: false
+---
+# COMPREHENSIVE ARCHIVING FOR LEVEL 4 TASKS (AI Instructions)
+
+> **TL;DR:** This rule guides the creation of a comprehensive archive for a completed Level 4 (Complex System) task using `edit_file`. It involves consolidating all system knowledge, design decisions, implementation details, and lessons learned into a structured archive.
+
+This rule is typically fetched by the Level 4 workflow orchestrator or the main ARCHIVE mode orchestrator if the task is L4.
+
+## ⚙️ AI ACTIONS FOR LEVEL 4 COMPREHENSIVE ARCHIVING:
+
+1.  **Acknowledge & Context Gathering:**
+    a.  State: "Initiating Comprehensive Archiving for Level 4 system: [System Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` (for the entire L4 task history, links to architectural plans, creative docs, etc.).
+    c.  `read_file memory-bank/reflection/reflect-[system_name_or_id]-[date].md` (for the comprehensive reflection).
+    d.  `read_file memory-bank/progress.md` (for the full development log).
+    e.  `read_file` all relevant `memory-bank/architecture/`, `memory-bank/creative/`, and other supporting documents.
+    f.  `read_file memory-bank/projectbrief.md`, `productContext.md`, `systemPatterns.md`, `techContext.md`.
+2.  **Pre-Archive Checklist (AI Self-Correction):**
+    a.  Confirm from `tasks.md` that the REFLECT phase for this L4 system is marked complete.
+    b.  Verify `memory-bank/reflection/reflect-[system_name_or_id]-[date].md` exists and is finalized.
+    c.  If checks fail, state: "L4 ARCHIVE BLOCKED: Comprehensive Reflection is not complete for system [System Name]. Please complete REFLECT mode first." Await user.
+3.  **Create Archive Document Structure (Main Archive File):**
+    a.  Determine archive filename: `archive-system-[system_name_or_id]-[date].md`.
+    b.  Use `edit_file` to create/update `memory-bank/archive/[archive_filename.md]`. This will be the main archive document.
+4.  **Populate Archive Document (Using `edit_file` and Template Below):**
+    a.  Iteratively populate the sections of the main archive document by synthesizing information from all gathered Memory Bank files.
+        **L4 Comprehensive Archive Structure (Content for `edit_file` into `archive-system-*.md`):**
+        ```markdown
+        # System Archive: [System Name from tasks.md]
+
+        ## System ID: [System ID from tasks.md]
+        ## Date Archived: [Current Date]
+        ## Complexity Level: 4
+        ## Status: COMPLETED & ARCHIVED
+
+        ## 1. System Overview
+        ### 1.1. System Purpose and Scope
+        [Synthesize from `projectbrief.md`, initial `tasks.md` description.]
+        ### 1.2. Final System Architecture
+        [Summarize key architectural decisions from architectural planning docs/ADRs. Link to detailed architecture documents if they exist in `memory-bank/architecture/` or `documentation/`.]
+        ### 1.3. Key Components & Modules
+        [List final key components and their purpose. From `tasks.md` component breakdown and implementation details.]
+        ### 1.4. Integration Points
+        [Describe internal and external integration points. From architectural plan / `techContext.md`.]
+        ### 1.5. Technology Stack
+        [Final technology stack used. From `techContext.md` / implementation details.]
+        ### 1.6. Deployment Environment Overview
+        [Brief overview of how the system is deployed. From `techContext.md` / deployment plans.]
+
+        ## 2. Requirements and Design Documentation Links
+        - Business Requirements: [Link to relevant section in `productContext.md` or `tasks.md`]
+        - Functional Requirements: [Link to detailed FRs in `tasks.md`]
+        - Non-Functional Requirements: [Link to NFRs in `tasks.md` or architectural plan]
+        - Architecture Decision Records (ADRs): [Link to `memory-bank/architecture/adrs/` or summaries in arch plan]
+        - Creative Design Documents:
+          - [Link to `../../creative/creative-[aspect1]-[date].md`]
+          - [Link to `../../creative/creative-[aspect2]-[date].md`]
+          - (List all relevant creative docs)
+
+        ## 3. Implementation Documentation Summary
+        ### 3.1. Phased Implementation Overview (if applicable)
+        [Summary of how phased implementation (`Level4/phased-implementation.mdc`) was executed. From `progress.md`.]
+        ### 3.2. Key Implementation Details & Challenges
+        [Highlight significant implementation details or challenges overcome. From `progress.md` / reflection doc.]
+        ### 3.3. Code Repository & Key Branches/Tags
+        [Link to Git repository. Note main branch, key feature branches, and final release tag/commit.]
+        ### 3.4. Build and Packaging Details
+        [Summary of build process and key artifacts. From `techContext.md` / `progress.md`.]
+
+        ## 4. API Documentation (If applicable)
+        [Link to or summarize key API endpoint documentation. If extensive, this might be a separate document in `documentation/` linked here.]
+
+        ## 5. Data Model and Schema Documentation (If applicable)
+        [Link to or summarize data model and schema. If extensive, separate document in `documentation/` linked here.]
+
+        ## 6. Security Documentation Summary
+        [Summary of key security measures implemented. Link to detailed security design if available.]
+
+        ## 7. Testing Documentation Summary
+        - Test Strategy: [Overall strategy. From `tasks.md` / reflection.]
+        - Test Results: [Summary of final test outcomes, key bugs fixed. Link to detailed test reports if any.]
+        - Known Issues & Limitations (at time of archive): [From reflection doc.]
+
+        ## 8. Deployment Documentation Summary
+        [Link to or summarize deployment procedures, environment configs. From `techContext.md` / `progress.md`.]
+
+        ## 9. Operational Documentation Summary
+        [Link to or summarize key operational procedures, monitoring, backup/recovery. From `techContext.md` / reflection.]
+
+        ## 10. Knowledge Transfer & Lessons Learned
+        - **Link to Comprehensive Reflection Document:** `../../reflection/reflect-[system_name_or_id]-[date].md`
+        - **Key Strategic Learnings (copied from reflection):**
+          - [Learning 1]
+          - [Learning 2]
+        - **Recommendations for Future Similar Systems (copied from reflection):**
+          - [Recommendation 1]
+
+        ## 11. Project History Summary
+        [Brief overview of project timeline and key milestones achieved. From `progress.md`.]
+        ```
+5.  **Update Core Memory Bank Files (using `edit_file`):**
+    a.  **`tasks.md`:**
+        *   Mark the Level 4 system task as "ARCHIVED".
+        *   Add a link to the main archive document: `Archived: ../archive/[archive_filename.md]`.
+    b.  **`progress.md`:**
+        *   Add a final entry: `[Date] - System [System Name] ARCHIVED. Comprehensive archive at archive/[archive_filename.md]`.
+    c.  **`activeContext.md`:**
+        *   Clear current system focus.
+        *   Add to log: "Archived Level 4 system [System Name]. Archive at `archive/[archive_filename.md]`."
+    d.  Consider updating `projectbrief.md` with a note about the system's completion and link to its archive.
+6.  **Completion:**
+    a.  State: "Comprehensive archiving for Level 4 system [System Name] complete. Main archive document created at `memory-bank/archive/[archive_filename.md]`."
+    b.  (Control returns to the fetching rule).

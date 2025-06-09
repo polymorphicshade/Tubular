@@ -1,0 +1,21 @@
+---
+description: Core rule for enforcing Creative Phase completion for Level 3-4 tasks before allowing IMPLEMENT mode.
+globs: **/Core/creative-phase-enforcement.mdc
+alwaysApply: false
+---
+# CREATIVE PHASE ENFORCEMENT
+
+> **TL;DR:** For L3/L4 tasks, if `tasks.md` flags items for "CREATIVE Phase", they MUST be completed before IMPLEMENT.
+
+## 🔍 ENFORCEMENT WORKFLOW (AI Actions)
+(Typically invoked by IMPLEMENT mode orchestrator for L3/L4 tasks, or by PLAN mode before suggesting IMPLEMENT)
+
+1.  **Check Task Level & Creative Flags:**
+    a.  `read_file` `memory-bank/activeContext.md` (for task level).
+    b.  `read_file` `memory-bank/tasks.md`. Scan current feature's sub-tasks for incomplete "CREATIVE: Design..." entries.
+2.  **Decision:**
+    *   **If uncompleted CREATIVE tasks for L3/L4 feature:**
+        a.  State: "🚨 IMPLEMENTATION BLOCKED for [feature]. Creative designs needed for: [list uncompleted creative tasks]."
+        b.  Suggest: "Initiate CREATIVE mode (e.g., 'CREATIVE design [component]')." Await user.
+    *   **Else (No uncompleted creative tasks or not L3/L4):**
+        a.  State: "Creative phase requirements met/not applicable. Proceeding."

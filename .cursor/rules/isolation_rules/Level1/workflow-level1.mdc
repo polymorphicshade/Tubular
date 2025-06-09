@@ -1,0 +1,61 @@
+---
+description: Streamlined workflow for Level 1 (Quick Bug Fix) tasks. Guides AI through minimal initialization, direct implementation, and quick documentation using `edit_file`.
+globs: **/Level1/workflow-level1.mdc
+alwaysApply: false
+---
+# STREAMLINED WORKFLOW FOR LEVEL 1 TASKS (AI Instructions)
+
+> **TL;DR:** This rule guides the AI through a minimal workflow for Level 1 (Quick Bug Fix) tasks. It emphasizes rapid issue resolution and concise documentation, primarily using `edit_file`.
+
+## 🧭 LEVEL 1 WORKFLOW PHASES (AI Actions)
+
+This workflow is typically fetched after VAN mode has confirmed the task as Level 1.
+
+### Phase 1: INITIALIZATION (Quick Confirmation)
+
+1.  **Acknowledge & Context:**
+    a.  State: "Initiating Level 1 Workflow for [Task Name from activeContext.md]."
+    b.  `read_file memory-bank/tasks.md` to confirm the specific issue details.
+    c.  `read_file memory-bank/activeContext.md` for current focus.
+2.  **Environment Setup (Conceptual):**
+    a.  No complex setup expected for L1. Assume environment is ready.
+3.  **Task Entry Check:**
+    a.  Ensure a minimal task entry exists in `tasks.md` for the issue. If VAN mode created a detailed one, that's fine. If not, ensure at least a line item is there.
+    b.  `edit_file memory-bank/activeContext.md` to confirm: "Focus: L1 Fix - [Task Name]".
+4.  **Milestone:** State "L1 Initialization complete. Proceeding to Implementation."
+
+### Phase 2: IMPLEMENTATION (Direct Fix)
+
+1.  **Locate Issue Source:**
+    a.  If `tasks.md` or `activeContext.md` specifies file(s) and line(s), use that.
+    b.  If not, use `codebase_search` or `search_files` with keywords from the issue description to find the relevant code.
+2.  **Develop & Apply Fix:**
+    a.  Use `edit_file` to make the targeted code change.
+    b.  The fix should be small and localized, consistent with Level 1.
+3.  **Test & Verify:**
+    a.  Perform a simple verification. This might be:
+        *   Visual inspection of the change.
+        *   Running a linter on the modified file (`run_terminal_cmd`).
+        *   If a very specific unit test covers the change and is easy to run, consider `run_terminal_cmd` for that single test.
+    b.  State the verification method and outcome.
+4.  **Milestone:** State "L1 Implementation and verification complete. Proceeding to Documentation."
+
+### Phase 3: DOCUMENTATION (Quick & Concise)
+
+1.  **Update `tasks.md`:**
+    a.  `fetch_rules` for `.cursor/rules/isolation_rules/Level1/quick-documentation.mdc`.
+    b.  Follow the template provided in `quick-documentation.mdc` to update the task entry in `memory-bank/tasks.md` using `edit_file`. This includes issue, cause (if known), solution, files changed, and verification. Mark as COMPLETED with date.
+2.  **Update `activeContext.md`:**
+    a.  Use `edit_file` to clear the "Focus" section in `memory-bank/activeContext.md` or set it to "Awaiting next task."
+    b.  Optionally, add a one-line summary to a "Recent L1 Fixes" log in `activeContext.md`.
+3.  **Notify Stakeholders (Conceptual):**
+    a.  For L1, direct notification is usually not needed unless specified. The `tasks.md` update serves as the record.
+4.  **Milestone:** State "L1 Documentation complete. Task [Task Name] is fully resolved."
+
+## 🚨 TASK ESCALATION
+*   If during IMPLEMENTATION, the issue is found to be more complex than L1 (e.g., requires changes to multiple components, design decisions, or significant testing):
+    a.  State: "ESCALATION: Issue [Task Name] is more complex than initially assessed. It appears to be Level [2/3]. Recommend halting L1 workflow and re-evaluating in VAN or PLAN mode."
+    b.  Use `edit_file` to update `tasks.md` and `activeContext.md` with this assessment.
+    c.  Await user guidance.
+
+This workflow prioritizes speed and efficiency for simple fixes.

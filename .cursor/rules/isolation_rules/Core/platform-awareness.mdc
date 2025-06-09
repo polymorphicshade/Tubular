@@ -1,0 +1,31 @@
+---
+description: Core guidelines for platform-aware command execution with `run_terminal_cmd`.
+globs: **/Core/platform-awareness.mdc
+alwaysApply: true
+---
+# PLATFORM AWARENESS SYSTEM (for `run_terminal_cmd`)
+
+> **TL;DR:** When using `run_terminal_cmd`, be aware of OS differences (paths, common commands). If unsure, state your default command (Linux-style) and ask the user to confirm or provide the platform-specific version (e.g., for Windows PowerShell).
+
+## 🔍 AI ACTION FOR PLATFORM AWARENESS:
+
+1.  **Identify Need for `run_terminal_cmd`:** This tool is for tasks like `mkdir`, running scripts (e.g., `npm run build`, `python manage.py test`), installing packages (`pip install`, `npm install`), or other shell operations. **Do NOT use it for creating or editing file content; use `edit_file` for that.**
+2.  **Consider Platform Differences:**
+    *   **Path Separators:** `/` (common for Linux, macOS, and often works in modern Windows PowerShell) vs. `\` (traditional Windows). When constructing paths for commands, be mindful.
+    *   **Common Commands:**
+        *   Directory Creation: `mkdir -p path/to/dir` (Linux/macOS) vs. `New-Item -ItemType Directory -Path path	o\dir` or `mkdir path	o\dir` (Windows PowerShell).
+        *   Listing Directory Contents: `ls -la` (Linux/macOS) vs. `Get-ChildItem` or `dir` (Windows PowerShell).
+        *   File Deletion: `rm path/to/file` (Linux/macOS) vs. `Remove-Item path	oile` (Windows PowerShell).
+        *   Environment Variables: `export VAR=value` (Linux/macOS) vs. `$env:VAR="value"` (Windows PowerShell).
+3.  **Execution Strategy with `run_terminal_cmd`:**
+    a.  **Check Context:** `read_file memory-bank/techContext.md` or `memory-bank/activeContext.md` to see if the OS has been previously identified.
+    b.  **If OS is Known:** Use the appropriate command syntax for that OS.
+    c.  **If OS is Unknown or Unsure:**
+        i.  State your intended action and the command you would typically use (default to Linux-style if no other info). Example: "To create the directory `my_app/src`, I would use `run_terminal_cmd` with `mkdir -p my_app/src`."
+        ii. Ask for Confirmation/Correction: "Is this command correct for your operating system? If you are on Windows, please provide the PowerShell equivalent."
+        iii. Await user confirmation or correction before proceeding with `run_terminal_cmd`.
+    d.  **Clearly State Command:** Before execution, always state the exact command you are about to run with `run_terminal_cmd`.
+4.  **Document Action and Outcome:**
+    a.  After `run_terminal_cmd` completes, use `edit_file` to log the command, its full output (or a summary if very long), and success/failure status in `memory-bank/activeContext.md` under a "Terminal Command Log" or similar section. (Refer to `Core/command-execution.mdc` for the log template).
+
+**This is a guiding principle. The key is to be *aware* of potential differences, default to a common standard (like Linux commands), and proactively seek clarification from the user when unsure to ensure `run_terminal_cmd` is used safely and effectively.**
