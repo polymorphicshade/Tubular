@@ -45,8 +45,6 @@ public class PlaybackParameterDialog extends DialogFragment {
 
     // Minimum allowable range in ExoPlayer
     private static final double MIN_PITCH_OR_SPEED = 0.10f;
-    private static final double MAX_PITCH_OR_SPEED = 5.00f;
-
     private static final boolean PITCH_CTRL_MODE_PERCENT = false;
     private static final boolean PITCH_CTRL_MODE_SEMITONE = true;
 
@@ -61,12 +59,6 @@ public class PlaybackParameterDialog extends DialogFragment {
     private static final double DEFAULT_STEP = STEP_25_PERCENT_VALUE;
     private static final boolean DEFAULT_SKIP_SILENCE = false;
     private static final boolean DEFAULT_PLAYBACK_UNHOOK = false;
-    private static final SliderStrategy QUADRATIC_STRATEGY = new SliderStrategy.Quadratic(
-            MIN_PITCH_OR_SPEED,
-            MAX_PITCH_OR_SPEED,
-            1.00f,
-            10_000);
-
     private static final SliderStrategy SEMITONE_STRATEGY = new SliderStrategy() {
         @Override
         public int progressOf(final double value) {
@@ -177,14 +169,17 @@ public class PlaybackParameterDialog extends DialogFragment {
 
     private void initUI() {
         // Tempo
-        setText(binding.tempoMinimumText, PlayerHelper::formatSpeed, MIN_PITCH_OR_SPEED);
-        setText(binding.tempoMaximumText, PlayerHelper::formatSpeed, MAX_PITCH_OR_SPEED);
+        final float maxPitchOrSpeed = getMaxPitchOrSpeed(requireContext());
+        final SliderStrategy quadraticStrategy = getQuadraticStrategy(requireContext());
 
-        binding.tempoSeekbar.setMax(QUADRATIC_STRATEGY.progressOf(MAX_PITCH_OR_SPEED));
+        setText(binding.tempoMinimumText, PlayerHelper::formatSpeed, MIN_PITCH_OR_SPEED);
+        setText(binding.tempoMaximumText, PlayerHelper::formatSpeed, maxPitchOrSpeed);
+
+        binding.tempoSeekbar.setMax(quadraticStrategy.progressOf(maxPitchOrSpeed));
         setAndUpdateTempo(tempo);
         binding.tempoSeekbar.setOnSeekBarChangeListener(
                 getTempoOrPitchSeekbarChangeListener(
-                        QUADRATIC_STRATEGY,
+                        quadraticStrategy,
                         this::onTempoSliderUpdated));
 
         registerOnStepClickListener(
@@ -216,13 +211,13 @@ public class PlaybackParameterDialog extends DialogFragment {
 
         // Pitch - Percent
         setText(binding.pitchPercentMinimumText, PlayerHelper::formatPitch, MIN_PITCH_OR_SPEED);
-        setText(binding.pitchPercentMaximumText, PlayerHelper::formatPitch, MAX_PITCH_OR_SPEED);
+        setText(binding.pitchPercentMaximumText, PlayerHelper::formatPitch, maxPitchOrSpeed);
 
-        binding.pitchPercentSeekbar.setMax(QUADRATIC_STRATEGY.progressOf(MAX_PITCH_OR_SPEED));
+        binding.pitchPercentSeekbar.setMax(quadraticStrategy.progressOf(maxPitchOrSpeed));
         setAndUpdatePitch(pitchPercent);
         binding.pitchPercentSeekbar.setOnSeekBarChangeListener(
                 getTempoOrPitchSeekbarChangeListener(
-                        QUADRATIC_STRATEGY,
+                        quadraticStrategy,
                         this::onPitchPercentSliderUpdated));
 
         registerOnStepClickListener(
@@ -488,6 +483,13 @@ public class PlaybackParameterDialog extends DialogFragment {
     // Sliders
     //////////////////////////////////////////////////////////////////////////*/
 
+    private SliderStrategy getQuadraticStrategy(final Context context) {
+        return new SliderStrategy.Quadratic(
+                MIN_PITCH_OR_SPEED, getMaxPitchOrSpeed(context),
+                1.00f,
+                10_000);
+    }
+
     private SeekBar.OnSeekBarChangeListener getTempoOrPitchSeekbarChangeListener(
             final SliderStrategy sliderStrategy,
             final DoubleConsumer newValueConsumer
@@ -527,16 +529,18 @@ public class PlaybackParameterDialog extends DialogFragment {
     }
 
     private void setAndUpdateTempo(final double newTempo) {
-        this.tempo = MathUtils.clamp(newTempo, MIN_PITCH_OR_SPEED, MAX_PITCH_OR_SPEED);
+        this.tempo = MathUtils.clamp(newTempo, MIN_PITCH_OR_SPEED,
+                getMaxPitchOrSpeed(requireContext()));
 
-        binding.tempoSeekbar.setProgress(QUADRATIC_STRATEGY.progressOf(tempo));
+        binding.tempoSeekbar.setProgress(getQuadraticStrategy(requireContext()).progressOf(tempo));
         setText(binding.tempoCurrentText, PlayerHelper::formatSpeed, tempo);
     }
 
     private void setAndUpdatePitch(final double newPitch) {
         this.pitchPercent = calcValidPitch(newPitch);
 
-        binding.pitchPercentSeekbar.setProgress(QUADRATIC_STRATEGY.progressOf(pitchPercent));
+        binding.pitchPercentSeekbar.setProgress(getQuadraticStrategy(requireContext())
+                .progressOf(pitchPercent));
         binding.pitchSemitoneSeekbar.setProgress(SEMITONE_STRATEGY.progressOf(pitchPercent));
         setText(binding.pitchPercentCurrentText,
                 PlayerHelper::formatPitch,
@@ -547,7 +551,8 @@ public class PlaybackParameterDialog extends DialogFragment {
     }
 
     private double calcValidPitch(final double newPitch) {
-        final double calcPitch = MathUtils.clamp(newPitch, MIN_PITCH_OR_SPEED, MAX_PITCH_OR_SPEED);
+        final double calcPitch = MathUtils.clamp(newPitch, MIN_PITCH_OR_SPEED,
+                getMaxPitchOrSpeed(requireContext()));
 
         if (!isCurrentPitchControlModeSemitone()) {
             return calcPitch;
@@ -612,11 +617,13 @@ public class PlaybackParameterDialog extends DialogFragment {
         return (float) MIN_PITCH_OR_SPEED;
     }
 
-    public static float getMaxPitchOrSpeed() {
-        return (float) MAX_PITCH_OR_SPEED;
+    public static float getMaxPitchOrSpeed(final Context context) {
+        return Float.parseFloat(PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(context.getString(R.string.max_playback_speed_key),
+                        context.getString(R.string.default_max_playback_speed_value)));
     }
 
-    public interface Callback {
+        public interface Callback {
         void onPlaybackParameterChanged(float playbackTempo, float playbackPitch,
                                         boolean playbackSkipSilence);
     }
