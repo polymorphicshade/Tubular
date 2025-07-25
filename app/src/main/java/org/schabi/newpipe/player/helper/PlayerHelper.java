@@ -246,6 +246,12 @@ public final class PlayerHelper {
                         context.getString(R.string.default_left_gesture_control_value));
     }
 
+    public static double getMiddleGestureWidth(@NonNull final Context context) {
+        return Float.parseFloat(getPreferences(context).getString(
+                context.getString(R.string.middle_gesture_area_width_key),
+                context.getString(R.string.default_middle_gesture_area_width_value)));
+    }
+
     public static boolean isStartMainPlayerFullscreenEnabled(@NonNull final Context context) {
         return getPreferences(context)
                 .getBoolean(context.getString(R.string.start_main_player_fullscreen_key), false);
