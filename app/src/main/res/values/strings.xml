@@ -113,6 +113,8 @@
     <string name="middle_gesture_control_title">Middle gesture action</string>
     <string name="right_gesture_control_summary">Choose gesture for right part of player screen</string>
     <string name="right_gesture_control_title">Right gesture action</string>
+    <string name="middle_gesture_width_summary">Choose area width for middle part of player screen</string>
+    <string name="middle_gesture_width_title">Middle gesture area width</string>
     <string name="brightness">Brightness</string>
     <string name="volume">Volume</string>
     <string name="none">None</string>

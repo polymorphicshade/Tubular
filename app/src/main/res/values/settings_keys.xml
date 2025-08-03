@@ -264,6 +264,21 @@
         <item>5</item>
         <item>10</item>
     </string-array>
+  
+    <string name="middle_gesture_area_width_key">middle_gesture_area_width</string>
+    <string name="default_middle_gesture_area_width_value">.3333</string>
+    <string-array name="middle_gesture_area_width_description_list">
+        <item>15%</item>
+        <item>25%</item>
+        <item>33%</item>
+        <item>40%</item>
+    </string-array>
+    <string-array name="middle_gesture_area_width_values_list">
+        <item>.15</item>
+        <item>.25</item>
+        <item>.3333</item>
+        <item>.4</item>
+    </string-array>
 
     <string name="prefer_original_audio_key">prefer_original_audio</string>
     <string name="prefer_descriptive_audio_key">prefer_descriptive_audio</string>

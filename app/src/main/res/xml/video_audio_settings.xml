@@ -227,6 +227,16 @@
             android:title="@string/max_playback_speed_title"
             app:singleLineTitle="false"
             app:iconSpaceReserved="false" />
+      
+       <ListPreference
+            android:defaultValue="@string/default_middle_gesture_area_width_value"
+            android:entries="@array/middle_gesture_area_width_description_list"
+            android:entryValues="@array/middle_gesture_area_width_values_list"
+            android:key="@string/middle_gesture_area_width_key"
+            android:summary="@string/middle_gesture_width_summary"
+            android:title="@string/middle_gesture_width_title"
+            app:singleLineTitle="false"
+            app:iconSpaceReserved="false" />
 
         <SwitchPreferenceCompat
             android:defaultValue="true"
