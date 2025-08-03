@@ -163,7 +163,7 @@ class MainPlayerGestureListener(
 
         val quadraticStrategy: SliderStrategy = SliderStrategy.Quadratic(
             PlaybackParameterDialog.getMinPitchOrSpeed().toDouble(),
-            PlaybackParameterDialog.getMaxPitchOrSpeed().toDouble(),
+            PlaybackParameterDialog.getMaxPitchOrSpeed(player.context).toDouble(),
             1.0,
             bar.max
         )
