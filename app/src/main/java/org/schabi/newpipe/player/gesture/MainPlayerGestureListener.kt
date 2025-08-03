@@ -241,8 +241,23 @@ class MainPlayerGestureListener(
 
         isMoving = true
 
+        var displayPortion: DisplayPortion
+
+        if (PlayerHelper.getActionForMiddleGestureSide(player.context) !=
+            player.context.getString(R.string.none_control_key)
+        ) {
+            displayPortion = getDisplayPortion(initialEvent)
+        } else {
+            displayPortion = getDisplayHalfPortion(initialEvent)
+            if (displayPortion == DisplayPortion.LEFT_HALF) {
+                displayPortion = DisplayPortion.LEFT
+            } else {
+                displayPortion = DisplayPortion.RIGHT
+            }
+        }
+
         // -- Brightness Volume and Tempo control --
-        if (getDisplayPortion(initialEvent) == DisplayPortion.RIGHT) {
+        if (displayPortion == DisplayPortion.RIGHT) {
             when (PlayerHelper.getActionForRightGestureSide(player.context)) {
                 player.context.getString(R.string.volume_control_key) ->
                     onScrollVolume(distanceY)
@@ -251,7 +266,7 @@ class MainPlayerGestureListener(
                 player.context.getString(R.string.playback_speed_control_key) ->
                     onScrollPlaybackSpeed(distanceY)
             }
-        } else if (getDisplayPortion(initialEvent) == DisplayPortion.LEFT) {
+        } else if (displayPortion == DisplayPortion.LEFT) {
             when (PlayerHelper.getActionForLeftGestureSide(player.context)) {
                 player.context.getString(R.string.volume_control_key) ->
                     onScrollVolume(distanceY)
