@@ -18,6 +18,7 @@ import org.schabi.newpipe.player.helper.PlaybackParameterDialog
 import org.schabi.newpipe.player.helper.PlayerHelper
 import org.schabi.newpipe.player.helper.PlayerSemitoneHelper
 import org.schabi.newpipe.player.ui.MainPlayerUi
+import org.schabi.newpipe.util.SliderStrategy
 import org.schabi.newpipe.util.ThemeHelper.getAndroidDimenPx
 import kotlin.math.abs
 import kotlin.math.roundToInt
@@ -158,27 +159,38 @@ class MainPlayerGestureListener(
         val bar: ProgressBar = binding.playbackSpeedProgressBar
         val maxPlaybackSpeed: Float = PlaybackParameterDialog.getMaxPitchOrSpeed(player.context)
         val minPlaybackSpeed: Float = PlaybackParameterDialog.getMinPitchOrSpeed()
-        val playbackSpeedStep: Float = PlaybackParameterDialog.getCurrentStepSize(player.context) / maxPlaybackSpeed
+        val playbackSpeedStep: Float = PlaybackParameterDialog.getCurrentStepSize(player.context)
+
+        val quadraticStrategy: SliderStrategy = SliderStrategy.Quadratic(
+            PlaybackParameterDialog.getMinPitchOrSpeed().toDouble(),
+            PlaybackParameterDialog.getMaxPitchOrSpeed().toDouble(),
+            1.0,
+            bar.max
+        )
 
         // If we just started sliding, change the progress bar to match the current playback speed
         if (!binding.playbackSpeedRelativeLayout.isVisible) {
-            val playbackSpeedPercent: Float = player.playbackSpeed / maxPlaybackSpeed
-            bar.progress = (playbackSpeedPercent * bar.max).toInt()
+            bar.progress = quadraticStrategy.progressOf(player.playbackSpeed.toDouble()).coerceIn(0, bar.max)
         }
 
         // Update progress bar
         bar.incrementProgressBy(distanceY.toInt())
 
-        // Update playback speed
-        val currentProgressPercent: Float = (bar.progress / bar.max.toFloat() / playbackSpeedStep).roundToInt() * playbackSpeedStep
-        val currentPlaybackSpeed: Float = (currentProgressPercent * maxPlaybackSpeed).coerceIn(minPlaybackSpeed, maxPlaybackSpeed)
+        // Use quadratic strategy to convert progress back to playback speed
+        val currentPlaybackSpeed: Float =
+            (
+                (quadraticStrategy.valueOf(bar.progress).toFloat() / playbackSpeedStep).roundToInt() *
+                    playbackSpeedStep
+                ).coerceIn(minPlaybackSpeed, maxPlaybackSpeed)
 
         player.playbackSpeed = currentPlaybackSpeed
         if (!PlaybackParameterDialog.getPlaybackUnhooked(player.context)) {
             if (!PlaybackParameterDialog.getPitchControlModeSemitone(player.context)) {
                 player.playbackPitch = currentPlaybackSpeed
             } else {
-                player.playbackPitch = PlayerSemitoneHelper.semitonesToPercent(PlayerSemitoneHelper.percentToSemitones(currentPlaybackSpeed.toDouble())).toFloat()
+                player.playbackPitch = PlayerSemitoneHelper.semitonesToPercent(
+                    PlayerSemitoneHelper.percentToSemitones(currentPlaybackSpeed.toDouble())
+                ).toFloat()
             }
         }
 
