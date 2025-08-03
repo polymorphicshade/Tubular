@@ -310,6 +310,11 @@ public final class PlayerHelper {
         return isUsingInexactSeek(context) ? SeekParameters.CLOSEST_SYNC : SeekParameters.EXACT;
     }
 
+    public static boolean getSeekInsteadOfSkip(@NonNull final Context context) {
+        return getPreferences(context).getBoolean(
+                context.getString(R.string.seek_on_media_button_events_key), false);
+    }
+
     public static long getPreferredCacheSize() {
         return 64 * 1024 * 1024L;
     }
