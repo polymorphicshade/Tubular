@@ -116,6 +116,8 @@
     <string name="brightness">Brightness</string>
     <string name="volume">Volume</string>
     <string name="none">None</string>
+    <string name="max_playback_speed_title">Maximum playback speed</string>
+    <string name="max_playback_speed_summary">Choose the maximum playback speed</string>
     <string name="show_search_suggestions_title">Search suggestions</string>
     <string name="show_search_suggestions_summary">Choose the suggestions to show when searching</string>
     <string name="local_search_suggestions">Local search suggestions</string>

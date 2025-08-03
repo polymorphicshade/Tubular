@@ -200,12 +200,13 @@
         <item>@string/audio_webm_key</item>
     </string-array>
 
-    <string name="left_gesture_control_key">left_gesture_control</string>
-    <string name="default_left_gesture_control_value">@string/brightness_control_key</string>
     <string name="brightness_control_key">brightness_control</string>
     <string name="volume_control_key">volume_control</string>
     <string name="playback_speed_control_key">playback_speed_control</string>
     <string name="none_control_key">none_control</string>
+
+    <string name="left_gesture_control_key">left_gesture_control</string>
+    <string name="default_left_gesture_control_value">@string/brightness_control_key</string>
     <string-array name="left_gesture_control_description">
         <item>@string/brightness</item>
         <item>@string/volume</item>
@@ -247,6 +248,21 @@
         <item>@string/volume_control_key</item>
         <item>@string/playback_speed_control_key</item>
         <item>@string/none_control_key</item>
+    </string-array>
+
+    <string name="max_playback_speed_key">max_playback_speed</string>
+    <string name="default_max_playback_speed_value">5</string>
+    <string-array name="max_playback_speed_description">
+        <item>2x</item>
+        <item>3x</item>
+        <item>5x</item>
+        <item>10x</item>
+    </string-array>
+    <string-array name="max_playback_speed_values">
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
     </string-array>
 
     <string name="prefer_original_audio_key">prefer_original_audio</string>
