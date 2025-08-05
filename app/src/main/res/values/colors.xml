@@ -95,5 +95,8 @@
     <color name="preview_segment">#008fd6</color>
     <color name="filler_segment">#7300ff</color>
     <color name="pending_segment">#ffffff</color>
+    
+    <!-- Vote button colors -->
+    <color name="sponsor_block_vote_button_selected">#CD201F</color>
 
 </resources>
