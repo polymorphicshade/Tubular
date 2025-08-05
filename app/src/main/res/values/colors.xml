@@ -97,6 +97,6 @@
     <color name="pending_segment">#ffffff</color>
     
     <!-- Vote button colors -->
-    <color name="sponsor_block_vote_button_selected">#FF4081</color>
+    <color name="sponsor_block_vote_button_selected">#CD201F</color>
 
 </resources>
