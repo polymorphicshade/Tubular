@@ -197,11 +197,33 @@ public class SponsorBlockSegmentListAdapter extends
             final String endText = millisecondsToString(sponsorBlockSegment.endTime);
             itemSegmentEndTimeTextView.setText(endText);
 
+            // Update vote button states
             if (sponsorBlockSegment.category == SponsorBlockCategory.PENDING
                     || sponsorBlockSegment.uuid.equals("TEMP")
                     || sponsorBlockSegment.uuid.equals("")) {
                 itemSegmentVoteUpImageView.setVisibility(View.INVISIBLE);
                 itemSegmentVoteDownImageView.setVisibility(View.INVISIBLE);
+            } else {
+                itemSegmentVoteUpImageView.setVisibility(View.VISIBLE);
+                itemSegmentVoteDownImageView.setVisibility(View.VISIBLE);
+
+                // Update button states based on current vote
+                final int selectedColor =
+                        context.getColor(R.color.sponsor_block_vote_button_selected);
+                final int defaultColor =
+                        context.getColor(android.R.color.darker_gray);
+
+                if (hasUpVoted) {
+                    itemSegmentVoteUpImageView.setColorFilter(selectedColor);
+                    itemSegmentVoteDownImageView.setColorFilter(defaultColor);
+                } else if (hasDownVoted) {
+                    itemSegmentVoteUpImageView.setColorFilter(defaultColor);
+                    itemSegmentVoteDownImageView.setColorFilter(selectedColor);
+                } else {
+                    // Reset to default colors when no vote
+                    itemSegmentVoteUpImageView.setColorFilter(defaultColor);
+                    itemSegmentVoteDownImageView.setColorFilter(defaultColor);
+                }
             }
         }
 
@@ -281,6 +303,11 @@ public class SponsorBlockSegmentListAdapter extends
                         Toast.makeText(context,
                                 toastMessage,
                                 Toast.LENGTH_SHORT).show();
+
+                    // Update button states after voting
+                    if (currentSponsorBlockSegment != null) {
+                        updateFrom(currentSponsorBlockSegment);
+                    }
                     }, throwable -> {
                         if (throwable instanceof NullPointerException) {
                             return;
