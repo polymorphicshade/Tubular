@@ -2622,6 +2622,9 @@ public final class Player implements PlaybackListener, Listener {
             case PREVIEW -> prefs.getString(
                     context.getString(R.string.sponsor_block_category_preview_mode_key),
                     defaultValue);
+            case HOOK -> prefs.getString(
+                    context.getString(R.string.sponsor_block_category_hook_mode_key),
+                    defaultValue);
             case FILLER -> prefs.getString(
                     context.getString(R.string.sponsor_block_category_filler_mode_key),
                     defaultValue);

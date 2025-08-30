@@ -265,7 +265,7 @@
         <item>5</item>
         <item>10</item>
     </string-array>
-  
+
     <string name="middle_gesture_area_width_key">middle_gesture_area_width</string>
     <string name="default_middle_gesture_area_width_value">.3333</string>
     <string-array name="middle_gesture_area_width_description_list">
@@ -1594,6 +1594,9 @@
     <string name="sponsor_block_category_preview_key" translatable="false">sponsor_block_category_preview</string>
     <string name="sponsor_block_category_preview_mode_key" translatable="false">sponsor_block_category_preview_mode</string>
     <string name="sponsor_block_category_preview_color_key" translatable="false">sponsor_block_category_preview_color</string>
+    <string name="sponsor_block_category_hook_key" translatable="false">sponsor_block_category_hook</string>
+    <string name="sponsor_block_category_hook_mode_key" translatable="false">sponsor_block_category_hook_mode</string>
+    <string name="sponsor_block_category_hook_color_key" translatable="false">sponsor_block_category_hook_color</string>
     <string name="sponsor_block_category_filler_key" translatable="false">sponsor_block_category_filler</string>
     <string name="sponsor_block_category_filler_mode_key" translatable="false">sponsor_block_category_filler_mode</string>
     <string name="sponsor_block_category_filler_color_key" translatable="false">sponsor_block_category_filler_color</string>

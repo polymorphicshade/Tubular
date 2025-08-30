@@ -84,6 +84,13 @@ public final class SponsorBlockHelper {
                         ? context.getResources().getColor(R.color.preview_segment)
                         : Color.parseColor(colorStr);
             }
+            case HOOK -> {
+                key = context.getString(R.string.sponsor_block_category_hook_color_key);
+                colorStr = prefs.getString(key, null);
+                return colorStr == null
+                        ? context.getResources().getColor(R.color.hook_segment)
+                        : Color.parseColor(colorStr);
+            }
             case FILLER -> {
                 key = context.getString(R.string.sponsor_block_category_filler_color_key);
                 colorStr = prefs.getString(key, null);
@@ -156,6 +163,8 @@ public final class SponsorBlockHelper {
                     R.string.sponsor_block_category_non_music);
             case PREVIEW -> context.getString(
                     R.string.sponsor_block_category_preview);
+            case HOOK -> context.getString(
+                    R.string.sponsor_block_category_hook);
             case FILLER -> context.getString(
                     R.string.sponsor_block_category_filler);
             case PENDING -> context.getString(
@@ -181,6 +190,8 @@ public final class SponsorBlockHelper {
                     .getString(R.string.sponsor_block_skip_non_music_toast);
             case PREVIEW -> context
                     .getString(R.string.sponsor_block_skip_preview_toast);
+            case HOOK -> context
+                    .getString(R.string.sponsor_block_skip_hook_toast);
             case FILLER -> context
                     .getString(R.string.sponsor_block_skip_filler_toast);
             case PENDING -> context
