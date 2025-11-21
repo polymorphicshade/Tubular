@@ -1561,6 +1561,8 @@
         <item>@string/image_quality_high_key</item>
     </string-array>
 
+    <string name="show_kiosks_key">show_kiosks</string>
+
     <!-- SponsorBlock -->
     <string name="sponsor_block_home_page_key" translatable="false">sponsor_block_home_page</string>
     <string name="sponsor_block_enable_key" translatable="false">sponsor_block_enable</string>

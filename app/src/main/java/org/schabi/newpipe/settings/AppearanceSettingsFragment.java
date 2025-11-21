@@ -52,6 +52,14 @@ public class AppearanceSettingsFragment extends BasePreferenceFragment {
                         getString(R.string.auto_device_theme_title)));
             }
         }
+
+        final String showKiosksKey = getString(R.string.show_kiosks_key);
+        findPreference(showKiosksKey).setOnPreferenceChangeListener((preference, newValue) -> {
+            defaultPreferences.edit()
+                    .putBoolean(Constants.KEY_DRAWER_CHANGE, true)
+                    .apply();
+            return true;
+        });
     }
 
     @Override

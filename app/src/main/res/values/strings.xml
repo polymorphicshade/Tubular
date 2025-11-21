@@ -882,6 +882,8 @@
     <string name="trending_podcasts">Trending podcasts</string>
     <string name="trending_movies">Trending movies and shows</string>
     <string name="trending_music">Trending music</string>
+    <string name="show_kiosks_title">Show kiosks in drawer</string>
+    <string name="show_kiosks_summary">Show trending, most liked, and other kiosks</string>
     <!-- SponsorBlock -->
     <string name="sponsor_block">SponsorBlock</string>
     <string name="sponsor_block_category_sponsor">Sponsor</string>
