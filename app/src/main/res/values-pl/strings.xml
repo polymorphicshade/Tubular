@@ -96,10 +96,7 @@
     <string name="all">Wszystkie</string>
     <string name="disabled">Wyłączone</string>
     <string name="clear">Wyczyść</string>
-    <string name="short_thousand">tys.</string>
-    <string name="short_million">mln</string>
-    <string name="short_billion">mld</string>
-    <string name="msg_popup_permission">To pozwolenie jest wymagane, aby 
+    <string name="msg_popup_permission">To pozwolenie jest wymagane, aby
 \notworzyć w trybie okienkowym</string>
     <string name="open_in_popup_mode">Otwórz w trybie okienkowym</string>
     <string name="controls_popup_title">Tryb okienkowy</string>
@@ -173,10 +170,10 @@
     </plurals>
     <string name="charset_most_special_characters">Większość znaków specjalnych</string>
     <string name="donation_title">Dotacja</string>
-    <string name="donation_encouragement">NewPipe jest rozwijany przez wolontariuszy, którzy poświęcają swój wolny czas, zapewniając Ci najlepsze wrażenia z użytkowania. To dobry moment na wsparcie programistów i sprawienie, aby Tubular był jeszcze lepszy, podczas gdy oni będą mogli delektować się filiżanką kawy.</string>
+    <string name="donation_encouragement">Tubular jest rozwijany przez wolontariuszy, którzy poświęcają swój wolny czas, zapewniając Ci najlepsze wrażenia z użytkowania. To dobry moment na wsparcie programistów i sprawienie, aby Tubular był jeszcze lepszy, podczas gdy oni będą mogli delektować się filiżanką kawy.</string>
     <string name="give_back">Wspomóż</string>
     <string name="website_title">Strona internetowa</string>
-    <string name="website_encouragement">Odwiedź stronę NewPipe, aby uzyskać więcej informacji i najnowsze wiadomości.</string>
+    <string name="website_encouragement">Odwiedź stronę Tubular, aby uzyskać więcej informacji i najnowsze wiadomości.</string>
     <string name="delete_item_search_history">Czy chcesz usunąć tę pozycję z historii wyszukiwania?</string>
     <string name="main_page_content">Zawartość strony głównej</string>
     <string name="blank_page_summary">Pusta strona</string>
@@ -313,9 +310,9 @@
     <string name="one_item_deleted">Usunięto jedną pozycję</string>
     <string name="app_license">Tubular jest wolnym i bezpłatnym oprogramowaniem: Możesz używać, udostępniać i ulepszać je do woli. W szczególności możesz je redystrybuować i/lub modyfikować zgodnie z warunkami GNU General Public License, opublikowanej przez Free Software Fundation, w wersji 3 albo (według Twojego wyboru) jakiejkolwiek późniejszej wersji.</string>
     <string name="import_settings">Czy chcesz zaimportować również ustawienia?</string>
-    <string name="privacy_policy_title">Polityka prywatności NewPipe</string>
-    <string name="privacy_policy_encouragement">Projekt NewPipe bardzo poważnie traktuje Twoją prywatność, dlatego aplikacja nie gromadzi żadnych danych bez Twojej zgody.
-\nPolityka prywatności NewPipe szczegółowo wyjaśnia, jakie dane są zbierane i przesyłane, kiedy wysyłasz raport o awarii aplikacji.</string>
+    <string name="privacy_policy_title">Polityka prywatności Tubular</string>
+    <string name="privacy_policy_encouragement">Projekt Tubular bardzo poważnie traktuje Twoją prywatność, dlatego aplikacja nie gromadzi żadnych danych bez Twojej zgody.
+\nPolityka prywatności Tubular szczegółowo wyjaśnia, jakie dane są zbierane i przesyłane, kiedy wysyłasz raport o awarii aplikacji.</string>
     <string name="read_privacy_policy">Przeczytaj politykę prywatności</string>
     <string name="start_accept_privacy_policy">Ze względu na wprowadzenie Ogólnego rozporządzenia o ochronie danych (RODO) chcielibyśmy zwrócić Twoją uwagę na politykę prywatności Tubular. Prosimy przeczytać ją uważnie.
 \nMusisz ją zaakceptować, aby przesyłać nam raporty o błędach.</string>
@@ -595,8 +592,8 @@
     <string name="crash_the_app">Zepsuj aplikację</string>
     <string name="paid_content">Ta treść dostępna jest tylko dla użytkowników, którzy za nią zapłacili. Nie może być strumieniowana ani pobierana przez Tubular.</string>
     <string name="youtube_music_premium_content">To wideo dostępne jest tylko dla subskrybentów usługi YouTube Music Premium. Nie może być strumieniowane ani pobierane przez Tubular.</string>
-    <string name="private_content">Ta treść jest prywatna, więc nie może być strumieniowana ani pobierana przez Tubular</string>
-    <string name="georestricted_content">Ta treść nie jest dostępna w Twoim kraju</string>
+    <string name="private_content">Ta treść jest prywatna, więc nie może być strumieniowana ani pobierana przez Tubular.</string>
+    <string name="georestricted_content">Ta treść nie jest dostępna w Twoim kraju.</string>
     <string name="restricted_video_no_stream">To wideo jest objęte ograniczeniem wiekowym.
 \nZe względu na nowe zasady YouTube dotyczące wideo z ograniczeniami wiekowymi Tubular nie może uzyskać dostępu do żadnego z jego strumieni wideo i dlatego nie jest w stanie go odtworzyć.</string>
     <string name="soundcloud_go_plus_content">To jest utwór SoundCloud Go+ (przynajmniej w Twoim kraju). Nie może być strumieniowany ani pobierany przez Tubular.</string>
@@ -626,8 +623,7 @@
     <string name="metadata_category">Kategoria</string>
     <string name="open_website_license">Otwórz stronę</string>
     <string name="description_select_note">Teraz możesz zaznaczyć tekst wewnątrz opisu. Pamiętaj, że w trybie zaznaczania strona może migotać i linki nie będą klikalne.</string>
-    <string name="service_provides_reason">%s podaje ten powód:</string>
-    <string name="account_terminated">Konto zamknięte</string>
+    <string name="account_terminated">Konto zamknięte.</string>
     <string name="feed_load_error_fast_unknown">Tryb szybki dla ładowania kanału nie dostarcza więcej informacji na ten temat.</string>
     <string name="feed_load_error_terminated">Konto autora zostało zawieszone.
 \nTubular nie będzie w stanie załadować tego kanału w przyszłości.
@@ -843,9 +839,9 @@
 \nCzy na pewno chcesz kontynuować?</string>
     <string name="yes">Tak</string>
     <string name="no">Nie</string>
-    <string name="auto_update_check_description">NewPipe może od czasu do czasu automatycznie sprawdzać dostępność nowych wersji i powiadamiać Cię, gdy tylko będą dostępne.
+    <string name="auto_update_check_description">Tubular może od czasu do czasu automatycznie sprawdzać dostępność nowych wersji i powiadamiać Cię, gdy tylko będą dostępne.
 \nCzy chcesz to włączyć?</string>
-    <string name="import_settings_vulnerable_format">Ustawienia w importowanym eksporcie korzystają z podatnego na ataki formatu, który został wycofany od wersji NewPipe 0.27.0. Upewnij się, że importowany eksport pochodzi z zaufanego źródła, i w przyszłości używaj wyłącznie eksportów uzyskanych z NewPipe 0.27.0 lub nowszego. Obsługa importowania ustawień w tym podatnym formacie zostanie wkrótce całkowicie usunięta, a wtedy starsze wersje NewPipe nie będą już mogły importować ustawień z eksportu z nowych wersji.</string>
+    <string name="import_settings_vulnerable_format">Ustawienia w importowanym eksporcie korzystają z podatnego na ataki formatu, który został wycofany od wersji Tubular 0.27.0. Upewnij się, że importowany eksport pochodzi z zaufanego źródła, i w przyszłości używaj wyłącznie eksportów uzyskanych z Tubular 0.27.0 lub nowszego. Obsługa importowania ustawień w tym podatnym formacie zostanie wkrótce całkowicie usunięta, a wtedy starsze wersje Tubular nie będą już mogły importować ustawień z eksportu z nowych wersji.</string>
     <string name="audio_track_type_secondary">dodatkowa</string>
     <string name="share_playlist_as_youtube_temporary_playlist">Udostępnij jako tymczasową playlistę YouTube</string>
     <string name="tab_bookmarks_short">Playlisty</string>
@@ -857,4 +853,24 @@
     <string name="channel_tab_likes">Polubienia</string>
     <string name="migration_info_6_7_title">Usunięto stronę SoundCloud 50 najlepszych</string>
     <string name="migration_info_6_7_message">SoundCloud wycofał oryginalną listę 50 najlepszych. Odpowiadająca karta została usunięta ze strony głównej.</string>
+    <string name="migration_info_7_8_title">Usunięto połączone Na czasie YouTube</string>
+    <string name="migration_info_7_8_message">Od 21 lipca 2025 r. YouTube zaprzestał korzystania z połączonego Na czasie. TubularTubular zastąpił domyślną stronę Na czasie popularnymi transmisjami na żywo.\n\nMożesz także wybrać różne strony Na czasie w „Ustawienia &gt; Zawartość &gt; Zawartość strony głównej”.</string>
+    <string name="trending_gaming">Gry na czasie</string>
+    <string name="trending_podcasts">Podcasty na czasie</string>
+    <string name="trending_movies">Filmy i programy na czasie</string>
+    <string name="trending_music">Muzyka na czasie</string>
+    <string name="short_thousand">%stys.</string>
+    <string name="short_million">%smln</string>
+    <string name="short_billion">%smld</string>
+    <string name="delete_file">Usuń plik</string>
+    <string name="delete_entry">Usuń wpis</string>
+    <string name="entry_deleted">Usunięto wpis</string>
+    <string name="permission_display_over_apps_message">Aby korzystać z odtwarzacza w trybie okienkowym, wybierz %1$s w następującym menu ustawień Androida i włącz %2$s.</string>
+    <string name="permission_display_over_apps_permission_name">„Zezwól na wyświetlanie nad innymi aplikacjami”</string>
+    <string name="account_terminated_service_provides_reason">Konto zamknięte.\n\n%1$s podaje następujący powód: %2$s</string>
+    <string name="player_http_403">Podczas odtwarzania otrzymano od serwera błąd HTTP 403, prawdopodobnie spowodowany wygaśnięciem adresu URL strumienia lub blokadą adresu IP.</string>
+    <string name="player_http_invalid_status">Podczas odtwarzania otrzymano od serwera błąd HTTP %1$s.</string>
+    <string name="youtube_player_http_403">Podczas odtwarzania otrzymano od serwera błąd HTTP 403, prawdopodobnie spowodowany blokadą adresu IP lub problemami z odszyfrowaniem adresu URL strumienia.</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s odmówił dostarczenia danych, prosząc o zalogowanie się w celu potwierdzenia, że nie jest się botem.\n\nTwoje IP mogło zostać tymczasowo zablokowane przez %1$s. Możesz chwilę poczekać lub zmienić adres IP (na przykład włączając/wyłączając VPN lub przełączając się z sieci Wi-Fi na dane komórkowe).</string>
+    <string name="unsupported_content_in_country">Ta treść nie jest dostępna dla aktualnie wybranego kraju treści.\n\nZmień swój wybór w „Ustawienia &gt; Zawartość &gt; Domyślny kraj treści”.</string>
 </resources>

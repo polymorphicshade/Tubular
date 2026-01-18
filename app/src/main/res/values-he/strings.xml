@@ -112,9 +112,6 @@
     <string name="video">סרטון</string>
     <string name="audio">שמע</string>
     <string name="retry">ניסיון חוזר</string>
-    <string name="short_thousand">אלפ.</string>
-    <string name="short_million">מיל.</string>
-    <string name="short_billion">מיליארד</string>
     <string name="no_subscribers">אין מנויים</string>
     <plurals name="subscribers">
         <item quantity="one">מנוי אחד</item>
@@ -169,10 +166,10 @@
     <string name="contribution_encouragement">אם יש לך רעיון כלשהו בנוגע לתרגום, שינויי עיצוב, ניקוי הקוד או שינויים מהותיים בקוד - אנו תמיד שמחים לקבל עזרה. ככל שיותר דברים מתבצעים כך היישומון משתפר!</string>
     <string name="view_on_github">הצגה ב־GitHub</string>
     <string name="donation_title">תרומה</string>
-    <string name="donation_encouragement">הפיתוח של Tubular נערך ע״י מתנדבים שמשקיעים את זמנם הפנוי כדי להגיש לך את חווית השימוש הטובה ביותר. באפשרותך להעניק בחזרה כדי לסייע למפתחים לשפר את NewPipe בעודם נהנים מכוס קפה.</string>
+    <string name="donation_encouragement">הפיתוח של Tubular נערך ע״י מתנדבים שמשקיעים את זמנם הפנוי כדי להגיש לך את חווית השימוש הטובה ביותר. באפשרותך להעניק בחזרה כדי לסייע למפתחים לשפר את Tubular בעודם נהנים מכוס קפה.</string>
     <string name="give_back">לתרום בחזרה</string>
     <string name="website_title">אתר הבית</string>
-    <string name="website_encouragement">מומלץ לבקר באתר של NewPipe לפרטים נוספים ולחדשות.</string>
+    <string name="website_encouragement">מומלץ לבקר באתר של Tubular לפרטים נוספים ולחדשות.</string>
     <string name="app_license_title">הרישיון של Tubular</string>
     <string name="read_full_license">הצגת הרישיון</string>
     <string name="title_activity_history">היסטוריה</string>
@@ -286,9 +283,9 @@
     <string name="invalid_source">אין מקור תיקייה/תוכן</string>
     <string name="error_occurred_detail">אירעה שגיאה: %1$s</string>
     <string name="no_streams_available_download">אין תזרימים זמינים להורדה</string>
-    <string name="privacy_policy_title">מדיניות הפרטיות של NewPipe</string>
+    <string name="privacy_policy_title">מדיניות הפרטיות של Tubular</string>
     <string name="privacy_policy_encouragement">מיזם Tubular שומר על הפרטיות שלך בצורה מאוד קפדנית. לפיכך, היישומון אינו אוסף נתונים ללא הסכמתך.
-\nמדיניות הפרטיות של NewPipe מסבירה בפרטי פרטים אילו נתונים נשלחים ומאוחסנים בעת שליחת דיווח על תקלה.</string>
+\nמדיניות הפרטיות של Tubular מסבירה בפרטי פרטים אילו נתונים נשלחים ומאוחסנים בעת שליחת דיווח על תקלה.</string>
     <string name="read_privacy_policy">הצגת מדיניות הפרטיות</string>
     <string name="app_license">Tubular הוא יישומון חופשי בהתאם לרישיון קופילפט: מותר לך להשתמש, לחקור, לשתף ולשפר בכל דרך שנראית לך. במיוחד מותר לך להפיץ מחדש ו/או לשנות תחת תנאי הרישיון הציבורי הכללי של GNU כפי שמופץ על ידי קרן התכנה החופשית, בין אם גרסה 3 של הרישיון או (לשיקולך) כל גרסה עדכנית יותר שלו.</string>
     <string name="title_last_played">התנגנו אחרונים</string>
@@ -598,7 +595,7 @@
     <string name="open_with">פתיחה באמצעות</string>
     <string name="no_app_to_open_intent">אין יישומון על המכשיר שלך שיכול לפתוח את זה</string>
     <string name="crash_the_app">להקריס את היישומון</string>
-    <string name="paid_content">תוכן זה זמין רק למשתמשים ששילמו, לכן לא ניתן להזרים או להוריד אותו עם Tubular.</string>
+    <string name="paid_content">התוכן הזה זמין רק למשתמשים ששילמו, לכן לא ניתן להזרים או להוריד אותו עם Tubular.</string>
     <string name="youtube_music_premium_content">סרטון זה זמין רק למנויי YouTube Music Premium, לכן לא ניתן להזרים או להוריד אותו עם Tubular.</string>
     <string name="private_content">זה תוכן פרטי, לכן לא ניתן להזרים או להוריד אותו עם Tubular.</string>
     <string name="soundcloud_go_plus_content">רצועה זו של SoundCloud Go+‎ מוגבלת, לפחות במדינה שלך, לכן לא ניתן להזרים או להוריד אותה עם Tubular.</string>
@@ -635,7 +632,6 @@
 \nל־Tubular לא תהיה אפשרות להוריד את ההזנה הזאת בעתיד.
 \nלהסיר את המינוי מהערוץ הזה\?</string>
     <string name="open_website_license">פתיחת האתר</string>
-    <string name="service_provides_reason">%s מספק את הסיבה הבאה:</string>
     <string name="account_terminated">החשבון הושמד</string>
     <string name="feed_load_error_fast_unknown">מצב ההזנה המהירה לא מספק מידע נוסף על כך.</string>
     <string name="feed_load_error_account_info">לא ניתן לטעון את ההזנה עבור ‚%s’.</string>
@@ -838,7 +834,7 @@
         <item quantity="other">%s תשובות</item>
     </plurals>
     <string name="notification_actions_summary_android13">אפשר לערוך כל פעולה בהתראה להלן על ידי נגיעה בה. שלוש הפעולות הראשונות (נגינה/השהיה, הקודם והבא) מוגדרות על ידי המערכת ונעולות לעריכה.</string>
-    <string name="auto_update_check_description">NewPipe יכול לבדוק אוטומטית אם יש גרסאות חדשות מעת לעת ולהודיע כאשר הן זמינות.
+    <string name="auto_update_check_description">Tubular יכול לבדוק אוטומטית אם יש גרסאות חדשות מעת לעת ולהודיע כאשר הן זמינות.
 \nלהפעיל את היכולת הזאת?</string>
     <string name="reset_settings_title">איפוס הגדרות</string>
     <string name="reset_settings_summary">איפוס כל ההגדרות לערכי ברירת המחדל שלהן</string>
@@ -849,7 +845,7 @@
 \n
 \nלהמשיך?</string>
     <string name="error_insufficient_storage">אין מספיק מקום פנוי במכשיר</string>
-    <string name="import_settings_vulnerable_format">ההגדרות בייצוא המיובא משתמשות בתסדיר פגיע שהוצא משימוש מאז NewPipe 0.27.0. יש לוודא שהייצוא המיובא הוא ממקור מהימן, ועדיף להשתמש רק בייצוא שהושג מ־NewPipe 0.27.0 ומעלה בעתיד. תמיכה בייבוא הגדרות בתסדיר פגיע זה תוסר בקרוב לחלוטין, ואז גרסאות ישנות של NewPipe לא יוכלו לייבא עוד הגדרות של ייצוא מגרסאות חדשות.</string>
+    <string name="import_settings_vulnerable_format">ההגדרות בייצוא המיובא משתמשות בתסדיר פגיע שהוצא משימוש מאז Tubular 0.27.0. יש לוודא שהייצוא המיובא הוא ממקור מהימן, ועדיף להשתמש רק בייצוא שהושג מ־Tubular 0.27.0 ומעלה בעתיד. תמיכה בייבוא הגדרות בתסדיר פגיע זה תוסר בקרוב לחלוטין, ואז גרסאות ישנות של Tubular לא יוכלו לייבא עוד הגדרות של ייצוא מגרסאות חדשות.</string>
     <string name="audio_track_type_secondary">משני</string>
     <string name="tab_bookmarks_short">רשימות נגינה</string>
     <string name="share_playlist_as_youtube_temporary_playlist">שיתוף כרשימת נגינה זמנית של YouTube</string>
@@ -859,4 +855,26 @@
     <string name="search_with_service_name">חיפוש ב־%1$s</string>
     <string name="search_with_service_name_and_filter">חיפוש ב־%1$s‏ (%2$s)</string>
     <string name="channel_tab_likes">לייקים</string>
+    <string name="account_terminated_service_provides_reason">חשבון הושמד\n\n%1$s מספק את הסיבה הבאה: %2$s</string>
+    <string name="permission_display_over_apps_message">כדי להשתמש בנגן צף, נא לבחור ב־%1$s בתפריט ההגדרות הבא של Android ולהפעיל את %2$s.</string>
+    <string name="permission_display_over_apps_permission_name">„תמיד להציג מעל יישומונים אחרים”</string>
+    <string name="short_thousand">%s אלף</string>
+    <string name="short_million">%s מיליון</string>
+    <string name="short_billion">%s מיליארד</string>
+    <string name="migration_info_7_8_title">המובילים המשולבים של YouTube הוסרו</string>
+    <string name="delete_file">מחיקת קובץ</string>
+    <string name="delete_entry">מחיקת רשומה</string>
+    <string name="migration_info_6_7_title">עמוד 50 המובילים ב־SoundCloud הוסר</string>
+    <string name="trending_gaming">מגמות במשחקים</string>
+    <string name="trending_podcasts">פודקאסטים מובילים</string>
+    <string name="trending_movies">סרטים וסדרות מובילים</string>
+    <string name="trending_music">מוזיקה מובילה</string>
+    <string name="entry_deleted">הרשומה נמחקה</string>
+    <string name="migration_info_6_7_message">SoundCloud הפסיקו את מצעדי 50 הלהיטים המקוריים. הלשונית התואמת הוסרה מהעמוד הראשי שלך.</string>
+    <string name="migration_info_7_8_message">ב־YouTube הושבת עמוד המובילים המשולב החל מ־21 ביולי 2025. Tubular החליפה את עמוד המובילים המוגדר כברירת מחדל בשידורים חיים מובילים.\n\nניתן גם לבחור עמודי מובילים שונים תחת „הגדרות &gt; תוכן &gt; תוכן הדף הראשי”.</string>
+    <string name="player_http_403">שגיאת HTTP 403 שהתקבלה מהשרת בזמן השמעה, ככל הנראה נגרמת עקב פקיעת כתובת URL של סטרימינג או חסימת IP</string>
+    <string name="player_http_invalid_status">שגיאת HTTP %1$s התקבלה מהשרת בזמן הניגון</string>
+    <string name="youtube_player_http_403">שגיאת HTTP‏ 403 שהתקבלה מהשרת בזמן הניגון, ככל הנראה נגרמה עקב חסימת IP או בעיות בהסרת ערפול כתובת תזרים</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s סירב לספק נתונים, וביקש התחברות כדי לאשר שהמבקש אינו בוט.\n\nכנראה שה־IP שלך נחסם זמנית על ידי %1$s, ניתן להמתין זמן מה או לעבור ל־IP אחר (לדוגמה על ידי הפעלה/כיבוי של VPN, או על ידי מעבר מרשת אלחוטית לתקשורת נתונים סלולרית).</string>
+    <string name="unsupported_content_in_country">תוכן זה אינו זמין עבור מדינת התוכן שנבחרה כעת.\n\nניתן לשנות את בחירתך דרך „הגדרות &gt; תוכן &gt; מדינת תוכן ברירת מחדל”.</string>
 </resources>
