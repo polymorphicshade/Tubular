@@ -438,7 +438,10 @@ public final class Player implements PlaybackListener, Listener {
                 final var data = Objects.requireNonNull(IntentCompat.getParcelableExtra(intent,
                         PLAYER_INTENT_DATA, TimestampChangeData.class));
                 final Single<StreamInfo> single =
-                        ExtractorHelper.getStreamInfo(data.getServiceId(), data.getUrl(), false);
+                        ExtractorHelper.getStreamInfo(context,
+                                                      data.getServiceId(),
+                                                      data.getUrl(),
+                                                      false);
                 streamItemDisposable.add(single.subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(info -> {

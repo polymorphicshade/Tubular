@@ -196,7 +196,7 @@ public final class NotificationUtil {
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setCategory(NotificationCompat.CATEGORY_TRANSPORT)
                 .setShowWhen(false)
-                .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+                .setSmallIcon(R.drawable.ic_tubular_white)
                 .setColor(ContextCompat.getColor(context, R.color.dark_background_color))
                 .setDeleteIntent(PendingIntentCompat.getBroadcast(context,
                         NOTIFICATION_ID, new Intent(ACTION_CLOSE), FLAG_UPDATE_CURRENT, false));
