@@ -1,16 +1,11 @@
-# Improved
-Keep current player when clicking on timestamps
-Try to recover pending download missions when possible
-Add option to delete a download without also deleting file
-Overlay Permission: display explanatory dialog for Android > R
-Support on.soundcloud link opening
-A lot of small improvements and optimizations
+[Tubular]
 
-# Fixed
-Fix short count formatting for Android versions below 7
-Fix ghost notifications
-Fixes for SRT subtitle files
-Fixed tons of crashes
+Updated:
+• merged latest changes from NewPipe's master branch
 
-# Development
-Internal code modernization
+Improved:
+• SponsorBlock segment rating buttons (thumbs up/down) now highlight when tapped
+
+Added:
+• added "Show kiosks in drawer" toggle in Settings -> Appearance
+• added "inv.nadeko.net" to the invidious instances list
