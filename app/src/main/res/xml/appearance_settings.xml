@@ -66,4 +66,12 @@
         app:singleLineTitle="false"
         app:iconSpaceReserved="false" />
 
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:key="@string/show_kiosks_key"
+        android:summary="@string/show_kiosks_summary"
+        android:title="@string/show_kiosks_title"
+        app:iconSpaceReserved="false"
+        app:singleLineTitle="false" />
+
 </PreferenceScreen>

@@ -886,6 +886,8 @@
     <string name="trending_podcasts">Trending podcasts</string>
     <string name="trending_movies">Trending movies and shows</string>
     <string name="trending_music">Trending music</string>
+    <string name="show_kiosks_title">Show kiosks in drawer</string>
+    <string name="show_kiosks_summary">Show trending, most liked, and other kiosks</string>
     <string name="entry_deleted">Entry deleted</string>
     <string name="player_http_403">HTTP error 403 received from server while playing, likely caused by streaming URL expiration or an IP ban</string>
     <string name="player_http_invalid_status">HTTP error %1$s received from server while playing</string>
