@@ -23,7 +23,6 @@ import org.schabi.newpipe.extractor.downloader.Response
 import org.schabi.newpipe.extractor.exceptions.ReCaptchaException
 import org.schabi.newpipe.util.ReleaseVersionUtil
 import org.schabi.newpipe.util.Version
-import java.io.IOException
 
 class NewVersionWorker(
     context: Context,

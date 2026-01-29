@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isVisible
 import kotlin.math.abs
+import kotlin.math.roundToInt
 import org.schabi.newpipe.MainActivity
 import org.schabi.newpipe.R
 import org.schabi.newpipe.ktx.AnimationType
@@ -21,8 +22,6 @@ import org.schabi.newpipe.player.helper.PlayerSemitoneHelper
 import org.schabi.newpipe.player.ui.MainPlayerUi
 import org.schabi.newpipe.util.SliderStrategy
 import org.schabi.newpipe.util.ThemeHelper.getAndroidDimenPx
-import kotlin.math.abs
-import kotlin.math.roundToInt
 
 /**
  * GestureListener for the player
@@ -282,6 +281,7 @@ class MainPlayerGestureListener(
 
                 player.context.getString(R.string.brightness_control_key) ->
                     onScrollBrightness(distanceY)
+
                 player.context.getString(R.string.playback_speed_control_key) ->
                     onScrollPlaybackSpeed(distanceY)
             }
@@ -292,6 +292,7 @@ class MainPlayerGestureListener(
 
                 player.context.getString(R.string.brightness_control_key) ->
                     onScrollBrightness(distanceY)
+
                 player.context.getString(R.string.playback_speed_control_key) ->
                     onScrollPlaybackSpeed(distanceY)
             }
@@ -299,8 +300,10 @@ class MainPlayerGestureListener(
             when (PlayerHelper.getActionForMiddleGestureSide(player.context)) {
                 player.context.getString(R.string.volume_control_key) ->
                     onScrollVolume(distanceY)
+
                 player.context.getString(R.string.brightness_control_key) ->
                     onScrollBrightness(distanceY)
+
                 player.context.getString(R.string.playback_speed_control_key) ->
                     onScrollPlaybackSpeed(distanceY)
             }
@@ -313,9 +316,11 @@ class MainPlayerGestureListener(
             e.x < binding.root.width *
                 (0.5 - PlayerHelper.getMiddleGestureWidth(player.context) / 2.0)
             -> DisplayPortion.LEFT
+
             e.x > binding.root.width *
                 (0.5 + PlayerHelper.getMiddleGestureWidth(player.context) / 2.0)
             -> DisplayPortion.RIGHT
+
             else -> DisplayPortion.MIDDLE
         }
     }
