@@ -423,6 +423,9 @@ public final class ExtractorHelper {
         result.includePreviewCategory =
                 prefs.getBoolean(context
                         .getString(R.string.sponsor_block_category_preview_key), false);
+        result.includeHookCategory =
+                prefs.getBoolean(context
+                        .getString(R.string.sponsor_block_category_hook_key), false);
         result.includeFillerCategory =
                 prefs.getBoolean(context
                         .getString(R.string.sponsor_block_category_filler_key), false);
