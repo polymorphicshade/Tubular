@@ -42,9 +42,9 @@ android {
         minSdk = 21
         targetSdk = 35
 
-        versionCode = System.getProperty("versionCodeOverride")?.toInt() ?: 1006
+        versionCode = System.getProperty("versionCodeOverride")?.toInt() ?: 1007
 
-        versionName = "0.28.1"
+        versionName = "0.28.2"
         System.getProperty("versionNameSuffix")?.let { versionNameSuffix = it }
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -133,6 +133,13 @@ ksp {
 
 // Custom dependency configuration for ktlint
 val ktlint by configurations.creating
+
+// https://checkstyle.org/#JRE_and_JDK
+tasks.withType<Checkstyle>().configureEach {
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
 
 checkstyle {
     configDirectory = rootProject.file("checkstyle")
