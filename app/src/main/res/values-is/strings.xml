@@ -296,7 +296,7 @@
     <string name="caption_setting_title">Skýringartexti</string>
     <string name="import_title">Flytja inn</string>
     <string name="import_ongoing">Flytur inn…</string>
-    <string name="start_accept_privacy_policy">Í samræmi við almenna persónuverndarreglugerðin ESB vekjum við athygli þína á persónuverndarstefnu NewPipe. Lestu hana vandlega. \nÞú verður að samþykkja hana til að senda okkur villuskýrsluna.</string>
+    <string name="start_accept_privacy_policy">Í samræmi við almenna persónuverndarreglugerðin ESB vekjum við athygli þína á persónuverndarstefnu Tubular. Lestu hana vandlega. \nÞú verður að samþykkja hana til að senda okkur villuskýrsluna.</string>
     <string name="playback_tempo">Hraði</string>
     <string name="playback_pitch">Tónhæð</string>
     <string name="playback_step">Skref</string>

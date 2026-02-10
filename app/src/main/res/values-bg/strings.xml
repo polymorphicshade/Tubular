@@ -499,7 +499,7 @@
     </plurals>
     <string name="channel_created_by">Създаден от %s</string>
     <string name="youtube_music_premium_content">Това видео е достъпно за абонати на YouTube Music Premium, затова не може да бъде гледано или изтеглено с Tubular.</string>
-    <string name="paid_content">Съдържанието е достъпно само за хора, които са си платили, затова не може да бъде гледано или изтеглено с NewPipe.</string>
+    <string name="paid_content">Съдържанието е достъпно само за хора, които са си платили, затова не може да бъде гледано или изтеглено с Tubular.</string>
     <string name="remove_watched_popup_title">Премахни изгледаните потоци?</string>
     <string name="remove_watched_popup_partially_watched_streams">Да, както и само частично изгледаните видеа</string>
     <string name="subscribers_count_not_available">Брой на абонати не е наличен</string>
