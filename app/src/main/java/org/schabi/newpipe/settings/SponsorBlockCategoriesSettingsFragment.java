@@ -42,6 +42,8 @@ public class SponsorBlockCategoriesSettingsFragment extends BasePreferenceFragme
                     findPreference(getString(R.string.sponsor_block_category_non_music_key));
             final SwitchPreference previewCategoryPreference =
                     findPreference(getString(R.string.sponsor_block_category_preview_key));
+            final SwitchPreference hookCategoryPreference =
+                    findPreference(getString(R.string.sponsor_block_category_hook_key));
             final SwitchPreference fillerCategoryPreference =
                     findPreference(getString(R.string.sponsor_block_category_filler_key));
 
@@ -53,6 +55,7 @@ public class SponsorBlockCategoriesSettingsFragment extends BasePreferenceFragme
             selfPromoCategoryPreference.setChecked(true);
             nonMusicCategoryPreference.setChecked(true);
             previewCategoryPreference.setChecked(true);
+            hookCategoryPreference.setChecked(true);
             fillerCategoryPreference.setChecked(true);
 
             return true;
@@ -77,6 +80,8 @@ public class SponsorBlockCategoriesSettingsFragment extends BasePreferenceFragme
                     findPreference(getString(R.string.sponsor_block_category_non_music_key));
             final SwitchPreference previewCategoryPreference =
                     findPreference(getString(R.string.sponsor_block_category_preview_key));
+            final SwitchPreference hookCategoryPreference =
+                    findPreference(getString(R.string.sponsor_block_category_hook_key));
             final SwitchPreference fillerCategoryPreference =
                     findPreference(getString(R.string.sponsor_block_category_filler_key));
 
@@ -88,6 +93,7 @@ public class SponsorBlockCategoriesSettingsFragment extends BasePreferenceFragme
             selfPromoCategoryPreference.setChecked(false);
             nonMusicCategoryPreference.setChecked(false);
             previewCategoryPreference.setChecked(false);
+            hookCategoryPreference.setChecked(false);
             fillerCategoryPreference.setChecked(false);
 
             return true;
@@ -128,6 +134,9 @@ public class SponsorBlockCategoriesSettingsFragment extends BasePreferenceFragme
                         setColorPreference(editor,
                                 R.string.sponsor_block_category_preview_color_key,
                                 R.color.preview_segment);
+                        setColorPreference(editor,
+                                R.string.sponsor_block_category_hook_color_key,
+                                R.color.hook_segment);
                         setColorPreference(editor,
                                 R.string.sponsor_block_category_filler_color_key,
                                 R.color.filler_segment);

@@ -293,6 +293,42 @@
 
     <PreferenceCategory
         android:layout="@layout/settings_category_header_layout"
+        android:title="@string/sponsor_block_category_hook">
+
+        <Preference
+            app:iconSpaceReserved="false"
+            android:summary="@string/settings_category_sponsor_block_category_hook_summary"
+            android:selectable="false"/>
+
+        <SwitchPreference
+            app:iconSpaceReserved="false"
+            android:defaultValue="true"
+            android:key="@string/sponsor_block_category_hook_key"
+            android:title="@string/settings_category_sponsor_block_category_enable_title"/>
+
+        <ListPreference
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:useSimpleSummaryProvider="true"
+            android:dependency="@string/sponsor_block_category_hook_key"
+            android:defaultValue="@string/sponsor_block_skip_mode_enabled"
+            android:entries="@array/sponsor_block_category_sponsor_modes_key"
+            android:entryValues="@array/sponsor_block_category_sponsor_modes_key"
+            android:key="@string/sponsor_block_category_hook_mode_key"
+            android:title="@string/settings_category_sponsor_block_category_enable_mode_title"
+            />
+
+        <org.schabi.newpipe.settings.custom.EditColorPreference
+            app:iconSpaceReserved="false"
+            android:dependency="@string/sponsor_block_category_hook_key"
+            android:defaultValue="@color/hook_segment"
+            android:key="@string/sponsor_block_category_hook_color_key"
+            android:title="@string/settings_category_sponsor_block_category_color"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/settings_category_header_layout"
         android:title="@string/sponsor_block_category_filler">
 
         <Preference

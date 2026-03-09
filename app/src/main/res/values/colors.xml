@@ -93,6 +93,7 @@
     <color name="self_promo_segment">#ffff00</color>
     <color name="non_music_segment">#ff9900</color>
     <color name="preview_segment">#008fd6</color>
+    <color name="hook_segment">#395699</color>
     <color name="filler_segment">#7300ff</color>
     <color name="pending_segment">#ffffff</color>
     

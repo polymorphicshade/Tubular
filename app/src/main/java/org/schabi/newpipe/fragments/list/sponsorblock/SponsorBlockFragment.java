@@ -331,6 +331,8 @@ public class SponsorBlockFragment
                 SponsorBlockHelper.convertCategoryToFriendlyName(
                         context, SponsorBlockCategory.PREVIEW),
                 SponsorBlockHelper.convertCategoryToFriendlyName(
+                        context, SponsorBlockCategory.HOOK),
+                SponsorBlockHelper.convertCategoryToFriendlyName(
                         context, SponsorBlockCategory.FILLER)
         }, (dialog, which) -> {
             final SponsorBlockCategory category = SponsorBlockCategory.values()[which];
