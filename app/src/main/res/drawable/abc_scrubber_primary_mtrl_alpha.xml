@@ -1,0 +1,8 @@
+<!-- NOTE: this is a replica of "abc_scrubber_primary_mtrl_alpha", a compatibility resource that no longer exists -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="line">
+            <stroke android:width="2dp"/>
+        </shape>
+    </item>
+</layer-list>
