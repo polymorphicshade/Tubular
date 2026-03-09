@@ -127,7 +127,7 @@ import org.schabi.newpipe.util.StreamTypeUtil;
 import org.schabi.newpipe.util.ThemeHelper;
 import org.schabi.newpipe.util.external_communication.KoreUtils;
 import org.schabi.newpipe.util.external_communication.ShareUtils;
-import org.schabi.newpipe.util.image.PicassoHelper;
+import org.schabi.newpipe.util.image.CoilHelper;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -138,6 +138,7 @@ import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
+import coil3.util.CoilUtils;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
@@ -171,8 +172,6 @@ public final class VideoDetailFragment
     private static final String DESCRIPTION_TAB_TAG = "DESCRIPTION TAB";
     private static final String SPONSOR_BLOCK_TAB_TAG = "SPONSOR_BLOCK TAB";
     private static final String EMPTY_TAB_TAG = "EMPTY TAB";
-
-    private static final String PICASSO_VIDEO_DETAILS_TAG = "PICASSO_VIDEO_DETAILS_TAG";
 
     // tabs
     private boolean showComments;
@@ -684,6 +683,12 @@ public final class VideoDetailFragment
     @SuppressLint("ClickableViewAccessibility")
     protected void initListeners() {
         super.initListeners();
+
+        // Workaround for #5600
+        // Forcefully catch click events uncaught by children because otherwise
+        // they will be caught by underlying view and "click through" will happen
+        binding.getRoot().setOnClickListener(v -> { });
+        binding.getRoot().setOnLongClickListener(v -> true);
 
         setOnClickListeners();
         setOnLongClickListeners();
@@ -1564,7 +1569,10 @@ public final class VideoDetailFragment
             }
         }
 
-        PicassoHelper.cancelTag(PICASSO_VIDEO_DETAILS_TAG);
+        CoilUtils.dispose(binding.detailThumbnailImageView);
+        CoilUtils.dispose(binding.detailSubChannelThumbnailView);
+        CoilUtils.dispose(binding.overlayThumbnail);
+        CoilUtils.dispose(binding.detailUploaderThumbnailView);
         binding.detailThumbnailImageView.setImageBitmap(null);
         binding.detailSubChannelThumbnailView.setImageBitmap(null);
     }
@@ -1703,8 +1711,8 @@ public final class VideoDetailFragment
         binding.detailSecondaryControlPanel.setVisibility(View.GONE);
 
         checkUpdateProgressInfo(info);
-        PicassoHelper.loadDetailsThumbnail(info.getThumbnails()).tag(PICASSO_VIDEO_DETAILS_TAG)
-                .into(binding.detailThumbnailImageView);
+        CoilHelper.INSTANCE.loadDetailsThumbnail(binding.detailThumbnailImageView,
+                info.getThumbnails());
         showMetaInfoInTextView(info.getMetaInfo(), binding.detailMetaInfoTextView,
                 binding.detailMetaInfoSeparator, disposables);
 
@@ -1754,8 +1762,8 @@ public final class VideoDetailFragment
             binding.detailUploaderTextView.setVisibility(View.GONE);
         }
 
-        PicassoHelper.loadAvatar(info.getUploaderAvatars()).tag(PICASSO_VIDEO_DETAILS_TAG)
-                .into(binding.detailSubChannelThumbnailView);
+        CoilHelper.INSTANCE.loadAvatar(binding.detailSubChannelThumbnailView,
+                info.getUploaderAvatars());
         binding.detailSubChannelThumbnailView.setVisibility(View.VISIBLE);
         binding.detailUploaderThumbnailView.setVisibility(View.GONE);
     }
@@ -1786,11 +1794,11 @@ public final class VideoDetailFragment
             binding.detailUploaderTextView.setVisibility(View.GONE);
         }
 
-        PicassoHelper.loadAvatar(info.getSubChannelAvatars()).tag(PICASSO_VIDEO_DETAILS_TAG)
-                .into(binding.detailSubChannelThumbnailView);
+        CoilHelper.INSTANCE.loadAvatar(binding.detailSubChannelThumbnailView,
+                info.getSubChannelAvatars());
         binding.detailSubChannelThumbnailView.setVisibility(View.VISIBLE);
-        PicassoHelper.loadAvatar(info.getUploaderAvatars()).tag(PICASSO_VIDEO_DETAILS_TAG)
-                .into(binding.detailUploaderThumbnailView);
+        CoilHelper.INSTANCE.loadAvatar(binding.detailUploaderThumbnailView,
+                info.getUploaderAvatars());
         binding.detailUploaderThumbnailView.setVisibility(View.VISIBLE);
     }
 
@@ -2049,7 +2057,11 @@ public final class VideoDetailFragment
         }
 
         if (binding.relatedItemsLayout != null) {
-            binding.relatedItemsLayout.setVisibility(fullscreen ? View.GONE : View.VISIBLE);
+            if (showRelatedItems) {
+                binding.relatedItemsLayout.setVisibility(fullscreen ? View.GONE : View.VISIBLE);
+            } else {
+                binding.relatedItemsLayout.setVisibility(View.GONE);
+            }
         }
         scrollToTop();
 
@@ -2579,8 +2591,7 @@ public final class VideoDetailFragment
         binding.overlayTitleTextView.setText(isEmpty(overlayTitle) ? "" : overlayTitle);
         binding.overlayChannelTextView.setText(isEmpty(uploader) ? "" : uploader);
         binding.overlayThumbnail.setImageDrawable(null);
-        PicassoHelper.loadDetailsThumbnail(thumbnails).tag(PICASSO_VIDEO_DETAILS_TAG)
-                .into(binding.overlayThumbnail);
+        CoilHelper.INSTANCE.loadDetailsThumbnail(binding.overlayThumbnail, thumbnails);
     }
 
     private void setOverlayPlayPauseImage(final boolean playerIsPlaying) {
