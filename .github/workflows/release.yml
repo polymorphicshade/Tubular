@@ -41,14 +41,14 @@ jobs:
           KEYSTORE: ${{ secrets.KEYSTORE }}
           SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
         run: |
-          version=$( grep "versionName" app/build.gradle | awk -F'"' '{print $2}' )
+          version=$(grep 'versionName[[:space:]]*=' app/build.gradle.kts | grep -o '"[^"]*"' | head -n 1 | tr -d '"')
           echo "${KEYSTORE}" | base64 -d > apksign.keystore
           ${ANDROID_HOME}/build-tools/34.0.0/apksigner sign --ks apksign.keystore --ks-pass env:SIGNING_STORE_PASSWORD "app/build/outputs/apk/release/app-release-unsigned.apk"
           mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/"tubular_v${version}.apk"
 
       - name: Create release and upload
         run: |
-          version=$( grep "versionName" app/build.gradle | awk -F'"' '{print $2}' )
+          version=$(grep 'versionName[[:space:]]*=' app/build.gradle.kts | grep -o '"[^"]*"' | head -n 1 | tr -d '"')
           gh auth login --with-token <<<"${{ secrets.GITHUB_TOKEN }}"
           gh release create "v${version}" --title "${{ inputs.title }}" --notes-file ".github/changelog.md" --prerelease=${{ inputs.is_pre_release }} --repo polymorphicshade/Tubular
           gh release upload "v${version}" app/build/outputs/apk/release/*.apk --repo polymorphicshade/Tubular
