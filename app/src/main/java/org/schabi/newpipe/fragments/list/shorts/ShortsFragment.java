@@ -120,7 +120,8 @@ public class ShortsFragment extends BaseFragment {
             return;
         }
 
-        disposables.add(ExtractorHelper.getKioskInfo(serviceId, getKioskUrl(service, kioskId), false)
+        final String kioskUrl = getKioskUrl(service, kioskId);
+        disposables.add(ExtractorHelper.getKioskInfo(serviceId, kioskUrl, false)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::onKioskLoaded, throwable ->

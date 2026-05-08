@@ -34,6 +34,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 import org.schabi.newpipe.BaseFragment;
+import org.schabi.newpipe.MainActivity;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.databinding.FragmentMainBinding;
 import org.schabi.newpipe.error.ErrorInfo;
@@ -179,8 +180,8 @@ public class MainFragment extends BaseFragment implements TabLayout.OnTabSelecte
             return true;
         }
         if (item.getItemId() == R.id.action_services) {
-            if (activity instanceof org.schabi.newpipe.MainActivity) {
-                ((org.schabi.newpipe.MainActivity) activity).openServicesDrawer();
+            if (activity instanceof MainActivity) {
+                ((MainActivity) activity).openServicesDrawer();
             }
             return true;
         }
