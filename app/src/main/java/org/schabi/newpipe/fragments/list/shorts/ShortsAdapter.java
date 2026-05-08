@@ -62,6 +62,8 @@ public class ShortsAdapter extends RecyclerView.Adapter<ShortsAdapter.ShortsView
     /**
      * Move the shared ExoPlayer's surface to the holder for {@code position}.
      * Called by the fragment on every page change.
+     *
+     * @param position adapter position whose PlayerView should host the player
      */
     public void bindPlayerToHolder(final int position) {
         if (attachedRecycler == null) {

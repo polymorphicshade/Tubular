@@ -326,6 +326,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Hide the bottom nav when fullscreen UI (player, video detail) is showing.
+     *
+     * @param visible whether the bottom navigation bar should be visible
      */
     public void setBottomNavigationVisible(final boolean visible) {
         if (mainBinding != null) {
