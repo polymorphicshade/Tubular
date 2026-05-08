@@ -80,7 +80,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chat"
             android:tint="#FFFFFF"
-            android:contentDescription="@string/comments" />
+            android:contentDescription="@string/comments_tab_description" />
 
         <ImageButton
             android:id="@+id/shorts_share"
@@ -124,7 +124,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/placeholder_person"
-                android:contentDescription="@string/channel" />
+                android:contentDescription="@string/channels" />
 
             <TextView
                 android:id="@+id/shorts_uploader"
@@ -147,7 +147,7 @@
                 android:paddingEnd="12dp"
                 android:paddingTop="6dp"
                 android:paddingBottom="6dp"
-                android:text="@string/channel_button_subscribe"
+                android:text="@string/subscribe_button_title"
                 android:textColor="#FFFFFF"
                 android:textSize="13sp"
                 android:textStyle="bold" />
