@@ -41,7 +41,9 @@
         android:ellipsize="end"
         android:lines="1"
         android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="@dimen/comment_item_title_text_size"
+        android:textStyle="bold"
         tools:text="Author Name, Lorem ipsum • 5 months ago" />
 
     <org.schabi.newpipe.views.NewPipeTextView
@@ -49,10 +51,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/itemTitleView"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="4dp"
         android:layout_toEndOf="@+id/itemThumbnailView"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="@dimen/comment_item_content_text_size"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="14sp"
         tools:text="@tools:sample/lorem/random[1]" />
 
     <ImageView

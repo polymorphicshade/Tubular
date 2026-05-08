@@ -15,9 +15,9 @@
 
     <!-- Base Theme -->
     <style name="Base.V21" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <item name="actionColor">@color/white</item>
+        <item name="actionColor">?android:attr/textColorPrimary</item>
         <item name="floatingActionButtonStyle">@style/FloatingActionButtonTheme</item>
-        <item name="toolbarSearchColor">@color/white</item>
+        <item name="toolbarSearchColor">?android:attr/textColorPrimary</item>
         <item name="colorControlActivated">?attr/colorPrimary</item>
     </style>
     <style name="Base" parent="Base.V21"/>

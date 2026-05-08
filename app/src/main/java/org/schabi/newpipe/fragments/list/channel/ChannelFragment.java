@@ -389,8 +389,9 @@ public class ChannelFragment extends BaseStateFragment<ChannelInfo>
         final int subscribedBackground = ContextCompat
                 .getColor(activity, R.color.subscribed_background_color);
         final int subscribedText = ContextCompat.getColor(activity, R.color.subscribed_text_color);
-        final int subscribeBackground = ColorUtils.blendARGB(ThemeHelper
-                .resolveColorFromAttr(activity, R.attr.colorPrimary), subscribedBackground, 0.35f);
+        // YouTube-style: subscribe button is a solid red pill regardless of theme.
+        final int subscribeBackground = ThemeHelper
+                .resolveColorFromAttr(activity, R.attr.colorAccent);
         final int subscribeText = ContextCompat.getColor(activity, R.color.subscribe_text_color);
 
         if (isSubscribed) {

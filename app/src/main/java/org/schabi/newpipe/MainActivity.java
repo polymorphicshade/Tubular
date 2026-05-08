@@ -286,6 +286,25 @@ public class MainActivity extends AppCompatActivity {
             return false;
         });
         mainBinding.bottomNavigation.setOnItemReselectedListener(item -> { });
+
+        // Slide the bottom nav off-screen when the main player expands so the
+        // video gets the full width of the screen, like YouTube does.
+        final View navView = mainBinding.bottomNavigation;
+        final BottomSheetBehavior<FragmentContainerView> playerBehavior =
+                BottomSheetBehavior.from(mainBinding.fragmentPlayerHolder);
+        playerBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull final View bottomSheet, final int newState) {
+                // no-op; translation is driven by onSlide
+            }
+
+            @Override
+            public void onSlide(@NonNull final View bottomSheet, final float slideOffset) {
+                // slideOffset: -1 hidden, 0 collapsed (peek), 1 expanded
+                final float visible = Math.max(0f, Math.min(1f, slideOffset));
+                navView.setTranslationY(navView.getHeight() * visible);
+            }
+        });
     }
 
     /**

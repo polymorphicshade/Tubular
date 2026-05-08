@@ -11,6 +11,24 @@
         android:scaleType="centerCrop"
         android:contentDescription="@string/tab_shorts" />
 
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/shorts_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:resize_mode="zoom"
+        app:show_buffering="when_playing"
+        app:use_controller="false"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+    <ProgressBar
+        android:id="@+id/shorts_item_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="#FFFFFF"
+        android:visibility="gone" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
