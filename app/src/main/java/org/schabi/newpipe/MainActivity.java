@@ -46,7 +46,7 @@ import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.ActionBarDrawerToggle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -112,8 +112,6 @@ public class MainActivity extends AppCompatActivity {
     private DrawerHeaderBinding drawerHeaderBinding;
     private DrawerLayoutBinding drawerLayoutBinding;
     private ToolbarLayoutBinding toolbarLayoutBinding;
-
-    private ActionBarDrawerToggle toggle;
 
     private boolean servicesShown = false;
 
@@ -239,10 +237,11 @@ public class MainActivity extends AppCompatActivity {
     private void setupDrawer() throws ExtractionException {
         addDrawerMenuForCurrentService();
 
-        toggle = new ActionBarDrawerToggle(this, mainBinding.getRoot(),
-                toolbarLayoutBinding.toolbar, R.string.drawer_open, R.string.drawer_close);
-        toggle.syncState();
-        mainBinding.getRoot().addDrawerListener(toggle);
+        // Lock the drawer everywhere — bottom navigation is now the primary
+        // entry point. The drawer is reachable only via the avatar button in
+        // the toolbar (which calls openServicesDrawer()) for power-user
+        // service / kiosk switching.
+        mainBinding.getRoot().setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         mainBinding.getRoot().addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             private int lastService;
 
@@ -265,6 +264,24 @@ public class MainActivity extends AppCompatActivity {
         drawerLayoutBinding.navigation.setNavigationItemSelectedListener(this::drawerItemSelected);
         setupDrawerHeader();
         setupBottomNavigation();
+    }
+
+    /**
+     * Open the (now hidden) drawer for service / kiosk switching. Called from
+     * the toolbar avatar action.
+     */
+    public void openServicesDrawer() {
+        mainBinding.getRoot().setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+        mainBinding.getRoot().open();
+        // Re-lock once it's closed via the existing drawer listener.
+        mainBinding.getRoot().addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+            @Override
+            public void onDrawerClosed(final View drawerView) {
+                mainBinding.getRoot().setDrawerLockMode(
+                        DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+                mainBinding.getRoot().removeDrawerListener(this);
+            }
+        });
     }
 
     private void setupBottomNavigation() {
@@ -855,12 +872,8 @@ public class MainActivity extends AppCompatActivity {
                 .findFragmentById(R.id.fragment_holder);
         if (fragment instanceof MainFragment) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-            if (toggle != null) {
-                toggle.syncState();
-                toolbarLayoutBinding.toolbar.setNavigationOnClickListener(v -> mainBinding.getRoot()
-                        .open());
-                mainBinding.getRoot().setDrawerLockMode(DrawerLayout.LOCK_MODE_UNDEFINED);
-            }
+            // Drawer stays locked; avatar action opens it explicitly.
+            mainBinding.getRoot().setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         } else {
             mainBinding.getRoot().setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

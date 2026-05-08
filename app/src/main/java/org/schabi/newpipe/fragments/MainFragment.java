@@ -178,6 +178,12 @@ public class MainFragment extends BaseFragment implements TabLayout.OnTabSelecte
             }
             return true;
         }
+        if (item.getItemId() == R.id.action_services) {
+            if (activity instanceof org.schabi.newpipe.MainActivity) {
+                ((org.schabi.newpipe.MainActivity) activity).openServicesDrawer();
+            }
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

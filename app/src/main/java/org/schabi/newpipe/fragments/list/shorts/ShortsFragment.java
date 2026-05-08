@@ -1,5 +1,6 @@
 package org.schabi.newpipe.fragments.list.shorts;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -26,6 +27,8 @@ import org.schabi.newpipe.extractor.kiosk.KioskInfo;
 import org.schabi.newpipe.extractor.stream.StreamInfo;
 import org.schabi.newpipe.extractor.stream.StreamInfoItem;
 import org.schabi.newpipe.extractor.stream.VideoStream;
+import org.schabi.newpipe.player.helper.PlayerHolder;
+import org.schabi.newpipe.player.notification.NotificationConstants;
 import org.schabi.newpipe.util.ExtractorHelper;
 import org.schabi.newpipe.util.ServiceHelper;
 
@@ -70,6 +73,14 @@ public class ShortsFragment extends BaseFragment {
         pager = view.findViewById(R.id.shorts_pager);
         loading = view.findViewById(R.id.shorts_loading);
         empty = view.findViewById(R.id.shorts_empty);
+
+        // If the main bottom-sheet player is playing, pause it so audio
+        // focus doesn't fight between two players.
+        if (PlayerHolder.getInstance().isPlaying()) {
+            requireContext().sendBroadcast(
+                    new Intent(NotificationConstants.ACTION_PLAY_PAUSE)
+                            .setPackage(requireContext().getPackageName()));
+        }
 
         exoPlayer = new ExoPlayer.Builder(requireContext()).build();
         exoPlayer.setRepeatMode(Player.REPEAT_MODE_ONE);
@@ -166,11 +177,11 @@ public class ShortsFragment extends BaseFragment {
                     if (currentPosition != position) {
                         return; // user moved on
                     }
-                    final String videoUrl = pickVideoUrl(streamInfo);
-                    if (videoUrl == null) {
+                    final MediaItem mediaItem = pickMediaItem(streamInfo);
+                    if (mediaItem == null) {
                         return;
                     }
-                    exoPlayer.setMediaItem(MediaItem.fromUri(Uri.parse(videoUrl)));
+                    exoPlayer.setMediaItem(mediaItem);
                     exoPlayer.prepare();
                     exoPlayer.setPlayWhenReady(true);
                 }, throwable -> {
@@ -180,12 +191,29 @@ public class ShortsFragment extends BaseFragment {
     }
 
     @Nullable
-    private String pickVideoUrl(final StreamInfo info) {
+    private MediaItem pickMediaItem(final StreamInfo info) {
+        // Prefer a HLS/DASH manifest when available — most YouTube videos only
+        // expose adaptive streams now and progressive fallbacks are rare.
+        if (info.getHlsUrl() != null && !info.getHlsUrl().isEmpty()) {
+            return new MediaItem.Builder()
+                    .setUri(Uri.parse(info.getHlsUrl()))
+                    .setMimeType(com.google.android.exoplayer2.util.MimeTypes
+                            .APPLICATION_M3U8)
+                    .build();
+        }
+        if (info.getDashMpdUrl() != null && !info.getDashMpdUrl().isEmpty()) {
+            return new MediaItem.Builder()
+                    .setUri(Uri.parse(info.getDashMpdUrl()))
+                    .setMimeType(com.google.android.exoplayer2.util.MimeTypes
+                            .APPLICATION_MPD)
+                    .build();
+        }
+
         final List<VideoStream> streams = info.getVideoStreams();
         if (streams == null || streams.isEmpty()) {
             return null;
         }
-        // Pick the lowest-resolution progressive stream that's available.
+        // Pick a progressive stream — preferring ~480p for fast load on mobile.
         VideoStream chosen = null;
         for (final VideoStream s : streams) {
             if (s.getContent() == null || s.getContent().isEmpty()) {
@@ -193,15 +221,13 @@ public class ShortsFragment extends BaseFragment {
             }
             if (chosen == null) {
                 chosen = s;
-                continue;
             }
-            // Prefer something around 480p for fast load on mobile.
             if (s.getResolution() != null && s.getResolution().contains("480")) {
                 chosen = s;
                 break;
             }
         }
-        return chosen == null ? null : chosen.getContent();
+        return chosen == null ? null : MediaItem.fromUri(Uri.parse(chosen.getContent()));
     }
 
     private void showEmpty(final String message) {

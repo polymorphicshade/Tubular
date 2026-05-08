@@ -19,6 +19,8 @@
         android:focusableInTouchMode="true"
         android:hint="@string/search"
         android:textColor="?attr/toolbarSearchColor"
+        android:textColorHint="?android:attr/textColorSecondary"
+        android:textSize="16sp"
         android:imeOptions="actionSearch|flagNoFullscreen"
         android:inputType="textFilter|textNoSuggestions"
         android:maxLines="1"
