@@ -9,10 +9,10 @@
     <color name="placeholder_background">#999999</color>
     <color name="placeholder_foreground">#6C6C6C</color>
 
-    <!-- Light Theme -->
-    <color name="light_background_color">#EEEEEE</color>
-    <color name="light_dialog_background_color">#EEEEEE</color>
-    <color name="light_settings_accent_color">#e53935</color>
+    <!-- Light Theme (YouTube mobile palette) -->
+    <color name="light_background_color">#FFFFFF</color>
+    <color name="light_dialog_background_color">#FFFFFF</color>
+    <color name="light_settings_accent_color">#CC0000</color>
     <color name="light_separator_color">#32000000</color>
     <color name="light_ripple_color">#48868686</color>
     <color name="light_selected_color">#2a868686</color>
@@ -20,14 +20,25 @@
     <color name="light_shadow_start_color">#5a000000</color>
     <color name="light_license_background_color">#ffffff</color>
     <color name="light_license_text_color">#212121</color>
-    <color name="light_card_item_background_color">#F8F8F8</color>
-    <color name="light_card_item_contrast_color">#E9E9E9</color>
+    <color name="light_card_item_background_color">#FFFFFF</color>
+    <color name="light_card_item_contrast_color">#F2F2F2</color>
     <color name="light_border_color">#33000000</color>
 
-    <!-- Dark Theme -->
-    <color name="dark_background_color">#222222</color>
-    <color name="dark_dialog_background_color">#424242</color>
-    <color name="dark_settings_accent_color">#ff5252</color>
+    <!-- YouTube semantic tokens -->
+    <color name="light_yt_text_primary">#0F0F0F</color>
+    <color name="light_yt_text_secondary">#606060</color>
+    <color name="light_yt_chip_bg">#F2F2F2</color>
+    <color name="light_yt_chip_selected_bg">#0F0F0F</color>
+    <color name="light_yt_chip_selected_text">#FFFFFF</color>
+    <color name="light_yt_subscribe_bg">#CC0000</color>
+    <color name="light_yt_subscribed_bg">#F2F2F2</color>
+    <color name="light_yt_subscribed_text">#0F0F0F</color>
+    <color name="light_yt_divider">#E5E5E5</color>
+
+    <!-- Dark Theme (YouTube mobile palette) -->
+    <color name="dark_background_color">#0F0F0F</color>
+    <color name="dark_dialog_background_color">#212121</color>
+    <color name="dark_settings_accent_color">#FF0000</color>
     <color name="dark_separator_color">#0affffff</color>
     <color name="dark_ripple_color">#48ffffff</color>
     <color name="dark_selected_color">#2affffff</color>
@@ -36,9 +47,21 @@
     <color name="dark_license_background_color">#424242</color>
     <color name="dark_license_text_color">#ffffff</color>
     <color name="dark_queue_background_color">#af000000</color>
-    <color name="dark_card_item_background_color">#313131</color>
-    <color name="dark_card_item_contrast_color">#474747</color>
+    <color name="dark_card_item_background_color">#212121</color>
+    <color name="dark_card_item_contrast_color">#272727</color>
     <color name="dark_border_color">#33FFFFFF</color>
+
+    <!-- YouTube semantic tokens (dark) -->
+    <color name="dark_yt_text_primary">#FFFFFF</color>
+    <color name="dark_yt_text_secondary">#AAAAAA</color>
+    <color name="dark_yt_chip_bg">#272727</color>
+    <color name="dark_yt_chip_selected_bg">#FFFFFF</color>
+    <color name="dark_yt_chip_selected_text">#0F0F0F</color>
+    <color name="dark_yt_subscribe_bg">#FFFFFF</color>
+    <color name="dark_yt_subscribe_text">#0F0F0F</color>
+    <color name="dark_yt_subscribed_bg">#272727</color>
+    <color name="dark_yt_subscribed_text">#FFFFFF</color>
+    <color name="dark_yt_divider">#272727</color>
 
     <!-- Black Theme -->
     <color name="black_background_color">#000000</color>

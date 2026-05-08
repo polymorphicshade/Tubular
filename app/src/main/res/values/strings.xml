@@ -34,6 +34,13 @@
     <string name="subscription_update_failed">Could not update subscription</string>
     <string name="show_info">Show info</string>
     <string name="tab_subscriptions">Subscriptions</string>
+    <string name="tab_main">Home</string>
+    <string name="tab_shorts">Shorts</string>
+    <string name="tab_you">You</string>
+    <string name="library_history">History</string>
+    <string name="library_playlists">Playlists</string>
+    <string name="library_downloads">Downloads</string>
+    <string name="library_watch_later">Watch later</string>
     <string name="tab_bookmarks">Bookmarked Playlists</string>
     <string name="tab_bookmarks_short">Playlists</string>
     <string name="tab_choose">Choose Tab</string>

@@ -264,6 +264,37 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayoutBinding.navigation.setNavigationItemSelectedListener(this::drawerItemSelected);
         setupDrawerHeader();
+        setupBottomNavigation();
+    }
+
+    private void setupBottomNavigation() {
+        mainBinding.bottomNavigation.setOnItemSelectedListener(item -> {
+            final int id = item.getItemId();
+            if (id == R.id.bottom_nav_home) {
+                NavigationHelper.openMainFragment(getSupportFragmentManager());
+                return true;
+            } else if (id == R.id.bottom_nav_shorts) {
+                NavigationHelper.openShortsFragment(getSupportFragmentManager());
+                return true;
+            } else if (id == R.id.bottom_nav_subscriptions) {
+                NavigationHelper.openFeedFragment(getSupportFragmentManager());
+                return true;
+            } else if (id == R.id.bottom_nav_you) {
+                NavigationHelper.openLibraryFragment(getSupportFragmentManager());
+                return true;
+            }
+            return false;
+        });
+        mainBinding.bottomNavigation.setOnItemReselectedListener(item -> { });
+    }
+
+    /**
+     * Hide the bottom nav when fullscreen UI (player, video detail) is showing.
+     */
+    public void setBottomNavigationVisible(final boolean visible) {
+        if (mainBinding != null) {
+            mainBinding.bottomNavigation.setVisibility(visible ? View.VISIBLE : View.GONE);
+        }
     }
 
     /**
