@@ -144,7 +144,7 @@ class SubscriptionImportWorker(
         val notification =
             NotificationCompat
                 .Builder(applicationContext, NOTIFICATION_CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+                .setSmallIcon(R.drawable.ic_tubular_white)
                 .setOngoing(true)
                 .setProgress(maxProgress, currentProgress, currentProgress == 0)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
