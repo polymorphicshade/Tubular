@@ -8,7 +8,7 @@
     <string name="navigate_back">Back</string>
 
     <!-- AboutScreen -->
-    <string name="title_activity_about">About NewPipe</string>
+    <string name="title_activity_about">About Tubular</string>
     <string name="title_licenses">Third-party Licenses</string>
     <string name="license">By %1$s under %2$s</string>
     <string name="tab_about">About \u0026 FAQ</string>

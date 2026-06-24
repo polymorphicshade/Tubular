@@ -22,7 +22,7 @@ val buildConfigGenerator by tasks.registering(Sync::class) {
 
         object BuildConfig {
             const val VERSION_NAME = "$NEWPIPE_VERSION_NAME"
-            const val APP_NAME = "NewPipe"
+            const val APP_NAME = "Tubular"
         }
     """.trimIndent()
     from(resources.text.fromString(rawClass)) {
