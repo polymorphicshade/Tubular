@@ -48,7 +48,7 @@ configure<ApplicationExtension> {
     defaultConfig {
         applicationId = "org.polymorphicshade.tubular"
         resValue("string", "app_name", "Tubular")
-        minSdk = 21
+        minSdk = 23
         targetSdk = 35
 
         versionCode = System.getProperty("versionCodeOverride")?.toInt() ?: NEWPIPE_VERSION_CODE
@@ -94,7 +94,7 @@ configure<ApplicationExtension> {
             // suffix the app id and the app name with git branch name
             if (normalizedWorkingBranch.isEmpty() || workingBranch in defaultBranches) {
                 applicationIdSuffix = ".continuous"
-                resValue("string", "app_name", "NewPipe Continuous")
+                resValue("string", "app_name", "Tubular")
             } else {
                 applicationIdSuffix = ".continuous.$normalizedWorkingBranch"
                 resValue("string", "app_name", "NewPipe $workingBranch")
