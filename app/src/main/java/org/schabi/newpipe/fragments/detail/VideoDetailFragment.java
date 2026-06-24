@@ -225,6 +225,7 @@ public final class VideoDetailFragment
     int lastStableBottomSheetState = BottomSheetBehavior.STATE_EXPANDED;
     @State
     protected boolean autoPlayEnabled = true;
+    private boolean forceFullscreen = false;
     @State
     SponsorBlockMode currentSponsorBlockMode = null;
 
