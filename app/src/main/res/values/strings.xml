@@ -511,6 +511,18 @@
     <string name="show_error_snackbar">Show an error snackbar</string>
     <string name="create_error_notification">Create an error notification</string>
     <!-- Subscriptions import/export -->
+    <plurals name="export_subscriptions">
+        <item quantity="one">Exporting %d subscription…</item>
+        <item quantity="other">Exporting %d subscriptions…</item>
+    </plurals>
+    <plurals name="load_subscriptions">
+        <item quantity="one">Loading %d subscription…</item>
+        <item quantity="other">Loading %d subscriptions…</item>
+    </plurals>
+    <plurals name="import_subscriptions">
+        <item quantity="one">Importing %d subscription…</item>
+        <item quantity="other">Importing %d subscriptions…</item>
+    </plurals>
     <string name="import_title">Import</string>
     <string name="import_from">Import from</string>
     <string name="export_to">Export to</string>
@@ -518,6 +530,11 @@
     <string name="export_ongoing">Exporting…</string>
     <string name="import_file_title">Import file</string>
     <string name="previous_export">Previous export</string>
+    <string name="import_subscriptions_title">Import subscriptions"</string>
+    <string name="export_subscriptions_title">Export subscriptions</string>
+    <string name="import_subscriptions_summary">Import subscriptions from a previous .json export"</string>
+    <string name="export_subscriptions_summary">Export your subscriptions to a .json file</string>
+    <string name="import_from_previous_export">Import from previous export</string>
     <string name="subscriptions_import_unsuccessful">Could not import subscriptions</string>
     <string name="subscriptions_export_unsuccessful">Could not export subscriptions</string>
     <string name="import_youtube_instructions">Import YouTube subscriptions from Google takeout:

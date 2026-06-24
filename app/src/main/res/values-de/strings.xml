@@ -43,7 +43,7 @@
     <string name="settings_category_appearance_title">Aussehen</string>
     <string name="general_error">Fehler</string>
     <string name="could_not_load_thumbnails">Konnte nicht alle Vorschaubilder laden</string>
-    <string name="parsing_error">Konnte Webseite nicht analysieren</string>
+    <string name="parsing_error">Konnte Website nicht analysieren</string>
     <string name="content_not_available">Inhalt nicht verfügbar</string>
     <string name="content">Inhalt</string>
     <string name="show_age_restricted_content_title">Altersbeschränkte Inhalte anzeigen</string>
@@ -244,8 +244,8 @@
     <string name="caption_auto_generated">Automatisch erzeugt</string>
     <string name="import_from">Import von</string>
     <string name="export_to">Export nach</string>
-    <string name="import_ongoing">Importiere …</string>
-    <string name="export_ongoing">Exportiere …</string>
+    <string name="import_ongoing">Wird importiert …</string>
+    <string name="export_ongoing">Wird exportiert …</string>
     <string name="import_file_title">Datei importieren</string>
     <string name="previous_export">Vorheriger Export</string>
     <string name="import_network_expensive_warning">Beachte, dass diese Aktion das Netzwerk stark belasten kann. 
@@ -623,7 +623,7 @@
     <string name="account_terminated">Konto geschlossen</string>
     <string name="feed_load_error_fast_unknown">Der Schnellmodus liefert hierzu keine weiteren Informationen.</string>
     <string name="no_dir_yet">Noch kein Downloadordner festgelegt, wähle jetzt den Standard-Downloadordner</string>
-    <string name="open_website_license">Webseite öffnen</string>
+    <string name="open_website_license">Website öffnen</string>
     <string name="downloads_storage_use_saf_summary_api_29">Ab Android 10 wird nur noch „Storage Access Framework“ unterstützt</string>
     <string name="downloads_storage_ask_summary_no_saf_notice">Du wirst jedes Mal gefragt werden, wohin der Download gespeichert werden soll</string>
     <string name="feed_load_error">Fehler beim Laden des Feeds</string>
@@ -699,7 +699,7 @@
     <string name="streams_not_yet_supported_removed">Streams, die der Downloader noch nicht unterstützt, werden nicht angezeigt</string>
     <string name="selected_stream_external_player_not_supported">Der ausgewählte Stream wird von externen Playern nicht unterstützt</string>
     <string name="progressive_load_interval_title">Größe des Ladeintervalls für die Wiedergabe</string>
-    <string name="faq">Auf der Webseite ansehen</string>
+    <string name="faq">Auf der Website ansehen</string>
     <string name="faq_title">Häufig gestellte Fragen</string>
     <string name="faq_description">Wenn du Probleme bei der Verwendung der App hast, lies bitte die Antworten auf häufig gestellte Fragen!</string>
     <string name="sort">Sortieren</string>
@@ -848,7 +848,7 @@
     <string name="player_http_403">HTTP-Fehler 403 vom Server während der Wiedergabe erhalten, wahrscheinlich verursacht durch Ablauf der Streaming-URL oder eine IP-Sperre</string>
     <string name="player_http_invalid_status">HTTP-Fehler %1$s vom Server während der Wiedergabe erhalten</string>
     <string name="youtube_player_http_403">HTTP-Fehler 403 vom Server während der Wiedergabe erhalten, wahrscheinlich verursacht durch eine IP-Sperre oder Probleme beim Entschlüsseln der Streaming-URL</string>
-    <string name="sign_in_confirm_not_bot_error">%1$s hat die Datenbereitstellung verweigert und verlangt eine Anmeldung, um zu bestätigen, dass es sich bei dem Anfragenden nicht um einen Bot handelt.\n\nDeine IP-Adresse wurde möglicherweise vorübergehend von %1$s gesperrt. Du kannst einige Zeit warten oder zu einer anderen IP-Adresse wechseln (z. B. durch Ein- und Ausschalten eines VPNs oder durch Wechseln von WLAN zu mobilen Daten).</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s hat die Datenbereitstellung verweigert und verlangt eine Anmeldung, um zu bestätigen, dass es sich bei dem Anfragenden nicht um einen Bot handelt.\n\nDeine IP-Adresse wurde möglicherweise vorübergehend von %1$s gesperrt. Du kannst einige Zeit warten oder zu einer anderen IP-Adresse wechseln (z. B. durch Ein- und Ausschalten eines VPNs oder durch Wechseln von WLAN zu mobilen Daten).\n\nWeitere Informationen findest du unter <a href="%2$s">diesem FAQ-Eintrag</a>.</string>
     <string name="unsupported_content_in_country">Dieser Inhalt ist für das aktuell ausgewählte Land des Inhalts nicht verfügbar.\n\nÄndere die Auswahl unter „Einstellungen &gt; Inhalt &gt; Bevorzugtes Land des Inhalts“.</string>
     <string name="kao_dialog_warning">Im August 2025 gab Google bekannt, dass ab September 2026 für die Installation von Apps eine Entwicklerüberprüfung für alle Android-Apps auf zertifizierten Geräten erforderlich sein wird, einschließlich derjenigen, die außerhalb des Play Store installiert wurden. Da die Entwickler von NewPipe dieser Forderung nicht nachkommen, wird NewPipe nach diesem Zeitpunkt auf zertifizierten Android-Geräten nicht mehr funktionieren.</string>
     <string name="kao_dialog_more_info">Details</string>

@@ -104,7 +104,7 @@
     <string name="subscribe_button_title">訂閱</string>
     <string name="subscribed_button_title">已訂閱</string>
     <string name="channel_unsubscribed">已取消訂閱頻道</string>
-    <string name="subscription_change_failed">無法更改訂閱</string>
+    <string name="subscription_change_failed">無法變更訂閱</string>
     <string name="subscription_update_failed">無法更新訂閱</string>
     <string name="tab_subscriptions">訂閱清單</string>
     <string name="fragment_feed_title">新鮮事</string>
@@ -168,7 +168,7 @@
     <string name="external_player_unsupported_link_type">外部播放器不支援此類型連結</string>
     <string name="video_streams_empty">找不到影片串流</string>
     <string name="audio_streams_empty">找不到音訊串流</string>
-    <string name="donation_title">贊助</string>
+    <string name="donation_title">捐款</string>
     <string name="website_title">網站</string>
     <string name="import_data_title">匯入資料庫</string>
     <string name="export_data_title">匯出資料庫</string>
@@ -226,7 +226,7 @@
     <string name="delete_playlist_prompt">刪除此播放清單？</string>
     <string name="playlist_creation_success">已建立播放清單</string>
     <string name="playlist_add_stream_success">已增至播放清單</string>
-    <string name="playlist_thumbnail_change_success">播放清單縮圖已更改。</string>
+    <string name="playlist_thumbnail_change_success">播放清單縮圖已變更。</string>
     <string name="caption_none">沒有字幕</string>
     <string name="resize_fit">合適的</string>
     <string name="resize_fill">填滿</string>
@@ -343,7 +343,7 @@
     <string name="generate_unique_name">生成獨特的名稱</string>
     <string name="overwrite">覆寫</string>
     <string name="overwrite_finished_warning">有已下載的同名檔案</string>
-    <string name="download_already_running">已有進行中的下載與此同名</string>
+    <string name="download_already_running">已有正在進行的下載與此同名</string>
     <string name="show_error">顯示錯誤</string>
     <string name="error_file_creation">無法建立檔案</string>
     <string name="error_path_creation">無法建立目的地資料夾</string>
@@ -544,7 +544,7 @@
     <string name="show_description_summary">關閉以隱藏影片說明及其他附帶資訊</string>
     <string name="show_description_title">顯示說明</string>
     <string name="open_with">以……開啟</string>
-    <string name="no_app_to_open_intent">您裝置上沒有應用程式可以打開這個</string>
+    <string name="no_app_to_open_intent">您的裝置上沒有應用程式可以開啟這個</string>
     <string name="crash_the_app">應用程式當機</string>
     <string name="paid_content">此內容僅對已付費的內容可用，因此無法由 Tubular 串流或下載。</string>
     <string name="youtube_music_premium_content">此影片僅供 YouTube Music Premium 會員使用，因此無法由 Tubular 串流或下載。</string>
@@ -811,6 +811,26 @@
     <string name="player_http_403">播放時收到來自伺服器的 HTTP 錯誤 403，可能因串流網址過期或 IP 封鎖所致</string>
     <string name="player_http_invalid_status">播放時收到來自伺服器的 HTTP 錯誤 %1$s</string>
     <string name="youtube_player_http_403">播放時收到來自伺服器的 HTTP 錯誤 403，可能因 IP 封鎖或串流網址去混淆化問題所致</string>
-    <string name="sign_in_confirm_not_bot_error">%1$s 拒絕提供資料，要求登入以確認請求者並非機器人。\n\n您的 IP 位址可能已被 %1$s 暫時封鎖，您可稍候片刻或切換至其他 IP 位址（例如開啟/關閉 VPN，或從 Wi-Fi 切換至行動數據）。</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s 拒絕提供資料，要求登入以確認請求者並非機器人。\n\n您的 IP 位址可能已被 %1$s 暫時封鎖，您可稍候片刻或切換至其他 IP 位址（例如開啟/關閉 VPN，或從 Wi-Fi 切換至行動數據）。\n\n更多資訊請參見<a href="%2$s">此 FAQ 條目</a>。</string>
     <string name="unsupported_content_in_country">此內容目前無法於您所選的國家/地區提供。\n\n請至「設定」→「內容」→「預設內容國家」變更您的選擇。</string>
+    <string name="kao_dialog_warning">2025年8月，Google 宣佈自2026年9月起，所有經認證裝置上的 Android 應用程式（包含不是透過 Play 商店安裝的應用程式）皆須通過開發者驗證方可安裝。由於 NewPipe 開發團隊不接受此項要求，該應用程式屆時將無法在經認證的 Android 裝置上運作。</string>
+    <string name="kao_dialog_more_info">詳細資訊</string>
+    <string name="kao_solution">解決方案</string>
+    <plurals name="export_subscriptions">
+        <item quantity="other">正在匯出 %d 個訂閱…</item>
+    </plurals>
+    <plurals name="load_subscriptions">
+        <item quantity="other">正在載入 %d 個訂閱…</item>
+    </plurals>
+    <plurals name="import_subscriptions">
+        <item quantity="other">正在匯入 %d 個訂閱…</item>
+    </plurals>
+    <string name="import_subscriptions_title">匯入訂閱</string>
+    <string name="export_subscriptions_title">匯出訂閱</string>
+    <string name="export_subscriptions_summary">匯出您的訂閱至 .json 檔案</string>
+    <string name="import_subscriptions_summary">從先前匯出的 .json 匯入訂閱</string>
+    <string name="import_from_previous_export">從先前的匯出檔案匯入</string>
+    <string name="api23_requirement_dialog_title">NewPipe 即將停止支援 Android 5</string>
+    <string name="api23_requirement_dialog_blogpost">部落格文章</string>
+    <string name="api23_requirement_dialog_message">不幸的是，NewPipe 依賴的一些函式庫已停止支援 Android 5.0 和 5.1。因此，下一個版本的 NewPipe 將只能在 Android 6 或更高版本的裝置上運作，非常遺憾。更多資訊請參閱部落格文章。</string>
 </resources>

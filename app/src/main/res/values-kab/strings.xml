@@ -223,4 +223,12 @@
     <string name="metadata_tags">Tibzimin</string>
     <string name="blank_page_summary">Asebter d ilem</string>
     <string name="settings_category_exoplayer_title">Iɣewwaṛen n ExoPlayer</string>
+    <plurals name="days">
+        <item quantity="one">%d n wass</item>
+        <item quantity="other">%d n wussan</item>
+    </plurals>
+    <plurals name="videos">
+        <item quantity="one">%s n tvidyut</item>
+        <item quantity="other">%s n tvidyutin</item>
+    </plurals>
 </resources>

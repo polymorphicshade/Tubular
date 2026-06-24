@@ -62,7 +62,7 @@
     <string name="general_error">Lỗi</string>
     <string name="network_error">Lỗi kết nối mạng</string>
     <string name="could_not_load_thumbnails">Không thể tải tất cả hình thu nhỏ</string>
-    <string name="parsing_error">Không thể phân tích cú pháp trang web vì trang này đã ngừng hoạt động vào 21/07/2025.</string>
+    <string name="parsing_error">Không thể phân tích cú pháp web.</string>
     <string name="content_not_available">Nội dung không khả dụng</string>
     <string name="could_not_setup_download_menu">Không thể thiết lập menu tải về</string>
     <string name="app_ui_crash">Ứng dụng/Giao diện người dùng bị lỗi</string>
@@ -102,7 +102,6 @@
     <string name="title_activity_about">Giới thiệu về Tubular</string>
     <string name="title_licenses">Giấy phép của bên thứ ba</string>
     <string name="copyright" formatted="true">© %1$s bởi %2$s dưới %3$s</string>
-    <string name="tab_about">Giới thiệu &amp; Câu hỏi thường gặp</string>
     <string name="tab_licenses">Giấy phép</string>
     <string name="app_description">Phát trực tuyến nhẹ tự do trên Android.</string>
     <string name="view_on_github">Xem trên GitHub</string>
@@ -209,12 +208,12 @@
     <string name="settings_file_replacement_character_title">Ký tự thay thế</string>
     <string name="charset_letters_and_digits">Chỉ chữ cái và chữ số</string>
     <string name="charset_most_special_characters">Hầu hết các ký tự đặc biệt</string>
-    <string name="donation_title">Quyên tặng</string>
-    <string name="donation_encouragement">NewPipe được phát triển bởi các tình nguyện viên dành thời gian rảnh rỗi để mang lại cho bạn trải nghiệm người dùng tốt nhất. Hãy đền đáp để giúp các nhà phát triển làm cho NewPipe thậm chí còn tốt hơn nữa trong khi họ thưởng thức một tách cà phê.</string>
-    <string name="give_back">Đền đáp</string>
+    <string name="donation_title">Quyên góp</string>
+    <string name="donation_encouragement">Newpipe được phát triển bởi các tình nguyện viên dành thời gian rảnh để mang trải nghiệm người dùng tốt nhất. Gửi lại để giúp nhà phát triển làm NewPipe tốt hơn nữa trong khi họ tận hưởng một ly cà phê.</string>
+    <string name="give_back">Gửi lại</string>
     <string name="website_title">Trang web</string>
-    <string name="website_encouragement">Truy cập website chính thức của NewPipe để biết thêm thông tin và tin tức.</string>
-    <string name="privacy_policy_title">Chính sách bảo mật của NewPipe</string>
+    <string name="website_encouragement">Ghé thăm Trang web NewPipe để biết thêm thông tin và tin tức.</string>
+    <string name="privacy_policy_title">Chính sách Quyền riêng tư của NewPipe</string>
     <string name="privacy_policy_encouragement">NewPipe rất coi trọng quyền riêng tư của bạn. Do đó, ứng dụng không thu thập bất kỳ dữ liệu nào mà không có sự đồng ý của bạn.
 \nChính sách bảo mật của NewPipe giải thích chi tiết dữ liệu nào được gửi và lưu trữ khi bạn gửi báo cáo sự cố.</string>
     <string name="read_privacy_policy">Đọc chính sách bảo mật</string>
@@ -438,7 +437,7 @@
     <string name="most_liked">Được yêu thích nhất</string>
     <string name="recently_added">Đã thêm gần đây</string>
     <string name="subtitle_activity_recaptcha">Bấm \"Xong\" khi hoàn thành</string>
-    <string name="done">Đã hoàn thành</string>
+    <string name="done">Đã xong</string>
     <string name="infinite_videos">∞ video</string>
     <string name="more_than_100_videos">100+ video</string>
     <plurals name="listening">
@@ -685,8 +684,8 @@
     <string name="progressive_load_interval_title">Kích thước tải thời lượng phát lại</string>
     <string name="sort">Thể loại</string>
     <string name="faq_title">Câu hỏi thường gặp</string>
-    <string name="faq">Xem trên website</string>
-    <string name="faq_description">Nếu bạn gặp vấn đề khi sử dụng ứng dụng , hãy chắc chắn rằng bạn đã tìm kiếm các câu hỏi thường thấy !</string>
+    <string name="faq">Xem trên trang web</string>
+    <string name="faq_description">Nếu bạn gặp vấn đề khi sử dụng ứng dụng, hãy chắc chắn rằng bạn kiểm tra câu trà lời cho câu hỏi thường gặp!</string>
     <string name="import_subscriptions_hint">Nhập hoặc xuất các kênh bạn đăng ký bằng cách nhấn nút 3 chấm ở góc trên màn hình</string>
     <string name="msg_failed_to_copy">Không thể sao chép vào khay nhớ tạm</string>
     <string name="playlist_add_stream_success_duplicate">Đã thêm trùng lặp %d lần</string>
@@ -821,8 +820,8 @@
     <string name="trending_movies">Phim và chương trình đang thịnh hành</string>
     <string name="trending_music">Âm nhạc đang thịnh hành</string>
     <string name="player_http_403">Đã xảy ra lỗi HTTP 403 trong khi phát, có thể do URL phát sóng đã hết hạn hoặc bị ban IP</string>
-    <string name="sign_in_confirm_not_bot_error">%1$s đã từ chối cung cấp dữ liệu, cần phải đăng nhập để xác nhận yêu cầu viên ko phải là bot.\n\nIP này có vẻ đã bị ban tạm thời bởi %1$s, bạn có thể đợi một lúc hoặc chuyển sang IP khác (ví dụ như việc tắt / bật lại VPN, hoặc là chuyển mạng từ WIFI sang 4G/5G).</string>
-    <string name="unsupported_content_in_country">Nội dung này không được hỗ trợ tại quốc gia mà bạn chọn.\n\nHãy đổi quốc gia trong phần \"Cài đặt &gt; Nội dung &gt; Nội dung quốc gia mặc định\".</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s đã từ chối cung cấp dữ liệu, cần phải đăng nhập để xác nhận requester của NewPipe ko phải là bot.\n\nIP này có vẻ đã bị ban tạm thời bởi %1$s, bạn có thể đợi một lúc hoặc chuyển sang IP khác (ví dụ như việc tắt / bật lại VPN, hoặc là chuyển mạng từ WIFI sang 4G/5G).\n\nXem qua <a href="%2$s">phần FAQ này</a> đẻ biết thêm chi tiết</string>
+    <string name="unsupported_content_in_country">Nội dung này không được hỗ trợ tại quốc gia mà bạn chọn.\n\nHãy đổi quốc gia trong phần \"Cài đặt &gt; Nội dung &gt; Quốc gia nội dung mặc định\".</string>
     <string name="permission_display_over_apps_message">Để sử dụng tính năng phát video nổi, hãy chọn %1$s trong Cài đặt Android và bật tính năng %2$s.</string>
     <string name="youtube_player_http_403">Đã xảy ra lỗi HTTP 403 trong khi phát, có thể IP này đã bị ban hoặc vấn đề phát URL deobfuscation</string>
     <string name="permission_display_over_apps_permission_name">\"Cho phép hiển thị trên ứng dụng khác\"</string>
@@ -831,4 +830,18 @@
     <string name="account_terminated_service_provides_reason">Tài khoản bị vô hiệu hóa. \n\n%1$s cung cấp lý do này: %2$s</string>
     <string name="entry_deleted">Entry đã xóa</string>
     <string name="player_http_invalid_status">Đã xảy ra lỗi HTTP %1$s trong khi phát</string>
+    <string name="kao_dialog_warning">Từ tháng 8 năm 2025, Google đã thông báo rằng kể từ tháng 9 năm 2026, việc cài app sẽ yêu cầu các nhà phát triển phải xác minh trên những thiết bị đã chứng nhận, kể cả đối với các ứng dụng ngoài Play Store. Vì các nhà phát triển của NewPipe không đồng ý với điều kiện này, nên có lẽ NewPipe sẽ không còn hoạt động trên các máy Android được chứng nhận sau thời điểm ấy.</string>
+    <string name="kao_dialog_more_info">Chi tiết</string>
+    <string name="kao_solution">Giải pháp</string>
+    <string name="api23_requirement_dialog_title">NewPipe sẽ ngừng hỗ trợ phiên bản Android 5.x vào bản cập nhật sau</string>
+    <string name="api23_requirement_dialog_message">Vì NewPipe phụ thuộc vào vài libs của Google nhưng đã ngừng hỗ trợ cho Android 5.x. Bản cập nhật sau sẽ chỉ hỗ trợ cho Android 6 trở lên, thật đáng tiếc. Chi tiết tại blog của NewPipe.</string>
+    <string name="api23_requirement_dialog_blogpost">Bài đăng</string>
+    <plurals name="export_subscriptions">
+        <item quantity="other">Nhập/Xuất kênh đăng ký</item>
+    </plurals>
+    <string name="import_subscriptions_title">Nhập kênh đăng ký</string>
+    <string name="export_subscriptions_title">Xuất kênh đăng ký</string>
+    <string name="import_subscriptions_summary">Nhập kênh đăng ký từ file .json đã xuất trước đó</string>
+    <string name="export_subscriptions_summary">Xuất kênh đăng ký của bạn thành file .json</string>
+    <string name="import_from_previous_export">Nhập từ bản đã xuất trước đó</string>
 </resources>

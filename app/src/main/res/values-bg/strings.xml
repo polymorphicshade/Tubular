@@ -5,7 +5,7 @@
     <string name="no_player_found">Не е намерен стрийм плейър. Инсталиране на VLC\?</string>
     <string name="install">Инсталиране</string>
     <string name="cancel">Отмяна</string>
-    <string name="open_in_browser">Отваряне в браузър</string>
+    <string name="open_in_browser">Отвори в браузър</string>
     <string name="open_in_popup_mode">Отваряне в прозорец</string>
     <string name="share">Споделяне</string>
     <string name="download">Изтегляне</string>
@@ -143,8 +143,8 @@
     <string name="title_licenses">Лицензи от трети страни</string>
     <string name="tab_about">За приложението</string>
     <string name="tab_licenses">Лицензи</string>
-    <string name="app_description">Безплатно и леко поточно предаване за Android.</string>
-    <string name="view_on_github">Виж в GitHub</string>
+    <string name="app_description">Безплатно леко стрийминг на Android.</string>
+    <string name="view_on_github">Преглед в GitHub</string>
     <string name="controls_download_desc">Изтегляне на стрийм файл</string>
     <string name="show_info">Покажи информация</string>
     <string name="tab_bookmarks">Отметнати плейлисти</string>
@@ -609,7 +609,7 @@
     <string name="settings_category_player_notification_title">Известие на плеъра</string>
     <string name="msg_failed_to_copy">Неуспешно копиране в клипборда</string>
     <string name="faq_title">Често задавани въпроси</string>
-    <string name="faq">Отвори уеб страницата</string>
+    <string name="faq">Преглед на уебсайта</string>
     <string name="title_activity_play_queue">Възпроизвеждане на опашка</string>
     <string name="leak_canary_not_available">LeakCanary не е открито</string>
     <string name="show_memory_leaks">Покажи къде изтича паметта</string>
@@ -722,7 +722,7 @@
         <item quantity="other">%s нови потоци</item>
     </plurals>
     <string name="subtitle_activity_recaptcha">Натиснете „Готово“, когато решите</string>
-    <string name="faq_description">Ако имате проблеми с използването на приложението, не забравяйте да проверите тези отговори на често задавани въпроси!</string>
+    <string name="faq_description">Ако имате проблеми с използването на приложението, не забравяйте да разгледате тези отговори на често задавани въпроси!</string>
     <string name="main_page_content_swipe_remove">Плъзнете елементи, за да ги премахнете</string>
     <string name="default_kiosk_page_summary">Kiosk по подразбиране</string>
     <string name="enqueue_next_stream">Наредете следващия</string>
@@ -830,9 +830,29 @@
     <string name="player_http_403">HTTP грешка 403, получена от сървъра по време на възпроизвеждане, вероятно причинена от изтичане на URL адреса за стрийминг или забрана на IP адреса</string>
     <string name="player_http_invalid_status">HTTP грешка %1$s получена от сървъра по време на възпроизвеждане</string>
     <string name="youtube_player_http_403">HTTP грешка 403, получена от сървъра по време на възпроизвеждане, вероятно причинена от забрана на IP адреса или проблеми с деобфускацията на URL адреси за стрийминг</string>
-    <string name="sign_in_confirm_not_bot_error">%1$s отказа да предостави данни, като поиска вход, за да потвърди, че заявителят не е бот.\n\nВашият IP адрес може да е временно забранен от %1$s. Можете да изчакате известно време или да превключите към друг IP адрес (например като включите/изключите VPN или като превключите от WiFi към мобилни данни).</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s отказа да предостави данни, като поиска вход, за да потвърди, че заявителят не е бот.\n\nВашият IP адрес може да е временно забранен от %1$s. Можете да изчакате известно време или да превключите към друг IP адрес (например като включите/изключите VPN или като превключите от WiFi към мобилни данни).\n\nМоля, вижте <a href="%2$s">тази статия с ЧЗВ</a> за повече информация.</string>
     <string name="unsupported_content_in_country">Това съдържание не е налично за текущо избраната държава на съдържанието.\n\nПроменете избора си от \"Настройки &gt; Съдържание &gt; Държава на съдържанието по подразбиране\".</string>
     <string name="kao_dialog_warning">През август 2025 г. Google обяви, че от септември 2026 г. инсталирането на приложения ще изисква проверка от разработчика за всички приложения за Android на сертифицирани устройства, включително тези, инсталирани извън Play Store. Тъй като разработчиците на NewPipe не са съгласни с това изискване, NewPipe вече няма да работи на сертифицирани устройства с Android след този период.</string>
     <string name="kao_dialog_more_info">Детайли</string>
     <string name="kao_solution">Решение</string>
+    <plurals name="export_subscriptions">
+        <item quantity="one">Изнасяне на %d абонамент…</item>
+        <item quantity="other">Изнасяне на %d абонаменти…</item>
+    </plurals>
+    <plurals name="load_subscriptions">
+        <item quantity="one">Зареждане на %d абонамент…</item>
+        <item quantity="other">Зареждане на %d абонаменти…</item>
+    </plurals>
+    <plurals name="import_subscriptions">
+        <item quantity="one">Внасяне на %d абонамент…</item>
+        <item quantity="other">Внасяне на %d абонаменти…</item>
+    </plurals>
+    <string name="import_subscriptions_title">Внасяне на абонаменти</string>
+    <string name="export_subscriptions_title">Изнасяне на абонаменти</string>
+    <string name="import_subscriptions_summary">Внасяне на абонаменти от предишен .json файл</string>
+    <string name="export_subscriptions_summary">Изнесете абонаментите си в .json файл</string>
+    <string name="import_from_previous_export">Внасяне от предишно изнасяне</string>
+    <string name="api23_requirement_dialog_title">NewPipe спира поддръжката си за Android 5</string>
+    <string name="api23_requirement_dialog_message">За съжаление NewPipe зависи от няколко библиотеки, които спряха поддръжката за Android 5.0 и 5.1. Следователно, за съжаление, следващата версия на NewPipe ще работи само на устройства с Android 6 или по-нова версия. Прочетете повече в публикацията в блога.</string>
+    <string name="api23_requirement_dialog_blogpost">Публикация в блога</string>
 </resources>

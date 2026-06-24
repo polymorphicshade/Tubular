@@ -26,9 +26,9 @@
     <string name="show_play_with_kodi_summary">Zobrazit možnost přehrání videa pomocí multimediálního centra Kodi</string>
     <string name="play_audio">Zvuk</string>
     <string name="default_audio_format_title">Výchozí formát zvuku</string>
-    <string name="theme_title">Téma</string>
-    <string name="dark_theme_title">Tmavé</string>
-    <string name="light_theme_title">Světlé</string>
+    <string name="theme_title">Motiv</string>
+    <string name="dark_theme_title">Tmavý</string>
+    <string name="light_theme_title">Světlý</string>
     <string name="download_dialog_title">Stáhnout</string>
     <string name="show_next_and_similar_title">Zobrazovat \'další\' a \'podobná\' videa</string>
     <string name="unsupported_url">URL není podporováno</string>
@@ -78,7 +78,7 @@
     <string name="ok">OK</string>
     <string name="title_activity_recaptcha">Výzva reCAPTCHA</string>
     <string name="recaptcha_request_toast">Požadována výzva reCAPTCHA</string>
-    <string name="black_theme_title">Černé</string>
+    <string name="black_theme_title">Černý</string>
     <string name="checksum">Kontrolní součet</string>
     <string name="no_available_dir">Určete prosím složku pro stahování později v nastavení</string>
     <string name="info_labels">Co:\nŽádost:\nJazyk obsahu:\nZemě obsahu:\nJazyk aplikace:\nSlužba:\nČas GMT:\nBalíček:\nVerze:\nVerze OS:</string>
@@ -149,14 +149,14 @@
     <string name="title_activity_about">O Tubular</string>
     <string name="title_licenses">Licence třetích stran</string>
     <string name="copyright" formatted="true">© %1$s od %2$s pod %3$s</string>
-    <string name="tab_about">O aplikaci a FAQ</string>
+    <string name="tab_about">O aplikaci a dotazy</string>
     <string name="tab_licenses">Licence</string>
     <string name="app_description">Svobodné a nenáročné streamování v Androidu.</string>
     <string name="view_on_github">Zobraz na GitHubu</string>
     <string name="app_license_title">Licence Tubular</string>
     <string name="contribution_encouragement">Pokud máte nápady na zlepšení jako; překlad, změny designu, vylepšování kódu nebo opravdu velké změny kódu - pomoc je vždy vítána. Čím více se udělá, tím lepší to bude!</string>
     <string name="read_full_license">Přečíst licenci</string>
-    <string name="contribution_title">Podílet se</string>
+    <string name="contribution_title">Přispějte</string>
     <string name="title_activity_history">Historie</string>
     <string name="action_history">Historie</string>
     <string name="show_hold_to_append_title">Zobrazit tip „Podržte pro zařazení do fronty“</string>
@@ -586,7 +586,7 @@
     <string name="crash_the_app">Zbořit aplikaci</string>
     <string name="download_has_started">Stahování bylo zahájeno</string>
     <string name="select_night_theme_toast">Níže si můžete zvolit svůj oblíbený motiv</string>
-    <string name="night_theme_summary">Zvolte si svůj oblíbený noční motiv - %s</string>
+    <string name="night_theme_summary">Zvolte si svůj oblíbený noční motiv – %s</string>
     <string name="auto_device_theme_title">Automatický (motiv zařízení)</string>
     <string name="radio">Radio</string>
     <string name="featured">Představujeme</string>
@@ -710,7 +710,7 @@
     <string name="select_quality_external_players">Vyberte kvalitu pro externí přehrávače</string>
     <string name="no_video_streams_available_for_external_players">U externích přehrávačů nejsou k dispozici žádné videostreamy</string>
     <string name="faq_title">Často kladené dotazy</string>
-    <string name="faq_description">Pokud máte potíže s používáním aplikace, přečtěte si tyto odpovědi na časté otázky!</string>
+    <string name="faq_description">Pokud máte problémy s používáním aplikace, podívejte se na tyto odpovědi, které zodpovídají nejčastější dotazy!</string>
     <string name="faq">Zobrazit na webu</string>
     <string name="sort">Řazení</string>
     <string name="app_update_available_notification_text">Klepnutím stáhnete %s</string>
@@ -859,9 +859,35 @@
     <string name="player_http_403">Během přehrávání byla ze serveru přijata chyba HTTP 403, pravděpodobně způsobená vypršením platnosti streamingové adresy URL nebo zákazem IP adresy</string>
     <string name="player_http_invalid_status">Chyba HTTP %1$s obdržená ze serveru během přehrávání</string>
     <string name="youtube_player_http_403">Chyba HTTP 403 obdržená od serveru během přehrávání, pravděpodobně způsobená zákazem IP adresy nebo problémy s deobfuskací streamovací adresy URL</string>
-    <string name="sign_in_confirm_not_bot_error">%1$s odmítl poskytnout data, žádá o přihlášení k potvrzení, že žadatel není bot.\n\nVaše IP adresa mohla být dočasně zakázána %1$s, můžete nějakou dobu počkat nebo přepnout na jinou IP adresu (například zapnutím/vypnutím VPN nebo přepnutím z WiFi na mobilní data).</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s odmítl poskytnout data, žádá o přihlášení k potvrzení, že žadatel není bot.\n\nVaše IP adresa mohla být dočasně zablokována službou %1$s, můžete nějakou dobu počkat nebo přepnout na jinou IP adresu (například zapnutím/vypnutím VPN nebo přepnutím z Wi-Fi na mobilní data).\n\nPro více informací si přečtěte <a href="%2$s">tento záznam v FAQ</a>.</string>
     <string name="unsupported_content_in_country">Tento obsah není pro aktuálně vybranou zemi obsahu dostupný.\n\nZměňte výběr v nabídce \"Nastavení &gt; Obsah &gt; Výchozí země obsahu\".</string>
     <string name="kao_dialog_warning">Společnost Google oznámila, že od roku 2026/2027 budou všechny aplikace na certifikovaných zařízeních Android vyžadovat, aby vývojář odeslal své osobní identifikační údaje přímo společnosti Google. Jelikož vývojáři této aplikace s tímto požadavkem nesouhlasí, aplikace po tomto datu přestane na certifikovaných zařízeních Android fungovat.</string>
     <string name="kao_dialog_more_info">Podrobnosti</string>
     <string name="kao_solution">Řešení</string>
+    <plurals name="export_subscriptions">
+        <item quantity="one">Exportování %d odběru…</item>
+        <item quantity="few">Exportování %d odběrů…</item>
+        <item quantity="many">Exportování %d odběrů…</item>
+        <item quantity="other">Exportování %d odběrů…</item>
+    </plurals>
+    <plurals name="load_subscriptions">
+        <item quantity="one">Načítání %d odběru…</item>
+        <item quantity="few">Načítání %d odběrů…</item>
+        <item quantity="many">Načítání %d odběrů…</item>
+        <item quantity="other">Načítání %d odběrů…</item>
+    </plurals>
+    <plurals name="import_subscriptions">
+        <item quantity="one">Importování %d odběru…</item>
+        <item quantity="few">Importování %d odběrů…</item>
+        <item quantity="many">Importování %d odběrů…</item>
+        <item quantity="other">Importování %d odběrů…</item>
+    </plurals>
+    <string name="import_subscriptions_title">Importovat odběry</string>
+    <string name="export_subscriptions_title">Exportovat odběry</string>
+    <string name="import_subscriptions_summary">Importovat odběry z předchozího exportu .json</string>
+    <string name="export_subscriptions_summary">Exportovat odběry do souboru .json</string>
+    <string name="import_from_previous_export">Importovat z předchozího exportu</string>
+    <string name="api23_requirement_dialog_title">NewPipe ukončuje podporu systému Android 5</string>
+    <string name="api23_requirement_dialog_message">NewPipe bohužel využívá několik knihoven, které již nepodporují Android 5.0 a 5.1. Příští verze NewPipe proto bude bohužel fungovat pouze na zařízeních s Androidem 6 nebo novějším. Více se dozvíte v tomto blogovém příspěvku.</string>
+    <string name="api23_requirement_dialog_blogpost">Blogový příspěvek</string>
 </resources>
