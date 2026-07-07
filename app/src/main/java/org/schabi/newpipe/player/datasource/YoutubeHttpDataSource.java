@@ -670,14 +670,12 @@ public final class YoutubeHttpDataSource extends BaseDataSource implements HttpD
 
         httpURLConnection.setRequestProperty(HttpHeaders.TE, "trailers");
 
-        final boolean isAndroidStreamingUrl = isAndroidStreamingUrl(requestUrl);
-        final boolean isIosStreamingUrl = isIosStreamingUrl(requestUrl);
-        if (isAndroidStreamingUrl) {
+        if (isAndroidStreamingUrl(requestUrl)) {
             // Improvement which may be done: find the content country used to request YouTube
             // contents to add it in the user agent instead of using the default
             httpURLConnection.setRequestProperty(HttpHeaders.USER_AGENT,
                     getAndroidUserAgent(null));
-        } else if (isIosStreamingUrl) {
+        } else if (isIosStreamingUrl(requestUrl)) {
             httpURLConnection.setRequestProperty(HttpHeaders.USER_AGENT,
                     getIosUserAgent(null));
         } else {

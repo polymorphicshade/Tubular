@@ -511,6 +511,18 @@
     <string name="show_error_snackbar">Show an error snackbar</string>
     <string name="create_error_notification">Create an error notification</string>
     <!-- Subscriptions import/export -->
+    <plurals name="export_subscriptions">
+        <item quantity="one">Exporting %d subscription…</item>
+        <item quantity="other">Exporting %d subscriptions…</item>
+    </plurals>
+    <plurals name="load_subscriptions">
+        <item quantity="one">Loading %d subscription…</item>
+        <item quantity="other">Loading %d subscriptions…</item>
+    </plurals>
+    <plurals name="import_subscriptions">
+        <item quantity="one">Importing %d subscription…</item>
+        <item quantity="other">Importing %d subscriptions…</item>
+    </plurals>
     <string name="import_title">Import</string>
     <string name="import_from">Import from</string>
     <string name="export_to">Export to</string>
@@ -518,6 +530,11 @@
     <string name="export_ongoing">Exporting…</string>
     <string name="import_file_title">Import file</string>
     <string name="previous_export">Previous export</string>
+    <string name="import_subscriptions_title">Import subscriptions"</string>
+    <string name="export_subscriptions_title">Export subscriptions</string>
+    <string name="import_subscriptions_summary">Import subscriptions from a previous .json export"</string>
+    <string name="export_subscriptions_summary">Export your subscriptions to a .json file</string>
+    <string name="import_from_previous_export">Import from previous export</string>
     <string name="subscriptions_import_unsuccessful">Could not import subscriptions</string>
     <string name="subscriptions_export_unsuccessful">Could not export subscriptions</string>
     <string name="import_youtube_instructions">Import YouTube subscriptions from Google takeout:
@@ -1013,4 +1030,7 @@
     <string name="return_youtube_dislike_privacy_policy_text">ReturnYouTubeDislike Security FAQ</string>
     <string name="return_youtube_dislike_home_page_url">https://returnyoutubedislike.com/</string>
     <string name="return_youtube_dislike_security_faq_url">https://www.returnyoutubedislike.com/faq/</string>
+    <string name="api23_requirement_dialog_title">NewPipe is dropping support for Android 5</string>
+    <string name="api23_requirement_dialog_message">Unfortunately NewPipe depends on a few libraries that dropped support for Android 5.0 and 5.1. The next NewPipe release will therefore only work on devices with Android 6 or higher, sadly. Read more in the blogpost.</string>
+    <string name="api23_requirement_dialog_blogpost">Blogpost</string>
 </resources>

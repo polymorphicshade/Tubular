@@ -310,7 +310,7 @@
     <string name="privacy_policy_title">Ochrana osobných údajov v NewPipe</string>
     <string name="privacy_policy_encouragement">NewPipe projekt berie vaše súkromie vážne. Preto aplikácia nezhromažďuje žiadne údaje bez vášho súhlasu.
 \nNewPipe v ochrane súkromia podrobne vysvetľuje, aké údaje budú odoslané a uložené pri hlásení o páde.</string>
-    <string name="read_privacy_policy">Prečítajte si pravidlá ochrany osobných údajov</string>
+    <string name="read_privacy_policy">Prečítajte si zásady ochrany osobných údajov</string>
     <string name="import_settings">Chcete zároveň importovať aj nastavenia?</string>
     <string name="start_accept_privacy_policy">V súlade s Európskym Všeobecným Nariadením o Ochrane Údajov (GDPR), chceme upriamiť Vašu pozornosť na zmluvu o ochrane osobných údajov v Tubular. Starostlivo si ju prečítajte.
 \nMusíte ju prijať pred nahlásením chyby.</string>
@@ -711,9 +711,9 @@
     <string name="no_video_streams_available_for_external_players">Žiadne video streamy nie sú k dispozícií pre externé prehrávače</string>
     <string name="unknown_quality">Neznáma kvalita</string>
     <string name="faq_title">Často kladené otázky</string>
-    <string name="faq">Pozrieť na webovej stránke</string>
+    <string name="faq">Pozrieť na webstránke</string>
     <string name="sort">Usporiadať</string>
-    <string name="faq_description">Ak máte problémy s používaním aplikácie, určite si prečítajte tieto odpovede na časté otázky!</string>
+    <string name="faq_description">Ak máte problémy s používaním aplikácie, určite si prečítajte tieto odpovede na zvyčajné otázky!</string>
     <string name="unset_playlist_thumbnail">Vypnutie trvalého náhľadu</string>
     <string name="msg_failed_to_copy">Kopírovanie do schránky zlyhalo</string>
     <string name="duplicate_in_playlist">Playlisty zobrazené šedou farbou už obsahujú danú položku.</string>
@@ -860,9 +860,35 @@
     <string name="player_http_403">Počas prehrávania bola zo servera prijatá chyba HTTP 403, pravdepodobne spôsobená vypršaním platnosti streamingovej adresy URL alebo zákazom IP adresy</string>
     <string name="player_http_invalid_status">Chyba HTTP %1$s prijatá zo servera počas prehrávania</string>
     <string name="youtube_player_http_403">Chyba HTTP 403 prijatá zo servera počas prehrávania, pravdepodobne spôsobená zákazom IP adresy alebo problémami s deobfuskáciou streamingovej URL adresy</string>
-    <string name="sign_in_confirm_not_bot_error">%1$s odmietol poskytnúť údaje, žiada o prihlásenie na potvrdenie, že žiadateľ nie je bot.\n\nVaša IP adresa mohla byť dočasne zakázaná %1$s, môžete nejaký čas počkať alebo prejsť na inú IP adresu (napríklad zapnutím/vypnutím VPN alebo prepnutím z WiFi na mobilné dáta).</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s odmietol poskytnúť údaje, žiada o prihlásenie na potvrdenie, že žiadateľ nie je bot.\n\nVaša IP adresa mohla byť dočasne zakázaná %1$s, môžete nejaký čas počkať alebo prejsť na inú IP adresu (napríklad zapnutím/vypnutím VPN alebo prepnutím z WiFi na mobilné dáta).\n\nPozrite si <a href="%2$s">túto časť FAQ</a> pre viac informácií.</string>
     <string name="unsupported_content_in_country">Tento obsah nie je dostupný pre aktuálne zvolenú krajinu obsahu.\n\nZmeňte výber v ponuke \"Nastavenia &gt; Obsah &gt; Predvolená krajina obsahu\".</string>
     <string name="kao_dialog_warning">V auguste 2025 spoločnosť Google oznámila, že od septembra 2026 bude inštalácia aplikácií vyžadovať overenie vývojára pre všetky aplikácie Android na certifikovaných zariadeniach, vrátane tých, ktoré sú inštalované mimo obchodu Play Store. Keďže vývojári NewPipe s touto požiadavkou nesúhlasia, NewPipe po tomto termíne nebude na certifikovaných zariadeniach Android fungovať.</string>
     <string name="kao_dialog_more_info">Podrobnosti</string>
     <string name="kao_solution">Riešenie</string>
+    <plurals name="export_subscriptions">
+        <item quantity="one">Exportovanie %d odberu…</item>
+        <item quantity="few">Exportovanie %d odberov…</item>
+        <item quantity="many">Exportovanie %d odberov…</item>
+        <item quantity="other">Exportovanie %d odberov…</item>
+    </plurals>
+    <plurals name="load_subscriptions">
+        <item quantity="one">Načítanie %d odberu…</item>
+        <item quantity="few">Načítanie %d odberov…</item>
+        <item quantity="many">Načítanie %d odberov…</item>
+        <item quantity="other">Načítanie %d odberov…</item>
+    </plurals>
+    <plurals name="import_subscriptions">
+        <item quantity="one">Importovanie %d odberu…</item>
+        <item quantity="few">Importovanie %d odberov…</item>
+        <item quantity="many">Importovanie %d odberov…</item>
+        <item quantity="other">Importovanie %d odberov…</item>
+    </plurals>
+    <string name="import_subscriptions_title">Importovať odbery</string>
+    <string name="export_subscriptions_title">Exportovať odbery</string>
+    <string name="import_subscriptions_summary">Import odberov z predchádzajúceho exportu .json</string>
+    <string name="export_subscriptions_summary">Export vašich odberov do súboru .json</string>
+    <string name="import_from_previous_export">Importovať z predchádzajúceho exportu</string>
+    <string name="api23_requirement_dialog_title">NewPipe ukončuje podporu pre Android 5</string>
+    <string name="api23_requirement_dialog_message">NewPipe je bohužiaľ závislý od niekoľkých knižníc, ktoré ukončili podporu pre Android 5.0 a 5.1. Ďalšia verzia NewPipe bude preto, žiaľ, fungovať len na zariadeniach s Androidom 6 alebo novším. Viac informácií nájdete v blogovom príspevku.</string>
+    <string name="api23_requirement_dialog_blogpost">Blogový príspevok</string>
 </resources>

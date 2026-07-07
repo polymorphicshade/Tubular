@@ -10,7 +10,7 @@
     <string name="install">Installer</string>
     <string name="kore_not_found">Installer l’application Kore manquante \?</string>
     <string name="no_player_found">Aucun lecteur de flux trouvé. Installer VLC \?</string>
-    <string name="open_in_browser">Ouvrir dans un navigateur</string>
+    <string name="open_in_browser">Ouvrir dans le navigateur</string>
     <string name="play_with_kodi_title">Lire avec Kodi</string>
     <string name="search">Rechercher</string>
     <string name="settings">Paramètres</string>
@@ -107,7 +107,7 @@
     <string name="channel_unsubscribed">Désabonné de la chaîne</string>
     <string name="tab_subscriptions">Abonnements</string>
     <string name="settings_category_downloads_title">Téléchargement</string>
-    <string name="title_licenses">Licences tierce partie</string>
+    <string name="title_licenses">Licences de tiers</string>
     <string name="tab_about">À propos &amp; FAQ</string>
     <string name="tab_licenses">Licences</string>
     <string name="app_description">Lecteur multimédia libre et léger pour Android.</string>
@@ -118,7 +118,7 @@
     <string name="charset_letters_and_digits">Lettres et chiffres</string>
     <string name="title_activity_about">À propos de Tubular</string>
     <string name="copyright" formatted="true">© %1$s par %2$s sous %3$s</string>
-    <string name="contribution_encouragement">Que ce soit pour des idées de traductions, de changements de design, de nettoyage de code ou de gros changements de code, une aide est toujours la bienvenue. Plus on en fera meilleur il sera !</string>
+    <string name="contribution_encouragement">Que vous ayez des idées concernant la traduction, des modifications de conception, le nettoyage du code ou des modifications techniques importantes, votre aide est toujours la bienvenue. Plus on y met du nôtre, meilleurs sont les résultats !</string>
     <string name="subscription_change_failed">Impossible de modifier l’abonnement</string>
     <string name="subscription_update_failed">Impossible d’actualiser l’abonnement</string>
     <string name="resume_on_audio_focus_gain_summary">Continuer la lecture après les interruptions (ex. : appels téléphoniques)</string>
@@ -307,7 +307,7 @@
     <string name="one_item_deleted">1 élément supprimé.</string>
     <string name="app_license">Tubular est un logiciel sous licence libre copyleft : vous pouvez l’utiliser, l’étudier, le partager, et l’améliorer comme bon vous semble. Plus précisément, vous pouvez le redistribuer ou le modifier sous les termes de la licence générale publique GNU, comme publiée par la Free Software Foundation, dans sa version 3, ou, à votre convenance, dans une quelconque version ultérieure.</string>
     <string name="privacy_policy_title">Politique de confidentialité de NewPipe</string>
-    <string name="read_privacy_policy">Lire la politique de confidentialité</string>
+    <string name="read_privacy_policy">Consultez notre politique de confidentialité</string>
     <string name="import_settings">Voulez-vous également importer les paramètres \?</string>
     <string name="accept">Accepter</string>
     <string name="decline">Refuser</string>
@@ -447,7 +447,7 @@
     <string name="app_language_title">Langue de l’application</string>
     <string name="systems_language">Prédéfini par le système</string>
     <string name="subtitle_activity_recaptcha">Appuyez sur « Terminé » une fois résolu</string>
-    <string name="done">Terminé</string>
+    <string name="done">Fait</string>
     <string name="videos_string">Vidéos</string>
     <string name="new_seek_duration_toast">En raison des contraintes d’ExoPlayer, le pas de déplacement a été réglée à %d secondes</string>
     <string name="mute">Couper le son</string>
@@ -712,8 +712,8 @@
     <string name="no_video_streams_available_for_external_players">Aucun flux vidéo n’est disponible pour les lecteurs externes</string>
     <string name="progressive_load_interval_title">Taille de l\'intervalle de chargement de la lecture</string>
     <string name="faq_title">Foire aux questions</string>
-    <string name="faq">Voir sur le site web</string>
-    <string name="faq_description">Si vous avez des difficultés à utiliser l\'application, consultez les réponses aux questions les plus fréquentes !</string>
+    <string name="faq">Consulter sur le site web</string>
+    <string name="faq_description">Si vous rencontrez des difficultés avec l\'application, n\'hésitez pas à consulter ces réponses aux questions fréquentes !</string>
     <string name="sort">Trier</string>
     <string name="fast_mode">Mode rapide</string>
     <string name="import_subscriptions_hint">Importer ou exporter des abonnements à partir du menu</string>
@@ -861,9 +861,32 @@
     <string name="player_http_403">Erreur HTTP 403 reçue du serveur pendant la lecture, probablement causée par l\'expiration de l\'URL de streaming ou une interdiction d\'IP</string>
     <string name="player_http_invalid_status">Erreur HTTP %1$s reçue du serveur pendant la lecture</string>
     <string name="youtube_player_http_403">Erreur HTTP 403 reçue du serveur pendant la lecture, probablement causée par un bannissement d\'IP ou des problèmes de désobfuscation de l\'URL de streaming</string>
-    <string name="sign_in_confirm_not_bot_error">%1$s a refusé de fournir des données et a demandé un identifiant pour confirmer que le demandeur n\'est pas un robot.\n\nVotre adresse IP a peut-être été temporairement bannie par %1$s. Vous pouvez patienter un peu ou changer d\'adresse IP (par exemple en activant/désactivant un VPN, ou en passant du Wi-Fi aux données mobiles).</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s a refusé de fournir des données et a demandé un identifiant pour confirmer que l\'auteur de la requête n\'est pas un robot.\n\nVotre adresse IP a peut-être été temporairement bloquée par %1$s. Vous pouvez patienter ou essayer une autre adresse IP (par exemple, en activant/désactivant un VPN ou en passant du Wi-Fi aux données mobiles).\n\nPour plus d\'informations, veuillez consulter <a href="%2$s">cette FAQ</a>.</string>
     <string name="unsupported_content_in_country">Ce contenu n\'est pas disponible pour le pays actuellement sélectionné.\n\nModifiez votre sélection dans « Paramètres &gt; Contenu &gt; Pays par défaut ».</string>
     <string name="kao_dialog_warning">En août 2025, Google a annoncé qu\'à compter de septembre 2026, l\'installation d\'applications nécessiterait une vérification par le développeur pour toutes les applications Android sur les appareils certifiés, y compris celles installées en dehors du Play Store. Les développeurs de NewPipe refusant cette exigence, NewPipe ne fonctionnera plus sur les appareils Android certifiés après cette date.</string>
     <string name="kao_dialog_more_info">Détails</string>
     <string name="kao_solution">Solution</string>
+    <plurals name="export_subscriptions">
+        <item quantity="one">Exportation de l\'abonnement %d…</item>
+        <item quantity="many">Exportation de %d abonnements…</item>
+        <item quantity="other">Exportation de %d abonnements…</item>
+    </plurals>
+    <plurals name="load_subscriptions">
+        <item quantity="one">Chargement de l\'abonnement %d…</item>
+        <item quantity="many">Chargement de %d abonnements…</item>
+        <item quantity="other">Chargement de %d abonnements…</item>
+    </plurals>
+    <plurals name="import_subscriptions">
+        <item quantity="one">Importation de l\'abonnement %d…</item>
+        <item quantity="many">Importation de %d abonnements…</item>
+        <item quantity="other">Importation de %d abonnements…</item>
+    </plurals>
+    <string name="import_subscriptions_title">Importer des abonnements</string>
+    <string name="export_subscriptions_title">Exporter les abonnements</string>
+    <string name="import_subscriptions_summary">Importer des abonnements à partir d\'une exportation .json précédente</string>
+    <string name="export_subscriptions_summary">Exportez vos abonnements dans un fichier .json</string>
+    <string name="import_from_previous_export">Importer à partir d\'une exportation précédente</string>
+    <string name="api23_requirement_dialog_title">NewPipe ne prendra plus en charge Android 5</string>
+    <string name="api23_requirement_dialog_message">Malheureusement, NewPipe dépend de certaines bibliothèques qui ne prennent plus en charge Android 5.0 et 5.1. La prochaine version de NewPipe ne fonctionnera donc, à notre grand regret, que sur les appareils équipés d\'Android 6 ou d\'une version ultérieure. Pour en savoir plus, consultez l\'article de blog.</string>
+    <string name="api23_requirement_dialog_blogpost">Article de blog</string>
 </resources>

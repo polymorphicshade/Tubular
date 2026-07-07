@@ -4,7 +4,7 @@
     <string name="no_player_found">스트림 플레이어가 발견되지 않았습니다. VLC를 설치할까요\?</string>
     <string name="install">설치</string>
     <string name="cancel">취소</string>
-    <string name="open_in_browser">브라우저로 열기</string>
+    <string name="open_in_browser">브라우저에서 열기</string>
     <string name="share">공유</string>
     <string name="download">다운로드</string>
     <string name="search">검색</string>
@@ -146,8 +146,8 @@
     <string name="title_activity_about">Tubular에 대해서</string>
     <string name="title_licenses">제3자 라이센스</string>
     <string name="copyright" formatted="true">© %3$s 하에서 %2$s 에 의한 %1$s</string>
-    <string name="tab_about">정보 및 자주 묻는 질문</string>
-    <string name="tab_licenses">라이센스</string>
+    <string name="tab_about">정보 및 FAQ</string>
+    <string name="tab_licenses">라이선스</string>
     <string name="app_description">가볍고 빠른 자유 안드로이드 스트리밍 앱입니다.</string>
     <string name="contribution_title">기여</string>
     <string name="contribution_encouragement">번역, 디자인, 코딩 등 다양한 기여를 언제나 환영합니다. 더 나아지도록 도와주세요!</string>
@@ -831,9 +831,26 @@
     <string name="player_http_403">재생 중 서버에서 HTTP 403 오류를 수신했으며, 스트리밍 URL이 만료되었거나 IP 차단으로 인해 발생했을 수 있습니다</string>
     <string name="player_http_invalid_status">재생 중 서버에서 HTTP %1$s 오류를 수신했습니다</string>
     <string name="youtube_player_http_403">재생 중 서버에서 HTTP 403 오류를 수신했으며, 스트리밍 URL 역난독화 문제나 IP 차단 때문일 수 있습니다</string>
-    <string name="sign_in_confirm_not_bot_error">%1$s에서 데이터 제공을 거부하고, 요청자가 봇이 아닌지 확인하기 위해 로그인을 요청하고 있습니다.\n\n아마 IP가 %1$s에서 임시 차단되었을 것이며, 잠시 기다리거나 다른 IP로 전환할 수 있습니다 (예를 들자면 VPN을 켜/끄거나, WiFi를 모바일 데이터로 바꾸세요).</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s에서 데이터 제공을 거부하고, 요청자가 봇이 아닌지 확인하기 위해 로그인을 요청하고 있습니다.\n\n아마 IP가 %1$s에서 임시 차단되었을 것이며, 잠시 기다리거나 다른 IP로 전환할 수 있습니다 (예를 들어 VPN을 켜/끄거나, WiFi를 모바일 데이터로 바꿔 보세요).\n\n자세한 정보는 <a href="%2$s">여기 FAQ</a>를 확인하세요.</string>
     <string name="unsupported_content_in_country">이 콘텐츠는 현재 선택한 콘텐츠 지역에서 이용할 수 없습니다.\n\n\"설정 &gt; 콘텐츠 &gt; 기본 콘텐츠 국가\"에서 지역을 바꾸세요.</string>
     <string name="kao_dialog_warning">2025년 8월, Google은 2026년 9월부터 인증된 기기에 앱을 설치하려면 Play 스토어 외 앱을 포함한 모든 Android 앱에 대해 개발자 인증을 받아야 한다고 발표했습니다. NewPipe 개발자는 이 요구 사항에 동의하지 않으므로, 이 이후 NewPipe는 더 이상 인증된 Android 기기에서 동작하지 않을 것입니다.</string>
     <string name="kao_dialog_more_info">자세히</string>
     <string name="kao_solution">해결책</string>
+    <plurals name="export_subscriptions">
+        <item quantity="other">구독 %d건 내보내는 중…</item>
+    </plurals>
+    <plurals name="load_subscriptions">
+        <item quantity="other">구독 %d건 불러오는 중…</item>
+    </plurals>
+    <plurals name="import_subscriptions">
+        <item quantity="other">구독 %d건 가져오는 중…</item>
+    </plurals>
+    <string name="import_subscriptions_title">구독 가져오기</string>
+    <string name="export_subscriptions_title">구독 내보내기</string>
+    <string name="import_subscriptions_summary">이전에 내보낸 .json에서 구독을 가져옵니다</string>
+    <string name="export_subscriptions_summary">구독 현황을 .json 파일로 내보냅니다</string>
+    <string name="import_from_previous_export">이전 내보내기에서 가져오기</string>
+    <string name="api23_requirement_dialog_title">NewPipe가 Android 5 지원을 중단합니다</string>
+    <string name="api23_requirement_dialog_message">NewPipe는 Android 5.0 및 5.1 지원을 중단한 몇 라이브러리에 의존합니다. 따라서 유감스럽게도 다음NewPipe 버전은 Android 6 이상 기기에서만 작동할 예정입니다. 자세한 내용은 블로그 게시글을 참조하세요.</string>
+    <string name="api23_requirement_dialog_blogpost">블로그 게시글</string>
 </resources>

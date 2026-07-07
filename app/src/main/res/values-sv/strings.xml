@@ -171,7 +171,7 @@
     <string name="select_a_channel">Välj en kanal</string>
     <string name="no_channel_subscribed_yet">Inga kanal prenumerationer ännu</string>
     <string name="select_a_kiosk">Välj en kiosk</string>
-    <string name="trending">Trendande</string>
+    <string name="trending">Populärt</string>
     <string name="top_50">Topp 50</string>
     <string name="new_and_hot">Nytt och populärt</string>
     <string name="play_queue_remove">Ta bort</string>
@@ -834,8 +834,8 @@
     <string name="migration_info_7_8_message">YouTube har upphört med den kombinerade trendsidan från och med den 21 juli 2025. NewPipe ersatte standardtrendsidan med trendiga livestreams.\n\nDu kan också välja olika trendsidor i \"Inställningar &gt; Innehåll &gt; Innehåll på huvudsidan\".</string>
     <string name="trending_gaming">Speltrender</string>
     <string name="trending_podcasts">Trendiga poddar</string>
-    <string name="trending_movies">Trendiga filmer och serier</string>
-    <string name="trending_music">Trendig musik</string>
+    <string name="trending_movies">Populära filmer och serier</string>
+    <string name="trending_music">Populär musik</string>
     <string name="permission_display_over_apps_message">För att använda Popup Player, välj %1$s i följande Android-inställningsmeny och aktivera %2$s.</string>
     <string name="permission_display_over_apps_permission_name">\"Tillåt visning över andra appar\"</string>
     <string name="delete_file">Ta bort fil</string>
@@ -845,9 +845,9 @@
     <string name="player_http_403">HTTP-fel 403 mottogs från servern under uppspelning, troligen orsakat av att streaming-URL:en har löpt ut eller att en IP-adress har blockerats</string>
     <string name="player_http_invalid_status">HTTP-fel %1$s mottogs från servern under spelning</string>
     <string name="youtube_player_http_403">HTTP-fel 403 mottogs från servern under spelning, troligen orsakat av en IP-avstängning eller problem med deobfuskering av streaming-URL:er</string>
-    <string name="sign_in_confirm_not_bot_error">%1$s vägrade att tillhandahålla data och bad om en inloggning för att bekräfta att den som begärde detta inte är en bot.\n\nDin IP-adress kan ha blivit tillfälligt avstängd av %1$s. Du kan vänta en stund eller byta till en annan IP-adress (till exempel genom att slå på/av ett VPN eller genom att byta från WiFi till mobildata).</string>
+    <string name="sign_in_confirm_not_bot_error">%1$s vägrade att lämna ut data och bad om en inloggning för att bekräfta att den som begärde detta inte är en bot.\n\nDin IP-adress kan ha blivit tillfälligt avstängd av %1$s. Du kan vänta en stund eller byta till en annan IP-adress (till exempel genom att slå på/av ett VPN eller genom att byta från Wi-Fi till mobildata).\n\nSe <a href="%2$s">denna FAQ-post</a> för mer information.</string>
     <string name="unsupported_content_in_country">Detta innehåll är inte tillgängligt för det valda innehållslandet.\n\nÄndra ditt val från \"Inställningar &gt; Innehåll &gt; Standardinnehållsland\".</string>
-    <string name="kao_dialog_warning">Google har meddelat att från och med 2026/2027 kommer alla appar på certifierade Android-enheter att kräva att utvecklarna lämnar sina personliga identitetsuppgifter direkt till Google. Eftersom utvecklarna av denna app inte accepterar detta krav kommer appen inte längre att fungera på certifierade Android-enheter efter den tiden.</string>
+    <string name="kao_dialog_warning">I augusti 2025 meddelade Google att från och med september 2026 kommer installation av appar att kräva utvecklarverifiering för alla Android-appar på certifierade enheter, inklusive de som installerats utanför Play Store. Eftersom utvecklarna av NewPipe inte godkänner detta krav kommer NewPipe inte längre att fungera på certifierade Android-enheter efter den tiden.</string>
     <string name="kao_dialog_more_info">Detaljer</string>
     <string name="kao_solution">Lösning</string>
 
